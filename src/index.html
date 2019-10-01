@@ -11,18 +11,18 @@
                         <!--INPUTS STARTS-->
                         <div class="form-text">
                             <div class="form-group">
-                                <label for="from">From:</label>
-                                <input type="text" name="from" class="form-control" id="from"
+                                <label for="startPlace">From:</label>
+                                <input type="text" name="from" class="form-control" id="startPlace"
                                        placeholder="Insert pick-up address" required>
 
                             </div>
 
                             <div class="form-group">
-                                <label for="destination">Destination:</label>
-                                <input type="email" name="destination" class="form-control" id="destination"
+                                <label for="endPlace">Destination:</label>
+                                <input type="email" name="destination" class="form-control" id="endPlace"
                                        placeholder="Insert Delivery address" required>
                             </div>
-
+                            <p> <input type="button" class="btn btn-primary" onclick="calcRoute()" value="Hesabla" /></p>
                         </div>
                         <!-- INPUT END-->
                         <!-- CAR STARTS-->
@@ -268,13 +268,13 @@
     <!--    MAP -->
     <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7">
         <div class="divider divider-side d-none d-lg-block transform-flip-y"></div>
-
-        <iframe class="min-vh-70 h-100 w-100 map"
+        <div id="map_canvas" style="height: 100%;"></div>
+        <!-- <iframe class="min-vh-70 h-100 w-100 map"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24304.907147343918!2d49.8225675!3d40.4063387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1568631227364!5m2!1sen!2s"
                 width="600" height="450"
                 frameborder="0" style="border:0;" allowfullscreen="">
 
-        </iframe>
+        </iframe> -->
 
     </div>
 
