@@ -3,14 +3,14 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 
 var autocomplete_start, autocomplete_end;
-var place_start, place_end;
+var place_start, place_end,marker;
 
 
 function initialize() {
     directionsDisplay = new google.maps.DirectionsRenderer();
     var thisCity = new google.maps.LatLng(40.409264, 49.867092);
     var myOptions = {
-        zoom: 14,
+        zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: thisCity
     }
@@ -31,6 +31,40 @@ function initialize() {
     autocomplete_end = new google.maps.places.Autocomplete(input_end, options);
     google.maps.event.addListener(autocomplete_end, 'place_changed', function () {
         place_end = autocomplete_end.getPlace();
+    });
+
+
+
+    // google.maps.event.addListener(map, 'click', function (event) {
+
+    //     marker = new google.maps.Marker({ position: event.latLng, map: map });
+    //     alert("Latitude: " + event.latLng.lat() + " " + ", longitude: " + event.latLng.lng());
+    // });
+
+    google.maps.event.addListener(map, 'click', function (event) {
+     
+        if (marker && marker.setMap) {
+            marker.setMap(null);
+        }
+        marker = new google.maps.Marker({ position: event.latLng, map: map });
+       
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+            "latLng": event.latLng
+        }, 
+        function (results, status) {
+            console.log(results, status);
+            if (status == google.maps.GeocoderStatus.OK) {
+                console.log(results);
+                var lat = results[0].geometry.location.lat(),
+                    lng = results[0].geometry.location.lng(),
+                    placeName = results[0].address_components[0].long_name,
+                    latlng = new google.maps.LatLng(lat, lng);
+
+                $("#startPlace").val(results[0].formatted_address);
+            }
+        });
+    
     });
 }
 
@@ -88,6 +122,8 @@ function calcRoute() {
         }
     });
 }
+
+
 
 window.onload = initialize;
 
