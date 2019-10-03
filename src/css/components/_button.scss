@@ -4,16 +4,11 @@
     width: 360px;
     border-radius: 0;
     height: 40px;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
+    margin-top: 35px;
 
     @include respondmax(lg) {
         padding-left: 3rem;
         margin-bottom: 1rem;
-    
-    }
-    @include respondmax(md) {
-        width: 100% !important;
+        width: 100%;
     }
 }
