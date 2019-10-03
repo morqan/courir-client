@@ -1,0 +1,11 @@
+.divider-side:first-child {
+    left: 10px !important;
+}
+
+.map {
+    @include respondmax(lg) {
+        min-height: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
