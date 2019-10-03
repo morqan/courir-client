@@ -1,0 +1,32 @@
+.add-image {
+    border-color: #cccccc !important;
+    outline: none;
+    background-color: #f5f5f5;
+
+    &::placeholder {
+        color: #818490 !important;
+    }
+}
+
+
+
+#filepond--drop-label-vll8v78cr {
+    color: #818490 !important;
+}
+
+.filepond {
+    &--root {
+        width: 360px;
+        background-color: #f5f5f5 !important;
+
+        @include respondmax(lg) {
+            width: 100% !important;
+        }
+    }
+
+    &--item {
+        width: 100px;
+    height: 100px;
+    }
+}
+

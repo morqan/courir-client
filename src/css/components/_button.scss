@@ -1,0 +1,14 @@
+.btn-2 {
+    background-color: #47b475;
+    border: none;
+    width: 360px;
+    border-radius: 0;
+    height: 40px;
+    margin-top: 35px;
+
+    @include respondmax(lg) {
+        padding-left: 3rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
