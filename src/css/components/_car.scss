@@ -19,7 +19,8 @@
     .nav-link {
         width: 80px !important;
         padding: 0 !important;
-        padding-bottom: 10px !important;
+       
+        
     }
 
     &__link {
@@ -29,7 +30,8 @@
         border: none;
         background-color: transparent;
         outline: none;
-        border-radius: 5px;
+        border-radius: 5px !important;
+
         @include respondmax(xl) {
             width: 100% !important;
         }
@@ -53,15 +55,20 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    height: 70px;
+        
 
         &--img {
             margin-left: auto;
             margin-right: auto;
+            margin-top: 5px;
             width: 40px;
         }
 
+
         &--span {
             font-size: 12px;
+            letter-spacing: -1px;
             text-align: center;
             text-transform: uppercase;
             font-family: 'Fira Sans Condensed', sans-serif;
@@ -71,5 +78,49 @@
     }
 }
 
+
+.line {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f5f5f5;
+    margin-bottom: 30px;
+    width: 360px;
+
+    @include respondmax(md) {
+        width: 100% !important;
+    }
+}
+
+
+
+#pills-tabContent {
+    height: 110px !important;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    color: #00CED1;
+    font-weight: bold;
+    width: 360px;
+    height: 20px;
+
+    @include respondmax(md) {
+        width: 100% !important;
+    }
+
+    &__p {
+        padding-top: 10px;
+        font-size: 15px;
+        width: 360px;
+        @include respondmax(md) {
+            width: 100% !important;
+        }
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
 
 

@@ -3,9 +3,23 @@ $( function() {
         dateFormat: "dd-mm-yy",
         duration: "fast",
         gotoCurrent: true,
+       
+        
     });
 } );
 
+function myFunction1() {
+    document.getElementById("delivery").style.display = "none";
+  }
+
+
+function myFunction2() {
+    document.getElementById("delivery").style.display = "block";
+  }
+
+  function clickFunction() {
+    document.getElementById("labor").style.display = "block";
+  }
 
 FilePond.registerPlugin(
     FilePondPluginImageCrop,
@@ -28,6 +42,8 @@ const pond = FilePond.create(inputElement, {
             const img = new Image();
             img.src = URL.createObjectURL(output.file);
             document.body.appendChild(img);
+
+        
         })
     }
 });
@@ -312,4 +328,5 @@ $("#icon-plus").on("click", function (e) {
         count = count + 1;
     $("#spinner").val(count);
     spinnerAction(count);
+
 });

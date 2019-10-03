@@ -1,0 +1,38 @@
+.urgent {
+   margin-top: 20px;
+   width: 360px;
+   @include respondmax(lg) {
+    width: 100% !important;
+}
+    &__list {
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &--item {
+            width: 50%;
+
+            .non-urgent-link{
+                padding: 10px 20px;
+              margin-right: 10px;
+               text-align: center;
+              
+            }
+            .urgent-link {
+                padding: 10px 20px;
+                background-color: #ababab ;
+                color: #ffffff;
+              
+                text-align: center;
+            }
+           
+        }
+    }
+    &__div {
+        font-size: 13px;
+    }
+}
+#pills-tabContent3 {
+    height: 50px;
+}
