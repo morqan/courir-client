@@ -1,0 +1,110 @@
+.delivery {
+    margin: 20px 0;
+    width: 360px;
+    display: none;
+    
+
+    @include respondmax(md) {
+        width: 100% !important;
+    }
+
+    .tab-content {
+        font-size: 16px;   
+        font-weight: bold;
+
+
+        .tab-pane {
+        
+        }
+    }
+}
+
+
+.day {
+    margin: 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+
+        .active {
+            background-color: #47b475 !important;
+            color: #1f1f1f;
+        }
+    }
+&__link {
+    width: 100px;
+    height: 80px;
+    background-color: #ffc61a !important;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        color: #ffffff !important;
+        background-color: #47b475 !important;
+        transition: all .3s;
+    }
+
+    &:focus {
+        background-color: #47b475 !important;
+        color: #1f1f1f;
+    }
+  }
+
+}
+
+#pills-tabContent2 {
+    height: 50px;
+    margin: 10px 0 20px;
+}
+
+.times {
+    font-size: 16px;
+
+    @include respondmax(md) {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    &__label {
+        text-align: center;
+        cursor: pointer;
+        background-color: #454545;
+        color: white;
+        padding: 5px 6px;
+        border-radius: 3px;
+    }
+
+    &__input[type="radio"] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+
+        &:checked+label {
+            background-color: #00CED1;
+        }
+    }
+}
+
+
+.disable-label {
+    background-color: #ababab;
+}
+
+
+// input[type="radio"] {
+//     visibility: hidden;
+//     height: 0;
+//     width: 0;
+// }
+
+// input[type="radio"]:checked+label {
+//     background-color: #00CED1;
+// }

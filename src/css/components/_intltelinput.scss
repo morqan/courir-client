@@ -1,0 +1,19 @@
+#error-msg {
+    color: #ea4335;
+}
+
+#valid-msg {
+    color: #34a853;
+}
+
+.iti {
+    width: 100%;
+
+    &__country-list {
+        width: 360px !important;
+
+        @include respondmax(lg) {
+            width: 90% !important;
+        }
+    }
+}

@@ -20,6 +20,8 @@ const pond = FilePond.create(inputElement, {
             const img = new Image();
             img.src = URL.createObjectURL(output.file);
             document.body.appendChild(img);
+
+        
         })
     }
 });
