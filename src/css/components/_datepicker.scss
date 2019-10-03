@@ -1,5 +1,4 @@
 .datepicker {
-    font-size: 14px !important;
     &__link {
         position: relative;
     }
@@ -17,7 +16,7 @@
         font-weight: bold;
         color: #1f1f1f;
         border-radius: 0.5rem;
-        padding-left: 13px;
+        padding-left: 10px;
 
         &:focus {
             outline: none;
@@ -157,18 +156,3 @@ table {
     font-weight: 400;
     font-size: 0.75rem;
 }
-
-.ui-state-highlight {
-    background-color: #00CED1;
-    color: #ffffff !important;
-
-    &:hover {
-        background-color: #47b475 !important;
-      }
-  }
-  
-  #datepicker {
-      font-size: 14px !important;
-  }
-
-  #ui-datepicker-div { font-size:11px; }

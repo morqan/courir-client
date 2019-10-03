@@ -3,7 +3,5 @@ $( function() {
         dateFormat: "dd-mm-yy",
         duration: "fast",
         gotoCurrent: true,
-       
-        
     });
 } );
