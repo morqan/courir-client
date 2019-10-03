@@ -21,5 +21,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-watch": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bower": "^1.8.8"
+  }
 }
