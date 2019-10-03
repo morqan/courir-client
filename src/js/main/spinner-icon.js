@@ -33,5 +33,4 @@ $("#icon-plus").on("click", function (e) {
         count = count + 1;
     $("#spinner").val(count);
     spinnerAction(count);
-
 });
