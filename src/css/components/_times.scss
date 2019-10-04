@@ -1,0 +1,36 @@
+.times {
+
+    @include respondmax(sm) {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+    &__label {
+
+        text-align: center;
+        cursor: pointer;
+        background-color: #cccccc;
+        color: white;
+      padding: 5px 8px !important;
+        border-radius: 3px;
+        font-size: 16px;
+
+    }
+}
+
+
+input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+
+    &:checked+label {
+        background-color: #00CED1;
+    }
+}
+
+
+
+.disable-label {
+    background-color: #ababab;
+}

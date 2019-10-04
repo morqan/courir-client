@@ -1,0 +1,27 @@
+.urgent {
+
+    &__list {
+        width: 100%;
+        &--item {
+            width: 50%;
+           font-size: 16px;
+           font-weight: bold;
+           text-align: center;
+            .non-urgent-link {
+                margin-right: 10px;
+            }
+            .urgent-link {
+background-color:#ababab ;
+            }
+        }
+    }
+}
+
+#pills-tabContent3 {
+    height: 50px;
+
+    div {
+        font-size: 13px;
+        
+    }
+}
