@@ -123,6 +123,10 @@
                 innerHtml += '<p>Qiymet: ' + Math.ceil(price) + ' AZN';
                 innerHtml += '';
                 price_for_selected.innerHTML = innerHtml;
+
+                console.log(myRoute.distance.text);
+                console.log(myRoute.duration.text);
+                console.log(Math.ceil(price));
             } else {
                 var price_for_selected = document.getElementById('price_for_selected');
                 var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
@@ -131,6 +135,8 @@
                 directionsPanel.innerHTML = '';
             }
         });
+
+      
     }
 
     window.onload = initialize;
