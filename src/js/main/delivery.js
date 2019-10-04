@@ -1,6 +1,13 @@
-function myFunction1() {
-    document.getElementById("delivery").style.display = "none";
-  };
-  function myFunction2() {
-    document.getElementById("delivery").style.display = "block";
-  }
+
+
+  $('.non-urgent-link').click(function(){
+    $('#delivery').css({
+      'display' : 'none'
+    });
+  });
+
+  $('.urgent-link').click(function(){
+    $('#delivery').css({
+      'display' : 'block'
+    });
+  });

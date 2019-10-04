@@ -1,9 +1,9 @@
 .car {
-    display: flex !important;
-    justify-content: space-between !important;
-    flex-wrap: nowrap !important;
-    width: 360px !important;
-    border-bottom: 1px solid #f5f5f5 !important;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
     padding-left: 0;
     list-style: none;
 
@@ -11,25 +11,26 @@
         width: 100% !important;
     }
 
-    .active {
-        background-color: #ffc61a !important;
-        border: none;
-    }
 
-    .nav-link {
-        width: 80px !important;
-        padding: 0 !important;
-        padding-bottom: 10px !important;
+
+    .active {
+        background-color: #ffc61a;
+        border: none;
     }
 
     &__link {
         padding-right: 0;
         padding-left: 0;
-        width: 80px !important;
+        width: 80px;
         border: none;
-        background-color: transparent;
+        display: block;
         outline: none;
         border-radius: 5px;
+        padding-bottom: 10px;
+        text-decoration: none;
+
+        
+
         @include respondmax(xl) {
             width: 100% !important;
         }
@@ -46,6 +47,7 @@
             background-color: #ffc61a;
             transition: all .5s;
             outline: none;
+            text-decoration: none;
         }
     }
 
@@ -53,6 +55,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 80px;
 
         &--img {
             margin-left: auto;
@@ -76,8 +79,9 @@
     justify-content: space-around;
     color: blue($color: #000000);
     font-weight: bold;
-    width: 360px;
+    width: 100%;
     height: 20px;
+
     @include respondmax(xl) {
         width: 100% !important;
     }
@@ -85,15 +89,15 @@
     span {
         font-size: 16px !important;
     }
-  
-  
-    &__p {
-      padding-top: 10px;
-      font-size: 15px;
-      width: 360px;
-      @include respondmax(xl) {
-        width: 100% !important;
-    }
-    }
-  }
 
+
+    &__p {
+        padding-top: 10px;
+        font-size: 15px;
+        width: 100%;
+
+        @include respondmax(xl) {
+            width: 100% !important;
+        }
+    }
+}

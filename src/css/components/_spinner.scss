@@ -1,9 +1,14 @@
+#labor {
+    display: none;
+}
+
 .input-spinner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 360px;
     height: 70px !important;
+  margin-bottom: 2rem;
 
     @include respondmax(md) {
         width: 100% !important;

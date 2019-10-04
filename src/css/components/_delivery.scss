@@ -1,7 +1,7 @@
 .delivery {
     margin: 30px 0;
     width: 360px;
-
+display: none;
 
     @include respondmax(sm) {
         width: 100% !important;
