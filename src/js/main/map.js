@@ -43,6 +43,7 @@ function AutocompleteDirectionsHandler(map) {
     this.setupClickListener('pills-standart-tab', 'WALKING');
     this.setupClickListener('pills-business-tab', 'TRANSIT');
     this.setupClickListener('pills-vip-tab', 'DRIVING');
+    this.setupClickListener('pills-vip-tab', 'DRIVING');
   
     this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
     this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
@@ -89,24 +90,70 @@ function AutocompleteDirectionsHandler(map) {
     }
     var me = this;
   
-    this.directionsService.route(
-        {
-          origin: {'placeId': this.originPlaceId},
-          destination: {'placeId': this.destinationPlaceId},
-          travelMode: this.travelMode
-        },
-        function(response, status) {
-          if (status === 'OK') {
-            me.directionsRenderer.setDirections(response);
+    // this.directionsService.route(
+    //     {
+    //       origin: {'placeId': this.originPlaceId},
+    //       destination: {'placeId': this.destinationPlaceId},
+    //       travelMode: this.travelMode
+    //     },
+    //     function(response, status) {
+    //       if (status === 'OK') {
+    //         me.directionsRenderer.setDirections(response);
+    //       } else {
+    //         window.alert('Directions request failed due to ' + status);
+    //       }
+    //     });
+
+
+
+    var request = {
+      origin: {'placeId': this.originPlaceId},
+      destination: {'placeId': this.destinationPlaceId},
+      travelMode: this.travelMode
+  };
+
+  directionsService.route(request, function (result, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(result);
+          var price_for_selected = document.getElementById('price_for_selected');
+          var myRoute = result.routes[0].legs[0];
+
+          var commonDistanse = myRoute.distance.value / 1000;
+
+          if (commonDistanse <= 3) {
+              price = 2
+          } else if (commonDistanse > 3 && commonDistanse <= 12) {
+              price = (commonDistanse - 3) * 0.5 + 2
+          } else if (commonDistanse > 12 && commonDistanse <= 70) {
+              price = (commonDistanse - 12) * 0.4 + 2 + (9 * 0.5)
           } else {
-            window.alert('Directions request failed due to ' + status);
+              price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
           }
-        });
+
+
+          var roadPrice = Math.ceil(price) + ' AZN';
+          var roadDistance = myRoute.distance.text ;
+          var roadTime = Math.round(myRoute.duration.value/60 )+ ' dəq';
+
+
+          $('.price').text(roadPrice);
+          $('.distance').text(roadDistance);
+          $('.time').text(roadTime);
+          
+
+          console.log(myRoute.distance.text);
+          console.log(myRoute.duration.text);
+          console.log(Math.ceil(price));
+      } else {
+          var price_for_selected = document.getElementById('price_for_selected');
+          var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
+          price_for_selected.innerHTML = innerHtml;
+          var directionsPanel = document.getElementById('directionsPanel');
+          directionsPanel.innerHTML = '';
+      }
+  });
+        
   };
   
-
-
-
-
 window.onload = initialize;
 
