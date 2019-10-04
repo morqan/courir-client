@@ -43,6 +43,7 @@ function AutocompleteDirectionsHandler(map) {
     this.setupClickListener('pills-standart-tab', 'WALKING');
     this.setupClickListener('pills-business-tab', 'TRANSIT');
     this.setupClickListener('pills-vip-tab', 'DRIVING');
+    this.setupClickListener('pills-vip-tab', 'DRIVING');
   
     this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
     this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
@@ -129,12 +130,16 @@ function AutocompleteDirectionsHandler(map) {
               price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
           }
 
-          var innerHtml = '<div class="alert alert-success" role="alert"> ';
-          innerHtml += '<p>Mesafe: <td>' + myRoute.distance.text + '';
-          innerHtml += '<p>Teqribi vaxt: <td>' + myRoute.duration.text + '';
-          innerHtml += '<p>Qiymet: ' + Math.ceil(price) + ' AZN';
-          innerHtml += '';
-          price_for_selected.innerHTML = innerHtml;
+
+          var roadPrice = Math.ceil(price) + ' AZN';
+          var roadDistance = myRoute.distance.text ;
+          var roadTime = Math.round(myRoute.duration.value/60 )+ ' dəq';
+
+
+          $('.price').text(roadPrice);
+          $('.distance').text(roadDistance);
+          $('.time').text(roadTime);
+          
 
           console.log(myRoute.distance.text);
           console.log(myRoute.duration.text);
@@ -150,9 +155,5 @@ function AutocompleteDirectionsHandler(map) {
         
   };
   
-
-
-
-
 window.onload = initialize;
 
