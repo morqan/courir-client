@@ -89,19 +89,65 @@ function AutocompleteDirectionsHandler(map) {
     }
     var me = this;
   
-    this.directionsService.route(
-        {
-          origin: {'placeId': this.originPlaceId},
-          destination: {'placeId': this.destinationPlaceId},
-          travelMode: this.travelMode
-        },
-        function(response, status) {
-          if (status === 'OK') {
-            me.directionsRenderer.setDirections(response);
+    // this.directionsService.route(
+    //     {
+    //       origin: {'placeId': this.originPlaceId},
+    //       destination: {'placeId': this.destinationPlaceId},
+    //       travelMode: this.travelMode
+    //     },
+    //     function(response, status) {
+    //       if (status === 'OK') {
+    //         me.directionsRenderer.setDirections(response);
+    //       } else {
+    //         window.alert('Directions request failed due to ' + status);
+    //       }
+    //     });
+
+
+
+    var request = {
+      origin: {'placeId': this.originPlaceId},
+      destination: {'placeId': this.destinationPlaceId},
+      travelMode: this.travelMode
+  };
+
+  directionsService.route(request, function (result, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(result);
+          var price_for_selected = document.getElementById('price_for_selected');
+          var myRoute = result.routes[0].legs[0];
+
+          var commonDistanse = myRoute.distance.value / 1000;
+
+          if (commonDistanse <= 3) {
+              price = 2
+          } else if (commonDistanse > 3 && commonDistanse <= 12) {
+              price = (commonDistanse - 3) * 0.5 + 2
+          } else if (commonDistanse > 12 && commonDistanse <= 70) {
+              price = (commonDistanse - 12) * 0.4 + 2 + (9 * 0.5)
           } else {
-            window.alert('Directions request failed due to ' + status);
+              price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
           }
-        });
+
+          var innerHtml = '<div class="alert alert-success" role="alert"> ';
+          innerHtml += '<p>Mesafe: <td>' + myRoute.distance.text + '';
+          innerHtml += '<p>Teqribi vaxt: <td>' + myRoute.duration.text + '';
+          innerHtml += '<p>Qiymet: ' + Math.ceil(price) + ' AZN';
+          innerHtml += '';
+          price_for_selected.innerHTML = innerHtml;
+
+          console.log(myRoute.distance.text);
+          console.log(myRoute.duration.text);
+          console.log(Math.ceil(price));
+      } else {
+          var price_for_selected = document.getElementById('price_for_selected');
+          var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
+          price_for_selected.innerHTML = innerHtml;
+          var directionsPanel = document.getElementById('directionsPanel');
+          directionsPanel.innerHTML = '';
+      }
+  });
+        
   };
   
 
