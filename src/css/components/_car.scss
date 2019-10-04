@@ -71,5 +71,29 @@
     }
 }
 
+.info {
+    display: flex;
+    justify-content: space-around;
+    color: blue($color: #000000);
+    font-weight: bold;
+    width: 360px;
+    height: 20px;
+    @include respondmax(xl) {
+        width: 100% !important;
+    }
 
+    span {
+        font-size: 16px !important;
+    }
+  
+  
+    &__p {
+      padding-top: 10px;
+      font-size: 15px;
+      width: 360px;
+      @include respondmax(xl) {
+        width: 100% !important;
+    }
+    }
+  }
 

@@ -1,0 +1,33 @@
+.form-control {
+    background-color: #555a64;
+    width: 360px;
+    height: 50px;
+    border-radius: 0;
+
+  
+    @include respondmax(xl) {
+        width: 100% !important;
+    }
+  
+    &:focus {
+      border-color: #cccccc !important;
+      outline: none;
+      background-color: #cccccc;
+    }
+  
+    &::placeholder {
+      color: #818490 !important;
+  
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  .form-label {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Fira Sans', sans-serif;
+      color: #555a64;
+  }

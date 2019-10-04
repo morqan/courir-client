@@ -4,7 +4,9 @@
     width: 360px;
     border-radius: 0;
     height: 40px;
-    margin-top: 35px;
+
+    font-size: 16px !important;
+    font-weight: bold;
 
     @include respondmax(lg) {
         padding-left: 3rem;
