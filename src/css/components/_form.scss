@@ -1,4 +1,6 @@
-.form-control {
+
+.form {
+  &__control {
     background-color: #555a64;
     width: 100%;
     height: 50px;
@@ -20,14 +22,30 @@
   
     }
   }
-  
-  .form-group {
+  &__group {
     margin-bottom: 2rem;
   }
 
-  .form-label {
-      font-size: 16px;
-      font-weight: bold;
-      font-family: 'Fira Sans', sans-serif;
-      color: #555a64;
+  &__label {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color: #555a64;
+}
+}
+
+
+
+  .scroll {
+  overflow-y: scroll;
+max-height: 90vh;
+  }
+
+  .map {
+    max-height: 90vh;
+  }
+
+  .example {
+   
+    padding-top: 3rem;
   }
