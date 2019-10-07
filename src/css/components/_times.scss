@@ -16,19 +16,21 @@
         font-size: 16px;
 
     }
-}
 
-
-input[type="radio"] {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    display: none;
-
-    &:checked+label {
-        background-color: #00CED1;
+    &__input[type="radio"] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none;
+    
+        &:checked+label {
+            background-color: #00CED1;
+        }
     }
 }
+
+
+
 
 
 
