@@ -1,10 +1,11 @@
 
 .form {
   &__control {
-   
+    background-color: #f5f5f5;
     width: 100% !important;
     height: 50px !important;
-    border-radius: 0;
+    border-radius: 0; color: #555a64;
+    font-size: 16px;
 
   
     @include respondmax(xl) {
@@ -14,7 +15,7 @@
     &:focus {
       border-color: #cccccc !important;
       outline: none;
-      background-color: #cccccc;
+    
     }
   
     &::placeholder {
@@ -48,4 +49,9 @@ max-height: 90vh;
   .example {
    
     padding-top: 3rem;
+  }
+
+  .textarea {
+    height: 80px !important;
+    resize: vertical !important;
   }

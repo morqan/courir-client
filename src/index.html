@@ -1,5 +1,57 @@
 //= template/head.html
-
+<div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
+            <div class="container-fluid">
+                <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index-2.html">
+                    <img alt="Logo"  src="img/logo.png">
+                </a>
+    
+                <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-start" id="navigation-menu">
+                    <ul class="navbar-nav my-3 my-lg-0">
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item " href="#" role="button">Be
+                                carrier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item " href="#" role="button">For
+                                Costumer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item " href="#" role="button">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item " href="#" role="button">Help</a>
+                        </li>
+    
+                    </ul>
+                    <div class="d-flex ml-auto">
+                        <div class="language">
+                            <img src="assets/img/globe.png" alt="" class="globe">
+                            <select name="language" id="language">
+                                <option value="En">En</option>
+                                <option value="En">Ru</option>
+                                <option value="En">Az</option>
+                            </select>
+                        </div>
+                        <a href="" class="login">
+                            <img src="img/login-icon.png" alt="" class="login__icon">
+                            <span>Log in</span>
+                        </a>
+                        <a href="https://themeforest.net/item/jumpstart-app-and-software-template/24207799"
+                           class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3 order-now">Order Now</a>
+                    </div>
+                </div>
+    
+                <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                        data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                    <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" data-inject-svg
+                         src="img/icons/interface/icon-menu.svg">
+                    <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm" data-inject-svg
+                         src="assets/img/icons/interface/icon-x.svg">
+                </button>
+            </div>
+        </nav>
+    </div>
 
 <div class="container-fluid example">
 
@@ -28,7 +80,7 @@
                     <div id="price_for_selected" style="width:100%;"></div>
                     <!-- INPUT END-->
                     <!-- CAR STARTS-->
-                    <ul class="nav nav-pills mb-3 car line" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3 car" id="pills-tab" role="tablist">
                         <li class="nav-item ">
 
                             <a class="car__link--active car__link car__link-hide" id="pills-standart-tab"
@@ -51,12 +103,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                                <a class="car__link car__link-hide" id="pills-car-tab" data-toggle="pill" href="#pills-car"
+                                    role="tab" aria-controls="pills-car" aria-selected="false">
+                                    <div class="car__div">
+                                        <img src="img/car.png" alt="car" class="car__div--img">
+                                        <span class="car__div--span">Avtomobil</span>
+                                    </div>
+                                </a>
+                            </li>
+                        <li class="nav-item">
 
                             <a class="car__link car__link-hide" id="pills-vip-tab" data-toggle="pill" href="#pills-vip"
                                 role="tab" aria-controls="pills-vip" aria-selected="false">
                                 <div class="car__div">
-                                    <img src="img/car.png" alt="car" class="car__div--img">
-                                    <span class="car__div--span">Avtomobil</span>
+                                    <img src="img/evacuator.png" alt="car" class="car__div--img">
+                                    <span class="car__div--span">Evakuator</span>
                                 </div>
                             </a>
                         </li>
@@ -70,7 +131,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="tab-content line " id="pills-tabContent">
+                    <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane show active" id="pills-standart" role="tabpanel"
                             aria-labelledby="pills-standart-tab">
                             <div class="info">
@@ -78,7 +139,7 @@
                                 <span class="distance">5.6km</span>
                                 <span class="time">15 dəq</span>
                             </div>
-                            <p class="info__p">Lorem ipsum dolor sit amet.</p>
+                            <p class="info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam, dolorum alias assumenda accusantium nemo exercitationem sint cum aspernatur necessitatibus.</p>
                         </div>
                         <div class="tab-pane fade" id="pills-business" role="tabpanel"
                             aria-labelledby="pills-business-tab">
@@ -91,6 +152,16 @@
                                 facere
                                 impedit in quas quia vel vitae. Hic nam, nulla!</p>
                         </div>
+                        <div class="tab-pane fade" id="pills-car" role="tabpanel" aria-labelledby="pills-car-tab">
+                                <div class="info">
+                                    <span class="price">2.96$</span>
+                                    <span class="distance">5.6km</span>
+                                    <span class="time">15 dəq</span>
+                                </div>
+                                <p class="info__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum et
+                                    facere
+                                    impedit in quas quia vel vitae. Hic nam, nulla!</p>
+                            </div>
                         <div class="tab-pane fade" id="pills-vip" role="tabpanel" aria-labelledby="pills-vip-tab">
                             <div class="info">
                                 <span class="price">2.96$</span>
