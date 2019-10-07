@@ -37,6 +37,17 @@
 .disable-label {
     background-color: #ababab;
 }
-.tab__pane {
-   margin: auto;
+
+
+
+.tab {
+    &__pane__list {
+  
+       padding-left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        
+     }
 }
