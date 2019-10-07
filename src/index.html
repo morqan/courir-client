@@ -6,7 +6,7 @@
     <section class="row">
         <div class=" col-sm-12 col-md-12 col-lg-5 col-lg-5 scroll">
             <div class="container">
-                <form class="form" >
+                <form class="form">
 
                     <!--INPUTS STARTS-->
                     <div class="form-text">
@@ -31,11 +31,9 @@
                     <ul class="nav nav-pills mb-3 car line" id="pills-tab" role="tablist">
                         <li class="nav-item ">
 
-                            <a class="car__link--active car__link car__link-hide" id="pills-standart-tab" data-toggle="pill"
-
-
-                                href="#pills-standart" role="tab" aria-controls="pills-standart"
-                                aria-selected="true"  >
+                            <a class="car__link--active car__link car__link-hide" id="pills-standart-tab"
+                                data-toggle="pill" href="#pills-standart" role="tab" aria-controls="pills-standart"
+                                aria-selected="true">
                                 <div class="car__div">
                                     <img src="img/pedestrian-man.png" alt="car" class="car__div--img">
                                     <span class="car__div--span">Piyada</span>
@@ -45,8 +43,7 @@
                         <li class="nav-item">
 
                             <a class="car__link car__link-hide" id="pills-business-tab" data-toggle="pill"
-                                href="#pills-business" role="tab" aria-controls="pills-business"
-                                aria-selected="false">
+                                href="#pills-business" role="tab" aria-controls="pills-business" aria-selected="false">
                                 <div class="car__div">
                                     <img src="img/motorcycle.png" alt="car" class="car__div--img">
                                     <span class="car__div--span">Motosiklet</span>
@@ -65,11 +62,10 @@
                         </li>
                         <li class="nav-item">
 
-                            <a class="car__link" id="pills-busminivan-tab" data-toggle="pill"
-                                href="#pills-busminivan" role="tab" aria-controls="pills-busminivan"
-                                aria-selected="false">
-                                <div class="car__div"><img src="img/truck.png" alt="car"
-                                        class="car__div--img"><span class="car__div--span">Yük maşını</span>
+                            <a class="car__link" id="pills-busminivan-tab" data-toggle="pill" href="#pills-busminivan"
+                                role="tab" aria-controls="pills-busminivan" aria-selected="false">
+                                <div class="car__div"><img src="img/truck.png" alt="car" class="car__div--img"><span
+                                        class="car__div--span">Yük maşını</span>
                                 </div>
                             </a>
                         </li>
@@ -95,8 +91,7 @@
                                 facere
                                 impedit in quas quia vel vitae. Hic nam, nulla!</p>
                         </div>
-                        <div class="tab-pane fade" id="pills-vip" role="tabpanel"
-                            aria-labelledby="pills-vip-tab">
+                        <div class="tab-pane fade" id="pills-vip" role="tabpanel" aria-labelledby="pills-vip-tab">
                             <div class="info">
                                 <span class="price">2.96$</span>
                                 <span class="distance">5.6km</span>
@@ -130,8 +125,8 @@
                     </div>
                     <div class="form-group form__group ">
                         <label for="phone" class="d-block form-label form__label">Receiver number</label>
-                        <input type="tel" name="phone" class="form-control form__control d-block" id="phone" value="+994"
-                            required>
+                        <input type="tel" name="phone" class="form-control form__control d-block" id="phone"
+                            value="+994" required>
                         <span id="valid-msg" class="hide d-block"></span>
                         <span id="error-msg" class="hide d-block"></span>
                     </div>
@@ -149,46 +144,45 @@
                     </div>
                     <!-- TEXTAREA FINISH-->
 
-                
+
                     <!--  SPINNER STARTS-->
-                    <div id="labor"> 
-                            <label for="contact-message" class="form-label form__label">İşçi qüvvəsi</label>
-                    <div class="input-spinner form-control form__control"  >
-                        <i class="fa fa-user " id="user1"></i>
-                        <i class="fa fa-user-friends d-none" id="user2"></i>
-                        <i class="fa fa-users d-none" id="userMore"></i>
-                        <div class="number-spinner">
-                            <span class="ns-btn">
-                                <a>
-                                    <span class="icon-minus" id="icon-minus"></span>
-                                </a>
-                            </span>
-                            <input type="text" class="pl-ns-value" value="1" maxlength=2 id="spinner">
-                            <span class="ns-btn">
-                                <a>
-                                    <span class="icon-plus" id="icon-plus"></span>
-                                </a>
-                            </span>
+                    <div id="labor">
+                        <label for="contact-message" class="form-label form__label">İşçi qüvvəsi</label>
+                        <div class="input-spinner form-control form__control">
+                            <i class="fa fa-user " id="user1"></i>
+                            <i class="fa fa-user-friends d-none" id="user2"></i>
+                            <i class="fa fa-users d-none" id="userMore"></i>
+                            <div class="number-spinner">
+                                <span class="ns-btn">
+                                    <a>
+                                        <span class="icon-minus" id="icon-minus"></span>
+                                    </a>
+                                </span>
+                                <input type="text" class="pl-ns-value" value="1" maxlength=2 id="spinner">
+                                <span class="ns-btn">
+                                    <a>
+                                        <span class="icon-plus" id="icon-plus"></span>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
                     <!-- SPINNER END-->
                     <!--URGENT START-->
                     <div class="urgent">
                         <span class="form-label form__label">Çatdırılma növü</span>
                         <ul class="nav nav-pills my-3 urgent__list" id="pills-tab" role="tablist">
                             <li class="urgent__list--item">
-                                <a class="all-urgent active-urgent non-urgent-link"
-                                    id="pills-non-urgent-tab" data-toggle="pill" href="#pills-non-urgent"
-                                    role="tab" aria-controls="pills-standart" aria-selected="true"
-                                   >Delivery now <span class="d-block">(ASAP)</span>
+                                <a class="all-urgent active-urgent non-urgent-link" id="pills-non-urgent-tab"
+                                    data-toggle="pill" href="#pills-non-urgent" role="tab"
+                                    aria-controls="pills-standart" aria-selected="true">Delivery now <span
+                                        class="d-block">(ASAP)</span>
                                 </a>
                             </li>
                             <li class="urgent__list--item">
                                 <a class="all-urgent  urgent-link" id="pills-urgent-tab" data-toggle="pill"
                                     href="#pills-urgent" role="tab" aria-controls="pills-urgent"
-                                    aria-selected="false" >Scheduled <span
-                                        class="d-block">(non-urgent)</span></a>
+                                    aria-selected="false">Scheduled <span class="d-block">(non-urgent)</span></a>
                             </li>
 
                         </ul>
@@ -210,9 +204,9 @@
 
                         <ul class="nav nav-pills day" id="pills-tab2" role="tablist">
                             <li class="nav-item day__list">
-                                <a class="nav-link show active day__link" id="pills-monday-tab"
-                                    data-toggle="pill" href="#pills-monday" role="tab"
-                                    aria-controls="pills-monday" aria-selected="true">Monday
+                                <a class="nav-link show active day__link" id="pills-monday-tab" data-toggle="pill"
+                                    href="#pills-monday" role="tab" aria-controls="pills-monday"
+                                    aria-selected="true">Monday
                                     <span>23 September</span></a>
                             </li>
                             <li class="nav-item day__list">
@@ -222,79 +216,149 @@
                             </li>
                             <li class="nav-item day__list datepicker">
                                 <a class="nav-link day__link datepicker__link" id="pills-calendar-tab"
-                                    data-toggle="pill" href="#pills-calendar" role="tab"
-                                    aria-controls="pills-calendar" aria-selected="false">
-                                    <input class="datepicker__input" type="text" id="datepicker"
-                                        autocomplete="off" placeholder="Pick a Date">
+                                    data-toggle="pill" href="#pills-calendar" role="tab" aria-controls="pills-calendar"
+                                    aria-selected="false">
+                                    <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
+                                        placeholder="Pick a Date">
 
                                 </a>
 
                             </li>
                         </ul>
                         <span class="form-label form__label">Delivery time</span>
-                        <div class="tab-content" id="pills-tabContent2">
+                        <div class="tab-content tab" id="pills-tabContent2">
                             <div class="tab-pane times fade show active  tab__pane" id="pills-monday" role="tabpanel"
                                 aria-labelledby="pills-monday-tab">
-                                <input class="times__input " type="radio" name="time" id="time_1"
-                                    value="08:00" />
-                                <label class="times__label disable-label" for="time_1">08:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_2"
-                                    value="10:00" />
-                                <label class="times__label disable-label" for="time_2">10:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_3" value="12:00"
-                                    checked />
-                                <label class="times__label" for="time_3">12:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_4"
-                                    value="14:00" />
-                                <label class="times__label" for="time_4">14:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_5"
-                                    value="16:00" />
-                                <label class="times__label" for="time_5">16:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_6"
-                                    value="18:00" />
-                                <label class="times__label" for="time_6">18:00</label>
+
+                                <ul class="tab__pane__list">
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input " type="radio" name="time" id="time_1"
+                                                value="08:00" />
+                                            <label class="times__label disable-label" for="time_1">08:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_2"
+                                                value="10:00" />
+                                            <label class="times__label disable-label" for="time_2">10:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_3"
+                                                value="12:00" checked />
+                                            <label class="times__label" for="time_3">12:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_4"
+                                                value="14:00" />
+                                            <label class="times__label" for="time_4">14:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_5"
+                                                value="16:00" />
+                                            <label class="times__label" for="time_5">16:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+
+                                            <input class="times__input" type="radio" name="time" id="time_6"
+                                                value="18:00" />
+                                            <label class="times__label" for="time_6">18:00</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="tab-pane fade tab__pane" id="pills-tuesday" role="tabpanel"
                                 aria-labelledby="pills-tuesday-tab">
-                                <input class="times__input" type="radio" name="time" id="time_7"
-                                    value="08:00" />
-                                <label class="times__label" for="time_7">08:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_8"
-                                    value="10:00" />
-                                <label class="times__label" for="time_8">10:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_9"
-                                    value="12:00" />
-                                <label class="times__label" for="time_9">12:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_10"
-                                    value="14:00" />
-                                <label class="times__label" for="time_10">14:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_11"
-                                    value="16:00" />
-                                <label class="times__label" for="time_11">16:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_12"
-                                    value="18:00" />
-                                <label class="times__label" for="time_12">18:00</label>
+                                <ul class="tab__pane__list">
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_7"
+                                                value="08:00" />
+                                            <label class="times__label" for="time_7">08:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group"> <input class="times__input" type="radio" name="time"
+                                                id="time_8" value="10:00" />
+                                            <label class="times__label" for="time_8">10:00</label></div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group"><input class="times__input" type="radio" name="time"
+                                                id="time_9" value="12:00" />
+                                            <label class="times__label" for="time_9">12:00</label></div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group"> <input class="times__input" type="radio" name="time"
+                                                id="time_10" value="14:00" />
+                                            <label class="times__label" for="time_10">14:00</label></div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group"><input class="times__input" type="radio" name="time"
+                                                id="time_11" value="16:00" />
+                                            <label class="times__label" for="time_11">16:00</label></div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group"> <input class="times__input" type="radio" name="time"
+                                                id="time_12" value="18:00" />
+                                            <label class="times__label" for="time_12">18:00</label></div>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="tab-pane fade tab__pane" id="pills-calendar" role="tabpanel"
                                 aria-labelledby="pills-calendar-tab">
-                                <input class="times__input" type="radio" name="time" id="time_13"
-                                    value="08:00" />
-                                <label class="times__label" for="time_13">08:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_14"
-                                    value="10:00" />
-                                <label class="times__label" for="time_14">10:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_15"
-                                    value="12:00" />
-                                <label class="times__label" for="time_15">12:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_16"
-                                    value="14:00" />
-                                <label class="times__label" for="time_16">14:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_17"
-                                    value="16:00" />
-                                <label class="times__label" for="time_17">16:00</label>
-                                <input class="times__input" type="radio" name="time" id="time_18"
-                                    value="18:00" />
-                                <label class="times__label" for="time_18">18:00</label>
+                                <ul class="tab__pane__list">
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_13"
+                                                value="08:00" />
+                                            <label class="times__label" for="time_13">08:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_14"
+                                                value="10:00" />
+                                            <label class="times__label" for="time_14">10:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_15"
+                                                value="12:00" />
+                                            <label class="times__label" for="time_15">12:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_16"
+                                                value="14:00" />
+                                            <label class="times__label" for="time_16">14:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_17"
+                                                value="16:00" />
+                                            <label class="times__label" for="time_17">16:00</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-group">
+                                            <input class="times__input" type="radio" name="time" id="time_18"
+                                                value="18:00" />
+                                            <label class="times__label" for="time_18">18:00</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
@@ -316,7 +380,7 @@
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 map ">
             <div class="d-none d-lg-block transform-flip-y"></div>
             <div id="map_canvas" style="height: 100%;"></div>
-         
+
 
         </div>
 
