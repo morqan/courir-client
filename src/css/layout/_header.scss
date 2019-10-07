@@ -1,0 +1,101 @@
+.language {
+    display: flex;
+
+    align-items: center;
+
+    .globe {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+        @include respondmax(sm) {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+    }
+
+    #language {
+        width: 50px;
+        border: none;
+        -webkit-appearance: none;
+        background-repeat: no-repeat;
+        background-position: left 2%;
+        font-size: 1.25rem;
+        outline: none;
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+            border: none;
+        }
+        @include respondmax(lg) {
+            font-size: 1rem;
+        }
+        @include respondmax(md) {
+            width: 30px;
+            margin-right: 10px;
+        }
+        
+        @include respondmax(sm) {
+            margin-right: 5px;
+        }
+
+        option {
+
+            border: none
+                /* prevent <option>s from becoming transparent as well */
+
+        }
+
+    }
+
+
+}
+
+.login {
+    color: rgba(0, 0, 0, .5);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+
+    @include respondmax(lg) {
+        font-size: 1rem;
+    }
+    @include respondmax(md) {
+        margin-right: 10px;
+    }
+
+
+
+    &:hover {
+        color: rgba(0, 0, 0, .7);
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+
+        @include respondmax(sm) {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+       
+    }
+}
+
+.order-now {
+    @include respondmax(sm) {
+        margin-right: 0 !important;
+    }
+    
+}
+
+#navigation-menu {
+
+
+ 
+}
