@@ -1,80 +1,80 @@
-.navbar {
-    font-size: 16px;
+// .navbar {
+//     font-size: 16px;
 
-    &__language {
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
+//     &__language {
+//         display: flex;
+//         align-items: center;
+//         margin-right: 10px;
 
-        .fa-globe {
-            padding-right: 5px;
+//         .fa-globe {
+//             padding-right: 5px;
 
-        }
+//         }
 
-        &__dropdown {
-            color: rgba(0, 0, 0, .5);
-            appearance: none;
-            font-size: 16px;
+//         &__dropdown {
+//             color: rgba(0, 0, 0, .5);
+//             appearance: none;
+//             font-size: 16px;
 
-            &--menu {
-                min-width: 4rem !important;
-                font-size: 16px;
-                padding: 0;
-            }
+//             &--menu {
+//                 min-width: 4rem !important;
+//                 font-size: 16px;
+//                 padding: 0;
+//             }
 
-            .dropdown-toggle {
-                color: rgba(0, 0, 0, .5);
+//             .dropdown-toggle {
+//                 color: rgba(0, 0, 0, .5);
 
-                &:after {
-                    display: none;
-                }
+//                 &:after {
+//                     display: none;
+//                 }
 
-            }
-        }
-    }
+//             }
+//         }
+//     }
 
-    &__login {
-        color: rgba(0, 0, 0, .5);
-        font-size: 18px;
-        display: flex;
-        align-items: center;
+//     &__login {
+//         color: rgba(0, 0, 0, .5);
+//         font-size: 18px;
+//         display: flex;
+//         align-items: center;
 
 
-        @include respondmax(lg) {
-            font-size: 1rem;
-        }
+//         @include respondmax(lg) {
+//             font-size: 1rem;
+//         }
 
-        @include respondmax(md) {
-            margin-right: 10px;
-        }
+//         @include respondmax(md) {
+//             margin-right: 10px;
+//         }
 
-        &:hover {
-            color: rgba(0, 0, 0, .7);
-        }
+//         &:hover {
+//             color: rgba(0, 0, 0, .7);
+//         }
 
-        .fa-user {
-            padding-right: 5px;
-        }
+//         .fa-user {
+//             padding-right: 5px;
+//         }
 
-    }
+//     }
 
-    &__order-now {
-        font-size: 14px;
-        color: #ffffff;
+//     &__order-now {
+//         font-size: 14px;
+//         color: #ffffff;
 
-        @include respondmax(sm) {
-            margin-right: 0 !important;
-        }
+//         @include respondmax(sm) {
+//             margin-right: 0 !important;
+//         }
 
-    }
+//     }
 
-    &__toggler {
-        margin-right: 20px;
-        display: block;
-        color: black;
-        background-color: black;
-    }
-}
+//     &__toggler {
+//         margin-right: 20px;
+//         display: block;
+//         color: black;
+//         background-color: black;
+//     }
+// }
 
 
 .sidenav {
@@ -120,13 +120,10 @@
     &__order-now {
         margin-left: 32px;
         margin-top: 5px;
-    
+
     }
 
-    &__hamburger-menu {
-        font-size:30px;cursor:pointer;
-        margin-right: 10px;
-    }
+
 }
 
 
@@ -141,5 +138,119 @@
 
     .sidenav a {
         font-size: 18px;
+    }
+}
+
+.header {
+    display: flex !important;
+    align-items: center !important;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-right: auto;
+        color: rgba(0, 0, 0, .5);
+        margin-bottom: 0;
+        padding-left: 0;
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            &--link {
+                font-size: 18px;
+                color: rgba(0, 0, 0, .5);
+
+                &:hover{
+                     color: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+    }
+
+    &__btn-group {
+        display: flex;
+        align-items: center;
+
+        &__login {
+            color: rgba(0, 0, 0, .5);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+
+            @include respondmax(lg) {
+                font-size: 1rem;
+            }
+
+            @include respondmax(md) {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: rgba(0, 0, 0, .7);
+            }
+
+            .fa-user {
+                padding-right: 5px;
+            }
+
+        }
+
+        &__order-now {
+            font-size: 14px;
+            color: #ffffff;
+            margin-right: 10px !important;
+
+            @include respondmax(sm) {
+                margin-right: 0 !important;
+            }
+
+        }
+    }
+
+    &__language {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        font-size: 18px !important;
+
+        .fa-globe {
+            padding-right: 5px;
+
+        }
+
+        &__dropdown {
+            color: rgba(0, 0, 0, .5);
+            appearance: none;
+            font-size: 18px;
+
+            .dropdown-link {
+                color: rgba(0, 0, 0, .5);
+                font-size: 18px;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &--menu {
+                min-width: 4rem !important;
+                font-size: 16px;
+                padding: 0;
+            }
+
+
+        }
+    }
+
+
+    &__hamburger-menu {
+        font-size: 30px;
+        cursor: pointer;
+        margin-right: 10px;
     }
 }
