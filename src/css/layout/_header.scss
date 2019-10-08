@@ -1,101 +1,145 @@
-.language {
-    display: flex;
+.navbar {
+    font-size: 16px;
 
-    align-items: center;
+    &__language {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
 
-    .globe {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
+        .fa-globe {
+            padding-right: 5px;
 
-        @include respondmax(sm) {
-            width: 15px;
-            height: 15px;
-            margin-right: 5px;
+        }
+
+        &__dropdown {
+            color: rgba(0, 0, 0, .5);
+            appearance: none;
+            font-size: 16px;
+
+            &--menu {
+                min-width: 4rem !important;
+                font-size: 16px;
+                padding: 0;
+            }
+
+            .dropdown-toggle {
+                color: rgba(0, 0, 0, .5);
+
+                &:after {
+                    display: none;
+                }
+
+            }
         }
     }
 
-    #language {
-        width: 50px;
-        border: none;
-        -webkit-appearance: none;
-        background-repeat: no-repeat;
-        background-position: left 2%;
-        font-size: 1.25rem;
-        outline: none;
+    &__login {
+        color: rgba(0, 0, 0, .5);
+        font-size: 18px;
+        display: flex;
+        align-items: center;
 
-        &:-moz-focusring {
-            color: transparent;
-            text-shadow: 0 0 0 #000;
-            border: none;
-        }
+
         @include respondmax(lg) {
             font-size: 1rem;
         }
+
         @include respondmax(md) {
-            width: 30px;
             margin-right: 10px;
         }
-        
-        @include respondmax(sm) {
-            margin-right: 5px;
+
+        &:hover {
+            color: rgba(0, 0, 0, .7);
         }
 
-        option {
-
-            border: none
-                /* prevent <option>s from becoming transparent as well */
-
+        .fa-user {
+            padding-right: 5px;
         }
 
     }
 
+    &__order-now {
+        font-size: 14px;
+        color: #ffffff;
 
+        @include respondmax(sm) {
+            margin-right: 0 !important;
+        }
+
+    }
+
+    &__toggler {
+        margin-right: 20px;
+        display: block;
+        color: black;
+        background-color: black;
+    }
 }
 
-.login {
-    color: rgba(0, 0, 0, .5);
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
 
-    @include respondmax(lg) {
-        font-size: 1rem;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5 !important;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #ccc;
     }
-    @include respondmax(md) {
+
+    &__link {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgba(0, 0, 0, .5);
+        display: block;
+        transition: 0.3s;
+        border-bottom: 2px solid #ccc;
+
+        &:hover {
+            color: rgba(0, 0, 0, .7);
+        }
+    }
+
+    &__login {
+        padding: 8px 8px 8px 32px;
+        font-size: 18px;
+    }
+
+    &__order-now {
+        margin-left: 32px;
+        margin-top: 5px;
+    
+    }
+
+    &__hamburger-menu {
+        font-size:30px;cursor:pointer;
         margin-right: 10px;
     }
-
-
-
-    &:hover {
-        color: rgba(0, 0, 0, .7);
-    }
-
-    &__icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
-
-
-        @include respondmax(sm) {
-            width: 15px;
-            height: 15px;
-            margin-right: 5px;
-        }
-       
-    }
 }
 
-.order-now {
-    @include respondmax(sm) {
-        margin-right: 0 !important;
+
+
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
     }
-    
-}
 
-#navigation-menu {
-
-
- 
+    .sidenav a {
+        font-size: 18px;
+    }
 }
