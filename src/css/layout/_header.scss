@@ -1,81 +1,3 @@
-// .navbar {
-//     font-size: 16px;
-
-//     &__language {
-//         display: flex;
-//         align-items: center;
-//         margin-right: 10px;
-
-//         .fa-globe {
-//             padding-right: 5px;
-
-//         }
-
-//         &__dropdown {
-//             color: rgba(0, 0, 0, .5);
-//             appearance: none;
-//             font-size: 16px;
-
-//             &--menu {
-//                 min-width: 4rem !important;
-//                 font-size: 16px;
-//                 padding: 0;
-//             }
-
-//             .dropdown-toggle {
-//                 color: rgba(0, 0, 0, .5);
-
-//                 &:after {
-//                     display: none;
-//                 }
-
-//             }
-//         }
-//     }
-
-//     &__login {
-//         color: rgba(0, 0, 0, .5);
-//         font-size: 18px;
-//         display: flex;
-//         align-items: center;
-
-
-//         @include respondmax(lg) {
-//             font-size: 1rem;
-//         }
-
-//         @include respondmax(md) {
-//             margin-right: 10px;
-//         }
-
-//         &:hover {
-//             color: rgba(0, 0, 0, .7);
-//         }
-
-//         .fa-user {
-//             padding-right: 5px;
-//         }
-
-//     }
-
-//     &__order-now {
-//         font-size: 14px;
-//         color: #ffffff;
-
-//         @include respondmax(sm) {
-//             margin-right: 0 !important;
-//         }
-
-//     }
-
-//     &__toggler {
-//         margin-right: 20px;
-//         display: block;
-//         color: black;
-//         background-color: black;
-//     }
-// }
-
 
 .sidenav {
     height: 100%;
@@ -89,6 +11,10 @@
     transition: 0.5s;
     padding-top: 60px;
 
+    @include respondmax(lg) {
+        padding-top: 40px;
+     }
+
     .closebtn {
         position: absolute;
         top: 0;
@@ -98,10 +24,16 @@
         color: #ccc;
     }
 
+    &__btn-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
     &__link {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 18px;
         color: rgba(0, 0, 0, .5);
         display: block;
         transition: 0.3s;
@@ -114,32 +46,28 @@
 
     &__login {
         padding: 8px 8px 8px 32px;
-        font-size: 18px;
+        font-size: 18px !important;
+
+        .fa-user {
+    
+            font-size: 13px !important;
+        }
+
+        &--span {
+            font-size: 13px;
+        }
     }
 
     &__order-now {
         margin-left: 32px;
         margin-top: 5px;
-
+        padding: 5px 10px;
+        font-size: 14px !important;
     }
 
 
 }
 
-
-
-
-
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
 
 .header {
     display: flex !important;
@@ -153,6 +81,9 @@
         color: rgba(0, 0, 0, .5);
         margin-bottom: 0;
         padding-left: 0;
+        @include respondmax(lg) {
+            display: none;
+         }
 
         &__item {
             &:not(:last-child) {
@@ -164,7 +95,7 @@
                 color: rgba(0, 0, 0, .5);
 
                 &:hover{
-                     color: rgba(0, 0, 0, .5);
+                     color: rgba(0, 0, 0, .7);
                 }
             }
         }
@@ -174,12 +105,16 @@
         display: flex;
         align-items: center;
 
+        @include respondmax(lg) {
+            display: none;
+         }
+
         &__login {
             color: rgba(0, 0, 0, .5);
             font-size: 18px;
             display: flex;
             align-items: center;
-            margin-right: 10px;
+            margin-right: 15px;
 
 
             @include respondmax(lg) {
@@ -196,12 +131,13 @@
 
             .fa-user {
                 padding-right: 5px;
+                font-size: 14px;
             }
 
         }
 
         &__order-now {
-            font-size: 14px;
+            font-size: 13px;
             color: #ffffff;
             margin-right: 10px !important;
 
@@ -215,18 +151,22 @@
     &__language {
         display: flex;
         align-items: center;
-        margin-right: 10px;
+        margin-right: 15px;
         font-size: 18px !important;
-
+        @include respondmax(lg) {
+           margin-left: auto;
+        
+         }
         .fa-globe {
             padding-right: 5px;
-
+font-size: 14px;
         }
 
         &__dropdown {
             color: rgba(0, 0, 0, .5);
             appearance: none;
             font-size: 18px;
+            cursor: pointer;
 
             .dropdown-link {
                 color: rgba(0, 0, 0, .5);
@@ -238,9 +178,18 @@
             }
 
             &--menu {
-                min-width: 4rem !important;
+                min-width: 3rem !important;
                 font-size: 16px;
                 padding: 0;
+                left: 0;
+
+                &--item {
+                    padding: 2px;
+                    padding-left: 10px;
+                    &:hover{
+                        color: rgba(0, 0, 0, .7);
+                    }
+                }
             }
 
 
@@ -251,6 +200,9 @@
     &__hamburger-menu {
         font-size: 30px;
         cursor: pointer;
-        margin-right: 10px;
+        display: none;
+        @include respondmax(lg) {
+           display: block;
+        }
     }
 }
