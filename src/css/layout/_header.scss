@@ -1,18 +1,31 @@
+
+
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 999;
+    z-index: 999 !important;
     top: 0;
     left: 0;
     background-color: #ffffff !important;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 16px;
+    margin: auto;
 
     @include respondmax(lg) {
         padding-top: 16px;
+        // max-width: 960px;
+        // margin: auto !important;
     }
+    
+    // @include respondmax(md) {
+    //     max-width: 720px;
+    // }
+    // @include respondmax(sm) {
+    //     max-width: 540px;
+    // }
+  
 
     &__logo-group {
         display: flex;
@@ -29,6 +42,9 @@
             margin-right: 15px;
             font-size: 20px !important;
 
+            @include respondmax(sm) {
+                margin-right: 50px !important;
+            }
             .fa-globe{
                 padding-right: 5px;
             }
@@ -42,6 +58,9 @@
         right: 30px;
         font-size: 45px;
         color: #555a64;
+        @include respondmax(sm) {
+            right: 15px;
+        }
     }
 
     &__btn-group {
@@ -79,11 +98,11 @@
 
         .fa-user {
 
-            font-size: 16px !important;
+            font-size: 18px !important;
         }
 
         &--span {
-            font-size: 16px;
+            font-size: 18px !important;
         }
     }
 
