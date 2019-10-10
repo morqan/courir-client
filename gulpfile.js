@@ -22,7 +22,8 @@ var path = {
         css: 'build/css/main/',
         images: 'build/img/',
         fonts: 'build/fonts/',
-        libs: 'build/libs/' //bower ile src klasörüne yüklediğim dosyaları build klasörüne eklemek için 
+        libs: 'build/libs/', //bower ile src klasörüne yüklediğim dosyaları build klasörüne eklemek için 
+        assets: 'build/assets'
     },
     src: { //Burası kaynaklar
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -31,7 +32,8 @@ var path = {
         css: 'src/css/main.scss',
         images: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        libs: 'src/libs/**/'
+        libs: 'src/libs/**/',
+        assets: 'src/assets/**/*.*'
     },
     watch: { //Burada izlemek istediğimiz dosyaları belirtiyoruz
         html: 'src/**/*.html',
@@ -40,7 +42,8 @@ var path = {
         css: 'src/css/**/*.scss',
         images: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
-        libs: 'src/libs/'
+        libs: 'src/libs/',
+        assets: 'src/assets/**/*.*'
     },
 };
 
@@ -110,6 +113,15 @@ gulp.task('libs:build', function () {
     .pipe(gulp.dest(path.build.libs));
 });
 
+gulp.task('copy:build', function () {
+    gulp.src(path.src.assets) 
+    .on('error', function(err) {
+        console.log(err)
+        this.emit('end')
+    })
+    .pipe(gulp.dest(path.build.assets));
+});
+
 
 gulp.task('vendor:build', function () {
     gulp.src(path.src.vendor) 
@@ -140,7 +152,8 @@ gulp.task('build', [
     'fonts:build',
     'image:build',
     'libs:build',
-    'vendor:build'
+    'vendor:build',
+    'copy:build'
     ]);
 
 
@@ -172,3 +185,14 @@ gulp.task('watch', function(){
 
 
 gulp.task('default', ['build', 'watch']);
+
+
+
+// function copy() {
+//     return src('./src/assets/**/*')
+     
+//         .pipe(dest('./build/assets/'))
+
+// }
+
+// exports.copy = copy;

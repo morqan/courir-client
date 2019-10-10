@@ -8,7 +8,7 @@
 
   $('#openNav').click(function () {
     $('#mySidenav').css({
-      'width': '250px'
+      'width': '100vw',
     });
   });
   $('#closeNav').click(function () {

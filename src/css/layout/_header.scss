@@ -1,4 +1,3 @@
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -6,38 +5,63 @@
     z-index: 999;
     top: 0;
     left: 0;
-    background-color: #f5f5f5 !important;
+    background-color: #ffffff !important;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 
     @include respondmax(lg) {
-        padding-top: 40px;
-     }
+        padding-top: 16px;
+    }
+
+    &__logo-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__img {
+            margin-left: 32px;
+        }
+
+        &__language{
+            display: flex;
+            margin-right: 70px !important;
+            margin-right: 15px;
+            font-size: 20px !important;
+
+            .fa-globe{
+                padding-right: 5px;
+            }
+            
+        }
+    }
 
     .closebtn {
         position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        color: #ccc;
+        top: 10px;
+        right: 30px;
+        font-size: 45px;
+        color: #555a64;
     }
 
     &__btn-group {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     &__link {
-        padding: 8px 8px 8px 32px;
+        margin: 8px 32px;
+        padding: 5px 0;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 16px;
         color: rgba(0, 0, 0, .5);
         display: block;
         transition: 0.3s;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 1px solid #cccccc;
+  
 
         &:hover {
             color: rgba(0, 0, 0, .7);
@@ -45,22 +69,26 @@
     }
 
     &__login {
-        padding: 8px 8px 8px 32px;
         font-size: 18px !important;
+        margin-right: 32px;
+        color: rgba(0, 0, 0, .5);
+
+        &:hover {
+            color: rgba(0, 0, 0, .7);
+        }
 
         .fa-user {
-    
-            font-size: 13px !important;
+
+            font-size: 16px !important;
         }
 
         &--span {
-            font-size: 13px;
+            font-size: 16px;
         }
     }
 
     &__order-now {
         margin-left: 32px;
-        margin-top: 5px;
         padding: 5px 10px;
         font-size: 14px !important;
     }
@@ -72,6 +100,7 @@
 .header {
     display: flex !important;
     align-items: center !important;
+    padding: 1rem 0;
 
     &__nav {
         display: flex;
@@ -81,9 +110,10 @@
         color: rgba(0, 0, 0, .5);
         margin-bottom: 0;
         padding-left: 0;
+
         @include respondmax(lg) {
             display: none;
-         }
+        }
 
         &__item {
             &:not(:last-child) {
@@ -91,11 +121,11 @@
             }
 
             &--link {
-                font-size: 18px;
+                font-size: 20px;
                 color: rgba(0, 0, 0, .5);
 
-                &:hover{
-                     color: rgba(0, 0, 0, .7);
+                &:hover {
+                    color: rgba(0, 0, 0, .7);
                 }
             }
         }
@@ -107,11 +137,11 @@
 
         @include respondmax(lg) {
             display: none;
-         }
+        }
 
         &__login {
             color: rgba(0, 0, 0, .5);
-            font-size: 18px;
+            font-size: 20px;
             display: flex;
             align-items: center;
             margin-right: 15px;
@@ -131,15 +161,15 @@
 
             .fa-user {
                 padding-right: 5px;
-                font-size: 14px;
+                font-size: 20px;
             }
 
         }
 
         &__order-now {
-            font-size: 13px;
+            font-size: 16px;
             color: #ffffff;
-            margin-right: 10px !important;
+
 
             @include respondmax(sm) {
                 margin-right: 0 !important;
@@ -152,41 +182,48 @@
         display: flex;
         align-items: center;
         margin-right: 15px;
-        font-size: 18px !important;
+        font-size: 20px !important;
+
         @include respondmax(lg) {
-           margin-left: auto;
-        
-         }
+            margin-left: auto;
+
+        }
+
         .fa-globe {
             padding-right: 5px;
-font-size: 14px;
+            font-size: 20px;
         }
 
         &__dropdown {
             color: rgba(0, 0, 0, .5);
             appearance: none;
-            font-size: 18px;
+            font-size: 20px;
             cursor: pointer;
 
             .dropdown-link {
                 color: rgba(0, 0, 0, .5);
-                font-size: 18px;
+                font-size: 20px;
 
                 &:after {
                     display: none;
+                }
+
+                &:hover {
+                    color: rgba(0, 0, 0, .7);
                 }
             }
 
             &--menu {
                 min-width: 3rem !important;
-                font-size: 16px;
+                font-size: 18px;
                 padding: 0;
                 left: 0;
 
                 &--item {
                     padding: 2px;
                     padding-left: 10px;
-                    &:hover{
+
+                    &:hover {
                         color: rgba(0, 0, 0, .7);
                     }
                 }
@@ -201,8 +238,9 @@ font-size: 14px;
         font-size: 30px;
         cursor: pointer;
         display: none;
+
         @include respondmax(lg) {
-           display: block;
+            display: block;
         }
     }
 }
