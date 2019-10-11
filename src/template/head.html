@@ -3,182 +3,213 @@
 
 <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-17"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-52115242-17');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52115242-17"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <meta charset="utf-8">
-    <title>Jumpstart SaaS App & Software Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bootstrap HTML template and UI kit by Medium Rare">
-    <!-- Begin loading animation -->
-    <style>
-      @keyframes hideLoader{ 0%{ width: 100%; height: 100%; } 100%{ width: 0; height: 0; } } body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center; } body:not(.loaded) > div.loader{ opacity: 1; } body:not(.loaded){ overflow: hidden; } body.loaded > div.loader{ animation: hideLoader .5s linear .5s forwards; } .loading-animation{width:40px;height:40px;margin:100px auto;background-color:#2568ef;border-radius:100%;animation:pulse 1s infinite ease-in-out}@keyframes pulse{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
-    </style>
-    <script type="text/javascript">
-      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
-    </script>
-    <!-- End loading animation -->
-    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-52115242-17');
+  </script>
+
+  <meta charset="utf-8">
+  <title>Jumpstart SaaS App & Software Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bootstrap HTML template and UI kit by Medium Rare">
+  <!-- Begin loading animation -->
+  <style>
+    @keyframes hideLoader {
+      0% {
+        width: 100%;
+        height: 100%;
+      }
+
+      100% {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    body>div.loader {
+      position: fixed;
+      background: white;
+      width: 100%;
+      height: 100%;
+      z-index: 1071;
+      opacity: 0;
+      transition: opacity .5s ease;
+      overflow: hidden;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body:not(.loaded)>div.loader {
+      opacity: 1;
+    }
+
+    body:not(.loaded) {
+      overflow: hidden;
+    }
+
+    body.loaded>div.loader {
+      animation: hideLoader .5s linear .5s forwards;
+    }
+
+    .loading-animation {
+      width: 40px;
+      height: 40px;
+      margin: 100px auto;
+      background-color: #2568ef;
+      border-radius: 100%;
+      animation: pulse 1s infinite ease-in-out
+    }
+
+    @keyframes pulse {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      document.querySelector('body').classList.add('loaded');
+    });
+  </script>
+  <!-- End loading animation -->
+  <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
 
 
 
-  
-<!-- 
+
+  <!-- 
     <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-<!-- FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
-    <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
-    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
-
-
-
-    <!-- <link rel="stylesheet" href="../css/intlTelInput.css"> -->
-    <link rel="stylesheet" href="css/main/main.css">
+  <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
 
 
-    <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="../css/intlTelInput.css"> -->
+  <link rel="stylesheet" href="css/main/main.css">
+
+
+  <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../libs/intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
 </head>
 
 <body>
-    <!--[if lte IE 9]>
+  <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <header>
-                <div class="container">
-                  <div class="header">
-                    <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index-2.html">
-                      <img alt="Logo" src="img/logo.png">
-                    </a>
-              
-                    <ul class="header__nav">
-                      <li class="header__nav__item">
-                        <a aria-expanded="false" aria-haspopup="true" class="header__nav__item--link" href="#" role="button">Be
-                          carrier</a>
-                      </li>
-                      <li class="header__nav__item">
-                        <a aria-expanded="false" aria-haspopup="true" class="header__nav__item--link" href="#" role="button">For
-                          Costumer</a>
-                      </li>
-                      <li class="header__nav__item">
-                        <a aria-expanded="false" aria-haspopup="true" class="header__nav__item--link" href="#"
-                          role="button">Business</a>
-                      </li>
-                      <li class="header__nav__item">
-                        <a aria-expanded="false" aria-haspopup="true" class="header__nav__item--link" href="#" role="button">Help</a>
-                      </li>
-                    </ul>
-                    <div class="header__language">
-                      <div class="dropdown ">
-                        <a aria-expanded="true" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Features</a>
-                        <div class="row dropdown-menu show" style="left: -799px;">
-                          <div class="col-auto" data-dropdown-content="" style="left: 799px;">
-                            <div class="dropdown-grid-menu"><a href="style-guide.html" class="dropdown-item fade-page">Style Guide</a><a href="plugins.html" class="dropdown-item fade-page">Plugins</a><a href="navigation-bars.html" class="dropdown-item fade-page">Navigation Bars</a>
-                            </div>
-                          </div>
+
+<header class="header">
+<div class="container header__container">
+  <div class="navbar-container">
+    <nav class="navbar header__navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index-2.html">
+          <img alt="Jumpstart" data-inject-svg src="assets/img/logos/jumpstart.svg">
+        </a>
+        <div class="collapse navbar-collapse order-2 order-lg-1 justify-content-lg-start" id="navigation-menu">
+          <ul class="navbar-nav header__navbar-nav my-3 my-lg-0">
+            <li class="nav-item">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#" role="button">Be career
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#" role="button">For
+                Costumer
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#" role="button">Business
+              </a>
+            </li>
+            <li class="nav-item">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#" role="button">Help
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="collapse navbar-collapse header__collapse order-1 order-lg-3 justify-content-lg-end navbar-nav" id="navigation-menu2">
+            <a href="" class="nav-link nav-item">
+                <i class="far fa-user"></i>
+                Log in
+              </a>
+              <a href="#" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-sm-block order-lg-3">Order Now</a>
+        </div>
+
+        <div class="d-flex align-items-center order-lg-2 justify-content-lg-end">
+         
+              <div class="dropdown">
+                  <a  href="#"
+                class=" dropdown-toggle nav-link nav-item header__language" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-globe"></i>  En
+                  </a>
+                  <div class="dropdown-menu  header__language__menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item  header__language__menu--item" href="#">Ru</a>
+                    <a class="dropdown-item header__language__menu--item" href="#">Az</a>
+                 
+                  </div>
+               
+          </div>
+            
+            <!-- <ul class="navbar-nav my-3 my-lg-0">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item header__language"
+                      data-toggle="dropdown-grid" href="#" role="button">
+                      <i class="fas fa-globe"></i>En</a>
+                    <div class="row dropdown-menu header__language__menu">
+                      <div class="col-auto" data-dropdown-content>
+                        <div class="dropdown-grid-menu  header__language__grid-menu">
+                          <a href="style-guide.html" class="dropdown-item fade-page">Ru</a>
+                          <a href="plugins.html" class="dropdown-item fade-page">Az</a>
                         </div>
                       </div>
-                      
                     </div>
-                    <div class="header__btn-group">
-                      <a href="" class="header__btn-group__login">
-                        <i class="far fa-user"></i>
-                        <span>Log in</span>
-                      </a>
-                      <a href="#" class="btn btn-primary header__btn-group__order-now">Order Now</a>
-                    </div>
-                    <span class="header__hamburger-menu " id="openNav">&#9776;</span>
                   </div>
-                </div>
-             
-                <div id="mySidenav" class="sidenav">
-                  <div class="sidenav__logo-group">
-                      <a class="navbar-brand navbar-brand-dynamic-color fade-page sidenav__logo-group__img" href="index-2.html">
-                          <img alt="Logo" src="img/logo.png">
-                        </a>
-                      
-                  </div>
-                    
-                  <div class="sidenav__btn-group">
-                    <div>  <a href="#" class="btn btn-primary navbar__order-now sidenav__order-now ">Order
-                        Now</a></div>
-                    
-                          <a href="" class=" sidenav__login">
-                              <i class="far fa-user"></i>
-                              <span class="sidenav__login--span">Log in</span>
-                            </a>
-                  </div>
-                  <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
-                  <a aria-expanded="false" aria-haspopup="true" class="sidenav__link " href="#" role="button">Be
-                    carrier</a>
-                  <a aria-expanded="false" aria-haspopup="true" class="sidenav__link" href="#" role="button">For
-                    Costumer</a>
-                  <a aria-expanded="false" aria-haspopup="true" class="sidenav__link" href="#" role="button">Business</a>
-                  <a aria-expanded="false" aria-haspopup="true" class="sidenav__link" href="#" role="button">Help</a>
-                 
-                  
-                </div>
+                </li>
+              </ul> -->
             
-              </header>
-
-
-
-              <!-- <div class="navbar-container">
-                <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
-                  <div class="container">
-                    <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index-2.html">
-                      <img alt="Jumpstart" data-inject-svg src="assets/img/logos/jumpstart.svg">
-                    </a>
-                    <div class="d-flex align-items-center order-lg-3">
-                      <a href="#" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Order Now</a>
-                      <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-                        <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" data-inject-svg src="assets/img/icons/interface/icon-menu.svg">
-                        <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm" data-inject-svg src="assets/img/icons/interface/icon-x.svg">
-                      </button>
-                    </div>
-                    <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-start" id="navigation-menu">
-                      <ul class="navbar-nav my-3 my-lg-0">
-                          <li class="nav-item">
-                              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item"
-                                 href="#" role="button">Be career
-                                </a>
-                          </li>
-                          <li class="nav-item">
-                              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item"
-                                 href="#" role="button">For Costumer
-                                </a>
-                          </li>
-                          <li class="nav-item">
-                              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item"
-                                 href="#" role="button">Business
-                                </a>
-                          </li>
-                          <li class="nav-item">
-                              <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item"
-                                 href="#" role="button">Help
-                                </a>
-                          </li>
-                      </ul>
-                    </div>
-                  </div>
-                </nav>
-              </div> -->
+            <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler header__toggler"
+              data-target=".navbar-collapse" data-toggle="collapse" type="button">
+              <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" data-inject-svg
+                src="assets/img/icons/interface/icon-menu.svg">
+              <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm" data-inject-svg
+                src="assets/img/icons/interface/icon-x.svg">
+            </button>
+          </div>
+      </div>
+    </nav>
+  </div>
+</div>
+</header>
