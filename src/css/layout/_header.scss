@@ -1,265 +1,72 @@
-
-
-.sidenav {
-    height: 100%;
-    width: 0;
+.header{
     position: fixed;
-    z-index: 999 !important;
-    top: 0;
-    left: 0;
-    background-color: #ffffff !important;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 16px;
-    margin: auto;
+    background-color: #ffffff;
+    z-index: 999;
+    width: 100vw;
 
-    @include respondmax(lg) {
-        padding-top: 16px;
-        // max-width: 960px;
-        // margin: auto !important;
+   
+
+
+    &__container{
+        z-index: 999;
+        background-color: #ffffff;
     }
-    
-    // @include respondmax(md) {
-    //     max-width: 720px;
-    // }
-    // @include respondmax(sm) {
-    //     max-width: 540px;
-    // }
-  
-
-    &__logo-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__img {
-            margin-left: 32px;
-        }
-
-        &__language{
-            display: flex;
-            margin-right: 70px !important;
-            margin-right: 15px;
-            font-size: 20px !important;
-
-            @include respondmax(sm) {
-                margin-right: 50px !important;
-            }
-            .fa-globe{
-                padding-right: 5px;
-            }
-            
-        }
+    &__navbar{
+        z-index: 999;
+        background-color: #ffffff;
+        max-width: 100% !important;
+        width: 100% !important;
+        left: 0 !important;
     }
 
-    .closebtn {
-        position: absolute;
-        top: 10px;
-        right: 30px;
-        font-size: 45px;
-        color: #555a64;
-        @include respondmax(sm) {
-            right: 15px;
-        }
-    }
+   
 
-    &__btn-group {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-
-    &__link {
-        margin: 8px 32px;
-        padding: 5px 0;
-        text-decoration: none;
-        font-size: 16px;
-        color: rgba(0, 0, 0, .5);
-        display: block;
-        transition: 0.3s;
-        border-bottom: 1px solid #cccccc;
-  
-
-        &:hover {
-            color: rgba(0, 0, 0, .7);
-        }
-    }
-
-    &__login {
-        font-size: 18px !important;
-        margin-right: 32px;
-        color: rgba(0, 0, 0, .5);
-
-        &:hover {
-            color: rgba(0, 0, 0, .7);
-        }
-
-        .fa-user {
-
-            font-size: 18px !important;
-        }
-
-        &--span {
-            font-size: 18px !important;
-        }
-    }
-
-    &__order-now {
-        margin-left: 32px;
-        padding: 5px 10px;
-        font-size: 14px !important;
-    }
-
-
-}
-
-
-.header {
-    display: flex !important;
-    align-items: center !important;
-    padding: 1rem 0;
-
-    &__nav {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        margin-right: auto;
-        color: rgba(0, 0, 0, .5);
-        margin-bottom: 0;
-        padding-left: 0;
-
+    &__navbar-nav { 
         @include respondmax(lg) {
-            display: none;
-        }
-
-        &__item {
-            &:not(:last-child) {
-                margin-right: 15px;
-            }
-
-            &--link {
-                font-size: 20px;
-                color: rgba(0, 0, 0, .5);
-
-                &:hover {
-                    color: rgba(0, 0, 0, .7);
-                }
-            }
-        }
+           margin-top: 0 !important;
+         }
     }
-
-    &__btn-group {
-        display: flex;
-        align-items: center;
-
+    &__collapse {
+        flex-grow: 0;
         @include respondmax(lg) {
-            display: none;
-        }
-
-        &__login {
-            color: rgba(0, 0, 0, .5);
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            margin-right: 15px;
-
-
-            @include respondmax(lg) {
-                font-size: 1rem;
-            }
-
-            @include respondmax(md) {
-                margin-right: 10px;
-            }
-
-            &:hover {
-                color: rgba(0, 0, 0, .7);
-            }
-
-            .fa-user {
-                padding-right: 5px;
-                font-size: 20px;
-            }
-
-        }
-
-        &__order-now {
-            font-size: 16px;
-            color: #ffffff;
-
-
-            @include respondmax(sm) {
-                margin-right: 0 !important;
-            }
-
+           display: flex;
+           flex-direction: row-reverse;
+           justify-content: space-between;
+           padding: 20px 0;
+           border-bottom: 1px solid #cccccc;
+           border-top: 1px solid #cccccc;
+           margin: 20px 0;
         }
     }
 
     &__language {
-        display: flex;
-        align-items: center;
-        margin-right: 15px;
-        font-size: 20px !important;
+        color: rgba(0,0,0,.5);
+        font-size: 20px;
 
-        @include respondmax(lg) {
-            margin-left: auto;
-
+        &:hover{
+            color: rgba(0,0,0,.7);
         }
-
         .fa-globe {
-            padding-right: 5px;
-            font-size: 20px;
+            margin-right: 5px;
         }
 
-        &__dropdown {
-            color: rgba(0, 0, 0, .5);
-            appearance: none;
-            font-size: 20px;
-            cursor: pointer;
+        &__menu {
+        min-width: 5rem !important;
 
-            .dropdown-link {
-                color: rgba(0, 0, 0, .5);
-                font-size: 20px;
-
-                &:after {
-                    display: none;
-                }
-
-                &:hover {
-                    color: rgba(0, 0, 0, .7);
-                }
+        &--item {
+            &:hover{
+                color: rgba(0,0,0,.7);
             }
-
-            &--menu {
-                min-width: 3rem !important;
-                font-size: 18px;
-                padding: 0;
-                left: 0;
-
-                &--item {
-                    padding: 2px;
-                    padding-left: 10px;
-
-                    &:hover {
-                        color: rgba(0, 0, 0, .7);
-                    }
-                }
-            }
-
-
+        }
+        }
+        &__grid-menu {
+            min-width: 5rem !important;
         }
     }
 
-
-    &__hamburger-menu {
-        font-size: 30px;
-        cursor: pointer;
-        display: none;
-
-        @include respondmax(lg) {
-            display: block;
+    &__toggler {
+        &:focus {
+            outline: none;
         }
     }
 }

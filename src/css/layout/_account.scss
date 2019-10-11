@@ -1,0 +1,54 @@
+.gender-label {
+
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #555a64;
+    width: 100%;
+    padding: 10px 20px !important;
+    border-radius: 3px;
+    font-size: 16px;
+
+}
+
+.gender-input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
+
+    &:checked+label {
+        background-color: #00CED1;
+        color: #ffffff;
+    }
+}
+
+.order-card {
+
+    &__img {}
+
+    &__cancelled {
+        text-align: center;
+        font-size: 13px;
+        background-color: #dc3545;
+        width: 150px;
+        padding: 2px 10px;
+    }
+
+    &__finished {
+        text-align: center;
+        font-size: 13px;
+        background-color: #28a745;
+        width: 150px;
+        padding: 2px 10px;
+    }
+
+    &__date {
+        font-size: 12px;
+    }
+
+    &__border {
+        border-bottom: 2px solid #cccccc;
+        padding-bottom: 4px;
+    }
+}
