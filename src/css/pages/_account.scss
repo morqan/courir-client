@@ -1,0 +1,249 @@
+.account {
+
+
+
+    &__btn {
+        @include respondmax(lg) {
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        @include respondmax(sm) {
+            margin-bottom: 0;
+        }
+
+        &__link {
+            @include respondmax(sm) {
+                width: 100% !important;
+            }
+        }
+
+        &__item {
+            @include respondmax(sm) {
+                width: 100% !important;
+            }
+        }
+    }
+
+    &__nav {
+        flex-wrap: nowrap;
+
+
+        @include respondmax(md) {
+            flex-wrap: wrap;
+        }
+
+        @include respondmax(sm) {
+            width: auto;
+        }
+
+        &__item {
+            @include respondmax(sm) {
+                width: 100%;
+            }
+        }
+
+        &--link {
+            text-align: center;
+
+            @include respondmax(sm) {
+                width: 100%;
+                text-align: left;
+            }
+
+        }
+    }
+}
+
+
+.gender-label {
+
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #555a64;
+    width: 100%;
+    padding: 10px 20px !important;
+    border-radius: 3px;
+    font-size: 16px;
+
+}
+
+.gender-input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
+
+    &:checked+label {
+        background-color: #00CED1;
+        color: #ffffff;
+    }
+}
+
+.order-card {
+
+    @include respondmax(sm) {
+        font-size: 14px;
+    }
+
+    &__div {
+        @include respondmax(sm) {}
+    }
+
+    &__img {}
+
+    &__cancelled {
+        text-align: center;
+        font-size: 13px;
+        background-color: #dc3545 !important;
+        width: 150px;
+        padding: 2px 10px;
+
+        @include respondmax(lg) {
+            width: 100px;
+        }
+    }
+
+    &__finished {
+        text-align: center;
+        font-size: 13px;
+        background-color: #28a745 !important;
+        width: 150px;
+        padding: 2px 10px;
+
+        @include respondmax(lg) {
+            width: 100px;
+        }
+    }
+
+    &__date {
+        font-size: 12px;
+    }
+
+    &__border {
+        border-bottom: 2px solid #cccccc;
+        padding-bottom: 4px;
+    }
+
+    &__money-group {
+        @include respondmax(lg) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+
+        }
+
+        @include respondmax(md) {
+
+            margin-top: 15px;
+
+        }
+    }
+}
+
+
+
+.order2 {
+    &__div {
+        display: flex;
+        flex-direction: column;
+
+
+        &__input {
+            background-color: #fff;
+            padding: 10px;
+            padding-left: 20px;
+            width: 90%;
+            margin: 1rem auto;
+            border-radius: 20px;
+            align-items: center;
+
+            @include respondmax(sm) {
+
+                width: 100%;
+
+            }
+
+            &--note {
+                width: 100%;
+
+                &--div {
+                    border-bottom: 1px solid #cccccc;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            &--span {
+                font-size: 13px;
+                color: #818490;
+            }
+        }
+
+        &__img {
+            display: flex;
+            justify-content: space-between;
+
+            width: 90%;
+            margin: auto;
+            margin-top: 1rem;
+
+            @include respondmax(sm) {
+                flex-wrap: wrap;
+                width: 100%;
+
+            }
+
+            &--div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20% !important;
+                width: 150px;
+                height: 150px;
+                background-color: #00CED1;
+                color: #fff;
+
+                @include respondmax(sm) {
+                    width: 100px !important;
+                    height: 100px;
+                    margin-top: 10px;
+                }
+
+                img {
+                    border-radius: 20%;
+                }
+            }
+        }
+
+        &__img-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            &--img {
+                width: 100px;
+                height: 100px;
+                margin-right: 20px;
+            }
+
+            &--span {
+                font-size: 20px;
+            }
+        }
+    }
+
+
+}
+
+.billing {
+
+    &__custom-control {
+        @include respondmax(sm) {
+           padding-left: 0 !important;
+        }
+    }
+}
