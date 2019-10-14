@@ -43,6 +43,10 @@
         color: rgba(0,0,0,.5);
         font-size: 20px;
 
+        @include respondmax(sm) {
+          font-size: 13px;
+          }
+
         &:hover{
             color: rgba(0,0,0,.7);
         }
@@ -52,6 +56,10 @@
 
         &__menu {
         min-width: 5rem !important;
+
+        @include respondmax(sm) {
+            min-width: 3rem !important;
+            }
 
         &--item {
             &:hover{
