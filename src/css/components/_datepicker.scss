@@ -14,7 +14,7 @@
         background-color: transparent;
         font-size: 15px;
         font-weight: bold;
-        color: #1f1f1f;
+        color: #000000 !important;
         border-radius: 0.5rem;
         padding-left: 10px;
 
@@ -24,11 +24,11 @@
 
         &:hover {
             color: #ffffff !important;
-            background-color: #47b475 !important;
+            background-color: $color-primary !important;
             transition: all .3s;
 
             &::placeholder {
-                color: #ffffff !important;
+                color: #ffffff!important;
                 transition: all 0.3s !important;
             }
 
@@ -37,7 +37,7 @@
 
         &::placeholder {
             padding-left: 4px;
-            color: #1f1f1f !important;
+            color: #000000 !important;
             font-weight: bold;
         }
 

@@ -8,10 +8,13 @@
             font-weight: bold;
             text-align: center;
             color: #000000;
-           
+           .all-urgent{
+               background-color: $color-secondary;
+           }
 
             .active-urgent {
-                background-color: #ffc61a !important;
+                background-color: $color-primary !important;
+                color: #ffffff !important;
             }
 
         
@@ -26,7 +29,7 @@
                 &:hover {
                     text-decoration: none;
                     cursor: pointer;
-                    background-color: #47b475;
+            
                     transition: all .3s;
                 }
             }
@@ -36,12 +39,11 @@
                 color: #000000;
                 display: block;
                 padding: 10px;
-                background-color: #ffffff;
+                background-color: $color-secondary;
     
                 &:hover {
                     text-decoration: none;
                     cursor: pointer;
-                    background-color: #47b475;
                     transition: all .3s;
                 }
             }

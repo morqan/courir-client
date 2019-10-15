@@ -21,32 +21,35 @@
     text-align: center;
 
     .active {
-      background-color: #47b475 !important;
-      color: #1f1f1f;
+      background-color: $color-primary !important;
+      color: #ffffff !important;
     }
   }
 
   &__link {
     width: 100px;
     height: 80px;
-    background-color: #ffc61a !important;
+    background-color: $color-secondary!important;
     font-size: 16px;
     font-weight: bold;
-    font-family: 'Fira Sans', sans-serif !important;
+    font-family: 'Nunito', sans-serif;
     padding: 10px !important;
-    color: #1f1f1f;
-
+    color: #000000;
 
     &:hover {
       color: #ffffff !important;
-      background-color: #47b475 !important;
+      background-color: $color-primary !important;
       transition: all .3s;
     }
 
 
     &:focus {
-      background-color: #47b475 !important;
-      color: #1f1f1f;
+      background-color: $color-primary !important;
+      color: #ffffff;
+    }
+
+    &--span {
+      font-size: 15px !important;
     }
   }
 }
