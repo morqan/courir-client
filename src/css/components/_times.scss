@@ -9,8 +9,8 @@
 
         text-align: center;
         cursor: pointer;
-        background-color: #cccccc;
-        color: white;
+        background-color: $color-secondary;
+        color: black;
       padding: 5px 9px !important;
         border-radius: 3px;
         font-size: 16px;
@@ -24,7 +24,8 @@
         display: none;
     
         &:checked+label {
-            background-color: #00CED1;
+            background-color: $color-primary;
+            color: #ffffff;
         }
     }
 }
@@ -36,6 +37,7 @@
 
 .disable-label {
     background-color: #ababab;
+    color: #ffffff;
 }
 
 

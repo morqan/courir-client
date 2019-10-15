@@ -1,0 +1,55 @@
+#verification {
+
+    margin: 10px auto ;
+    display: flex;
+    justify-content: space-between;
+
+    @include respondmax(lg) {
+       margin: 10px 70px;
+    }
+    @include respondmax(md) {
+        margin: 10px 30px;
+     }
+     @include respondmax(sm) {
+        margin: 10px auto;
+     }
+
+    input {
+        margin: 0;
+        text-align: center;
+        line-height: 40px;
+        font-size: 30px;
+        border: solid 1px #ccc;
+        box-shadow: 0 0 5px #ccc inset;
+        outline: none;
+        width: 15%;
+        transition: all .2s ease-in-out;
+        border-radius: 3px;
+
+        @include respondmax(lg) {
+            line-height: 60px;
+        }
+        @include respondmax(sm) {
+            line-height: 40px;
+        }
+
+        &:focus {
+            border-color: #ffc61a;
+            box-shadow: 0 0 5px #ffc61a inset;
+        }
+
+        &::selection {
+            background: transparent;
+        }
+    }
+
+}
+.verification-form {
+    &--div {
+        text-align: center;
+        font-size: 14px;
+        color: #00CED1;
+    }
+}
+
+

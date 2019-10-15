@@ -1,0 +1,65 @@
+.payment {
+    &__dropdown {
+
+        &--btn {
+
+            &:focus {
+
+                box-shadow: none !important;
+            }
+
+            &::before {
+                bottom: 20px !important;
+                background: #F5F5F5;
+                border-left: 1px #ffffff solid;
+                border-top: 1px #ffffff solid;
+                left: 90%;
+            }
+        }
+    }
+
+    &__dropdown-menu {
+        width: 100%;
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            span{
+                position: relative;
+                // background-color: #ffc61a;
+                // border: 1px solid #ccc;
+                // border-radius: 50%;
+                cursor: pointer;
+                // height: 28px;
+                // left: 0;
+                // top: 0;
+                // width: 28px;
+    
+                &:after {
+                    border: 2px solid $color-primary;
+                    border-top: none;
+                    border-right: none;
+                    content: "";
+                    height: 6px;
+                    left: 7px;
+                    opacity: 1;
+                  position: absolute;
+                    top: 8px;
+                    transform: rotate(-45deg);
+                    width: 12px;
+                }
+            }
+        }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
