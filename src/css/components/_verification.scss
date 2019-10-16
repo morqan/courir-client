@@ -34,8 +34,8 @@
         }
 
         &:focus {
-            border-color: #ffc61a;
-            box-shadow: 0 0 5px #ffc61a inset;
+            border-color: $color-primary ;
+            box-shadow: 0 0 5px $color-primary inset;
         }
 
         &::selection {
@@ -48,7 +48,7 @@
     &--div {
         text-align: center;
         font-size: 14px;
-        color: #00CED1;
+        color: $color-primary;
     }
 }
 

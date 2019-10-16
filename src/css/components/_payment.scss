@@ -24,8 +24,14 @@
         &--item {
             display: flex;
             justify-content: space-between;
-            span{
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            .payment-check {
                 position: relative;
+                display: none;
                 // background-color: #ffc61a;
                 // border: 1px solid #ccc;
                 // border-radius: 50%;
@@ -34,7 +40,7 @@
                 // left: 0;
                 // top: 0;
                 // width: 28px;
-    
+
                 &:after {
                     border: 2px solid $color-primary;
                     border-top: none;
@@ -43,7 +49,7 @@
                     height: 6px;
                     left: 7px;
                     opacity: 1;
-                  position: absolute;
+                    position: absolute;
                     top: 8px;
                     transform: rotate(-45deg);
                     width: 12px;
@@ -51,15 +57,7 @@
             }
         }
     }
-   
+
 }
-
-
-
-
-
-
-
-
 
 

@@ -1,0 +1,45 @@
+.index {
+    padding-top: 3rem;
+
+    &__content {
+        &--h1-group {
+            display: flex;
+            align-items: center;
+            font-size: 8px;
+
+            &--h1 {
+                font-weight: normal;
+                font-size: 8px;
+            }
+        }
+
+        &__p {
+            clear: both;
+            border: 1px solid $color-secondary;
+            border-radius: 10px;
+            padding: 10px;
+
+            &--img {
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin: 20px;
+
+                @include respondmax(sm) {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.map {
+    max-height: 80vh;
+}
+
+
+.textarea {
+    height: 80px !important;
+    resize: vertical !important;
+}

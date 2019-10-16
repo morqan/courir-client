@@ -1,13 +1,14 @@
 .datepicker {
     &__link {
         position: relative;
+        color: #000000;
     }
 
     &__input {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100px;
+        width: 100%;
         height: 80px;
         display: block;
         border: none;
@@ -16,10 +17,17 @@
         font-weight: bold;
         color: #000000 !important;
         border-radius: 0.5rem;
-        padding-left: 10px;
+        text-align: center;
 
         &:focus {
             outline: none;
+            color: #ffffff !important;
+
+            &::placeholder {
+
+                color: #ffffff;
+
+            }
         }
 
         &:hover {
@@ -28,7 +36,7 @@
             transition: all .3s;
 
             &::placeholder {
-                color: #ffffff!important;
+                color: #ffffff !important;
                 transition: all 0.3s !important;
             }
 
@@ -36,9 +44,13 @@
 
 
         &::placeholder {
-            padding-left: 4px;
+            padding-left: 0;
             color: #000000 !important;
             font-weight: bold;
+
+            &:focus {
+                color: #ffffff;
+            }
         }
 
     }
@@ -91,7 +103,7 @@ table {
             }
 
             .ui-state-active {
-                background-color: #00CED1;
+                background-color: $color-primary;
                 color: white;
             }
         }
@@ -126,6 +138,7 @@ table {
         background-position: 50%;
         transform: rotate(180deg);
     }
+
     .ui-datepicker-next {
         right: 0;
         background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
@@ -133,6 +146,7 @@ table {
         background-size: 10px;
         background-position: 50%;
     }
+
     a {
         span {
             display: none;
