@@ -4,7 +4,9 @@
     z-index: 999;
     width: 100vw;
 
-   
+   &__logo {
+       
+   }
 
 
     &__container{
@@ -80,4 +82,8 @@
 }
 .color-purple {
     color: $color-primary !important;
+}
+.index-shadow{
+    box-shadow: 0 8px 15px #7b2bfc1f;
+  
 }
