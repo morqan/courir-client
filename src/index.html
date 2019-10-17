@@ -1,13 +1,19 @@
 //= template/head.html
 
 <div class="index-shadow"></div>
-<div class="container example">
+<div class="container index">
 
     <div class="row mt-5">
-        <div class="col-sm-12 col-md-12 col-lg-5 scroll">
+        <div class="col-sm-12 col-md-12 col-lg-5">
             <div class="container">
-                <form class="form">
-
+                <form class="form scrollbar p-3 scroll-style">
+                    <!-- LOADING  START  -->
+  <div class="spinner-square">
+        <div class="square-1 square"></div>
+        <div class="square-2 square"></div>
+        <div class="square-3 square"></div>
+    </div>
+    <!-- LOADING END -->
                     <!--INPUTS STARTS-->
                     <div class="form-text">
                         <div class="form-group form__group">
@@ -135,49 +141,49 @@
                         </div>
                     </div> -->
                     <!-- CAR FINISH-->
+                    <label class="form-label form__label">Daşıma növünü seçin:</label>
 
-                  
-                    <div class="owl-carousel owl-theme nav-pills"  id="pills-tab" role="tablist">
-                            <div class="item">  <a class="car__link--active car__link car__link-hide" id="pills-standart-tab"
+                    <div class="owl-carousel owl-theme nav-pills mb-2 " id="pills-tab" role="tablist">
+                        <div class="item"> <a class="car__link--active car__link car__link-hide" id="pills-standart-tab"
                                 data-toggle="pill" href="#pills-standart" role="tab" aria-controls="pills-standart"
                                 aria-selected="true">
                                 <div class="car__div">
-                                    <img src="img/pedestrian-man.png" alt="car" class="car__div--img">
+                                    <img src="assets/img/pedestrian-man.png" alt="car" class="car__div--img">
                                     <span class="car__div--span">Piyada</span>
                                 </div>
                             </a></div>
-                            <div class="item"> <a class="car__link car__link-hide" id="pills-business-tab" data-toggle="pill"
-                                href="#pills-business" role="tab" aria-controls="pills-business" aria-selected="false">
+                        <div class="item"> <a class="car__link car__link-hide" id="pills-business-tab"
+                                data-toggle="pill" href="#pills-business" role="tab" aria-controls="pills-business"
+                                aria-selected="false">
                                 <div class="car__div">
-                                    <img src="img/motorcycle.png" alt="car" class="car__div--img">
+                                    <img src="assets/img/motorcycle.png" alt="car" class="car__div--img">
                                     <span class="car__div--span">Motosiklet</span>
                                 </div>
                             </a></div>
-                            <div class="item">   <a class="car__link car__link-hide" id="pills-car-tab" data-toggle="pill" href="#pills-car"
-                                role="tab" aria-controls="pills-car" aria-selected="false">
+                        <div class="item"> <a class="car__link car__link-hide" id="pills-car-tab" data-toggle="pill"
+                                href="#pills-car" role="tab" aria-controls="pills-car" aria-selected="false">
                                 <div class="car__div">
-                                    <img src="img/car.png" alt="car" class="car__div--img">
+                                    <img src="assets/img/car.png" alt="car" class="car__div--img">
                                     <span class="car__div--span">Avtomobil</span>
                                 </div>
                             </a></div>
-                            <div class="item">
-                                    <a class="car__link car__link-hide" id="pills-vip-tab" data-toggle="pill" href="#pills-vip"
-                                        role="tab" aria-controls="pills-vip" aria-selected="false">
-                                        <div class="car__div">
-                                            <img src="img/evacuator.png" alt="car" class="car__div--img">
-                                            <span class="car__div--span">Evakuator</span>
-                                        </div>
-                                    </a></div>
-                            <div class="item">
-                                    <a class="car__link" id="pills-busminivan-tab" data-toggle="pill" href="#pills-busminivan"
-                                        role="tab" aria-controls="pills-busminivan" aria-selected="false">
-                                        <div class="car__div"><img src="img/truck.png" alt="car" class="car__div--img"><span
-                                                class="car__div--span">Yük maşını</span>
-                                        </div>
-                                    </a></div>
-                          
-                        </div>
+                        <div class="item">
+                            <a class="car__link car__link-hide" id="pills-vip-tab" data-toggle="pill" href="#pills-vip"
+                                role="tab" aria-controls="pills-vip" aria-selected="false">
+                                <div class="car__div">
+                                    <img src="assets/img/evacuator.png" alt="car" class="car__div--img">
+                                    <span class="car__div--span">Evakuator</span>
+                                </div>
+                            </a></div>
+                        <div class="item">
+                            <a class="car__link" id="pills-busminivan-tab" data-toggle="pill" href="#pills-busminivan"
+                                role="tab" aria-controls="pills-busminivan" aria-selected="false">
+                                <div class="car__div"><img src="assets/img/truck.png" alt="car"
+                                        class="car__div--img"><span class="car__div--span">Yük maşını</span>
+                                </div>
+                            </a></div>
 
+                    </div>
 
 
 
@@ -258,6 +264,7 @@
                         <span id="valid-msg" class="hide d-block"></span>
                         <span id="error-msg" class="hide d-block"></span>
                     </div>
+                    <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
                     <input type="file" multiple class="add-image">
                     <!--INPUTS END-->
                     <!--TEXTAREA STARTS-->
@@ -273,7 +280,7 @@
                     <!-- TEXTAREA FINISH-->
 
 
-                    <!--  SPINNER STARTS-->
+                    <!-- LABOR SPINNER STARTS-->
                     <div id="labor">
                         <label for="contact-message" class="form-label form__label">İşçi qüvvəsi</label>
                         <div class="input-spinner form-control form__control">
@@ -295,7 +302,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- SPINNER END-->
+                    <!-- LABOR SPINNER END-->
                     <!--URGENT START-->
                     <div class="urgent">
                         <span class="form-label form__label">Çatdırılma növü</span>
@@ -332,20 +339,21 @@
 
                         <ul class="nav nav-pills day" id="pills-tab2" role="tablist">
                             <li class="nav-item day__list">
-                                <a class="nav-link show active day__link d-block" id="pills-monday-tab"
-                                    data-toggle="pill" href="#pills-monday" role="tab" aria-controls="pills-monday"
-                                    aria-selected="true">Bu gün
-                                    <span class="d-block  day__link--span">12 Oktyabr</span></a>
+                                <a class="show active day__link " id="pills-monday-tab" data-toggle="pill"
+                                    href="#pills-monday" role="tab" aria-controls="pills-monday" aria-selected="true">
+                                    <span>Bu gün</span>
+                                    <span class="  day__link--span">12 Oktyabr</span></a>
                             </li>
                             <li class="nav-item day__list">
-                                <a class="nav-link day__link d-block" id="pills-tuesday-tab" data-toggle="pill"
-                                    href="#pills-tuesday" role="tab" aria-controls="pills-tuesday"
-                                    aria-selected="false">Sabah <span class="d-block day__link--span">13
-                                        Oktyabr</span></a>
+                                <a class=" day__link " id="pills-tuesday-tab" data-toggle="pill" href="#pills-tuesday"
+                                    role="tab" aria-controls="pills-tuesday" aria-selected="false">
+                                    <span>Sabah</span>
+                                    <span class="day__link--span">13
+                                        September</span></a>
                             </li>
                             <li class="nav-item day__list datepicker">
-                                <a class="nav-link day__link datepicker__link" id="pills-calendar-tab"
-                                    data-toggle="pill" href="#pills-calendar" role="tab" aria-controls="pills-calendar"
+                                <a class=" day__link datepicker__link" id="pills-calendar-tab" data-toggle="pill"
+                                    href="#pills-calendar" role="tab" aria-controls="pills-calendar"
                                     aria-selected="false">
                                     <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
                                         placeholder="Pick a Date">
@@ -504,27 +512,28 @@
                         <div class="form-group form__group">
                             <div class="form-label form__label mt-2 mb-2">Ödəniş növü :</div>
                             <div class="dropdown   payment__dropdown">
-                                <button aria-expanded="false" aria-haspopup="true"
+                                <button aria-expanded="false" aria-haspopup="true" id="payment"
                                     class="btn btn-sm  dropdown-toggle arrow-bottom form__control  payment__dropdown--btn"
                                     data-toggle="dropdown" type="button">
                                     Select
                                 </button>
                                 <div class="dropdown-menu payment__dropdown-menu">
 
-                                    <div class="dropdown-item payment__dropdown-menu--item">
-                                        <div>
+                                    <div class="dropdown-item payment__dropdown-menu--item ">
+                                        <div class="payment__text">
                                             <i class="fas fa-credit-card color-purple mr-1"></i>
-                                            Kartla ödəniş
+                                            <span>Kartla ödəniş</span>
                                         </div>
-                                        <span class="mr-3"></span>
+                                        <span class="mr-3 payment-check"></span>
 
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <div class="dropdown-item payment__dropdown-menu--item">
-                                        <div><i class="far fa-money-bill-alt color-purple mr-1"></i>
-                                            Nəğd ödəniş</div>
-
-                                        <span class="mr-3"></span>
+                                        <div class="payment__text">
+                                            <i class="far fa-money-bill-alt color-purple mr-1"></i>
+                                            <span>Nəğd ödəniş</span>
+                                        </div>
+                                        <span class="mr-3 payment-check"></span>
                                     </div>
 
 
@@ -558,6 +567,31 @@
 
 
     </div>
+    <div class="container">
+        <div class="index__content mt-2">
+            <div class="index__content--h1-group p-3">
+                <div class="mr-2">Axtarış sözü :</div>
+                <h1 class="index__content--h1-group--h1">Gucci
+            </div>
+        </div>
+        <p class="index__content__p">
+            <img src="assets/img/about-2.jpg" alt="" class="index__content__p--img">Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
+            explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
+            ipsam
+            qui enim. Facere, repellat quaerat alias velit, fuga magnam quis iusto quo praesentium mollitia ut ipsa
+            quibusdam, rem eum blanditiis veritatis eaque! Doloribus possimus minima iure est eos porro dolore. Aut
+            quod
+            eveniet dolorem maxime facilis eum id soluta atque doloremque impedit, ex in debitis odio sint libero
+            alias
+            nulla? Facilis, quaerat quod numquam architecto quas deserunt cupiditate sit aliquid accusamus
+            repudiandae
+            officia expedita tenetur consequuntur doloremque itaque incidunt laborum dolores. Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Laborum ut autem eveniet, ipsam aspernatur mollitia temporibus officia
+            debitis aperiam ab animi deleniti accusantium, laudantium quasi nulla, rem minima commodi nobis.</p>
+    </div>
+</div>
+
 
 
 </div>
