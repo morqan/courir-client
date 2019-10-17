@@ -4,9 +4,7 @@
     z-index: 999;
     width: 100vw;
 
-   &__logo {
-       
-   }
+   
 
 
     &__container{
@@ -38,6 +36,18 @@
            border-bottom: 1px solid #cccccc;
            border-top: 1px solid #cccccc;
            margin: 20px 0;
+        }
+
+        .login1 {
+
+            &:hover  #navbarDropdownMenuLink {
+                display: block;
+            }
+            &__link {
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 
