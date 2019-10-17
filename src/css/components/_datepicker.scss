@@ -2,28 +2,33 @@
     &__link {
         position: relative;
         color: #000000;
+      
     }
-
+    &__link .active {
+        .datepicker__input {
+            color: #ffffff;
+        }
+     }
     &__input {
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         width: 100%;
         height: 80px;
-        display: block;
+        // display: block;
         border: none;
         background-color: transparent;
-        font-size: 15px;
+        // font-size: 15px;
         font-weight: bold;
-        color: #000000 !important;
-        border-radius: 0.5rem;
+        // color: #000000 !important;
+        // border-radius: 0.5rem;
         text-align: center;
 
         &:focus {
             outline: none;
             color: #ffffff !important;
 
-            &::placeholder {
+            .datepicker__input::placeholder {
 
                 color: #ffffff;
 

@@ -6,7 +6,7 @@ $(function() {
     function goToNextInput(e) {
       var key = e.which,
         t = $(e.target),
-        sib = t.next('input');
+        sib = t.next('.verification-input');
   
       if (key != 9 && (key < 48 || key > 57)) {
         e.preventDefault();
@@ -18,7 +18,7 @@ $(function() {
       }
   
       if (!sib || !sib.length) {
-        sib = body.find('input').eq(0);
+        sib = body.find('.verification-input').eq(0);
       }
       sib.select().focus();
     }
@@ -38,8 +38,8 @@ $(function() {
       $(e.target).select();
     }
   
-    body.on('keyup', 'input', goToNextInput);
-    body.on('keydown', 'input', onKeyDown);
-    body.on('click', 'input', onFocus);
+    body.on('keyup', '.verification-input', goToNextInput);
+    body.on('keydown', '.verification-input', onKeyDown);
+    body.on('click', '.verification-input', onFocus);
   
   })

@@ -3,17 +3,20 @@
 <div class="index-shadow"></div>
 <div class="container index">
 
-    <div class="row mt-5">
+    <div class="form-row mt-5">
         <div class="col-sm-12 col-md-12 col-lg-5">
             <div class="container">
-                <form class="form scrollbar p-3 scroll-style">
+                <form class="form scrollbar p-4 scroll-style">
                     <!-- LOADING  START  -->
-  <div class="spinner-square">
-        <div class="square-1 square"></div>
-        <div class="square-2 square"></div>
-        <div class="square-3 square"></div>
-    </div>
-    <!-- LOADING END -->
+                    <div class="loading-spinner">
+                        <div class="spinner-square">
+                            <div class="square-1 square"></div>
+                            <div class="square-2 square"></div>
+                            <div class="square-3 square"></div>
+                        </div>
+                        <div  class="loading-spinner__text mt-2">Kuryer axtarılır</div>
+                    </div>
+                    <!-- LOADING END -->
                     <!--INPUTS STARTS-->
                     <div class="form-text">
                         <div class="form-group form__group">
@@ -303,6 +306,23 @@
                         </div>
                     </div>
                     <!-- LABOR SPINNER END-->
+
+ <!-- PACKING START -->
+ <div class="packing"> 
+     <span class="form-label form__label">Paketləmə lazımdırmı?</span>
+     <div class="packing__div my-3">
+            <input class="packing__div__input " type="radio" name="time" id="packing-yes"
+            value="Bəli" />
+        <label class="packing__div__label packing__div__label--packing-yes packing-active" for="packing-yes">Bəli</label>
+        <input class="packing__div__input" type="radio" name="time" id="packing-no"
+        value="Xeyr" />
+        <label class="packing__div__label  packing__div__label--packing-no " for="packing-no">Xeyr</label>
+     </div>
+   
+   
+ </div>
+ <!-- PACKING END -->
+
                     <!--URGENT START-->
                     <div class="urgent">
                         <span class="form-label form__label">Çatdırılma növü</span>

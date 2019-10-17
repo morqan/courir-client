@@ -1,0 +1,642 @@
+//= template/head.html
+
+<div class="loader">
+    <div class="loading-animation"></div>
+</div>
+<!-- <div class="alert alert-dismissible d-none d-md-block bg-primary-3 text-white py-4 py-md-3 px-0 mb-0 rounded-0 border-0">
+      <div class="container">
+          <div class="row no-gutters align-items-md-center justify-content-center">
+              <div class="col-lg-11 col-md d-flex flex-column flex-md-row align-items-md-center justify-content-lg-center">
+                  <div class="mb-3 mb-md-0"><strong>Intro Sale</strong> $10 per license for Jumpstart's launch. Act fast, ends soon.</div>
+                  <a class="btn btn-sm btn-success ml-md-3" target="_blank" href=https://themeforest.net/item/jumpstart-app-and-software-template/24207799>Redeem Offer</a>
+              </div>
+              <div class="col-auto position-absolute right">
+                  <button type="button" class="close p-0 position-relative" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">
+                          <img src="assets/img/icons/interface/icon-x.svg" alt="Close" class="icon icon-sm bg-white" data-inject-svg>
+                      </span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div> -->
+<div class="p-5">
+    <div class=" container">
+        <div class=" bg-white ">
+            <div class="   row mt-3 pt-5">
+                <div class="col-lg-3">
+                    <ul class="nav nav-pills flex-lg-column account__btn" id="myTab-6" role="tablist">
+                        <li class="nav-item account__btn__item">
+                            <a class="btn btn-primary active w-100 account__btn__link" id="home-tab-6" data-toggle="tab"
+                                href="#home-6" role="tab" aria-controls="home" aria-selected="true">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/icons/theme/home/home.svg" alt="Icon" class="icon bg-primary"
+                                        data-inject-svg>
+                                    <span> Sifarişlərim</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item  account__btn__item">
+                            <a class="btn btn-primary w-100 account__btn__link" id="profile-tab-6" data-toggle="tab"
+                                href="#profile-6" role="tab" aria-controls="profile" aria-selected="false">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/icons/theme/communication/active-call.svg " alt="Icon"
+                                        class="icon bg-primary" data-inject-svg>
+                                    <span> Ödəniş növləri</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item  account__btn__item">
+                            <a class="btn btn-primary w-100 account__btn__link" id="contact-tab-6" data-toggle="tab"
+                                href="#contact-6" role="tab" aria-controls="contact" aria-selected="false">
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/img/icons/theme/general/user.svg" alt="Icon"
+                                        class="icon bg-primary" data-inject-svg>
+                                    <span> Profilim</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-9">
+
+                    <div class="tab-content flex-grow-1 ml-lg-4 mt-3 mt-md-0" id="myTabContent-6">
+                        <div class="tab-pane fade show active" id="home-6" role="tabpanel" aria-labelledby="home-tab-6">
+                            <div class=" account">
+                                <div class="bg-light p-1">
+
+                                    <ul class="nav nav-tabs lead mb-4 account__nav m-3" id="myTab" role="tablist">
+                                        <li class="nav-item account__nav__item">
+                                            <a class="nav-link active account__nav--link" id="home-tab"
+                                                data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                                                aria-selected="true">Aktiv
+                                                sifarişlər</a>
+                                        </li>
+                                        <li class="nav-item account__nav__item">
+                                            <a class="nav-link  account__nav--link" id="profile-tab" data-toggle="tab"
+                                                href="#profile" role="tab" aria-controls="profile"
+                                                aria-selected="false">Gözləmədə
+                                                olan</a>
+                                        </li>
+                                        <li class="nav-item account__nav__item">
+                                            <a class="nav-link  account__nav--link" id="contact-tab" data-toggle="tab"
+                                                href="#contact" role="tab" aria-controls="contact"
+                                                aria-selected="false">Bitmiş
+                                                sifarişlər</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <div class=" bg-light ">
+
+                                                <div class="card order-card m-3">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-lg-8">
+                                                                <div class=" order-card__div d-flex mb-3">
+                                                                    <img src="assets/img/avatars/male-3.jpg"
+                                                                        alt="Avatar"
+                                                                        class="avatar avatar-lg flex-shrink-0 order-card__img">
+                                                                    <div
+                                                                        class="ml-3 d-flex flex-column justify-content-center align-self-center">
+                                                                        <div class=" text-primary">
+                                                                            Asim Ağayev</div>
+                                                                        <span class=" order-card__date d-block">
+                                                                            24.02.2019 15:00
+                                                                        </span>
+                                                                        <span
+                                                                            class=" text-light rounded-pill order-card__cancelled">Cancelled</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mb-2 d-flex align-items-start">
+                                                                        <i class="far fa-circle mr-2 text-primary"></i>
+                                                                        <div class="order-card__border">
+                                                                            Baku
+                                                                            Medical Center</div>
+                                                                    </div>
+                                                                    <div class=" d-flex align-items-start">
+                                                                        <i
+                                                                            class="fas fa-map-marker-alt mr-2 text-danger"></i>
+                                                                        <div class="order-card__border">
+                                                                            Yasamal rayonu,
+                                                                            Şərifzadə
+                                                                            küçəsi</div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-lg-4 order-card__money-group">
+                                                                <div class="mb-2 mb-sm-2">
+                                                                    <i
+                                                                        class="fas fa-dollar-sign mr-2  text-primary pl-xl-2"></i>8.50
+                                                                    qəp</div>
+                                                                <div><i class="fas fa-route mr-2  text-primary"></i>50
+                                                                    km</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card order-card m-3">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-lg-8">
+                                                                <div class=" order-card__div d-flex   mb-3 ">
+                                                                    <img src="assets/img/avatars/male-3.jpg"
+                                                                        alt="Avatar"
+                                                                        class="avatar avatar-lg flex-shrink-0 order-card__img">
+                                                                    <div
+                                                                        class="ml-3 d-flex flex-column  justify-content-center align-self-center">
+                                                                        <div class=" text-primary"> Asim Ağayev</div>
+                                                                        <span class=" order-card__date d-block">
+                                                                            24.02.2019 15:00</span>
+                                                                        <span
+                                                                            class=" text-light rounded-pill order-card__finished">Tamamlanıb</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="mb-2 d-flex align-items-start">
+                                                                        <i class="far fa-circle mr-2 text-primary"></i>
+                                                                        <div class="order-card__border">
+                                                                            Baku
+                                                                            Medical Center</div>
+                                                                    </div>
+                                                                    <div class=" d-flex align-items-start">
+                                                                        <i
+                                                                            class="fas fa-map-marker-alt mr-2 text-danger"></i>
+                                                                        <div class="order-card__border">
+                                                                            Yasamal rayonu,
+                                                                            Şərifzadə
+                                                                            küçəsi</div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-lg-4 order-card__money-group">
+                                                                <div class="mb-2">
+                                                                    <i
+                                                                        class="fas fa-dollar-sign mr-2  text-primary pl-xl-2"></i>8.50
+                                                                    qəp</div>
+                                                                <div><i class="fas fa-route mr-2  text-primary"></i>50
+                                                                    km</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="order2">
+                                                <div class="m-3 order2__div">
+                                                    <div class="order2__div__label">Nəqliyyatın tipi :</div>
+                                                    <div class="order2__div__img-group">
+                                                        <img src="assets/img/car.png" alt="Car"
+                                                            class="order2__div__img-group--img ">
+                                                        <span class="order2__div__img-group--span ">Avtomobil</span>
+                                                    </div>
+
+                                                    <div class="order2__div__input"> Baku Medical Center
+                                                        <span class="d-block order2__div__input--span">14.05.2019
+                                                            20:00</span>
+                                                    </div>
+                                                    <div class="order2__div__input">Yasamal rayonu Şərifzadə küç.
+                                                        <span class="d-block order2__div__input--span">14.05.2019
+                                                            20:00</span>
+                                                    </div>
+                                                    <div class="order2__div__label">Ödəniş növü</div>
+                                                    <div class="order2__div__input d-flex justify-content-between">
+                                                        <span>
+                                                            <i class="fas fa-gift mr-1 text-primary"> </i>Nəğd
+                                                        </span>
+                                                        <span class="mr-1">6.50 &#x20BC;</span>
+                                                    </div>
+                                                    <div class="order2__div__label">Receiver</div>
+                                                    <div class="order2__div__input">Mammad Mammadov</div>
+                                                    <div class="order2__div__label">Receiver Number</div>
+                                                    <div class="order2__div__input">+99455-555-55-55</div>
+                                                    <div class="order2__div__label">Daşınan yükün fotosu</div>
+                                                    <div class="order2__div__img">
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                    </div>
+                                                    <div class="order2__div__input order2__div__input--note">
+                                                        <div class="order2__div__input--note--div"> Qeydlər</div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                                                            sint eaque commodi minima, error non consequuntur unde
+                                                            voluptas quo tempore culpa, ipsa facilis deleniti
+                                                            architecto.</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <div class="card m-3">
+                                                <div class="card-body">
+                                                    Gözləmədə olan Tab Content
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="contact" role="tabpanel"
+                                            aria-labelledby="contact-tab">
+                                            <div class="card m-3">
+                                                <div class="card-body">
+                                                    Bitmiş sifarişlər Tab Content
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-6" role="tabpanel" aria-labelledby="profile-tab-6">
+                            <div class="card billing">
+                                <div class="card-body">
+                                    <div class="row justify-content-between align-items-center mb-4">
+                                        <div class="col-auto">
+                                            <h3 class="mb-sm-0">Payment Methods</h3>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-success btn-sm">Add Payment Method</button>
+                                        </div>
+                                    </div>
+                                    <!-- ADD PAYMENT METHOD START -->
+                                    <div class="add-payment-method">
+                                        <div class="payment-container preload">
+                                            <div class="creditcard">
+                                                <div class="front">
+                                                    <div id="ccsingle"></div>
+                                                    <svg version="1.1" id="cardfront" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                        viewBox="0 0 750 471" style="enable-background:new 0 0 750 471;"
+                                                        xml:space="preserve">
+                                                        <g id="Front">
+                                                            <g id="CardBackground">
+                                                                <g id="Page-1_1_">
+                                                                    <g id="amex_1_">
+                                                                        <path id="Rectangle-1_1_"
+                                                                            class="lightcolor grey" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                                                                C0,17.9,17.9,0,40,0z" />
+                                                                    </g>
+                                                                </g>
+                                                                <path class="darkcolor greydark"
+                                                                    d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
+                                                            </g>
+                                                            <text transform="matrix(1 0 0 1 60.106 295.0121)"
+                                                                id="svgnumber" class="st2 st3 st4">0123 4567 8910
+                                                                1112</text>
+                                                            <text transform="matrix(1 0 0 1 54.1064 428.1723)"
+                                                                id="svgname" class="st2 st5 st6">JOHN DOE</text>
+                                                            <text transform="matrix(1 0 0 1 54.1074 389.8793)"
+                                                                class="st7 st5 st8">cardholder name</text>
+                                                            <text transform="matrix(1 0 0 1 479.7754 388.8793)"
+                                                                class="st7 st5 st8">expiration</text>
+                                                            <text transform="matrix(1 0 0 1 65.1054 241.5)"
+                                                                class="st7 st5 st8">card number</text>
+                                                            <g>
+                                                                <text transform="matrix(1 0 0 1 574.4219 433.8095)"
+                                                                    id="svgexpire" class="st2 st5 st9">01/23</text>
+                                                                <text transform="matrix(1 0 0 1 479.3848 417.0097)"
+                                                                    class="st2 st10 st11">VALID</text>
+                                                                <text transform="matrix(1 0 0 1 479.3848 435.6762)"
+                                                                    class="st2 st10 st11">THRU</text>
+                                                                <polygon class="st2"
+                                                                    points="554.5,421 540.4,414.2 540.4,427.9 		" />
+                                                            </g>
+                                                            <g id="cchip">
+                                                                <g>
+                                                                    <path class="st2"
+                                                                        d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
+                                                            c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <rect x="82" y="70" class="st12" width="1.5"
+                                                                            height="60" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <rect x="167.4" y="70" class="st12" width="1.5"
+                                                                            height="60" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <path class="st12"
+                                                                            d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
+                                                                c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                                                                C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                                                                c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                                                                c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <rect x="82.8" y="82.1" class="st12"
+                                                                            width="25.8" height="1.5" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <rect x="82.8" y="117.9" class="st12"
+                                                                            width="26.1" height="1.5" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <rect x="142.4" y="82.1" class="st12"
+                                                                            width="25.8" height="1.5" />
+                                                                    </g>
+                                                                    <g>
+                                                                        <rect x="142" y="117.9" class="st12"
+                                                                            width="26.2" height="1.5" />
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                        <g id="Back">
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div class="back">
+                                                    <svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                        viewBox="0 0 750 471" style="enable-background:new 0 0 750 471;"
+                                                        xml:space="preserve">
+                                                        <g id="Front">
+                                                            <line class="st0" x1="35.3" y1="10.4" x2="36.7" y2="11" />
+                                                        </g>
+                                                        <g id="Back">
+                                                            <g id="Page-1_2_">
+                                                                <g id="amex_2_">
+                                                                    <path id="Rectangle-1_2_" class="darkcolor greydark"
+                                                                        d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                                                            C0,17.9,17.9,0,40,0z" />
+                                                                </g>
+                                                            </g>
+                                                            <rect y="61.6" class="st2" width="750" height="78" />
+                                                            <g>
+                                                                <path class="st3" d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
+                                                        C707.1,246.4,704.4,249.1,701.1,249.1z" />
+                                                                <rect x="42.9" y="198.6" class="st4" width="664.1"
+                                                                    height="10.5" />
+                                                                <rect x="42.9" y="224.5" class="st4" width="664.1"
+                                                                    height="10.5" />
+                                                                <path class="st5"
+                                                                    d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
+                                                            </g>
+                                                            <text transform="matrix(1 0 0 1 621.999 227.2734)"
+                                                                id="svgsecurity" class="st6 st7">985</text>
+                                                            <g class="st8">
+                                                                <text transform="matrix(1 0 0 1 518.083 280.0879)"
+                                                                    class="st9 st6 st10">security code</text>
+                                                            </g>
+                                                            <rect x="58.1" y="378.6" class="st11" width="375.5"
+                                                                height="13.5" />
+                                                            <rect x="58.1" y="405.6" class="st11" width="421.7"
+                                                                height="13.5" />
+                                                            <text transform="matrix(1 0 0 1 59.5073 228.6099)"
+                                                                id="svgnameback" class="st12 st13">John Doe</text>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-container">
+                                            <div class="field-container">
+                                                <label for="name" class="payment-label">Name</label>
+                                                <input id="name" maxlength="20" type="text" class="payment-input">
+                                            </div>
+                                            <div class="field-container">
+                                                <label for="cardnumber" class="payment-label">Card Number</label><span
+                                                    id="generatecard">generate random</span>
+                                                <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric"
+                                                    class="payment-input">
+                                                <svg id="ccicon" class="ccicon" width="750" height="471"
+                                                    viewBox="0 0 750 471" version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                                </svg>
+                                            </div>
+                                            <div class="field-container">
+                                                <label for="expirationdate" class="payment-label">Expiration
+                                                    (mm/yy)</label>
+                                                <input id="expirationdate" class="payment-input" type="text"
+                                                    pattern="[0-9]*" inputmode="numeric">
+                                            </div>
+                                            <div class="field-container">
+                                                <label for="securitycode" class="payment-label">Security Code</label>
+                                                <input id="securitycode" class="payment-input" type="text"
+                                                    pattern="[0-9]*" inputmode="numeric">
+                                            </div>
+                                            
+                                        </div>
+                                        <button onclick="return false" class="btn  btn-purple" type="submit"
+                                        data-loading-text="Sending">
+                                        <span>Order Now</span>
+                                    </button>
+                                    </div>
+                                    <!-- ADD PAYMENT METHOD END -->
+                                    <div class="row  d-none">
+                                        <div class="col-sm-6  mb-3 mb-md-4">
+                                            <div class="border rounded bg-white px-4 pb-4 pt-2">
+                                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                                    <img src="assets/img/logos/payment/mastercard.svg" alt="Mastercard">
+                                                    <div class="dropdown">
+                                                        <button
+                                                            class="btn btn-sm btn-primary rounded-circle dropdown-toggle"
+                                                            type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <img src="assets/img/icons/interface/icon-more-horizontal.svg"
+                                                                alt="More" class="icon bg-white"
+                                                                data-inject-svg="data-inject-svg">
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-end">
+                                                    <div>
+                                                        <div class="h6 mb-2">•••• •••• •••• 3928</div>
+                                                        <div class="text-muted">Jonathan Wilson</div>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio-1" name="radio"
+                                                            class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="radio-1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6  mb-3 mb-md-4">
+                                            <div class="border rounded bg-white px-4 pb-4 pt-2">
+                                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                                    <img src="assets/img/logos/payment/visa.svg" alt="Via">
+                                                    <div class="dropdown">
+                                                        <button
+                                                            class="btn btn-sm btn-primary rounded-circle dropdown-toggle"
+                                                            type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <img src="assets/img/icons/interface/icon-more-horizontal.svg"
+                                                                alt="More" class="icon bg-white"
+                                                                data-inject-svg="data-inject-svg">
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-end">
+                                                    <div>
+                                                        <div class="h6 mb-2">•••• •••• •••• 9921</div>
+                                                        <div class="text-muted">Jonathan Wilson</div>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio-2" name="radio"
+                                                            class="custom-control-input">
+                                                        <label class="custom-control-label" for="radio-2"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-md-4">
+                                            <div class="border rounded bg-white px-4 pb-4 pt-2">
+                                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                                    <img src="assets/img/logos/payment/paypal.svg" alt="Paypal">
+                                                    <div class="dropdown">
+                                                        <button
+                                                            class="btn btn-sm btn-primary rounded-circle dropdown-toggle"
+                                                            type="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <img src="assets/img/icons/interface/icon-more-horizontal.svg"
+                                                                alt="More" class="icon bg-white"
+                                                                data-inject-svg="data-inject-svg">
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-end">
+                                                    <div>
+                                                        <div class="h6 mb-2">jwilson@jumpstart.com</div>
+                                                        <div class="text-muted">Jonathan Wilson</div>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" id="radio-3" name="radio"
+                                                            class="custom-control-input">
+                                                        <label class="custom-control-label" for="radio-3"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact-6" role="tabpanel" aria-labelledby="contact-tab-6">
+                            <div class="card">
+                                <div class="card-body bg-light">
+                                    <div class=" tab-content pt-5">
+                                        <div class="tab-pane fade show active" id="general" role="tabpanel"
+                                            aria-labelledby="general-tab">
+                                            <div class="container">
+                                                <div class="row mb-4 mb-lg-5">
+                                                    <div class="col">
+                                                        <div class=" d-flex flex-column align-items-center">
+                                                            <img src="assets/img/avatars/male-3.jpg" alt="Avatar"
+                                                                class="avatar avatar-lg flex-shrink-0">
+                                                            <div class="mt-3">
+                                                                <button class="btn btn-sm btn-primary">Fotonu
+                                                                    dəyiş</button>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="mt-lg-5">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4 mb-md-5 align-items-start">
+
+                                                    <div class="col-12 border-lg-right pr-lg-5">
+                                                        <div class="row mb-lg-5">
+                                                            <div class="col">
+                                                                <h3>Account Details</h3>
+                                                            </div>
+                                                        </div>
+                                                        <form>
+                                                            <div class="row form-row">
+                                                                <div class="col-sm-12 col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label for="first-name">Ad</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="first-name" value="Andrew">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 col-lg-6">
+                                                                    <div class="form-group">
+                                                                        <label for="last-name">Soyad</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="last-name" value="Smith">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="phone-number">Telefon
+                                                                    nömrəsi</label>
+                                                                <input type="text" id="phone-number"
+                                                                    class="form-control" placeholder="+994">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="" class="d-block">Cinsiniz</label>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <input class="gender-input form-control"
+                                                                            type="radio" name="gender" id="gender1" />
+                                                                        <label class="gender-label "
+                                                                            for="gender1">Kişi</label>
+
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <input class="gender-input form-control"
+                                                                            type="radio" name="gender" id="gender2" />
+                                                                        <label class="gender-label "
+                                                                            for="gender2">Qadın</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <button class="btn btn-primary btn-4" type="submit">Save
+                                                                changes</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up"
+    data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+    <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
+</a>
+
+//= template/footer.html
