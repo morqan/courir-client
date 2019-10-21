@@ -35,11 +35,23 @@
 
 
 .map {
-    max-height: 80vh;
+    // max-height: 80vh;
 }
 
 
 .textarea {
     height: 80px !important;
     resize: vertical !important;
+}
+
+#map_canvas {
+    height: 100%;
+    @include respondmax(lg) {
+       height: 400px;
+
+    }
+    @include respondmax(sm) {
+        height: 300px;
+ 
+     }
 }

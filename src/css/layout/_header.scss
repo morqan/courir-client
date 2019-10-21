@@ -40,12 +40,18 @@
 
         .login1 {
 
-            &:hover  #navbarDropdownMenuLink {
+            &:hover  .dropdown-menu {
                 display: block;
+              
             }
             &__link {
                 &::after {
                     display: none;
+                }
+            }
+            .dropdown-item {
+                &:hover {
+                    color: $color-primary;
                 }
             }
         }
