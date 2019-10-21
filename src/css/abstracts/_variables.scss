@@ -5,6 +5,7 @@ $color-primary-dark: #660afc;
 $color-secondary: #f5f5f5;
 $color-invalid: red;
 $color-valid: green;
+
 @mixin field-outline($color) {
     border: $color solid 2px;
     border-radius: 10px;
