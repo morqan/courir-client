@@ -12,11 +12,7 @@
         width: 100% !important;
     }
   
-    &:focus {
-      border-color: #cccccc !important;
-      outline: none;
-    
-    }
+   
   
     &::placeholder {
       color: #818490 !important;
@@ -34,6 +30,37 @@
     color: #555a64;
 }
 }
+
+.validation-message {
+  display: block;
+}
+
+.text-field {
+  &:focus:required:valid {
+      @include field-outline($color-valid);
+  }
+  
+  &:focus:required:invalid {
+      @include field-outline($color-invalid);
+  }
+
+ 
+}
+
+
+.from-field:focus:invalid + .validation-message::after {
+  color: $color-invalid;
+  content: "Please enter pick-up adress ";
+}
+
+
+.destination-field:focus:invalid + .validation-message::after {
+  @include message-invalid("Please enter delivery adress");
+}
+.message-field:focus:invalid + .validation-message::after {
+  @include message-invalid("Please enter your message");
+}
+
 
 
 

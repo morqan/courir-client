@@ -1,7 +1,7 @@
 .account {
 
 
-
+ 
     &__btn {
         @include respondmax(lg) {
             justify-content: space-between;
@@ -22,12 +22,20 @@
             @include respondmax(sm) {
                 width: 100% !important;
             }
+            
+
+            .btn-primary:not(:disabled):not(.disabled).active {
+                color: #fff;
+                background-color: $color-primary;
+                border-color:  $color-primary;
+                outline: none;
+            }
         }
     }
 
     &__nav {
         flex-wrap: nowrap;
-
+border: none;
 
         @include respondmax(md) {
             flex-wrap: wrap;
@@ -41,6 +49,12 @@
             @include respondmax(sm) {
                 width: 100%;
             }
+            .active {
+                color: $color-primary !important;
+                background-color: none;
+                border-color: none;
+                border-bottom: 2px solid $color-primary;}
+            
         }
 
         &--link {
@@ -88,7 +102,11 @@
     }
 
     &__div {
-        @include respondmax(sm) {}
+        display: flex;
+        @include respondmax(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img {}
@@ -193,6 +211,8 @@
             @include respondmax(sm) {
                 flex-wrap: wrap;
                 width: 100%;
+                justify-content: center;
+                margin-top: 0;
 
             }
 
@@ -203,17 +223,16 @@
                 border-radius: 20% !important;
                 width: 150px;
                 height: 150px;
-                background-color: #00CED1;
                 color: #fff;
-
+               
                 @include respondmax(sm) {
-                    width: 100px !important;
-                    height: 100px;
+        
                     margin-top: 10px;
                 }
 
                 img {
                     border-radius: 20%;
+                   
                 }
             }
         }
@@ -228,6 +247,10 @@
                 width: 100px;
                 height: 100px;
                 margin-right: 20px;
+                @include respondmax(sm) {
+                    width: 80px;
+                    height: 80px;
+                margin-right: 10px;}
             }
 
             &--span {
