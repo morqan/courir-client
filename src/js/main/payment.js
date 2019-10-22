@@ -3,9 +3,10 @@ $('.payment__dropdown-menu--item').click(function(){
     $('.payment__dropdown-menu--item ').removeClass("payment-active");
     $(this).addClass("payment-active");
     $( ".payment-active" ).find( ".payment-check" ).css( "display", "block" );
-    var text = $( ".payment-active" ).find( ".payment__text" ).find( "span" ).text() ;
-    $('#payment').text(text);
-    // console.log(text);
+    var myDiv = $( ".payment-active" ).find( ".payment__text" ).clone();
+    $( "#payment" ).find( ".payment__text" ).remove();
+    $(myDiv ).appendTo( "#payment" );
+  
 
 });
 // $(".payment__dropdown--btn").change(function(){

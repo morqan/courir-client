@@ -230,11 +230,9 @@
                         </ul>
                         <span class="form-label form__label">Delivery time</span>
                         <div class="tab-content tab" id="pills-tabContent2">
-                            <div class="tab-pane times fade show active  tab__pane" id="pills-monday" role="tabpanel"
+                            <div class="tab-pane  fade show active  tab__pane" id="pills-monday" role="tabpanel"
                                 aria-labelledby="pills-monday-tab">
-
-
-                                <ul class="tab__pane__list">
+                                <ul class="tab__pane__list owl-carousel owl-theme">
                                     <li>
                                         <div class="form-group">
                                             <input class="times__input " type="radio" name="time" id="time_1"
@@ -279,14 +277,10 @@
                                         </div>
                                     </li>
                                 </ul>
-
-
-
-
                             </div>
                             <div class="tab-pane fade tab__pane" id="pills-tuesday" role="tabpanel"
                                 aria-labelledby="pills-tuesday-tab">
-                                <ul class="tab__pane__list">
+                                <ul class="tab__pane__list owl-carousel owl-theme">
                                     <li>
                                         <div class="form-group">
                                             <input class="times__input" type="radio" name="time" id="time_7"
@@ -323,7 +317,7 @@
                             </div>
                             <div class="tab-pane fade tab__pane" id="pills-calendar" role="tabpanel"
                                 aria-labelledby="pills-calendar-tab">
-                                <ul class="tab__pane__list">
+                                <ul class="tab__pane__list owl-carousel owl-theme">
                                     <li>
                                         <div class="form-group">
                                             <input class="times__input" type="radio" name="time" id="time_13"
@@ -381,7 +375,10 @@
                                 <button aria-expanded="false" aria-haspopup="true" id="payment"
                                     class="btn btn-sm  dropdown-toggle arrow-bottom form__control  payment__dropdown--btn"
                                     data-toggle="dropdown" type="button">
-                                   Select
+                                    <div class="payment__text">
+                                        <i class="far fa-money-bill-alt color-purple mr-1"></i>
+                                        <span>Nəğd ödəniş</span>
+                                    </div>
                                 </button>
                                 <div class="dropdown-menu payment__dropdown-menu">
 
@@ -391,7 +388,6 @@
                                             <span>Kartla ödəniş</span>
                                         </div>
                                         <span class="mr-3 payment-check"></span>
-
                                     </div>
                                     <div class="dropdown-divider"></div>
                                     <div class="dropdown-item payment__dropdown-menu--item">
