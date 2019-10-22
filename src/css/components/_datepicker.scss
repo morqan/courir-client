@@ -1,14 +1,20 @@
 .datepicker {
     &__link {
         position: relative;
-        color: #000000;
-      
-    }
-    &__link .active {
-        .datepicker__input::placeholder {
+ 
+       
+
+        &:hover .datepicker__input::placeholder{
             color: #ffffff;
         }
-     }
+        
+        &:focus .datepicker__input::placeholder{
+        
+            color: #ffffff;
+        }
+      
+    }
+  
     &__input {
         
         width: 100%;
@@ -23,29 +29,18 @@
             padding-left: 0;
             color: black;
             font-weight: bold;
+            &:focus {
+                outline: none;
+                color: #ffffff;
+            }
+            
         }
 
-        // &:focus::placeholder {
-        //     outline: none;
-        //     color: #ffffff !important;
-
-        //     .datepicker__input::placeholder {
-        //         color: #ffffff !important;
-        //     }
-        // }
-
-        // &:hover {
-           
-        //     background-color: $color-primary !important;
-        //     transition: all .3s;
-        //     color: #ffffff !important;
-        //     .datepicker__input::placeholder {
-        //         color: #ffffff !important;
-              
-        //     }
-
-        // }
-
+        &:focus {
+            outline: none;
+            color: #ffffff;
+        }
+        
 
        
 
