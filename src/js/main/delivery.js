@@ -12,8 +12,4 @@
     });
   });
 
-  $('.datepicker__link').click(function(){
-    $('.datepicker__input ').css({
-      'color' : '#ffffff'
-    });
-  });
+ 
