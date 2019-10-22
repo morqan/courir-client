@@ -1,11 +1,11 @@
-$('#pills-busminivan-tab').click(function () {
-  $('#labor').css({
+$('#truck').click(function () {
+  $('#labor, #packing').css({
     'display': 'block'
   });
 });
 
 $('.car__link-hide').click(function () {
-  $('#labor').css({
+  $('#labor, #packing').css({
     'display': 'none'
   });
 });
