@@ -8,12 +8,15 @@ $('.owl-carousel').owlCarousel({
     autoplayHoverPause: true,
     responsive: {
       0: {
-        items: 1
+        items: 2
       },
       600: {
-        items: 3
+        items: 4
       },
       1000: {
+        items: 4
+      },
+      1200: {
         items: 5
       }
     }
