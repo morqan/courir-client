@@ -1,12 +1,9 @@
 $('.owl-carousel').owlCarousel({
     loop: false,
+    rewind: true,
     margin: 10,
     nav: false,
     dots: false,
-    // navText: [
-    //   "<i class='fa fa-caret-left'></i>",
-    //   "<i class='fa fa-caret-right'></i>"
-    // ],
     autoplay: true,
     autoplayHoverPause: true,
     responsive: {
@@ -21,3 +18,11 @@ $('.owl-carousel').owlCarousel({
       }
     }
   })
+
+
+//  $( document ).ready(function() {
+//   $('.car__link').click(function(){
+//     $('.car__link').removeClass("active");
+//     $(this).addClass("active");
+// });
+// });
