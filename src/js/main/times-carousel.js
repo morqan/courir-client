@@ -1,9 +1,9 @@
 
  $( document ).ready(function() {
-    $('.car-carousel').owlCarousel({
+    $('.times-carousel').owlCarousel({
       loop: false,
       rewind: true,
-    margin: 5,
+    
       nav: false,
       dots: false,
       autoplay: true,

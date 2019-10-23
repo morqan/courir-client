@@ -11,13 +11,52 @@
         width: 100% !important;
     }
 
-
-
-    .active {
-        background-color: $color-primary;
-        color: #ffffff !important;
-        border: none;
+&__label{
+    text-align: center;
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: black;
+ 
+    border-radius: 3px;
+    width: 100%;
+    &--img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40px !important;
+       
     }
+    &--span {
+        font-size: 12px;
+        text-align: center;
+
+        font-family: 'Nunito', sans-serif;
+        color: #1f1f1f;
+        font-weight: bold;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+    }
+    &:hover .car__label--span {
+        color: #ffffff ;
+    }
+}
+
+&__input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
+
+    &:checked+label {
+        background-color: $color-primary;
+        color: #ffffff ;
+    }
+    &:checked+label .car__label--span {
+        color: #ffffff !important;
+    }
+}
+    
 
     &__link {
         padding-right: 0;
