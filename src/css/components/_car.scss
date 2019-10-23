@@ -11,14 +11,19 @@
         width: 100% !important;
     }
 
+    &__form-group {
+        margin-bottom: 0;
+    }
+
 &__label{
     text-align: center;
     cursor: pointer;
     background-color: $color-secondary;
     color: black;
- 
+
     border-radius: 3px;
     width: 100%;
+    margin-bottom: 0;
     &--img {
         margin-left: auto;
         margin-right: auto;
@@ -58,73 +63,12 @@
 }
     
 
-    &__link {
-        padding-right: 0;
-        padding-left: 0;
-        width:100%;
-        border: none;
-        display: block;
-        outline: none;
-        border-radius: 5px;
-        padding-bottom: 10px;
-        text-decoration: none;
-
-
-
-        @include respondmax(xl) {
-            width: 100% !important;
-        }
-
-        &:not(:last-of-type) {
-            margin-right: 10px;
-        }
-
-        &:focus {
-            outline: 0;
-        }
-
-        &:hover {
-            background-color: $color-primary;
-            color: #ffffff !important;
-            transition: all .5s;
-            outline: none;
-            text-decoration: none;
-
-
-        }
-
-        &:hover .car__div--span {
-            color: #ffffff;
-            transition: all .3s;
-        }
-    }
-
-    &__div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-
-        &--img {
-            margin-left: auto;
-            margin-right: auto;
-            width: 40px !important;
-        }
-
-        &--span {
-            font-size: 12px;
-            text-align: center;
-
-            font-family: 'Nunito', sans-serif;
-            color: #1f1f1f;
-            font-weight: bold;
-        }
-    }
 }
 
 .info {
     display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 
     &__span {
         display: flex;
