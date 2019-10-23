@@ -10,9 +10,9 @@ $(document).ready(function() {
     var password = $('#password').val();
  
     $(".error").remove();
-    $(start_place).removeClass("inputErrorBorder");
-    $(end_place).removeClass("inputErrorBorder");
-    $(some_message).removeClass("inputErrorBorder");
+    $('#startPlace').removeClass("inputErrorBorder");
+    $('#endPlace').removeClass("inputErrorBorder");
+    $('#contact-message').removeClass("inputErrorBorder");
  
     if (start_place.length < 1) {
       $('#startPlace').addClass("inputErrorBorder").after('<span class="error">This field is required</span>');
@@ -41,6 +41,22 @@ $(document).ready(function() {
     if (password.length < 8) {
       $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
     }
+  });
+
+
+  $("#startPlace").keypress(function(){
+    $('#startPlace').removeClass("inputErrorBorder");
+    $('#startPlace').next().remove();
+  });
+
+  $("#endPlace").keypress(function(){
+    $('#endPlace').removeClass("inputErrorBorder");
+    $('#endPlace').next().remove();
+  });
+
+  $("#contact-message").keypress(function(){
+    $('#contact-message').removeClass("inputErrorBorder");
+    $('#contact-message').next().remove();
   });
  
 });
