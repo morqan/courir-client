@@ -1,10 +1,10 @@
-$('#truck').click(function () {
+$('#truck').change(function () {
   $('#labor, #packing').css({
     'display': 'block'
   });
 });
 
-$('.car__link-hide').click(function () {
+$('.car-hide').change(function () {
   $('#labor, #packing').css({
     'display': 'none'
   });
@@ -14,3 +14,5 @@ $('.car__link-hide').click(function () {
 //   $('.car__link').removeClass("car__link--active");
 //   $(this).addClass("car__link--active");
 // });
+
+$('#truck').attr( "checked" )

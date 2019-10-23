@@ -20,7 +20,7 @@
     }
   }
   &__group {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   &__label {
@@ -33,12 +33,6 @@
 
 
 
-
-
-
-
-
- 
 .error {
   color: red;
   margin-left: 5px;
@@ -46,6 +40,9 @@
  
 label.error {
   display: inline;
+}
+.inputErrorBorder {
+  border-color: red;
 }
   
   
