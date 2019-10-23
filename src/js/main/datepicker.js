@@ -24,13 +24,13 @@ $(function () {
 	});
 });
 $('.datepicker__link').click(function () {
-	$('input').addClass('.datepicker__input ').css({
+	$('.datepicker__input ').css({
 		'color': '#ffffff'
 	});
 });
 
 $('.day__link1').click(function () {
-	$("input").addClass('.datepicker__input ').css({
+	$(".datepicker__input ").css({
 		'color': '#000000'
 	});
 });

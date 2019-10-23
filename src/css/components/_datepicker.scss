@@ -1,16 +1,24 @@
 .datepicker {
     &__link {
-        position: relative;
+       
  
        
-
         &:hover .datepicker__input::placeholder{
-            color: #ffffff;
+            color: #ffffff !important;
+            transition: all .3;
         }
         
-        &:focus .datepicker__input::placeholder{
+        &:hover .datepicker__input{
+            color: #ffffff !important;
+        }
         
-            color: #ffffff;
+        &:focus-within .datepicker__input::placeholder{
+        
+            color: #ffffff !important;
+        }
+        &:focus .datepicker__input{
+        
+            color: #ffffff !important;
         }
       
     }
