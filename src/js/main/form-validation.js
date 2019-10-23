@@ -5,7 +5,7 @@ $(document).ready(function() {
     e.preventDefault();
     var start_place = $('#startPlace').val();
     var end_place = $('#endPlace').val();
-    var some_message = $('#some_message').val();
+    var some_message = $('#contact-message').val();
     var email = $('#email').val();
     var password = $('#password').val();
  
@@ -18,7 +18,13 @@ $(document).ready(function() {
       $('#endPlace').after('<span class="error">This field is required</span>');
     }
     if (some_message.length < 1) {
-        $('#some_message').after('<span class="error">This field is required</span>');
+        $('#contact-message').after('<span class="error">This field is required</span>');
+      }
+
+    if($('input[type=radio][name=car]:checked').length == 0)
+      {
+        $('.car-carousel').after('<span class="error">This field is required</span>');
+         return false;
       }
     if (email.length < 1) {
       $('#email').after('<span class="error">This field is required</span>');
