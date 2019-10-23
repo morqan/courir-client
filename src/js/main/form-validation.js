@@ -10,15 +10,18 @@ $(document).ready(function() {
     var password = $('#password').val();
  
     $(".error").remove();
+    $(start_place).removeClass("inputErrorBorder");
+    $(end_place).removeClass("inputErrorBorder");
+    $(some_message).removeClass("inputErrorBorder");
  
     if (start_place.length < 1) {
-      $('#startPlace').after('<span class="error">This field is required</span>');
+      $('#startPlace').addClass("inputErrorBorder").after('<span class="error">This field is required</span>');
     }
     if (end_place.length < 1) {
-      $('#endPlace').after('<span class="error">This field is required</span>');
+      $('#endPlace').addClass("inputErrorBorder").after('<span class="error">This field is required</span>');
     }
     if (some_message.length < 1) {
-        $('#contact-message').after('<span class="error">This field is required</span>');
+        $('#contact-message').addClass("inputErrorBorder").after('<span class="error">This field is required</span>');
       }
 
     if($('input[type=radio][name=car]:checked').length == 0)
