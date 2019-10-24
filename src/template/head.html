@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>Jumpstart SaaS App & Software Template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
 
   <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
@@ -54,49 +54,31 @@
               <img alt="Logo" src="img/logo.png" class=" header__logo--img">
             </a>
 
-
-            <ul class="nav nav-pills flex-lg-column account__btn collapse navbar-collapse order-2 d-md-none" id="myOrderTab-2" role="tablist">
-              <li class="nav-item account__btn__item">
-                  <a class="btn btn-primary active w-100 account__btn__link" id="my-order-tab-1" data-toggle="tab"
-                      href="#my-order-1" role="tab" aria-controls="my-order-1" aria-selected="true">
-                      <div class="d-flex align-items-center">
-                          <img src="assets/img/icons/theme/home/home.svg" alt="Icon" class="icon bg-purple"
-                              data-inject-svg>
-                          <span> Sifarişlərim</span>
-                      </div>
+            <div class="collapse navbar-collapse order-2 order-lg-1" id="myOrderTab-2">
+              <ul class="navbar-nav header__navbar-nav my-3 my-lg-0 d-md-none" id="myOrderTab-2" role="tablist">
+                <li class="nav-item">
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#my-order-1"
+                    role="button">Sifarişlərim
                   </a>
-              </li>
-              <li class="nav-item  account__btn__item">
-                  <a class="btn btn-primary w-100 account__btn__link" id="payment-method-tab-1" data-toggle="tab"
-                      href="#payment-method-1" role="tab" aria-controls="payment-method-1" aria-selected="false">
-                      <div class="d-flex align-items-center">
-                          <img src="assets/img/icons/theme/communication/active-call.svg " alt="Icon"
-                              class="icon bg-purple" data-inject-svg>
-                          <span> Ödəniş növləri</span>
-                      </div>
+                </li>
+                <li class="nav-item">
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#payment-method-1"
+                    role="button">Ödəniş növləri
                   </a>
-              </li>
-              <li class="nav-item  account__btn__item">
-                  <a class="btn btn-primary w-100 account__btn__link" id="my-address-tab-1" data-toggle="tab"
-                      href="#my-address-1" role="tab" aria-controls="my-address-1" aria-selected="false">
-                      <div class="d-flex align-items-center">
-                          <img src="assets/img/icons/theme/home/home.svg" alt="Icon" class="icon bg-purple"
-                              data-inject-svg>
-                          <span> My Address</span>
-                      </div>
+                </li>
+                <li class="nav-item">
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#my-address-1"
+                    role="button">My Address
                   </a>
-              </li>
-              <li class="nav-item  account__btn__item">
-                  <a class="btn btn-primary w-100 account__btn__link" id="my-profile-tab-1" data-toggle="tab"
-                      href="#my-profile-1" role="tab" aria-controls="my-profile-1" aria-selected="false">
-                      <div class="d-flex align-items-center">
-                          <img src="assets/img/icons/theme/general/user.svg" alt="Icon"
-                              class="icon bg-purple" data-inject-svg>
-                          <span> Profilim</span>
-                      </div>
+                </li>
+                <li class="nav-item">
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item" href="#my-profile-1"
+                    role="button">Profilim
                   </a>
-              </li>
-          </ul>
+                </li>
+              </ul>
+            </div>
+          
             <div class="collapse navbar-collapse order-3 order-lg-1 justify-content-lg-start" id="navigation-menu">
               <ul class="navbar-nav header__navbar-nav my-3 my-lg-0">
                 <li class="nav-item">
@@ -172,10 +154,10 @@
                 data-target=".navbar-collapse" data-toggle="collapse" type="button">
                 <!-- <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" data-inject-svg
                   src="assets/img/icons/interface/icon-menu.svg"> -->
-                  <i class="fas fa-bars navbar-toggler-open icon icon-sm"></i>
+                <i class="fas fa-bars navbar-toggler-open icon icon-sm"></i>
                 <!-- <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm" data-inject-svg
                   src="assets/img/icons/interface/icon-x.svg"> -->
-                  <i class="fas fa-times navbar-toggler-close icon icon-sm"></i>
+                <i class="fas fa-times navbar-toggler-close icon icon-sm"></i>
               </button>
             </div>
           </div>
