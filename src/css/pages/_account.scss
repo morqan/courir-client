@@ -1,7 +1,7 @@
 .account {
 
 
- 
+
     &__btn {
         @include respondmax(lg) {
             justify-content: space-between;
@@ -22,12 +22,12 @@
             @include respondmax(sm) {
                 width: 100% !important;
             }
-            
+
 
             .btn-primary:not(:disabled):not(.disabled).active {
                 color: #fff;
                 background-color: $color-primary;
-                border-color:  $color-primary;
+                border-color: $color-primary;
                 outline: none;
             }
         }
@@ -35,26 +35,36 @@
 
     &__nav {
         flex-wrap: nowrap;
-border: none;
+        border: none;
 
         @include respondmax(md) {
-            flex-wrap: wrap;
+        
+         border-bottom: none;
         }
 
         @include respondmax(sm) {
             width: auto;
+            font-size: 13px;
         }
 
         &__item {
-            @include respondmax(sm) {
-                width: 100%;
+            // @include respondmax(sm) {
+            //     width: 100%;
+            // }
+            &:not(:last-child){
+                margin-right: 5px;
             }
+
             .active {
                 color: $color-primary !important;
                 background-color: none;
                 border-color: none;
-                border-bottom: 2px solid $color-primary;}
-            
+                border-bottom: 2px solid $color-primary;
+                @include respondmax(md) {
+                    border-bottom: none;
+                   }
+            }
+
         }
 
         &--link {
@@ -103,6 +113,7 @@ border: none;
 
     &__div {
         display: flex;
+
         @include respondmax(sm) {
             flex-direction: column;
             align-items: center;
@@ -224,15 +235,15 @@ border: none;
                 width: 150px;
                 height: 150px;
                 color: #fff;
-               
+
                 @include respondmax(sm) {
-        
+
                     margin-top: 10px;
                 }
 
                 img {
                     border-radius: 20%;
-                   
+
                 }
             }
         }
@@ -247,10 +258,12 @@ border: none;
                 width: 100px;
                 height: 100px;
                 margin-right: 20px;
+
                 @include respondmax(sm) {
                     width: 80px;
                     height: 80px;
-                margin-right: 10px;}
+                    margin-right: 10px;
+                }
             }
 
             &--span {
@@ -266,7 +279,12 @@ border: none;
 
     &__custom-control {
         @include respondmax(sm) {
-           padding-left: 0 !important;
+            padding-left: 0 !important;
         }
+    }
+}
+#myOrderTab-1{
+    @include respondmax(sm) {
+        display: none;
     }
 }
