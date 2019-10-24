@@ -24,7 +24,7 @@
 	    }
 
 	    if ($('input[type=radio][name=car]:checked').length == 0) {
-	      $('.car-carousel').after('<span class="error">This field is required</span>');
+	      $('.owl-dots').after('<span class="error">This field is required</span>');
 	      return false;
 	    }
 	    if (email.length < 1) {
@@ -57,7 +57,7 @@
 	    $('#contact-message').next().remove();
     });
    
-    // $('input[type=radio][name=car]').change(function () {
-    //   $('.car-carousel').find('.error').remove();
-    // });
+    $('input[type=radio][name=car]').change(function () {
+      $('.owl-dots').next('.error').remove();
+    });
 	});
