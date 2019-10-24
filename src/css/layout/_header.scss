@@ -21,11 +21,7 @@
 
    
 
-    &__navbar-nav { 
-        @include respondmax(lg) {
-           margin-top: 0 !important;
-         }
-    }
+   
     &__collapse {
         flex-grow: 0;
         @include respondmax(lg) {
@@ -35,7 +31,7 @@
            padding: 20px 0;
            border-bottom: 1px solid #cccccc;
            border-top: 1px solid #cccccc;
-           margin: 20px 0;
+           margin-top: 20px;
         }
 
         .login1 {
@@ -104,7 +100,14 @@
   
 }
 
-#myOrderTab-2 {
-    display: none;
+// #myOrderTab-2 {
+//     border-bottom: 1px solid #cccccc;
+    
+// }
+#navigation-menu {
+    @include respondmax(sm) {
+        border-top: 1px solid #cccccc;
+        }
+  
     
 }
