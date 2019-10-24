@@ -68,69 +68,26 @@
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
 
-    
-    <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
-    <script type="text/javascript">
-      window.addEventListener("load",function(){
-            setTimeout(function() {
-              const delayedImages = document.querySelectorAll('[data-delay-src]');
-              theme.mrUtil.forEach(delayedImages, (index, elem) => {
-                const source = elem.getAttribute('data-delay-src');
-                elem.removeAttribute('data-delay-src');
-                elem.setAttribute('src', source);
-              });
-            }, 500);
-          });
-    </script>
-
-    <script type="text/javascript">
-      // This script appears only in the demo - it disables forms with no action attribute to prevent 
-      // navigating away from the page.
-      jQuery("form:not([action])").on('submit', function(){return false;});
-    </script>
-
-
-
-
-
-
-
-
 
 
 
 
     <!-- Our footer -->
-     
-     
-    
     
       <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
       <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
       <script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
       <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
       <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-
-
- <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
-
-<!-- 
-  <script src="libs/intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
-  <script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/intl-tel-input/build/js/intlTelInput.js"></script>
-<script src="js/main/intl-tel.js"></script> -->
-
+      <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
 
       <script src="js/all.js"></script>
 
-
-
       <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-      <script>
+      <!-- <script>
         window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
         ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
 </body>
 </html>
