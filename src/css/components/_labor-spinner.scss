@@ -84,6 +84,12 @@
             display: inline-block;
             vertical-align: middle;
             text-decoration: none;
+            .icon-minus,
+            .icon-plus{
+                position: relative;
+                width: 32px !important;
+                height: 32px !important;
+            }
         }
 
         .icon-minus:after {
@@ -91,6 +97,8 @@
             font-size: 30px;
             line-height: 30px;
             font-weight: bold;
+            width: 32px !important;
+            height: 32px !important;
         }
 
         .icon-plus:after {
@@ -98,6 +106,8 @@
             font-size: 30px;
             line-height: 30px;
             font-weight: bold;
+            width: 32px !important;
+                height: 32px !important;
         }
     }
     

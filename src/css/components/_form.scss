@@ -45,4 +45,11 @@ label.error {
   border-color: red;
 }
   
-  
+  #first_form{
+    @include respondmax(sm) {
+     border: 1px solid #f5f5f5;
+     border-radius: 10px;
+     transform: translateY(-20px);
+     background-color: #ffffff;
+  }
+  }
