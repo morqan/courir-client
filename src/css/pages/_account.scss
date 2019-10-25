@@ -218,12 +218,18 @@
             width: 90%;
             margin: auto;
             margin-top: 1rem;
+            @include respondmax(md) {
+                margin-top: 0;
+
+            }
 
             @include respondmax(sm) {
                 flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
                 justify-content: center;
-                margin-top: 0;
+                
 
             }
 
@@ -235,6 +241,21 @@
                 width: 150px;
                 height: 150px;
                 color: #fff;
+
+                @include respondmax(md) {
+
+                    margin-top: 10px;
+                }
+
+                &:not(:last-child){
+                   
+                    @include respondmax(md) {
+                        margin-right: 10px;
+                    }
+                    @include respondmax(sm) {
+                        margin-right: 0;
+                    }
+                }
 
                 @include respondmax(sm) {
 
