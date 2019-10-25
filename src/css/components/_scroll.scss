@@ -15,7 +15,7 @@
 	width: 100%;
 	overflow-y: scroll;
 
-	@include respondmax(sm) {
+	@include respondmax(md) {
 	  overflow-y: auto;
 	  height: auto;
     }
