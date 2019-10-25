@@ -5,6 +5,21 @@
 	height:80vh;
 	width: 100%;
 	overflow-y: scroll;
+
+}
+.scrollbar1
+{
+
+	float: left;
+	height:80vh;
+	width: 100%;
+	overflow-y: scroll;
+
+	@include respondmax(sm) {
+	  overflow-y: auto;
+	  height: auto;
+    }
+
 }
 
 .scroll-style::-webkit-scrollbar-track
