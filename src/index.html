@@ -5,8 +5,8 @@
 
     <div class="form-row mt-5 ">
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
-            <div class="container">
-                <form class="form scrollbar p-4 scroll-style" id="first_form">
+          
+                <form class="form scrollbar1 p-3 scroll-style" id="first_form">
                     <!-- LOADING  START  -->
                     <div class="loading-spinner">
                         <div class="spinner-square">
@@ -42,50 +42,12 @@
                     <!-- CAR START-->
                     <label class="form-label form__label">Daşıma növünü seçin:</label>
 
-                    <!-- <div class="owl-carousel owl-theme mb-2">
-                        <div class="item">
-                             <a class="car__link--active car__link car__link-hide" id="pedestrian" href="#">
-                                <div class="car__div">
-                                    <img src="img/shared.png" alt="car" class="car__div--img">
-                                    <span class="car__div--span">Piyada</span>
-                                </div>
-                            </a></div>
-                        <div class="item">
-                             <a class="car__link car__link-hide" id="motorbike" href="#">
-                                <div class="car__div">
-                                    <img src="img/motorbike.png" alt="car" class="car__div--img">
-                                    <span class="car__div--span">Motosiklet</span>
-                                </div>
-                            </a></div>
-                        <div class="item"> <a class="car__link car__link-hide" id="car"href="#">
-                                <div class="car__div">
-                                    <img src="img/lyft.png" alt="car" class="car__div--img">
-                                    <span class="car__div--span">Avtomobil</span>
-                                </div>
-                            </a></div>
-                        <div class="item">
-                            <a class="car__link car__link-hide" id="evacuator" href="#">
-                                <div class="car__div">
-                                    <img src="img/lyft-lux.png" alt="car" class="car__div--img">
-                                    <span class="car__div--span">Evakuator</span>
-                                </div>
-                            </a></div>
-                        <div class="item">
-                            <a class="car__link" id="truck" href="#">
-                                <div class="car__div"><img src="img/transit.png" alt="car"
-                                        class="car__div--img"><span class="car__div--span">Yük maşını</span>
-                                </div>
-                            </a></div>
-
-                    </div> -->
-
-
                     <div class="car-carousel owl-carousel  owl-theme mb-2">
                         <div class="form-group car__form-group">
                             
                             <input class="car__input car-hide"  type="radio" name="car" id="pedestrian" />
                             <label class="car__label" for="pedestrian">
-                                    <img src="img/shared.png" alt="car" class="car__label--img">
+                                    <img src="img/pedestrian.png" alt="car" class="car__label--img">
                                     <span class="car__label--span">Piyada</span>
                             </label>
                         </div>
@@ -101,7 +63,7 @@
                             <div class="form-group car__form-group">
                                 <input class="car__input car-hide" type="radio" name="car" id="car" />
                                 <label class="car__label" for="car">
-                                     <img src="img/lyft.png" alt="car"
+                                     <img src="img/car.png" alt="car"
                                         class="car__label--img">
                                     <span class="car__label--span">Avtomobil</span>
                                 </label>
@@ -110,7 +72,7 @@
                             <div class="form-group car__form-group">
                                     <input class="car__input car-hide" type="radio" name="car" id="evacuator" />
                                     <label class="car__label" for="evacuator">
-                                            <img src="img/lyft-lux.png" alt="car" class="car__label--img">
+                                            <img src="img/evacuator.png" alt="car" class="car__label--img">
                                             <span class="car__label--span">Evakuator</span>
                                     </label>
                               
@@ -183,13 +145,13 @@
                                 <div class="number-spinner">
                                     <span class="ns-btn">
                                         <a>
-                                            <span class="icon-minus" id="icon-minus"></span>
+                                            <div class="icon-minus" id="icon-minus"></div>
                                         </a>
                                     </span>
                                     <input type="text" class="pl-ns-value" value="0" maxlength=2 id="spinner">
                                     <span class="ns-btn">
                                         <a>
-                                            <span class="icon-plus" id="icon-plus"></span>
+                                            <div class="icon-plus" id="icon-plus"></div>
                                         </a>
                                     </span>
                                 </div>
@@ -457,12 +419,16 @@
                         <!-- PAYMENT END   -->
 
                         <!--SUBMIT BUTTON-->
-                        <button class="btn btn-2 btn-purple btn-loading " type="submit" name="submit">
+                        <button class="btn btn-2 btn-purple form-submit"  type="submit" name="submit">
                             <span>Order Now</span>
                         </button>
 
                 </form>
-            </div>
+                <!-- EXAMPLE BUTTON -->
+                <!-- <button class="btn btn-2 btn-purple  btn-submit" type="submit" name="submit">
+                        <span>Button</span>
+                    </button> -->
+        
 
         </div>
 
@@ -504,6 +470,8 @@
 
 
 </div>
+
+
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
 </script>

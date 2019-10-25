@@ -1,6 +1,8 @@
 .index {
     padding-top: 3rem;
-
+    @include respondmax(sm) {
+        padding-top: 0;
+    }
     &__content {
         &--h1-group {
             display: flex;
@@ -34,9 +36,7 @@
 }
 
 
-.map {
-    // max-height: 80vh;
-}
+
 
 
 .textarea {
