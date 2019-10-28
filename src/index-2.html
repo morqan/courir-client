@@ -22,11 +22,11 @@
                         <div class="inpBtn__box">
                             <div class="inpBtn getToMap">
                                 <div class="inpBtn__fields">From:</div>
-                                <div class="inpBtn__text">Enter start location</div>
+                                <div id="fromAdress" class="inpBtn__text">Enter start location</div>
                             </div>
                             <div class="inpBtn">
                                 <div class="inpBtn__fields">To:</div>
-                                <div class="inpBtn__text">Enter end location</div>
+                                <div  class="inpBtn__text">Enter end location</div>
                             </div>
                         </div>
                         <div class="d-none formBox">
@@ -516,8 +516,10 @@
 
                 if (status === 'OK') {
                     if (results[0]) {
-                    
-                        console.log(results[0].formatted_address);
+                        
+                        var myAdress = results[0].formatted_address;
+                        console.log(myAdress);
+                        $("#fromAdress").text(myAdress);
                     }
                 }
             });
@@ -525,6 +527,7 @@
 
             $(".mapBox").addClass('d-none');
             $(".inpBtn__box").show();
+            
            
         });
 
