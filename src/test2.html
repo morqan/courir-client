@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://twitter.github.io/typeahead.js/css/examples.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <title>test</title>
     <style type="text/css">
         section {
@@ -70,7 +72,9 @@
                         ].join('\n'),
                         suggestion: function (data) {
                             console.log(data);
-                            return ['<div class="d-flex"  data-place-id="' + data.placeId + '">' + data.address + '<div class="goToMap" >MAP</div> </div>'].join('\n');
+                            // return ['<div class="d-flex"  data-place-id="' + data.placeId + '">' + data.address + '<div class="goToMap" >MAP</div> </div>'].join('\n');
+
+                            return ['<div class="custom-result" data-place-id="' + data.placeId + '" ><div class=" custom-result__icon"><i class="fas fa-map-marker-alt "></i></div><div class="custom-result__text"><div class="custom-result__text--all"> ' + data.address + ' </div></div><div class="custom-result__map"><span>Map</span></div></div>'].join('\n');
                         },
                         footer: '<div style="text-align:right; padding-right: 10px;"><img src="https://cdn.doordash.com/static/img/consumer/share/powered_by_google_on_white_hdpi.png" style="height:18px;"/></div>'
                     }
