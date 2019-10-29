@@ -1,0 +1,37 @@
+.custom-result {
+    margin-top: 100px;
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    &__icon {
+    color:  #bbb;
+        padding: 0 20px;
+    }
+
+
+&__text {
+    margin-right: 5px;
+  
+   &--all{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 32px;      /* fallback */
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+   }
+  
+}
+    &__map {
+       padding: 0 8px;
+        border-left: 1px solid  rgba(187,187,187,0.3);
+        cursor: pointer;
+        color: $color-primary;
+    }
+}

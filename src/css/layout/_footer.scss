@@ -10,4 +10,10 @@
         justify-content: center;
         border-radius: 50%;
     }
+    &__3 {
+        margin-top: 40px;
+        @include respondmax(sm) {
+            margin-top: 20px;
+        }
+    }
 }
