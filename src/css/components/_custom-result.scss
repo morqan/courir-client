@@ -1,5 +1,5 @@
 .custom-result {
-    margin-top: 100px;
+
     width: 100%;
     background-color: #fff;
     height: 50px;
@@ -9,27 +9,34 @@
     cursor: pointer;
     &__icon {
     color:  #bbb;
-        padding: 0 20px;
+        padding-right:  15px;
     }
 
 
 &__text {
     margin-right: 5px;
-  
+   display: flex;
+   justify-self:start;
+   justify-content: start;
+   width: 100%;
    &--all{
+    text-align: left;
+  text-justify: inter-word;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 16px;
     display: -webkit-box;
     line-height: 16px;     /* fallback */
-    max-height: 32px;      /* fallback */
+    max-height: 16px;      /* fallback */
     -webkit-line-clamp: 1; /* number of lines to show */
     -webkit-box-orient: vertical;
+   
 
    }
   
 }
     &__map {
-       padding: 0 8px;
+     padding-left: 10px;
         border-left: 1px solid  rgba(187,187,187,0.3);
         cursor: pointer;
         color: $color-primary;

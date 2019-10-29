@@ -1,44 +1,49 @@
-.inpBtn{
-    display: flex;
-    background-color: #ddd;
-    margin-bottom: 10px;
-    padding: 15px 10px;
-    border-radius: 10px;
-    cursor: pointer;
+.inpBtn {
+  display: flex;
+  background-color: #ddd;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: pointer;
 
-    &__fields{
-        width: 65px;
-    }
-    &__currect{
-        flex-basis: 70%;
-    }
-    &__link{
-        color: #7b2bfc;
-    }
+  &__fields {
+    width: 65px;
+  }
+
+  &__currect {
+    flex-basis: 70%;
+  }
+
+  &__link {
+    color: #7b2bfc;
+  }
 }
 
-.myMap{
-    height: 500px;
+.myMap {
+  height: 500px;
 }
 
 
 
 #map_nextV {
-    position: relative;
+  position: relative;
 
 
-    &:after {
-        width: 22px;
-        height: 40px;
-        display: block;
-        content: ' ';
-        position: absolute;
-        top: 50%; left: 50%;
-        margin: -40px 0 0 -11px;
-        background: url('https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png');
-        background-size: 22px 40px; /* Since I used the HiDPI marker version this compensates for the 2x size */
-        pointer-events: none; /* This disables clicks on the marker. Not fully supported by all major browsers, though */
-    }
+  &:after {
+    width: 22px;
+    height: 40px;
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -11px;
+    background: url('https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png');
+    background-size: 22px 40px;
+    /* Since I used the HiDPI marker version this compensates for the 2x size */
+    pointer-events: none;
+    /* This disables clicks on the marker. Not fully supported by all major browsers, though */
+  }
 }
 
 
@@ -46,7 +51,8 @@
 
 
 
-  .tt-menu,.gist {
+.tt-menu,
+.gist {
   text-align: left;
 }
 
@@ -74,7 +80,7 @@ a:hover {
   color: #999;
 }
 
-p + p {
+p+p {
   margin: 30px 0 0 0;
 }
 
@@ -100,20 +106,33 @@ p + p {
   *z-index: 1;
   margin: 50px 0;
 }
+.formBox-div{
+ padding:10px;
+
+ margin-bottom: 10px;
+  background-color: #fafafe;
+  .fa-long-arrow-alt-left {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
 
 .typeahead,
 .tt-query,
 .tt-hint {
-  width: 396px;
-  height: 30px;
+  width: 100%;
+  // height: 30px;
   padding: 8px 12px;
-  font-size: 24px;
+  // font-size: 24px;
   line-height: 30px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   outline: none;
+}
+.twitter-typeahead {
+  width: 100%;
 }
 
 .typeahead {
@@ -121,13 +140,13 @@ p + p {
 }
 
 .typeahead:focus {
-  border: 2px solid #0097cf;
+  border-color: 1px solid #2568ef;
 }
 
 .tt-query {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .tt-hint {
@@ -135,35 +154,34 @@ p + p {
 }
 
 .tt-menu {
-  width: 422px;
+  width: 100%;
   margin: 12px 0;
   padding: 8px 0;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
-  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
-          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
 .tt-suggestion {
-  padding: 3px 20px;
+  padding: 3px 15px;
   font-size: 18px;
   line-height: 24px;
 }
 
 .tt-suggestion:hover {
   cursor: pointer;
-  color: #fff;
-  background-color: #0097cf;
+  background-color: #fafafe;
 }
 
 .tt-suggestion.tt-cursor {
-  color: #fff;
-  background-color: #0097cf;
+
+  background-color: #fafafe;
 
 }
 
@@ -180,7 +198,7 @@ p + p {
 
 #custom-templates .empty-message {
   padding: 5px 10px;
- text-align: center;
+  text-align: center;
 }
 
 #multiple-datasets .league-name {
