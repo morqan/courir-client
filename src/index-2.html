@@ -548,7 +548,7 @@
                         ].join('\n'),
                         suggestion: function (data) {
                             console.log(data);
-                            return ['<div class="d-flex"  data-place-id="' + data.placeId + '">' + data.address + '<div class="goToMap" >MAP</div> </div>'].join('\n');
+                            return ['<div class="custom-result" data-place-id="' + data.placeId + '" ><div class=" custom-result__icon"><i class="fas fa-map-marker-alt "></i></div><div class="custom-result__text"><div class="custom-result__text--all"> ' + data.address + ' </div></div><div class="custom-result__map"><span>Map</span></div></div>'].join('\n');
                         },
                         footer: '<div style="text-align:right; padding-right: 10px;"><img src="https://cdn.doordash.com/static/img/consumer/share/powered_by_google_on_white_hdpi.png" style="height:18px;"/></div>'
                     }
