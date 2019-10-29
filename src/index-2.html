@@ -38,7 +38,7 @@
                             <form>
                                 <div>
                                     <input type="text" class="typeahead" placeholder="Enter location" />
-                                    <div id="container">&nbsp;</div>
+                                    <div id="Mycontainer">&nbsp;</div>
                                 </div>
                                 <div class="inpBtn">
                                     <div class="inpBtn__fields">To:</div>
@@ -513,7 +513,7 @@
         };
 
         var geocoder = new google.maps.Geocoder;
-        
+
 
         map = new google.maps.Map(document.getElementById('map_nextV'), mapOptions);
         $(function () {
@@ -575,18 +575,32 @@
             $(".typeahead").on('typeahead:selected typeahead:autocompleted', function (e, datum) {
                 // this input is the input that needs the imdb_id value
                 //alert(datum.placeId);
-                var container = document.getElementById("container");
-                var service = new google.maps.places.PlacesService(container);
+                var Mycontainer = document.getElementById("Mycontainer");
+                var service = new google.maps.places.PlacesService(Mycontainer);
                 service.getDetails({
                     placeId: datum.placeId
                 }, function (place, status) {
                     if (status === google.maps.places.PlacesServiceStatus.OK) {
                         // document.getElementById("container").innerHTML = "Lat :" + place.geometry.location.lat() + "<br/>" + "Lan:" + place.geometry.location.lng()
                         console.log("Lat", place.geometry.location.lat());
-                        console.log("Lan", place.geometry.location.lng());
+                        console.log("Lan", place.geometry.location.lat());
+
                     }
                 }
                 )
+            });
+
+
+          
+            $(document).on("click", ".custom-result__map", function () {
+                var Mycontainer = document.getElementById("Mycontainer");
+                var service = new google.maps.places.PlacesService(Mycontainer);
+                var inputResultLat = place.geometry.location.lat();
+                var inputResultLng = place.geometry.location.lng();
+                console.log(inputResultLat, inputResultLng);
+
+                var myLatlng = { lat: parseFloat(markerLat), lng: parseFloat(markerLng) };
+                console.log(myLatlng);
             });
 
         });
