@@ -26,7 +26,7 @@
                             </div>
                             <div class="inpBtn">
                                 <div class="inpBtn__fields">To:</div>
-                                <div  class="inpBtn__text">Enter end location</div>
+                                <div class="inpBtn__text">Enter end location</div>
                             </div>
                         </div>
                         <div class="d-none formBox">
@@ -36,14 +36,20 @@
                                 </span>
                             </div>
                             <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter adress">
+                                <div>
+                                    <input type="text" class="typeahead" placeholder="Enter location" />
+                                    <div id="container">&nbsp;</div>
                                 </div>
                                 <div class="inpBtn">
                                     <div class="inpBtn__fields">To:</div>
                                     <div class="inpBtn__currect">Current location</div>
                                     <div class="inpBtn__link">MAP</div>
                                 </div>
+                                <div id="right-panel">
+                                    <p>Query suggestions for 'pizza near Syd':</p>
+                                    <ul id="results"></ul>
+                                </div>
+
 
                             </form>
 
@@ -489,50 +495,129 @@
 
 
 </div>
+
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
     </script>
 <script>
 
+
+
     function initialize() {
+
+
         var mapOptions = {
             zoom: 13,
             center: new google.maps.LatLng(40.42557252485824, 49.84169001645499),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+
         var geocoder = new google.maps.Geocoder;
+        
 
         map = new google.maps.Map(document.getElementById('map_nextV'), mapOptions);
+        $(function () {
+            var searchInput = $(".typeahead");
+            var sessionToken = new google.maps.places.AutocompleteSessionToken();
+            var service = new google.maps.places.AutocompleteService();
+            var predictions, status;
 
-        $(".getLatLng").click(function(){
+            $(".typeahead").typeahead({
+                highlight: true,
+                minLength: 3,
+                autoselect: true
+
+            },
+                {
+                    async: true,
+                    display: 'address',
+                    source: function (query, process, aProcess) {
+                        service.getPlacePredictions({
+                            input: query,
+                            sessionToken: sessionToken
+                        }, function (predictions, status) {
+                            aProcess(formatAddress(predictions, status));
+                        });
+
+                    },
+                    templates: {
+                        empty: [
+                            '<div class="empty-message text-center" style="">',
+                            'No address available.<br/>',
+                            '</div>',
+                        ].join('\n'),
+                        suggestion: function (data) {
+                            console.log(data);
+                            return ['<div class="d-flex"  data-place-id="' + data.placeId + '">' + data.address + '<div class="goToMap" >MAP</div> </div>'].join('\n');
+                        },
+                        footer: '<div style="text-align:right; padding-right: 10px;"><img src="https://cdn.doordash.com/static/img/consumer/share/powered_by_google_on_white_hdpi.png" style="height:18px;"/></div>'
+                    }
+
+                });
+
+            var formatAddress = function (predictions, status) {
+                console.log("Predictions", predictions);
+                console.log("Status", status);
+                var formatttedAddress = [];
+                var placeObj = {};
+                if (status === "OK") {
+                    predictions.forEach(function (prediction) {
+                        placeObj.address = prediction.description;
+                        placeObj.placeId = prediction.place_id;
+                        formatttedAddress.push(placeObj)
+                        placeObj = {};
+                    });
+                }
+                console.log("FormattedAddress", formatttedAddress);
+                return formatttedAddress;
+            }
+
+            $(".typeahead").on('typeahead:selected typeahead:autocompleted', function (e, datum) {
+                // this input is the input that needs the imdb_id value
+                //alert(datum.placeId);
+                var container = document.getElementById("container");
+                var service = new google.maps.places.PlacesService(container);
+                service.getDetails({
+                    placeId: datum.placeId
+                }, function (place, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        // document.getElementById("container").innerHTML = "Lat :" + place.geometry.location.lat() + "<br/>" + "Lan:" + place.geometry.location.lng()
+                        console.log("Lat", place.geometry.location.lat());
+                        console.log("Lan", place.geometry.location.lng());
+                    }
+                }
+                )
+            });
+
+        });
+
+        $(".getLatLng").click(function () {
             var markerLat = map.getCenter().lat();
             var markerLng = map.getCenter().lng();
-                console.log(markerLat,markerLng);
+            console.log(markerLat, markerLng);
 
-            var myLatlng = {lat: parseFloat(markerLat), lng: parseFloat(markerLng)};
+            var myLatlng = { lat: parseFloat(markerLat), lng: parseFloat(markerLng) };
             console.log(myLatlng);
 
-            geocoder.geocode({'location': myLatlng}, function(results, status) {
+            geocoder.geocode({ 'location': myLatlng }, function (results, status) {
 
                 if (status === 'OK') {
                     if (results[0]) {
-                        
+
                         var myAdress = results[0].formatted_address;
                         console.log(myAdress);
                         $("#fromAdress").text(myAdress);
                     }
                 }
             });
-
-
             $(".mapBox").addClass('d-none');
             $(".inpBtn__box").show();
-            
-           
         });
 
-        
     }
+
+
+
     google.maps.event.addDomListener(window, 'load', initialize);
 
 
