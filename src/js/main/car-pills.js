@@ -7,6 +7,7 @@ $('.hide-info').click(function () {
     $('.info').css({
       'display': 'block'
     });
+
   });
 
   $('.hide-receiver').click(function () {
