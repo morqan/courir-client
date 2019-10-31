@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    &__form-group{
+
+    &__form-group {
         width: 32%;
     }
 
@@ -33,11 +34,13 @@
         display: flex;
         flex-direction: column;
         border-radius: 10px;
+        text-decoration: none;
 
         &:hover {
             color: #ffffff !important;
             background-color: $color-primary !important;
             transition: all .3s;
+            text-decoration: none;
         }
 
 
@@ -51,7 +54,7 @@
         }
     }
 
-    &__label {
+    &__label1 {
         text-align: center;
         cursor: pointer;
         background-color: $color-secondary;
@@ -61,15 +64,17 @@
         justify-content: center;
         border-radius: 3px;
         width: 100%;
-        height: 60px;
-     
+        height: 70px;
+
         border-radius: 10px;
+
         &--img {
             margin-left: auto;
             margin-right: auto;
             width: 50px !important;
 
         }
+
 
         &--span {
             font-size: 12px;
@@ -80,11 +85,60 @@
             font-weight: bold;
         }
 
+
         &:hover {
             background-color: $color-primary;
         }
 
-        &:hover .car-pills__label--span {
+        &:hover .car-pills__label1--span {
+            color: #ffffff;
+        }
+    }
+
+    &__label2 {
+        text-align: center;
+        cursor: pointer;
+        background-color: $color-secondary;
+        color: black;
+        display: flex;
+     justify-content: space-between;
+     align-items: center;
+        border-radius: 3px;
+        width: 100%;
+        height: 70px;
+
+        border-radius: 10px;
+
+        &__img-group {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+        &--img {
+         
+            width: 50px !important;
+
+        }
+
+
+        &--span {
+            font-size: 12px;
+        font-family: 'Nunito', sans-serif;
+            color: #1f1f1f;
+            font-weight: bold;
+        }
+
+
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+        &:hover .car-pills__label2--span {
+            color: #ffffff;
+        }
+        &:hover .info2 {
             color: #ffffff;
         }
     }
@@ -100,7 +154,9 @@
             color: #ffffff;
         }
 
-        &:checked+label .car-pills__label--span {
+        &:checked+label .car-pills__label1--span,
+        &:checked+label .car-pills__label2--span,
+        &:checked+label .info2 {
             color: #ffffff !important;
         }
     }
@@ -115,6 +171,16 @@
     }
 
 }
+
 #pills-car-tabContent-2 {
     height: 70px;
+}
+.info2 {
+    margin-right: 20px;
+    font-size: 13px;
+    display: flex;
+width: 50%;
+justify-content: space-between;
+    color: $color-primary;
+
 }

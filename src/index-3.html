@@ -40,24 +40,25 @@
                 <!-- INPUT END-->
 
                 <!-- CAR START-->
+                <div class="form-group form__group">
                 <label class="form-label form__label">Daşıma növünü seçin:</label>
                 <ul class="nav nav-pills car-pills" id="pills-car-tab-2" role="tablist">
                     <li class="nav-item car-pills__list">
-                        <a class="show active car-pills__link day__link1" id="pills-car-1-tab" data-toggle="pill"
+                        <a class="show active car-pills__link  show-info" id="pills-car-1-tab" data-toggle="pill"
                             href="#pills-car-1" role="tab" aria-controls="pills-car-1" aria-selected="true">
-                            <span>Courier</span>
-                           </a>
+                            <span>Kuryer</span>
+                        </a>
                     </li>
                     <li class="nav-item car-pills__list">
-                        <a class=" car-pills__link  day__link1" id="pills-car-2-tab" data-toggle="pill"
+                        <a class=" car-pills__link   hide-info" id="pills-car-2-tab" data-toggle="pill"
                             href="#pills-car-2" role="tab" aria-controls="pills-car-2" aria-selected="false">
-                            <span>Services</span>
-                          </a>
+                            <span>Evakuator</span>
+                        </a>
                     </li>
-                    <li class="nav-item car-pills__list datepicker">
+                    <li class="nav-item car-pills__list  hide-info">
                         <a class=" car-pills__link datepicker__link" id="pills-car-3-tab" data-toggle="pill"
                             href="#pills-car-3" role="tab" aria-controls="pills-car-3" aria-selected="false">
-                            <span>Services</span>
+                            <span>Yük maşını</span>
 
                         </a>
 
@@ -70,55 +71,72 @@
                             <div class="form-group  car-pills__form-group">
 
                                 <input class="car-pills__input car-hide" type="radio" name="car2" id="pedestrian" />
-                                <label class="car-pills__label" for="pedestrian">
-                                    <img src="img/pedestrian.png" alt="car" class="car-pills__label--img">
-                                    <span class="car-pills__label--span">Piyada</span>
+                                <label class="car-pills__label1" for="pedestrian">
+                                    <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
+                                    <span class="car-pills__label1--span">Piyada</span>
                                 </label>
                             </div>
                             <div class="form-group  car-pills__form-group">
 
                                 <input class="car-pills__input car-hide" type="radio" name="car2" id="motorbike" />
-                                <label class="car-pills__label" for="motorbike">
-                                    <img src="img/motorbike.png" alt="car" class="car-pills__label--img">
-                                    <span class="car-pills__label--span">Motosiklet</span>
+                                <label class="car-pills__label1" for="motorbike">
+                                    <img src="img/motorbike.png" alt="car" class="car-pills__label1--img">
+                                    <span class="car-pills__label1--span">Motosiklet</span>
                                 </label>
 
                             </div>
                             <div class="form-group  car-pills__form-group">
                                 <input class="car-pills__input car-hide" type="radio" name="car2" id="car" />
-                                <label class="car-pills__label" for="car">
-                                    <img src="img/car.png" alt="car" class="car-pills__label--img">
-                                    <span class="car-pills__label--span">Avtomobil</span>
+                                <label class="car-pills__label1" for="car">
+                                    <img src="img/car.png" alt="car" class="car-pills__label1--img">
+                                    <span class="car-pills__label1--span">Avtomobil</span>
                                 </label>
 
                             </div>
                         </div>
 
                     </div>
-                    <div class="tab-pane fade tab__pane" id="pills-car-2" role="tabpanel"
+                    <div class="tab-pane fade tab__pane " id="pills-car-2" role="tabpanel"
                         aria-labelledby="pills-car-2-tab">
-                        <div class="form-group car-pills__form-group">
-                                <input class="car-pills__input car-hide" type="radio" name="car2" id="evacuator" />
-                                <label class="car-pills__label" for="evacuator">
-                                    <img src="img/evacuator.png" alt="car" class="car-pills__label--img">
-                                    <span class="car-pills__label--span">Evakuator</span>
-                                </label>
-        
-                            </div>
+                        <div class="form-group">
+                            <input class="car-pills__input car-hide" type="radio" name="car2" id="evacuator" />
+                            <label class="car-pills__label2" for="evacuator">
+                                <div class="car-pills__label2__img-group">
+                                    <img src="img/evacuator.png" alt="car" class="car-pills__label2--img">
+                                    <span class="car-pills__label2--span">Evakuator</span>
+                                </div>
+                                <div class="info2">
+                                    <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                    <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
+                                    <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
+
+                                </div>
+                            </label>
+
+                        </div>
                     </div>
-                    <div class="tab-pane fade tab__pane" id="pills-car-3" role="tabpanel"
+                    <div class="tab-pane fade tab__pane " id="pills-car-3" role="tabpanel"
                         aria-labelledby="pills-car-3-tab">
-                        <div class="form-group car-pills__form-group">
-                                <input class="car-pills__input" type="radio" name="car2" id="truck" />
-                                <label class="car-pills__label" for="truck">
-                                    <img src="img/transit.png" alt="car" class="car-pills__label--img"><span
-                                        class="car-pills__label--span">Yük maşını</span>
-                                </label>
-                            </div>
+                        <div class="form-group ">
+                            <input class="car-pills__input " type="radio" name="car2" id="truck" />
+                            <label class="car-pills__label2" for="truck">
+                                <div class="car-pills__label2__img-group"> <img src="img/transit.png" alt="car"
+                                        class="car-pills__label2--img"><span class="car-pills__label2--span">Yük
+                                        maşını</span>
+                                    </div>
+
+                                <div class="info2">
+                                    <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                    <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
+                                    <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
+
+                                </div>
+                            </label>
+                        </div>
                     </div>
                 </div>
+                </div>
 
-               
 
                 <div class="info">
                     <div class="info__span">
