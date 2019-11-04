@@ -15,4 +15,4 @@ $('.car-hide').change(function () {
 //   $(this).addClass("car__link--active");
 // });
 
-$('#truck').attr( "checked" )
+// $('#truck').attr( "checked" )
