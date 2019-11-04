@@ -678,6 +678,7 @@
         var originAutocomplete = new google.maps.places.Autocomplete(originInput);
         // Specify just the place data fields that you need.
         originAutocomplete.setFields(['place_id']);
+        console.log("placeid", originAutocomplete.setFields(['place_id']));
 
         var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
         // Specify just the place data fields that you need.

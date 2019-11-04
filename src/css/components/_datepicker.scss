@@ -2,10 +2,13 @@
     &__link {
        
  
-       
+       &:hover{
+        text-decoration: none;
+       }
         &:hover .datepicker__input::placeholder{
             color: #ffffff !important;
             transition: all .3;
+           
         }
         
         &:hover .datepicker__input{
