@@ -21,13 +21,14 @@ $('.show-receiver').click(function () {
   });
 });
 
-$('#pills-car-3-tab').click(function () {
+$('#car-tab2').click(function () {
+  $("#evacuator").prop( "checked", true );
+});
+
+$('#car-tab3').click(function () {
   $("#truck").prop( "checked", true );
 
 });
 
-$('#pills-car-2-tab').click(function () {
-  $("#evacuator").attr('checked', 'checked');
 
-});
 
