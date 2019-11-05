@@ -468,9 +468,11 @@
         <!--    MAP -->
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 map order-1 order-lg-2">
 
-            <div class="d-none" id="map_canvas"></div>
+            <div class="" id="map_canvas"></div>
+
+
             <div>
-                <img class="img-fluid" src="assets/img/blog/large-2.jpg" alt="">
+                <img class="img-fluid d-none" src="assets/img/blog/large-2.jpg" alt="">
             </div>
 
         </div>
@@ -508,23 +510,24 @@
 
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
-    </script>
+</script>
 <script>
-
-
+    var map2
 
     function initialize() {
 
 
         var mapOptions = {
-            zoom: 13,                                                             //  BÖYÜTMƏK
+            zoom: 13, //  BÖYÜTMƏK
             center: new google.maps.LatLng(40.42557252485824, 49.84169001645499), // ENLİK UZUNLUQ
-            mapTypeId: google.maps.MapTypeId.ROADMAP                              //  XƏRİTƏ NÖVÜ
+            mapTypeId: google.maps.MapTypeId.ROADMAP //  XƏRİTƏ NÖVÜ
         };
 
-        var geocoder = new google.maps.Geocoder;                             
+        var geocoder = new google.maps.Geocoder;
+
 
         map = new google.maps.Map(document.getElementById('map_nextV'), mapOptions);
+        map2 = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
         $(function () {
             var searchInput = $(".typeahead");
@@ -532,38 +535,41 @@
             var service = new google.maps.places.AutocompleteService();
             var predictions, status;
 
-            $(".typeahead").typeahead({                                           // SEARCH INPUT
+            $(".typeahead").typeahead({ // SEARCH INPUT
                 highlight: true,
                 minLength: 1,
                 autoselect: true
 
-            },
-                {
-                    async: true,
-                    display: 'address',
-                    source: function (query, process, aProcess) {
-                        service.getPlacePredictions({
-                            input: query,
-                            sessionToken: sessionToken
-                        }, function (predictions, status) {
-                            aProcess(formatAddress(predictions, status));
-                        });
+            }, {
+                async: true,
+                display: 'address',
+                source: function (query, process, aProcess) {
+                    service.getPlacePredictions({
+                        input: query,
+                        sessionToken: sessionToken
+                    }, function (predictions, status) {
+                        aProcess(formatAddress(predictions, status));
+                    });
 
+                },
+                templates: {
+                    empty: [
+                        '<div class="empty-message text-center" style="">',
+                        'No address available.<br/>',
+                        '</div>',
+                    ].join('\n'),
+                    suggestion: function (data) {
+                        // console.log(data);
+                        return ['<div class="custom-result" data-place-id="' + data.placeId +
+                            '" ><div class=" custom-result__icon"><i class="fas fa-map-marker-alt "></i></div><div class="custom-result__text"><div class="custom-result__text--all"> ' +
+                            data.address +
+                            ' </div></div><div class="custom-result__map"><span>Map</span></div></div>'
+                        ].join('\n');
                     },
-                    templates: {
-                        empty: [
-                            '<div class="empty-message text-center" style="">',
-                            'No address available.<br/>',
-                            '</div>',
-                        ].join('\n'),
-                        suggestion: function (data) {
-                            // console.log(data);
-                            return ['<div class="custom-result" data-place-id="' + data.placeId + '" ><div class=" custom-result__icon"><i class="fas fa-map-marker-alt "></i></div><div class="custom-result__text"><div class="custom-result__text--all"> ' + data.address + ' </div></div><div class="custom-result__map"><span>Map</span></div></div>'].join('\n');
-                        },
-                        footer: '<div style="text-align:right; padding-right: 10px;"><img src="https://cdn.doordash.com/static/img/consumer/share/powered_by_google_on_white_hdpi.png" style="height:18px;"/></div>'
-                    }
+                    footer: '<div style="text-align:right; padding-right: 10px;"><img src="https://cdn.doordash.com/static/img/consumer/share/powered_by_google_on_white_hdpi.png" style="height:18px;"/></div>'
+                }
 
-                });
+            });
 
             var formatAddress = function (predictions, status) {
                 // console.log("Predictions", predictions);
@@ -587,7 +593,7 @@
                 var resultPlaceId = $(this).parent().data("place-id");
                 // console.log(resultPlaceId);
                 var forFrom = $(this).parent().parent().parent().parent().next().data("id")
-                console.log("forform:",forFrom);
+                console.log("forform:", forFrom);
                 var Mycontainer = document.getElementById("Mycontainer");
                 console.log(Mycontainer);
                 var service = new google.maps.places.PlacesService(Mycontainer);
@@ -600,7 +606,8 @@
                         var inputResultLat = place.geometry.location.lat();
                         var inputResultLng = place.geometry.location.lng();
                         console.log(inputResultLat, inputResultLng);
-                        inputResultLatLng = new google.maps.LatLng(inputResultLat, inputResultLng)
+                        inputResultLatLng = new google.maps.LatLng(inputResultLat,
+                            inputResultLng)
                         map.setCenter(inputResultLatLng)
 
                         $(".formBox").addClass('d-none');
@@ -616,7 +623,8 @@
                         var inputResultLat = place.geometry.location.lat();
                         var inputResultLng = place.geometry.location.lng();
                         console.log(inputResultLat, inputResultLng);
-                        inputResultLatLng = new google.maps.LatLng(inputResultLat, inputResultLng)
+                        inputResultLatLng = new google.maps.LatLng(inputResultLat,
+                            inputResultLng)
                         map.setCenter(inputResultLatLng)
 
                         $(".formBox").addClass('d-none');
@@ -654,14 +662,17 @@
                             console.log("Lat", place.geometry.location.lat());
                             console.log("Lan", place.geometry.location.lng());
 
-                            var selectedLatlng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+                            var selectedLatlng = new google.maps.LatLng(place.geometry.location
+                                .lat(), place.geometry.location.lng());
 
-                            geocoder.geocode(
-                                { 'latLng': selectedLatlng },
+                            geocoder.geocode({
+                                    'latLng': selectedLatlng
+                                },
                                 function (results, status) {
                                     if (status == google.maps.GeocoderStatus.OK) {
                                         if (results[0]) {
-                                            var selectedAdress = results[0].formatted_address;
+                                            var selectedAdress = results[0]
+                                                .formatted_address;
                                             var value = selectedAdress.split(",");
 
                                             count = value.length;
@@ -675,12 +686,10 @@
                                             $(".endLocation").hide();
                                             $(".formBox").addClass('d-none');
 
-                                        }
-                                        else {
+                                        } else {
                                             alert("address not found");
                                         }
-                                    }
-                                    else {
+                                    } else {
                                         alert("Geocoder failed due to: " + status);
                                     }
                                 }
@@ -688,56 +697,55 @@
 
 
                         }
-                    }
-                    )
-                }
-                else{
+                    })
+                } else {
                     serviceEnd.getDetails({
-                    placeId: inpResultPlaceId
-                }, function (place, status) {
+                        placeId: inpResultPlaceId
+                    }, function (place, status) {
 
-                    if (status === google.maps.places.PlacesServiceStatus.OK) {
-                        // document.getElementById("container").innerHTML = "Lat :" + place.geometry.location.lat() + "<br/>" + "Lan:" + place.geometry.location.lng()
-                        console.log("Lat", place.geometry.location.lat());
-                        console.log("Lan", place.geometry.location.lng());
+                        if (status === google.maps.places.PlacesServiceStatus.OK) {
+                            // document.getElementById("container").innerHTML = "Lat :" + place.geometry.location.lat() + "<br/>" + "Lan:" + place.geometry.location.lng()
+                            console.log("Lat", place.geometry.location.lat());
+                            console.log("Lan", place.geometry.location.lng());
 
-                        var selectedEndLatlng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+                            var selectedEndLatlng = new google.maps.LatLng(place.geometry
+                                .location.lat(), place.geometry.location.lng());
 
-                        geocoder.geocode(
-                            { 'latLng': selectedEndLatlng },
-                            function (results, status) {
-                                if (status == google.maps.GeocoderStatus.OK) {
-                                    if (results[0]) {
-                                        var selecteEndAdress = results[0].formatted_address;
-                                        var valueEnd = selecteEndAdress.split(",");
+                            geocoder.geocode({
+                                    'latLng': selectedEndLatlng
+                                },
+                                function (results, status) {
+                                    if (status == google.maps.GeocoderStatus.OK) {
+                                        if (results[0]) {
+                                            var selecteEndAdress = results[0]
+                                                .formatted_address;
+                                            var valueEnd = selecteEndAdress.split(",");
 
-                                        count = valueEnd.length;
-                                        country = valueEnd[count - 1];
-                                        state = valueEnd[count - 2];
-                                        city = valueEnd[count - 3];
-                                        console.log(selecteEndAdress);
-                                        $("#toAdress").text(selecteEndAdress);
-                                        $(".inpBtn__box").show();
-                                        $(".currentLocation").hide();
-                                        $(".endLocation").hide();
-                                        $(".formBox").addClass('d-none');
+                                            count = valueEnd.length;
+                                            country = valueEnd[count - 1];
+                                            state = valueEnd[count - 2];
+                                            city = valueEnd[count - 3];
+                                            console.log(selecteEndAdress);
+                                            $("#toAdress").text(selecteEndAdress);
+                                            $(".inpBtn__box").show();
+                                            $(".currentLocation").hide();
+                                            $(".endLocation").hide();
+                                            $(".formBox").addClass('d-none');
 
+                                        } else {
+                                            alert("address not found");
+                                        }
+                                    } else {
+                                        alert("Geocoder failed due to: " + status);
                                     }
-                                    else {
-                                        alert("address not found");
-                                    }
-                                }
-                                else {
-                                    alert("Geocoder failed due to: " + status);
-                                }
-                         });
-                    }
-                })
+                                });
+                        }
+                    })
                 }
 
 
-              
-               
+
+
             });
 
 
@@ -750,10 +758,15 @@
             var markerLng = map.getCenter().lng();
             console.log(markerLat, markerLng);
 
-            var myLatlng = { lat: parseFloat(markerLat), lng: parseFloat(markerLng) };
+            var myLatlng = {
+                lat: parseFloat(markerLat),
+                lng: parseFloat(markerLng)
+            };
             console.log(myLatlng);
 
-            geocoder.geocode({ 'location': myLatlng }, function (results, status) {
+            geocoder.geocode({
+                'location': myLatlng
+            }, function (results, status) {
 
                 if (status === 'OK') {
                     if (results[0]) {
@@ -774,10 +787,15 @@
             var markerLng = map.getCenter().lng();
             console.log(markerLat, markerLng);
 
-            var myLatlng = { lat: parseFloat(markerLat), lng: parseFloat(markerLng) };
+            var myLatlng = {
+                lat: parseFloat(markerLat),
+                lng: parseFloat(markerLng)
+            };
             console.log(myLatlng);
 
-            geocoder.geocode({ 'location': myLatlng }, function (results, status) {
+            geocoder.geocode({
+                'location': myLatlng
+            }, function (results, status) {
 
                 if (status === 'OK') {
                     if (results[0]) {
@@ -797,9 +815,5 @@
 
 
     google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-
 </script>
 //= template/footer.html
