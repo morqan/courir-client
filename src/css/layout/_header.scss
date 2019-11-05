@@ -18,6 +18,10 @@
         max-width: 100% !important;
         width: 100% !important;
         left: 0 !important;
+
+        @include respondmax(sm){
+            padding: 10px 0 !important;
+        }
     }
 
 

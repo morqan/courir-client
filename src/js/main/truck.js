@@ -29,3 +29,11 @@ $('#car-tab1, #car-tab2').click(function () {
   });
 });
 
+
+// $('.car__link').click(function(){
+//   $('.car__link').removeClass("car__link--active");
+//   $(this).addClass("car__link--active");
+// });
+
+// $('#truck').attr( "checked" )
+
