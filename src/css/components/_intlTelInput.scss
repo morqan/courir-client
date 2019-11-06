@@ -1,0 +1,16 @@
+.iti {
+ 
+    display: block;
+}
+
+.iti__country-list {
+  
+    width: 270px;
+    @include respondmax(sm) {
+        width: 246px;
+      }
+  
+}
+
+
+
