@@ -33,6 +33,26 @@
             }
         }
     }
+
+    &__search{
+        &__content{
+            &__1{
+                display: flex;
+                flex-wrap: wrap;
+                &--item {
+                    color: $color-secondary-dark;
+                    border: 1px solid $color-secondary;
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    margin: 10px 5px 0 0;
+                    margin-left: 0;
+
+                    
+                }
+            }
+        }
+    }
 }
 
 
