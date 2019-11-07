@@ -19,7 +19,7 @@
         width: 100% !important;
         left: 0 !important;
 
-        @include respondmax(sm){
+        @include respondmax(sm) {
             padding: 10px 0 !important;
         }
     }
@@ -41,7 +41,7 @@
         }
 
         .login1 {
-         
+
 
             &:hover {
                 cursor: pointer;
@@ -59,7 +59,7 @@
             }
 
             &__dropdown-menu {
-          
+
                 margin: 0;
             }
 
@@ -91,7 +91,8 @@
             min-width: 5rem !important;
 
             @include respondmax(sm) {
-                min-width: 3rem !important;
+                min-width: 4rem !important;
+               margin-top: 0 !important;
             }
 
             &--item {
@@ -132,4 +133,46 @@
     }
 
 
+}
+
+// COLLAPSE
+
+.for-costumer {
+   &__dropdown-grid-menu {
+      
+   }
+
+   &--row {
+       margin-left: -30px !important;
+   }
+
+    &__list {
+        list-style: none;
+
+
+
+        &--ul {
+            padding-left: 0;
+            list-style: none;
+            margin-top: 20px;
+
+            .for-costumer-li {
+                margin-bottom: 20px;
+
+                &--link {
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    h6 {
+                        margin-left: 5px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }

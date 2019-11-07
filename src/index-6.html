@@ -512,11 +512,11 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
 </script>
 <script>
-    var map2
+    var map;
+    var map2;
 
     function initialize() {
-
-
+      
         var mapOptions = {
             zoom: 13, //  BÖYÜTMƏK
             center: new google.maps.LatLng(40.42557252485824, 49.84169001645499), // ENLİK UZUNLUQ
@@ -526,18 +526,18 @@
         var geocoder = new google.maps.Geocoder;
 
 
-        map = new google.maps.Map(document.getElementById('map_nextV'), mapOptions);
-        map2 = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-
+        map = new google.maps.Map(document.getElementById('map_nextV'), mapOptions);    // İNPUT XƏRİTƏSİ
+        map2 = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);  // İKİNCİ XƏRİTƏ
+       
         $(function () {
-            var searchInput = $(".typeahead");
+            var searchInput = $(".typeahead");                                           // SEARCH INPUT
             var sessionToken = new google.maps.places.AutocompleteSessionToken();
             var service = new google.maps.places.AutocompleteService();
             var predictions, status;
 
-            $(".typeahead").typeahead({ // SEARCH INPUT
-                highlight: true,
-                minLength: 1,
+            $(".typeahead").typeahead({                                                       // SEARCH INPUT
+                highlight: true,                                                              
+                minLength: 1,                                                                // NEÇƏNCİ HƏRFDƏN AXTARMAĞA BAŞLAMAQ
                 autoselect: true
 
             }, {
@@ -753,7 +753,7 @@
 
         });
 
-        $(".getStartLatLng").click(function () {
+        $(".getStartLatLng").click(function () {    // MAP-DƏ BAŞLANĞIC YERİ CLİCK ETMƏK
             var markerLat = map.getCenter().lat();
             var markerLng = map.getCenter().lng();
             console.log(markerLat, markerLng);
@@ -782,7 +782,7 @@
             $(".getStartLatLng").hide();
         });
 
-        $(".getEndLatLng").click(function () {
+        $(".getEndLatLng").click(function () {  // MAP-DƏ SON YERİ CLİCK ETMƏK
             var markerLat = map.getCenter().lat();
             var markerLng = map.getCenter().lng();
             console.log(markerLat, markerLng);
@@ -816,4 +816,7 @@
 
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+
+
 //= template/footer.html

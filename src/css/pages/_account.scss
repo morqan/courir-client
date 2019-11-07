@@ -100,7 +100,7 @@
     display: none;
 
     &:checked+label {
-        background-color: #00CED1;
+        background-color: $color-primary;
         color: #ffffff;
     }
 }

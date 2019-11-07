@@ -9,7 +9,8 @@ FilePond.registerPlugin(
 const inputElement = document.querySelector('input[type="file"]');
 const pond = FilePond.create(inputElement, {
     imageCropAspectRatio: 1,
-    imageResizeTargetWidth: 256,
+    imageResizeTargetWidth: 100,
+    imageEditInstantEdit: true,
     imageResizeMode: 'contain',
     imageTransformVariants: {},
     onaddfile: (err, fileItem) => {
