@@ -25,12 +25,10 @@ $(function () {
 });
 $('.datepicker__link').click(function () {
 	$('.datepicker__input ').css({
-		'color': '#ffffff'
+		'color': '#ffffff',
+		'background-color': '#7b2bfc',
+		'border-radius':'10px'
 	});
 });
 
-$('.day__link1').click(function () {
-	$(".datepicker__input ").css({
-		'color': '#000000'
-	});
-});
+
