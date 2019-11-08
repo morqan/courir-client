@@ -100,7 +100,7 @@
                                         aria-labelledby="active-order-tab">
                                         <div class=" bg-light pt-1">
 
-                                            <div class="card order-card m-3">
+                                            <div class="card order-card">
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col-sm-12 col-lg-8">
@@ -137,71 +137,79 @@
 
                                                         </div>
                                                         <div class="col-sm-12 col-lg-4 order-card__money-group">
-                                                            <div class="mb-2 mb-sm-2">
-                                                                <i
-                                                                    class="fas fa-dollar-sign mr-2  text-primary pl-xl-2"></i>8.50
-                                                                qəp</div>
                                                             <div>
-                                                                <i class="fas fa-route mr-2  text-primary"></i>50
-                                                                km
+                                                                <div class="mb-2 mb-sm-2">
+                                                                    <i
+                                                                        class="fas fa-dollar-sign mr-2  text-primary pl-xl-2"></i>8.50
+                                                                    qəp</div>
+                                                                <div>
+                                                                    <i class="fas fa-route mr-2  text-primary"></i>50
+                                                                    km
+                                                                </div>
                                                             </div>
-                                                            <a class="btn btn-purple" data-toggle="collapse" href="#order2" role="button" aria-expanded="false" aria-controls="order2">
-                                                                   Button
-                                                                  </a>
+
+                                                            <a class=" order-card__btn" data-toggle="collapse"
+                                                                href="#order2" role="button" aria-expanded="false"
+                                                                aria-controls="order2">
+                                                                <i class="fas fa-arrow-down "></i>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="order2 collapse" id="order2">
-                                                    <div class="m-3 order2__div">
-                                                        <div class="order2__div__label">Nəqliyyatın tipi :</div>
-                                                        <div class="order2__div__img-group">
-                                                            <img src="assets/img/car.png" alt="Car"
-                                                                class="order2__div__img-group--img ">
-                                                            <span class="order2__div__img-group--span ">Avtomobil</span>
-                                                        </div>
-        
-                                                        <div class="order2__div__input"> Baku Medical Center
-                                                            <span class="d-block order2__div__input--span">14.05.2019
-                                                                20:00</span>
-                                                        </div>
-                                                        <div class="order2__div__input">Yasamal rayonu Şərifzadə küç.
-                                                            <span class="d-block order2__div__input--span">14.05.2019
-                                                                20:00</span>
-                                                        </div>
-                                                        <div class="order2__div__label">Ödəniş növü</div>
-                                                        <div class="order2__div__input d-flex justify-content-between">
-                                                            <span>
-                                                                <i class="fas fa-gift mr-1 text-primary"> </i>Nəğd
-                                                            </span>
-                                                            <span class="mr-1">6.50 &#x20BC;</span>
-                                                        </div>
-                                                        <div class="order2__div__label">Receiver</div>
-                                                        <div class="order2__div__input">Mammad Mammadov</div>
-                                                        <div class="order2__div__label">Receiver Number</div>
-                                                        <div class="order2__div__input">+99455-555-55-55</div>
-                                                        <div class="order2__div__label">Daşınan yükün fotosu</div>
-                                                        <div class="order2__div__img">
-                                                            <div class="order2__div__img--div"><img src="assets/img/about-2.jpg"
-                                                                    class="img-fluid" alt="img"></div>
-                                                            <div class="order2__div__img--div"><img src="assets/img/about-2.jpg"
-                                                                    class="img-fluid" alt="img"></div>
-                                                            <div class="order2__div__img--div"><img src="assets/img/about-2.jpg"
-                                                                    class="img-fluid" alt="img"></div>
-                                                        </div>
-                                                        <div class="order2__div__input order2__div__input--note">
-                                                            <div class="order2__div__input--note--div"> Qeydlər</div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                                                                sint eaque commodi minima, error non consequuntur unde
-                                                                voluptas quo tempore culpa, ipsa facilis deleniti
-                                                                architecto.</p>
-                                                        </div>
+                                                <div class=" order2__div">
+                                                    <div class="order2__div__label">Nəqliyyatın tipi :</div>
+                                                    <div class="order2__div__img-group">
+                                                        <img src="assets/img/car.png" alt="Car"
+                                                            class="order2__div__img-group--img ">
+                                                        <span class="order2__div__img-group--span ">Avtomobil</span>
                                                     </div>
-        
+
+                                                    <div class="order2__div__input"> Baku Medical Center
+                                                        <span class="d-block order2__div__input--span">14.05.2019
+                                                            20:00</span>
+                                                    </div>
+                                                    <div class="order2__div__input">Yasamal rayonu Şərifzadə küç.
+                                                        <span class="d-block order2__div__input--span">14.05.2019
+                                                            20:00</span>
+                                                    </div>
+                                                    <div class="order2__div__label">Ödəniş növü</div>
+                                                    <div class="order2__div__input d-flex justify-content-between">
+                                                        <span>
+                                                            <i class="fas fa-gift mr-1 text-primary"> </i>Nəğd
+                                                        </span>
+                                                        <span class="mr-1">6.50 &#x20BC;</span>
+                                                    </div>
+                                                    <div class="order2__div__label">Receiver</div>
+                                                    <div class="order2__div__input">Mammad Mammadov</div>
+                                                    <div class="order2__div__label">Receiver Number</div>
+                                                    <div class="order2__div__input">+99455-555-55-55</div>
+                                                    <div class="order2__div__label">Daşınan yükün fotosu</div>
+                                                    <div class="order2__div__img">
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                        <div class="order2__div__img--div"><img
+                                                                src="assets/img/about-2.jpg" class="img-fluid"
+                                                                alt="img"></div>
+                                                    </div>
+                                                    <div class="order2__div__input order2__div__input--note">
+                                                        <div class="order2__div__input--note--div"> Qeydlər</div>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                                                            sint eaque commodi minima, error non consequuntur unde
+                                                            voluptas quo tempore culpa, ipsa facilis deleniti
+                                                            architecto.</p>
+                                                    </div>
                                                 </div>
 
-                                            <div class="card order-card m-3">
+                                            </div>
+
+                                            <div class="card order-card">
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col-sm-12 col-lg-8">
@@ -249,7 +257,7 @@
 
                                         </div>
 
-                                       
+
                                     </div>
                                     <div class="tab-pane fade" id="on-call-order" role="tabpanel"
                                         aria-labelledby="on-call-order-tab">
