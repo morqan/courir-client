@@ -6,6 +6,16 @@
   @include respondmax(sm) {
     width: 100% !important;
   }
+
+  &__time-1 {
+    display: block;
+  }
+  &__time-2 {
+    display: none;
+  }
+  &__time-3 {
+    display: none;
+  }
 }
 
 .day {
@@ -14,12 +24,54 @@
   justify-content: space-between;
   width: 100%;
 
+  &__label {
+
+    text-align: center;
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    font-weight: bold;
+
+    &--1 {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &--2 {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+
+}
+
+&__input[type="radio"] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
+
+    &:checked+label {
+        background-color: $color-primary;
+        color: #ffffff;
+    }
+}
+
   &__list {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 32%;
     border-radius: 10px !important;
+    padding-left: 0;
 
     .active {
       background-color: $color-primary !important;
@@ -60,7 +112,4 @@
   }
 }
 
-#pills-tabContent2 {
-  height: 50px;
-  margin: 10px 0 20px;
-}
+

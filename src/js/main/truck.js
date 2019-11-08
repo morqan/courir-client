@@ -17,17 +17,20 @@
 
 
 // FOR INDEX-5.HTML
-$('#car-tab1').click(function () {
-  $('#labor, #packing').css({
-    'display': 'block'
-  });
-});
+// $('#car-tab3').click(function () {
+//   $('#labor, #packing').css({
+//     'display': 'block'
+//   });
+// });
 
-$('#car-tab1, #car-tab2').click(function () {
-  $('#labor, #packing').css({
-    'display': 'none'
-  });
-});
+// $('#car-tab1, #car-tab2').click(function () {
+//   $('#labor, #packing').css({
+//     'display': 'none'
+//   });
+// });
+
+
+
 
 
 // $('.car__link').click(function(){
