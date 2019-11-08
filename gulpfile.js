@@ -22,6 +22,7 @@ var path = {
         css: 'build/css/main/',
         images: 'build/img/',
         fonts: 'build/fonts/',
+        assets: 'build/assets/',
         libs: 'build/libs/' //bower ile src klasörüne yükledigim dosyalari build klasörüne eklemek için 
     },
     src: { //Burasi kaynaklar
@@ -31,6 +32,7 @@ var path = {
         css: 'src/css/main.scss',
         images: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
+        assets: 'src/assets/**/*.*',
         libs: 'src/libs/**/'
     },
     watch: { //Burada izlemek istedigimiz dosyalari belirtiyoruz
@@ -40,6 +42,7 @@ var path = {
         css: 'src/css/**/*.scss',
         images: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
+        assets: 'src/assets/**/*.*',
         libs: 'src/libs/'
     },
 };
@@ -120,6 +123,11 @@ gulp.task('vendor:build', function () {
     .pipe(gulp.dest(path.build.vendor));
 });
 
+gulp.task('assets:build', function () {
+    gulp.src(path.src.assets) 
+    
+    .pipe(gulp.dest(path.build.assets));
+});
 
 
 gulp.task('fonts:build', function() {
@@ -140,6 +148,7 @@ gulp.task('build', [
     'fonts:build',
     'image:build',
     'libs:build',
+    'assets:build',
     'vendor:build'
     ]);
 
@@ -156,6 +165,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.images], function(event, cb) {
         gulp.start('image:build');
+    });
+    watch([path.watch.images], function(event, cb) {
+        gulp.start('assets:build');
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');

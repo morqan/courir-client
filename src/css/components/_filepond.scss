@@ -1,47 +1,70 @@
-.add-image {
-    border-color: #cccccc !important;
-    outline: none;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+// .add-image {
+//     border-color: #cccccc !important;
+//     outline: none;
+//     background-color: #f5f5f5;
+//     border-radius: 10px;
 
-    &::placeholder {
-        color: #818490 !important;
-    }
-}
+//     &::placeholder {
+//         color: #818490 !important;
+//     }
+// }
 
 
 
-#filepond--drop-label-vll8v78cr {
-    color: #818490 !important;
-}
+// #filepond--drop-label-vll8v78cr {
+//     color: #818490 !important;
+// }
+
+// .filepond {
+//     &--root {
+//         width: 100%;
+//         background-color: #f5f5f5 !important;
+//         min-height: 80px;
+//         margin: 10px 0 20px 0;
+
+//         @include respondmax(lg) {
+//             width: 100% !important;
+//         }
+//     }
+
+//     &--item {
+//         width: 100px;
+//         height: 100px;
+//     }
+
+//     &--drop-label {
+//         min-height: 80px !important;
+
+//         label {
+//             font-size: 15px;
+//         }
+//     }
+
+//     &--list {
+//         width: 413px !important;
+//     }
+// }
 
 .filepond {
-    &--root {
-        width: 100%;
-        background-color: #f5f5f5 !important;
-        min-height: 80px;
-        margin: 10px 0 20px 0;
-
-        @include respondmax(lg) {
-            width: 100% !important;
-        }
-    }
-
     &--item {
-        width: 100px;
-        height: 100px;
-    }
+        width: 120px;
+        height: 120px;
 
-    &--drop-label {
-        min-height: 80px !important;
-
-        label {
-            font-size: 15px;
+        @include respondmax(xl) {
+            width: 100px;
+            height: 100px;
         }
-    }
-
-    &--list {
-        width: 413px !important;
+        @include respondmax(lg) {
+            width: 120px;
+            height: 120px;
+        }
+        @include respondmax(md) {
+            width: 100px;
+            height: 100px;
+        }
+        @include respondmax(sm) {
+            width: 115px;
+            height: 115px;
+        }
     }
 }
-

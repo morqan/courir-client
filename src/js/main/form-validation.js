@@ -7,13 +7,13 @@
 			// var some_message = $('#contact-message').val();
 			// var email = $('#email').val();
 			// var password = $('#password').val();
-			
+
 
 			// $(".error").remove();
 			// $('#startPlace').removeClass("inputErrorBorder");
 			// $('#endPlace').removeClass("inputErrorBorder");
 			// $('#contact-message').removeClass("inputErrorBorder");
-			
+
 
 			// if (start_place.length < 1) {
 			// 	$('#startPlace').addClass("inputErrorBorder").after('<span class="error error1">This field is required</span>');
@@ -68,15 +68,3 @@
 
 	});
 
-
-
-	$("#phoneNumber").keypress(function () {
-		var phoneNumber = $('#phoneNumber').val();
-		if (phoneNumber.length < 11) {
-			$('#phoneNumber').addClass("inputErrorBorder");
-		}
-		if (phoneNumber.length > 11) {
-			$('#phoneNumber').removeClass("inputErrorBorder");
-		}
-		
-	});
