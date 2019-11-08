@@ -18,30 +18,30 @@
                     <div class="col-xl-7 col-lg-8">
                         <div class="card card-body shadow text-left">
                             <h1 class="h5 text-center">Sign In</h1>
-                            <form>
+                            <form id="sign-in-form">
                                 <div class="form-group validation-form">
                                     <label for="phoneNumber" class="form-label form__label">Elə indi qeydiyyatdan
                                         keç</label>
-                                    <input type="tel" class="form-control form__control" value="+994" id="phoneNumber" >
+                                    <input type="tel" class="form-control form__control" value="+994" id="phoneNumber">
 
                                 </div>
 
 
                                 <label class="account-sign-in-cover2__label">
-                                    <a href="#" class="color-purple" data-toggle="modal"
+                                    <a href="#" class="color-purple membership" data-toggle="modal"
                                         data-target="#membership-agreement"> Üzvlük müqaviləsi</a> şərtlərini oxudum və
                                     qəbul
                                     edirəm.
                                     <input type="checkbox" class="account-sign-in-cover2__label--checkbox"
-                                        checked="checked">
-                                    <span class="account-sign-in-cover2__label--checkmark"></span>
+                                        checked="checked" id="membership-checkbox">
+                                    <span class="account-sign-in-cover2__label--checkmark membership-span"></span>
                                 </label>
 
 
 
                                 <div class="account-sign-in-cover2__btn-group">
                                     <button
-                                        class="btn btn-purple text-uppercase  account-sign-in-cover2__btn-group--btn mb-3"
+                                        class="btn btn-purple text-uppercase  account-sign-in-cover2__btn-group--btn mb-3 " id="use-sms"
                                         type="submit">Use SMS</button>
                                     <button
                                         class="btn btn-success account-sign-in-cover2__btn-group--btn use-whatsapp-btn"

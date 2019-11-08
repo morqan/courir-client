@@ -6,7 +6,7 @@ FilePond.registerPlugin(
     FilePondPluginImageTransform
 );
 
-const inputElement = document.querySelector('input[type="file"]');
+const inputElement = document.querySelector('.add-image[type="file"]');
 const pond = FilePond.create(inputElement, {
     imageCropAspectRatio: 1,
     imageResizeTargetWidth: 100,
@@ -23,4 +23,13 @@ const pond = FilePond.create(inputElement, {
             document.body.appendChild(img);
         })
     }
+});
+FilePond.create(document.querySelector('.add-image[type="file"]'), {
+    acceptedFileTypes:['image/*'],
+    fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+        
+        // Do custom type detection here and return with promise
+
+        resolve(type);
+    })
 });

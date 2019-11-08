@@ -25,14 +25,16 @@
                             placeholder="Insert pick-up address">
 
                     </div>
-                    <input type="hidden" id="startPlaceLatLng">
+                    <input type="hidden" id="startPlaceLat">
+                    <input type="hidden" id="startPlaceLng">
                     <div class="form-group form__group">
                         <label for="endPlace" class="form-label form__label">Destination:</label>
                         <input type="text" name="destination" class="form-control form__control" id="endPlace"
                             placeholder="Insert Delivery address">
 
                     </div>
-                    <input type="hidden" id="endPlaceLatLng">
+                    <input type="hidden" id="endPlaceLat">
+                    <input type="hidden" id="endPlaceLng">
                 </div>
 
                 <div id="price_for_selected" style="width:100%;"></div>
@@ -118,7 +120,7 @@
                     <span id="error-msg" class="hide d-block"></span>
                 </div>
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
-                <input type="file" class="add-image" accept="image/x-png,image/gif,image/jpeg">
+                <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
@@ -803,9 +805,10 @@
                     var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
                     console.log(inputResultLat, inputResultLng);
 
-                    var hidenInputStart = document.getElementById("startPlaceLatLng");
-                    hidenInputStart.value = inputResultLat + "," + inputResultLng;
-
+                    var hidenInputStartLat = document.getElementById("startPlaceLat");
+                    hidenInputStartLat.value = inputResultLat;
+                    var hidenInputStartLng = document.getElementById("startPlaceLng");
+                    hidenInputStartLng.value = inputResultLng;
 
                 })
 
@@ -821,8 +824,11 @@
                     var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
                     console.log(inputResultLat, inputResultLng);
 
-                    var hidenInputEnd = document.getElementById("endPlaceLatLng");
-                    hidenInputEnd.value = inputResultLat + "," + inputResultLng;
+                    var hidenInputEndLat = document.getElementById("endPlaceLat");
+                    hidenInputEndLat.value = inputResultLat;
+
+                    var hidenInputEndLng = document.getElementById("endPlaceLng");
+                    hidenInputEndLng.value =  inputResultLng;
 
                 })
             }

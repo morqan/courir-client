@@ -200,12 +200,23 @@
 
 <!-- Our footer -->
 
+<!-- FILEPOND -->
+<script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
 <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+<script>
+// Register the plugin
+FilePond.registerPlugin(FilePondPluginFileValidateType);
+
+// ... FilePond initialisation code here
+</script>
 
 <script src="js/all.js"></script>
 

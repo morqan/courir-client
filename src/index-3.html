@@ -25,14 +25,16 @@
                             placeholder="Insert pick-up address">
 
                     </div>
-                    <input type="hidden" id="startPlaceLatLng">
+                    <input type="hidden" id="startPlaceLat">
+                    <input type="hidden" id="startPlaceLng">
                     <div class="form-group form__group">
                         <label for="endPlace" class="form-label form__label">Destination:</label>
                         <input type="text" name="destination" class="form-control form__control" id="endPlace"
                             placeholder="Insert Delivery address">
 
                     </div>
-                    <input type="hidden" id="endPlaceLatLng">
+                    <input type="hidden" id="endPlaceLat">
+                    <input type="hidden" id="endPlaceLng">
                 </div>
 
                 <div id="price_for_selected" style="width:100%;"></div>
@@ -155,12 +157,12 @@
                         <!-- SWIPE END -->
                     </div>
 
+<!-- CAR END -->
 
 
 
-
-                <!-- INPUTS STARTS-->
-                <div class="form-group form__group">
+                 <!-- INPUTS STARTS-->
+                 <div class="form-group form__group">
                     <label for="contact-name" class="form-label form__label">Receiver</label>
                     <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
                         placeholder="Mammad Mammadov">
@@ -175,7 +177,7 @@
                     <span id="error-msg" class="hide d-block"></span>
                 </div>
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
-                <input type="file" multiple class="add-image">
+                <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
@@ -234,12 +236,12 @@
                     <span class="form-label form__label">Çatdırılma növü</span>
                     <ul class="nav nav-pills my-3 urgent__list" id="pills-tab" role="tablist">
                         <li class="urgent__list--item">
-                            <input class="urgent__input" type="radio" name="urgent" id="pills-non-urgent-tab" checked/>
+                            <input class="urgent__input" type="radio" name="urgent" id="pills-non-urgent-tab" value="urgent" checked/>
                             <label class="urgent__label urgent__label--1" for="pills-non-urgent-tab">Delivery now <span
                                     class="d-block">(ASAP)</span></label>
                         </li>
                         <li class="urgent__list--item">
-                            <input class="urgent__input" type="radio" name="urgent" id="pills-urgent-tab" />
+                            <input class="urgent__input" type="radio" name="urgent" id="pills-urgent-tab"  value="non-urgent" />
                             <label class="urgent__label urgent__label--2" for="pills-urgent-tab">Scheduled <span
                                     class="d-block">(non-urgent)</span></label>
                         </li>
@@ -862,8 +864,10 @@
                     var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
                     console.log(inputResultLat, inputResultLng);
 
-                    var hidenInputStart = document.getElementById("startPlaceLatLng");
-                    hidenInputStart.value = inputResultLat + "," + inputResultLng;
+                    var hidenInputStartLat = document.getElementById("startPlaceLat");
+                    hidenInputStartLat.value = inputResultLat;
+                    var hidenInputStartLng = document.getElementById("startPlaceLng");
+                    hidenInputStartLng.value = inputResultLng;
 
 
                 })
@@ -880,8 +884,11 @@
                     var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
                     console.log(inputResultLat, inputResultLng);
 
-                    var hidenInputEnd = document.getElementById("endPlaceLatLng");
-                    hidenInputEnd.value = inputResultLat + "," + inputResultLng;
+                    var hidenInputEndLat = document.getElementById("endPlaceLat");
+                    hidenInputEndLat.value = inputResultLat;
+
+                    var hidenInputEndLng = document.getElementById("endPlaceLng");
+                    hidenInputEndLng.value =  inputResultLng;
 
                 })
             }
