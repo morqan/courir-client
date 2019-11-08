@@ -1,6 +1,7 @@
 .urgent {
     &__list {
         width: 100%;
+        display: flex;
 
         &--item {
             width: 50%;
@@ -8,15 +9,7 @@
             font-weight: bold;
             text-align: center;
             color: #6e2626;
-
-
-
-            
-
         }
-
-
-
     }
 
     &__label {
@@ -25,20 +18,20 @@
         cursor: pointer;
         background-color: $color-secondary;
         color: black;
-      width: 100%;
-      padding: 10px;
+        width: 100%;
+        padding: 10px;
         font-size: 16px;
 
         &--1 {
             border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
 
         &--2 {
             border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px; 
+            border-bottom-right-radius: 10px;
         }
-       
+
 
     }
 
@@ -47,7 +40,7 @@
         height: 0;
         width: 0;
         display: none;
-    
+
         &:checked+label {
             background-color: $color-primary;
             color: #ffffff;
@@ -55,12 +48,3 @@
     }
 }
 
-
-#pills-tabContent3 {
-    height: 50px;
-
-    div {
-        font-size: 13px;
-
-    }
-}
