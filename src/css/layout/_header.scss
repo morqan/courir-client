@@ -56,6 +56,17 @@
                 &::after {
                     display: none;
                 }
+
+                &--img{
+                    position: relative;
+                }
+                &--badge {
+                    position: absolute;
+                    padding: 3px 6px;
+                    top: 0;
+                    right: 0;
+                    transform: translateY(-8px) translateX(10px);
+                }
             }
 
             &__dropdown-menu {
