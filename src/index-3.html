@@ -240,7 +240,7 @@
                     <div class=" urgent__list">
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
-                                id="pills-non-urgent-tab" value="urgent" checked />
+                                id="pills-non-urgent-tab" value="urgent"/>
                             <label class="urgent__label urgent__label--1 form-check-label"
                                 for="pills-non-urgent-tab">Delivery now
                                 <span class="d-block">(ASAP)</span>
@@ -267,19 +267,20 @@
                         <div class="day__list form-check">
                             <input class="day__input form-check-input" type="radio" name="day" id="day-1"
                                 value="day-1" checked />
-                            <label class="day__label form-check-label" for="day-1">
+                            <label class="day__label form-check-label " for="day-1" >
                                 <span>Bu gün</span>
-                                <span class="  day__link--span">12 Oktyabr</span>
+                                <span class="  day__link--span d-inline-block" id="today-day-span"></span>
+                                <span class="  day__link--span d-inline-block" id="today-month-span"></span>
                             </label>
                         </div>
 
                         <div class="day__list form-check">
                             <input class="day__input form-check-input" type="radio" name="day" id="day-2"
                                 value="day-2" />
-                            <label class="day__label form-check-label" for="day-2">
+                            <label class="day__label form-check-label tomorrow-label" for="day-2">
                                 <span>Sabah</span>
-                                <span class="day__link--span">13
-                                    September</span>
+                                <span class="  day__link--span d-inline-block" id="tomorrow-day-span"></span>
+                                <span class="  day__link--span d-inline-block" id="tomorrow-month-span"></span>
                             </label>
                         </div>
 
@@ -439,7 +440,7 @@
                 <!--  PAYMENT START -->
                 <div class="form-text payment">
                     <div class="form-group form__group">
-                        <div class="form-label form__label mt-2 mb-2">Ödəniş növü :</div>
+                        <div class="form-label form__label mt-3 mb-2">Ödəniş növü :</div>
                         <div class="dropdown   payment__dropdown">
                             <button aria-expanded="false" aria-haspopup="true" id="payment"
                                 class="btn btn-sm  dropdown-toggle arrow-bottom form__control  payment__dropdown--btn"

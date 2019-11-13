@@ -51,6 +51,12 @@
                 display: block;
 
             }
+            &--badge {
+                font-size: 10px;
+padding: 3px 5px;
+border-radius: 50%;
+transform: translateY(-9px) translateX(6px);
+            }
 
             &__link {
                 &::after {
@@ -121,6 +127,14 @@
     &__toggler {
         &:focus {
             outline: none;
+        }
+
+       
+        &--badge{
+font-size: 10px;
+padding: 3px 5px;
+border-radius: 50%;
+transform: translateY(-10px) translateX(10px);
         }
     }
 }
