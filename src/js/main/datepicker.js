@@ -27,8 +27,23 @@ $('.datepicker__link').click(function () {
 	$('.datepicker__input ').css({
 		'color': '#ffffff',
 		'background-color': '#7b2bfc',
-		'border-radius':'10px'
+		'border-radius': '10px'
 	});
 });
+$('input:radio[name="day"]').click(function () {
+	$('.datepicker__input ').css({
+		'color': '#000000',
+		'background-color': '#f5f5f5',
+		'border-radius': '10px'
+	});
+});
+
+// $( ".datepicker__link" ).focus(function() {
+// 	$('.datepicker__input ').css({
+// 				'color': '#ffffff',
+// 				'background-color': '#7b2bfc',
+// 				'border-radius': '10px'
+// 			});
+//   });
 
 
