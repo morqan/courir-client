@@ -265,32 +265,33 @@
 
                     <div class="day">
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="day-1"
-                                value="day-1" checked />
-                            <label class="day__label form-check-label " for="day-1" >
+                            <input class="day__input form-check-input" type="radio" name="day" id="today"
+                                value="today" checked />
+                            <label class="day__label form-check-label " for="today" >
                                 <span>Bu gün</span>
-                                <span class="  day__link--span d-inline-block" id="today-day-span"></span>
-                                <span class="  day__link--span d-inline-block" id="today-month-span"></span>
+                                <span class="  day__link--span d-inline-block" id="today-span"></span>
                             </label>
                         </div>
 
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="day-2"
-                                value="day-2" />
-                            <label class="day__label form-check-label tomorrow-label" for="day-2">
+                            <input class="day__input form-check-input" type="radio" name="day" id="tomorrow"
+                                value="tomorrow" />
+                            <label class="day__label form-check-label tomorrow-label" for="tomorrow">
                                 <span>Sabah</span>
-                                <span class="  day__link--span d-inline-block" id="tomorrow-day-span"></span>
-                                <span class="  day__link--span d-inline-block" id="tomorrow-month-span"></span>
+                                <span class="  day__link--span d-inline-block" id="tomorrow-span"></span>
+
                             </label>
                         </div>
 
-
-                        <div class="day__list datepicker">
-                            <label class=" datepicker__link" id="pills-calendar-tab" aria-selected="false">
+                        <div class="day__list datepicker form-check">
                                 <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
-                                    placeholder="Pick a Date">
+                                placeholder="Pick a Date">
 
-                            </label>
+                                <input class="day__input form-check-input calendar-input" type="radio" name="day" id="calendar"
+                                value="" />
+                               
+                                <label class="day__label form-check-label " for="calendar" >Pick a date</label>
+                               
 
                         </div>
                     </div>
