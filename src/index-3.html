@@ -161,7 +161,7 @@
 
 
 
-                <!-- INPUTS STARTS-->
+                <!-- RECEIVER FILEPOND STARTS-->
                 <div id="receiver">
                         <div class="form-group form__group">
                                 <label for="contact-name" class="form-label form__label">Receiver</label>
@@ -181,7 +181,7 @@
                
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
                 <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
-                <!--INPUTS END-->
+                <!-- RECEIVER FILEPOND END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
                     <label for="contact-message" class="form-label form__label">Message</label>
@@ -265,28 +265,27 @@
 
                     <div class="day">
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="day-1"
-                                value="day-1" checked />
-                            <label class="day__label form-check-label " for="day-1" >
+                            <input class="day__input form-check-input" type="radio" name="day" id="today"
+                                value="today" checked />
+                            <label class="day__label form-check-label " for="today" >
                                 <span>Bu gün</span>
-                                <span class="  day__link--span d-inline-block" id="today-day-span"></span>
-                                <span class="  day__link--span d-inline-block" id="today-month-span"></span>
+                                <span class="  day__label--span d-inline-block" id="today-span"></span>
                             </label>
                         </div>
 
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="day-2"
-                                value="day-2" />
-                            <label class="day__label form-check-label tomorrow-label" for="day-2">
+                            <input class="day__input form-check-input" type="radio" name="day" id="tomorrow"
+                                value="tomorrow" />
+                            <label class="day__label form-check-label tomorrow-label" for="tomorrow">
                                 <span>Sabah</span>
-                                <span class="  day__link--span d-inline-block" id="tomorrow-day-span"></span>
-                                <span class="  day__link--span d-inline-block" id="tomorrow-month-span"></span>
+                                <span class="  day__label--span d-inline-block" id="tomorrow-span"></span>
+                            
                             </label>
                         </div>
 
 
                         <div class="day__list datepicker">
-                            <label class=" datepicker__link" id="pills-calendar-tab" aria-selected="false">
+                            <label class=" datepicker__link" id="pills-calendar-tab">
                                 <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
                                     placeholder="Pick a Date">
 
@@ -513,21 +512,19 @@
                 <h1 class="index__content--h1-group--h1">Gucci
             </div>
         </div>
-        <p class="index__content__p">
-            <img src="assets/img/about-2.jpg" alt="" class="index__content__p--img">Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
-            explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
-            ipsam
-            qui enim. Facere, repellat quaerat alias velit, fuga magnam quis iusto quo praesentium mollitia ut ipsa
-            quibusdam, rem eum blanditiis veritatis eaque! Doloribus possimus minima iure est eos porro dolore. Aut
-            quod
-            eveniet dolorem maxime facilis eum id soluta atque doloremque impedit, ex in debitis odio sint libero
-            alias
-            nulla? Facilis, quaerat quod numquam architecto quas deserunt cupiditate sit aliquid accusamus
-            repudiandae
-            officia expedita tenetur consequuntur doloremque itaque incidunt laborum dolores. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Laborum ut autem eveniet, ipsam aspernatur mollitia temporibus officia
-            debitis aperiam ab animi deleniti accusantium, laudantium quasi nulla, rem minima commodi nobis.</p>
+        <div class="index__content__div">
+            <div  class="index__content__div--img" >
+                    <img src="assets/img/about-2.jpg" alt="" class="img-fluid">
+            </div>
+           
+            <p>
+                Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
+                explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
+                ipsam
+            </p>
+            
+          </div>
     </div>
 
     <div class="index__search mt-2">

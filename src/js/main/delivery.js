@@ -45,8 +45,3 @@ $(window).bind('unload', function () {
     }));
   });
 });
-
-
-
-
-
