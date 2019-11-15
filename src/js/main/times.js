@@ -32,19 +32,14 @@ $('input:radio[name="day"]').change(
           $('.delivery__time-3').css({
             'display' : 'block'
           });
-
           // $("label[for='calendar']").css({
           //   'background-color': '#7b2bfc',
           //   'color': '#ffffff',
           // });
-
          
         }
     });
-
-
     // $( "#datepicker" ).focus(function() {
-
     //     $("input[value='day-1']" ).prop( "checked", false );
     //     $("input[value='day-2']" ).prop( "checked", false );
     //     $('.delivery__time-1').css({
@@ -57,3 +52,7 @@ $('input:radio[name="day"]').change(
     //         'display' : 'block'
     //       });
     //   });
+Collapse
+
+
+
