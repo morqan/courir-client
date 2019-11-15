@@ -1,3 +1,5 @@
+//  FOR  VERİFY-NUMBER.HTML 
+
 $(function() {
     'use strict';
   

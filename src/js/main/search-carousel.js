@@ -1,4 +1,4 @@
-
+//  İNDEXDƏ OLAN SEARCH CAROUSELİ
  $( document ).ready(function() {
     $('.search-carousel').owlCarousel({
       loop: false,

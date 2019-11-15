@@ -1,4 +1,4 @@
-
+//  FİLE YÜKLƏMƏK ÜÇÜN
 FilePond.registerPlugin(
     FilePondPluginImageCrop,
     FilePondPluginImagePreview,
@@ -24,6 +24,8 @@ const pond = FilePond.create(inputElement, {
         })
     }
 });
+
+//  SADƏCƏ ŞƏKİL FORMATINDA YÜKLƏMƏSİ ÜÇÜN
 FilePond.create(document.querySelector('.add-image[type="file"]'), {
     acceptedFileTypes:['image/*'],
     fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {

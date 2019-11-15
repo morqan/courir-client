@@ -1,3 +1,5 @@
+//  İNDEXDƏ FORMDA OLAN ÖDƏNİŞ NÖVÜNÜN SEÇİLMƏSİ
+
 $('.payment__dropdown-menu--item').click(function () {
     $(".payment-active").find(".payment-check").css("display", "none");
     $('.payment__dropdown-menu--item ').removeClass("payment-active");
@@ -11,19 +13,7 @@ $('.payment__dropdown-menu--item').click(function () {
 
 });
 
-// function showDetails(payment) {
-//     var paymentType = payment.getAttribute("data-id");
-//     alert("The " + payment.innerHTML + " is a " + paymentType + ".");
-// }
-// $(document).ready(function () {
-//     $(".payment__dropdown-menu--item ").click(function () {
-//         var paymentType = payment.getAttribute("data-id").innerHTML;
-//         alert(getAttribute("data-id").innerHTML);
-//     });
-// });
 
-// var animalType = animal.getAttribute("data-animal-type");
-// alert("The " + animal.innerHTML + " is a " + animalType + ".");
 
 $('.payment__dropdown-menu--item ').click(function () {
     var name = $(".payment-active").attr('data-id'); // `this` here refers to the current p you clicked on

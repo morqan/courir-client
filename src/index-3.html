@@ -6,7 +6,18 @@
     <div class="form-row mt-5 ">
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
 
-            <form class="form scrollbar1 p-3 scroll-style" id="first_form">
+            <!-- PARSLEY CALLOUT WARNING START -->
+                <div class="bs-callout bs-callout-warning hidden">
+                        <h4>Oh snap!</h4>
+                        <p>This form seems to be invalid :(</p>
+                      </div>
+                      
+                      <div class="bs-callout bs-callout-info hidden">
+                        <h4>Yay!</h4>
+                        <p>Everything seems to be ok :)</p>
+                      </div>
+                       <!-- PARSLEY CALLOUT WARNING END -->
+            <form class="form scrollbar1 p-3 scroll-style" id="first_form"  data-parsley-validate="">
                 <!-- LOADING  START  -->
                 <div class="loading-spinner">
                     <div class="spinner-square">
@@ -22,7 +33,7 @@
                     <div class="form-group form__group">
                         <label for="startPlace" class="form-label form__label">From:</label>
                         <input type="text" name="from" class="form-control form__control" id="startPlace"
-                            placeholder="Insert pick-up address">
+                            placeholder="Insert pick-up address" required>
 
                     </div>
                     <input type="hidden" id="startPlaceLat">
@@ -30,7 +41,7 @@
                     <div class="form-group form__group">
                         <label for="endPlace" class="form-label form__label">Destination:</label>
                         <input type="text" name="destination" class="form-control form__control" id="endPlace"
-                            placeholder="Insert Delivery address">
+                            placeholder="Insert Delivery address" required>
 
                     </div>
                     <input type="hidden" id="endPlaceLat">
@@ -67,7 +78,7 @@
                                         <div class="form-group  car-pills__form-group">
 
                                             <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="pedestrian" />
+                                                id="pedestrian" required/>
                                             <label class="car-pills__label1" for="pedestrian">
                                                 <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Piyada</span>
@@ -163,22 +174,23 @@
 
                 <!-- INPUTS STARTS-->
                 <div id="receiver">
-                        <div class="form-group form__group">
-                                <label for="contact-name" class="form-label form__label">Receiver</label>
-                                <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
-                                    placeholder="Mammad Mammadov">
-                                <div class="invalid-feedback">
-                                    Please type your name.
-                                </div>
-                            </div>
-                            <div class="form-group form__group ">
-                                <label for="phone" class="d-block form-label form__label">Receiver number</label>
-                                <input type="tel" name="phone" class="form-control form__control d-block " id="phone" value="+994">
-                                <span id="valid-msg" class="hide d-block"></span>
-                                <span id="error-msg" class="hide d-block"></span>
-                            </div>
+                    <div class="form-group form__group">
+                        <label for="contact-name" class="form-label form__label">Receiver</label>
+                        <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
+                            placeholder="Mammad Mammadov">
+                        <div class="invalid-feedback">
+                            Please type your name.
+                        </div>
+                    </div>
+                    <div class="form-group form__group ">
+                        <label for="phone" class="d-block form-label form__label">Receiver number</label>
+                        <input type="tel" name="phone" class="form-control form__control d-block " id="phone"
+                            value="+994">
+                        <span id="valid-msg" class="hide d-block"></span>
+                        <span id="error-msg" class="hide d-block"></span>
+                    </div>
                 </div>
-               
+
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
                 <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
@@ -186,7 +198,7 @@
                 <div class="form-group form__group">
                     <label for="contact-message" class="form-label form__label">Message</label>
                     <textarea id="contact-message" name="contact-message" rows="10"
-                        class="form-control form__control textarea  "></textarea>
+                        class="form-control form__control textarea"   data-parsley-trigger="keyup" data-parsley-minlength="1" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.." data-parsley-validation-threshold="10" required></textarea>
 
 
                 </div>
@@ -195,7 +207,7 @@
 
                 <!-- LABOR SPINNER STARTS-->
                 <div id="labor">
-                    <label for="contact-message" class="form-label form__label">İşçi qüvvəsi</label>
+                    <label  class="form-label form__label">İşçi qüvvəsi</label>
                     <div class="input-spinner form-control form__control">
                         <i class="fa fa-user-alt-slash" id="user0"></i>
                         <i class="fa fa-user d-none " id="user1"></i>
@@ -222,10 +234,10 @@
                 <div class="packing" id="packing">
                     <span class="form-label form__label">Paketləmə lazımdırmı?</span>
                     <div class="packing__div my-3">
-                        <input class="packing__div__input " type="radio" name="time" id="packing-yes" value="Bəli" />
-                        <label class="packing__div__label packing__div__label--packing-yes packing-active"
-                            for="packing-yes">Bəli</label>
-                        <input class="packing__div__input" type="radio" name="time" id="packing-no" value="Xeyr" />
+                        <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes" value="Bəli" checked />
+                        <label class="packing__div__label packing__div__label--packing-yes"
+                            for="packing-yes" >Bəli</label>
+                        <input class="packing__div__input" type="radio" name="packing-radio" id="packing-no" value="Xeyr" />
                         <label class="packing__div__label  packing__div__label--packing-no "
                             for="packing-no">Xeyr</label>
                     </div>
@@ -240,7 +252,7 @@
                     <div class=" urgent__list">
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
-                                id="pills-non-urgent-tab" value="urgent"/>
+                                id="pills-non-urgent-tab" value="urgent" />
                             <label class="urgent__label urgent__label--1 form-check-label"
                                 for="pills-non-urgent-tab">Delivery now
                                 <span class="d-block">(ASAP)</span>
@@ -265,17 +277,17 @@
 
                     <div class="day">
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="today"
-                                value="today" checked />
-                            <label class="day__label form-check-label " for="today" >
+                            <input class="day__input form-check-input today" type="radio" name="day" id="today" value=""
+                                checked />
+                            <label class="day__label form-check-label " for="today">
                                 <span>Bu gün</span>
                                 <span class="  day__link--span d-inline-block" id="today-span"></span>
                             </label>
                         </div>
 
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input" type="radio" name="day" id="tomorrow"
-                                value="tomorrow" />
+                            <input class="day__input form-check-input tomorrow" type="radio" name="day" id="tomorrow"
+                                value="" />
                             <label class="day__label form-check-label tomorrow-label" for="tomorrow">
                                 <span>Sabah</span>
                                 <span class="  day__link--span d-inline-block" id="tomorrow-span"></span>
@@ -284,14 +296,14 @@
                         </div>
 
                         <div class="day__list datepicker form-check">
-                                <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
+                            <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
                                 placeholder="Pick a Date">
 
-                                <input class="day__input form-check-input calendar-input" type="radio" name="day" id="calendar"
-                                value="" />
-                               
-                                <label class="day__label form-check-label " for="calendar" >Pick a date</label>
-                               
+                            <input class="day__input form-check-input calendar-input" type="radio" name="day"
+                                id="calendar" value="" />
+
+                            <label class="day__label form-check-label calendar-label" for="calendar">Pick a date</label>
+
 
                         </div>
                     </div>
@@ -301,40 +313,40 @@
                         <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
 
                             <div class=" form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_1"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_1"
                                     value="08:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_1">08:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_2"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_2"
                                     value="10:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_2">10:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_3"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_3"
                                     value="12:00" checked />
                                 <label class="times__label form-check-label" for="time_3">12:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_4"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_4"
                                     value="14:00" />
                                 <label class="times__label form-check-label" for="time_4">14:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_5"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_5"
                                     value="16:00" />
                                 <label class="times__label form-check-label" for="time_5">16:00</label>
                             </div>
 
                             <div class="form-check">
 
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_6"
+                                <input class="times__input form-check-input" type="radio" name="time1" id="time_6"
                                     value="18:00" />
                                 <label class="times__label form-check-label" for="time_6">18:00</label>
                             </div>
@@ -347,40 +359,40 @@
                         <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
 
                             <div class=" form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_7"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_7"
                                     value="08:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_7">08:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_8"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_8"
                                     value="10:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_8">10:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_9"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_9"
                                     value="12:00" checked />
                                 <label class="times__label form-check-label" for="time_9">12:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_10"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_10"
                                     value="14:00" />
                                 <label class="times__label form-check-label" for="time_10">14:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_13"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_13"
                                     value="16:00" />
                                 <label class="times__label form-check-label" for="time_13">16:00</label>
                             </div>
 
                             <div class="form-check">
 
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_14"
+                                <input class="times__input form-check-input" type="radio" name="time2" id="time_14"
                                     value="18:00" />
                                 <label class="times__label form-check-label" for="time_14">18:00</label>
                             </div>
@@ -393,40 +405,40 @@
                         <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
 
                             <div class=" form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_15"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_15"
                                     value="08:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_15">08:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_16"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_16"
                                     value="10:00" />
                                 <label class="times__label  form-check-label disable-label" for="time_16">10:00</label>
                             </div>
 
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_17"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_17"
                                     value="12:00" checked />
                                 <label class="times__label form-check-label" for="time_17">12:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_18"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_18"
                                     value="14:00" />
                                 <label class="times__label form-check-label" for="time_18">14:00</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_19"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_19"
                                     value="16:00" />
                                 <label class="times__label form-check-label" for="time_19">16:00</label>
                             </div>
 
                             <div class="form-check">
 
-                                <input class="times__input form-check-input" type="radio" name="time" id="time_20"
+                                <input class="times__input form-check-input" type="radio" name="time3" id="time_20"
                                     value="18:00" />
                                 <label class="times__label form-check-label" for="time_20">18:00</label>
                             </div>
@@ -484,7 +496,7 @@
                 <!-- PAYMENT END   -->
 
                 <!--SUBMIT BUTTON-->
-                <button class="btn btn-2 btn-purple form-submit" type="submit" name="submit">
+                <button class="btn btn-2 btn-purple form-submit" type="submit" name="submit" value="validate">
                     <span>Order Now</span>
                 </button>
 
@@ -514,21 +526,17 @@
                 <h1 class="index__content--h1-group--h1">Gucci
             </div>
         </div>
-        <p class="index__content__p">
-            <img src="assets/img/about-2.jpg" alt="" class="index__content__p--img">Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
-            explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
-            ipsam
-            qui enim. Facere, repellat quaerat alias velit, fuga magnam quis iusto quo praesentium mollitia ut ipsa
-            quibusdam, rem eum blanditiis veritatis eaque! Doloribus possimus minima iure est eos porro dolore. Aut
-            quod
-            eveniet dolorem maxime facilis eum id soluta atque doloremque impedit, ex in debitis odio sint libero
-            alias
-            nulla? Facilis, quaerat quod numquam architecto quas deserunt cupiditate sit aliquid accusamus
-            repudiandae
-            officia expedita tenetur consequuntur doloremque itaque incidunt laborum dolores. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Laborum ut autem eveniet, ipsam aspernatur mollitia temporibus officia
-            debitis aperiam ab animi deleniti accusantium, laudantium quasi nulla, rem minima commodi nobis.</p>
+        <div class="index__content__div">
+            <div class="index__content__div--img"><img src="assets/img/about-2.jpg" alt="" class="img-fluid"></div>
+            <p>
+                    Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
+                    explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
+                    ipsam
+                   
+            </p>
+           
+        </div>
     </div>
 
     <div class="index__search mt-2">
@@ -609,8 +617,6 @@
 
 
 </div>
-
-
 
 
 <script
