@@ -1,5 +1,3 @@
-
-
 $(function () {
 
     var today = new Date();
