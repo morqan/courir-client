@@ -1,3 +1,4 @@
+//  BUGÜN VƏ SABAHIN TARİXİNİN İNPUT NAME=DAY-DƏ GÖRSƏNMƏSİ
 $(function () {
 
     var today = new Date();

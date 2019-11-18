@@ -1,3 +1,5 @@
+//  HEADER-DA HAMBURGER MENUNUN ÜZƏRİNDƏ NOTİFİCATİONUN GÖRSƏNMƏSİ
+
 $(function () { 
     $('.header__toggler').on('click', function () {
       

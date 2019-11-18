@@ -1,4 +1,4 @@
-
+// FOR İNDEX.HTML
  $( document ).ready(function() {
     $('.car-carousel').owlCarousel({
       loop: false,

@@ -1,3 +1,5 @@
+// SWIPE  FOR İNDEX-3.HTML
+
 $(function () {
 
     function setCurrentSlide(ele, index, cssClass) {
@@ -33,6 +35,8 @@ $(function () {
                 'display': 'none'
             });
         }
+
+// SWIPE EDENDE TEK OLAN INPUTU SECSIN
 
         var numItems = $('.swiper-slide-active').find(".car-pills__input").length;
         console.log(numItems);
@@ -174,7 +178,7 @@ $(function () {
 });
 
 
-
+// CLICK EDENDE TEK OLAN INPUTU SECSIN
 
 $(document).ready(function () {
     $('#car-tab2').click(function () {
@@ -184,6 +188,5 @@ $(document).ready(function () {
     $('#car-tab3').click(function () {
         $("#truck").prop("checked", true);
     });
-
 
 });

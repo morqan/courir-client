@@ -1,4 +1,4 @@
-//  INDEX.HTML
+// FOR  INDEX.HTML  INDEX-3.HTML İNTERNATİONAL TELEPHONE İNPUT
 $("#phone").intlTelInput({
 
     autoPlaceholder: "polite",
@@ -7,7 +7,7 @@ $("#phone").intlTelInput({
 
 });
 
-//  ACCOUNT-SIGN-IN-COVER2.HTML
+// FOR ACCOUNT-SIGN-IN-COVER2.HTML
 $("#phoneNumber").intlTelInput({
 
     autoPlaceholder: "polite",

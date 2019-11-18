@@ -25,6 +25,8 @@
 // });
 
 
+
+//  FORM SUBMİT  FOR  ACCOUNT-SİGN-İN-COVER2.HTML
 $(document).ready(function () {
 
     $('#sign-in-form').submit(function (e) {
