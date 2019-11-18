@@ -44,7 +44,7 @@ $(function () {
         if (numItems == 1) {
             $(".swiper-slide-active").find(".car-pills__input").prop("checked", true);
         } else {
-            $(".swiper-slide-active").find(".car-pills__input").prop("checked", false)
+            $(".swiper-slide").find(".car-pills__input").prop("checked", false)
         }
 
     }
@@ -181,6 +181,10 @@ $(function () {
 // CLICK EDENDE TEK OLAN INPUTU SECSIN
 
 $(document).ready(function () {
+    $('#car-tab1').click(function () {
+        $("#evacuator").prop("checked", false);
+        $("#truck").prop("checked",false);
+    });
     $('#car-tab2').click(function () {
         $("#evacuator").prop("checked", true);
     });

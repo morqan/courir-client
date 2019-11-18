@@ -1,7 +1,7 @@
 //  DATEPICKER  IN INDEX.HTML, INDEX-3.HTML
 $(document).ready(function () {
     $("#datepicker").datepicker({
-duration: "fast",
+        duration: "fast",
         gotoCurrent: true,
         closeText: "Bağla",
         prevText: "&#x3C;Geri",
@@ -27,14 +27,14 @@ duration: "fast",
         onSelect: function () {
             $("label[for='calendar']").text($(this).val());
             var calendarInput = document.getElementById("calendar");
-            var timeVal4 =$("input[name='time3']:checked").val();
-            calendarInput.value =$(this).val() + " " + timeVal4 ;
+            var timeVal4 = $("input[name='time3']:checked").val();
+            calendarInput.value = $(this).val() + " " + timeVal4;
         }
     });
 
     // İNPUT RADİONU CLİCKLƏDİKDƏ DATEPİCKERİN GÖRSƏNMƏSİ
     $("#calendar").click(function () {
-    
+
         $("#datepicker").datepicker("show");
-        });
+    });
 });

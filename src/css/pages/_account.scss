@@ -247,10 +247,11 @@
         &__img {
             display: flex;
             justify-content: space-between;
-
+flex-wrap: wrap;
             width: 90%;
-            margin: auto;
-            margin-top: 1rem;
+            margin: 1rem auto;
+         
+
             @include respondmax(md) {
                 margin-top: 0;
 
@@ -268,11 +269,13 @@
 
             &--div {
                 display: flex;
+           
                 align-items: center;
                 justify-content: center;
                 border-radius: 20% !important;
                 width: 150px;
                 height: 150px;
+                margin: 20px;
                 color: #fff;
 
                 @include respondmax(md) {
