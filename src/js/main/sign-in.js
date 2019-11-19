@@ -60,7 +60,7 @@ $(document).ready(function () {
         var phoneNumber = $('#phoneNumber').val();
         intRegex = /[0-9 -()+]+$/;
         // phoneNumber = phoneNumber.replace(/[^0-9\.]+/g, '');
-        if (phoneNumber.length != 11  || (!intRegex.test(phoneNumber))) {
+        if (phoneNumber.length != 12  || (!intRegex.test(phoneNumber))) {
            
             $('#phoneNumber').addClass("inputErrorBorder");
         } else  {
