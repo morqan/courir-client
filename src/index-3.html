@@ -5,18 +5,6 @@
 
     <div class="form-row mt-5 ">
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
-
-            <!-- PARSLEY CALLOUT WARNING START -->
-                <div class="bs-callout bs-callout-warning hidden">
-                        <h4>Oh snap!</h4>
-                        <p>This form seems to be invalid :(</p>
-                      </div>
-                      
-                      <div class="bs-callout bs-callout-info hidden">
-                        <h4>Yay!</h4>
-                        <p>Everything seems to be ok :)</p>
-                      </div>
-                       <!-- PARSLEY CALLOUT WARNING END -->
             <form class="form scrollbar1 p-3 scroll-style" id="first_form"  data-parsley-validate="">
                 <!-- LOADING  START  -->
                 <div class="loading-spinner">
@@ -78,12 +66,13 @@
                                         <div class="form-group  car-pills__form-group">
 
                                             <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="pedestrian" required/>
+                                                id="pedestrian" checked />
                                             <label class="car-pills__label1" for="pedestrian">
                                                 <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Piyada</span>
                                             </label>
                                         </div>
+
                                         <div class="form-group  car-pills__form-group">
 
                                             <input class="car-pills__input car-hide" type="radio" name="car2"
@@ -96,7 +85,7 @@
                                         </div>
                                         <div class="form-group  car-pills__form-group">
                                             <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="car" />
+                                                id="car"required />
                                             <label class="car-pills__label1" for="car">
                                                 <img src="img/car.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Avtomobil</span>
