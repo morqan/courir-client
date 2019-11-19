@@ -124,6 +124,7 @@
         height: 70px;
         border: 2px solid transparent;
         border-radius: 10px;
+        margin-bottom: 20px;
 
         &__img-group {
             display: flex;
@@ -211,6 +212,7 @@
     justify-content: space-between;
     align-items: center;
     color: $color-primary;
+    font-weight: bold;
     .price{
         color: $color-secondary-dark;
         font-size: 16px;

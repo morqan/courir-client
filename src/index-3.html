@@ -5,7 +5,7 @@
 
     <div class="form-row mt-5 ">
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
-            <form class="form scrollbar1 p-3 scroll-style" id="first_form"  data-parsley-validate="">
+            <form class="form scrollbar1 p-3 scroll-style" id="first_form" data-parsley-validate="">
                 <!-- LOADING  START  -->
                 <div class="loading-spinner">
                     <div class="spinner-square">
@@ -84,8 +84,8 @@
 
                                         </div>
                                         <div class="form-group  car-pills__form-group">
-                                            <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="car"required />
+                                            <input class="car-pills__input car-hide" type="radio" name="car2" id="car"
+                                                required />
                                             <label class="car-pills__label1" for="car">
                                                 <img src="img/car.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Avtomobil</span>
@@ -94,10 +94,33 @@
                                         </div>
                                     </div>
                                     <div class="info">
-                                        <div class="info__span">
-                                            <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
-                                            <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
-                                            <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
+                                        <div class="info__div">
+                                            <div class="info__div--away-time">
+                                                <i class="fas fa-clock mr-1"></i>
+                                                <span class="away-time">15 dəqiqə uzaqlıqda</span>
+                                            </div>
+                                            <div class="info__div--price">
+                                                <span>Məbləğ</span>
+                                                <span class="price-span">
+                                                    <i class="fa fa-coins mr-1 ml-auto"></i>
+                                                    <span class="price"> 5$ </span>
+                                                </span>
+
+                                            </div>
+                                            <div class="info__div--distance">
+                                                <span>Məsafə</span>
+                                                <span class="distance-span"><i class="fas fa-route mr-1"></i>
+                                                    <span class="distance">5.6km</span>
+                                                </span>
+                                            </div>
+                                            <div class="info__div--time">
+                                                <span>Çatdırılma vaxtı</span>
+                                                <span class="time-span"> <i class="fas fa-clock mr-1"></i>
+                                                    <span class="time">10 dəq</span>
+                                                </span>
+                                            </div>
+
+
                                         </div>
                                         <p class="info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                             Obcaecati
@@ -121,12 +144,24 @@
                                             </div>
                                             <div class="info2">
 
-                                                <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
-                                                <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                                                <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                                    <span class="distance-span">
+                                                        <i class="fas fa-route mr-1"></i>
+                                                        <span class="distance">5.6km</span>
+                                                    </span>
+                                                    <span class="time-span">
+                                                         <i class="fas fa-clock mr-1"></i>
+                                                        <span class="time">10 dəq</span>
+                                                    </span>
+                                                    <span class="price-span">
+                                                            <i class="fa fa-coins mr-1 ml-auto"></i>
+                                                            <span class="price"> 5$ </span>
+                                                        </span>
                                             </div>
                                         </label>
-
+                                        <div class="info__div--away-time">
+                                                <i class="fas fa-clock mr-1"></i>
+                                                <span class="away-time">15 dəqiqə uzaqlıqda</span>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +183,10 @@
                                                 <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
                                             </div>
                                         </label>
+                                        <div class="info__div--away-time">
+                                                <i class="fas fa-clock mr-1"></i>
+                                                <span class="away-time">15 dəqiqə uzaqlıqda</span>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +226,10 @@
                 <div class="form-group form__group">
                     <label for="contact-message" class="form-label form__label">Message</label>
                     <textarea id="contact-message" name="contact-message" rows="10"
-                        class="form-control form__control textarea"   data-parsley-trigger="keyup" data-parsley-minlength="1" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.." data-parsley-validation-threshold="10" required></textarea>
+                        class="form-control form__control textarea" data-parsley-trigger="keyup"
+                        data-parsley-minlength="1" data-parsley-maxlength="100"
+                        data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
+                        data-parsley-validation-threshold="10" required></textarea>
 
 
                 </div>
@@ -196,7 +238,7 @@
 
                 <!-- LABOR SPINNER STARTS-->
                 <div id="labor">
-                    <label  class="form-label form__label">İşçi qüvvəsi</label>
+                    <label class="form-label form__label">İşçi qüvvəsi</label>
                     <div class="input-spinner form-control form__control">
                         <i class="fa fa-user-alt-slash" id="user0"></i>
                         <i class="fa fa-user d-none " id="user1"></i>
@@ -223,10 +265,12 @@
                 <div class="packing" id="packing">
                     <span class="form-label form__label">Paketləmə lazımdırmı?</span>
                     <div class="packing__div my-3">
-                        <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes" value="Bəli" checked />
+                        <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes"
+                            value="Bəli" checked />
                         <label class="packing__div__label packing__div__label--packing-yes"
-                            for="packing-yes" >Bəli</label>
-                        <input class="packing__div__input" type="radio" name="packing-radio" id="packing-no" value="Xeyr" />
+                            for="packing-yes">Bəli</label>
+                        <input class="packing__div__input" type="radio" name="packing-radio" id="packing-no"
+                            value="Xeyr" />
                         <label class="packing__div__label  packing__div__label--packing-no "
                             for="packing-no">Xeyr</label>
                     </div>
@@ -302,9 +346,9 @@
                         <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
 
                             <div class=" form-check">
-                                <input class="times__input form-check-input" type="radio" name="time1" id="time_1"
-                                    value="08:00" />
-                                <label class="times__label  form-check-label disable-label" for="time_1">08:00</label>
+                                <input class="times__input form-check-input" type="radio" name="time1"
+                                    data-id="today-time" id="time_1" value="08:00" />
+                                <label class="times__label  form-check-label disable-label">08:00</label>
                             </div>
 
 
@@ -518,13 +562,13 @@
         <div class="index__content__div">
             <div class="index__content__div--img"><img src="assets/img/about-2.jpg" alt="" class="img-fluid"></div>
             <p>
-                    Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
-                    explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
-                    ipsam
-                   
+                Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
+                explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
+                ipsam
+
             </p>
-           
+
         </div>
     </div>
 

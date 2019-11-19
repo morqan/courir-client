@@ -15,68 +15,107 @@
         margin-bottom: 0;
     }
 
-&__label{
-    text-align: center;
-    cursor: pointer;
-    background-color: $color-secondary;
-    color: black;
-
-    border-radius: 3px;
-    width: 100%;
-    margin-bottom: 0;
-    &--img {
-        margin-left: auto;
-        margin-right: auto;
-        width: 50px !important;
-       
-    }
-    &--span {
-        font-size: 12px;
+    &__label {
         text-align: center;
+        cursor: pointer;
+        background-color: $color-secondary;
+        color: black;
 
-        font-family: 'Nunito', sans-serif;
-        color: #1f1f1f;
-        font-weight: bold;
+        border-radius: 3px;
+        width: 100%;
+        margin-bottom: 0;
+
+        &--img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50px !important;
+
+        }
+
+        &--span {
+            font-size: 12px;
+            text-align: center;
+
+            font-family: 'Nunito', sans-serif;
+            color: #1f1f1f;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+        &:hover .car__label--span {
+            color: #ffffff;
+        }
     }
 
-    &:hover {
-        background-color: $color-primary;
-    }
-    &:hover .car__label--span {
-        color: #ffffff ;
-    }
-}
+    &__input[type="radio"] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none;
 
-&__input[type="radio"] {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    display: none;
+        &:checked+label {
+            background-color: $color-primary;
+            color: #ffffff;
+        }
 
-    &:checked+label {
-        background-color: $color-primary;
-        color: #ffffff ;
+        &:checked+label .car__label--span {
+            color: #ffffff !important;
+        }
     }
-    &:checked+label .car__label--span {
-        color: #ffffff !important;
-    }
-}
-    
+
 
 }
 
 .info {
     display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
+    flex-direction: column;
+    margin-top: 1rem;
 
-    &__span {
+    &__div {
         display: flex;
-        justify-content: space-around;
-        color: $color-primary;
+        flex-direction: column;
+
         font-weight: bold;
         width: 100% !important;
-        height: 20px;
+        height: auto;
+
+
+
+        &--away-time {
+            color: $color-primary;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        &--time,
+        &--price,
+        &--distance {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            color: $color-secondary-dark;
+
+            span {
+                background-color: #fff;
+                padding: 5px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0.5em;
+                border-top: 1px solid $color-secondary;
+                z-index: -1;
+            }
+        }
 
         @include respondmax(xl) {
             width: 100% !important;
