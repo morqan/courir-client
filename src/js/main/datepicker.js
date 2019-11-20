@@ -22,6 +22,9 @@ $(document).ready(function () {
         isRTL: false,
         showMonthAfterYear: false,
         yearSuffix: "",
+        minDate: 0, // disable past date
+        minTime: 0, // disable past time
+
 
         // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
         onSelect: function () {
@@ -37,4 +40,19 @@ $(document).ready(function () {
 
         $("#datepicker").datepicker("show");
     });
+});
+
+$(document).ready(function () {
+    var disableVal = $(".ui-state-disabled").html();
+
+    if (disableVal !== "&nbsp;") {
+        $(".ui-state-disabled").css({
+            'background-color': '#ababab',
+            'color': '#fff',
+            'border-radius': '5px',
+        });
+
+    } else{}
+
+
 });
