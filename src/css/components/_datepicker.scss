@@ -1,36 +1,7 @@
 .datepicker {
   
-
         &__input {
-        display: none;
-            // position: absolute;
-            //         width: 100%;
-            //         height: auto;
-            //         top: 30%;
-            //         border: none;
-            //         background-color: transparent;
-            //         font-weight: bold;
-            //         text-align: center;
-            
-            
-                    // &::placeholder {
-                    //     padding-left: 0;
-                    //     color: black;
-                    //     font-weight: bold;
-                    //     // &:focus {
-                    //     //     outline: none;
-                    //     //     color: #ffffff;
-                    //     // }
-                        
-                    // }
-            
-                    // &:focus {
-                    //     outline: none;
-                    //     color: #ffffff;
-                    // }
-                    
-            
-                   
+        display: none;  
             
                 }
         
@@ -50,7 +21,7 @@
     padding: 0.5rem;
 }
 
-table {
+.ui-datepicker-calendar {
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -78,12 +49,13 @@ table {
                 border-radius: 0.25rem;
                 line-height: 2rem;
                 transition: 0.3s all;
-                color: #546E7A;
-                font-size: 0.875rem;
+                color: #3a3a3a;
+                font-size: 16px;
                 text-decoration: none;
 
                 &:hover {
-                    background-color: #E0F2F1;
+                    background-color: $color-primary;
+                    color: #ffffff;
                 }
             }
 

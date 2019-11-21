@@ -17,3 +17,8 @@ $("#phoneNumber").intlTelInput({
 
 });
 
+// $("#phoneNumber").focus(function () {
+//     $(".iti__selected-flag").css({
+//         'height': '75%',
+//     });
+// });
