@@ -1,7 +1,9 @@
 $(document).ready(function () {
-  
 
-  $('#first_form').parsley().on('field:validated', function () {
+  $('#phoneNumber').mask('+000000000000');
+
+
+  $('#sign-in-form').parsley().on('field:validated', function () {
       var ok = $('.parsley-error').length === 0;
 
 
@@ -12,6 +14,10 @@ $(document).ready(function () {
       // };
 
       
+
+
+
+
 
 
     })
