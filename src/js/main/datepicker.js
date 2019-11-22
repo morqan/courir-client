@@ -1,6 +1,9 @@
 //  DATEPICKER  IN INDEX.HTML, INDEX-3.HTML
 $(document).ready(function () {
+    var date = new Date();
+    date.setDate(date.getDate());
     $("#datepicker").datepicker({
+        startDate: date,
         duration: "fast",
         gotoCurrent: true,
         closeText: "Bağla",
@@ -42,17 +45,8 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
-    var disableVal = $(".ui-state-disabled").html();
-
-    if (disableVal !== "&nbsp;") {
-        $(".ui-state-disabled").css({
-            'background-color': '#ababab',
-            'color': '#fff',
-            'border-radius': '5px',
-        });
-
-    } else{}
-
-
-});
+// $(document).ready(function () {
+//     $(".ui-state-disabled").find('.ui-state-default').css({
+//         'color': '#f5f5f5'
+//     });
+// });

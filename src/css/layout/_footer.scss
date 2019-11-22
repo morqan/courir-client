@@ -9,6 +9,10 @@
        align-items: center;
         justify-content: center;
         border-radius: 50%;
+
+        &:hover{
+            text-decoration: none;
+        }
     }
     &__3 {
         margin-top: 40px;

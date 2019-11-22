@@ -341,7 +341,7 @@ flex-wrap: wrap;
     }
 }
 #myOrderTab-1{
-    @include respondmax(sm) {
+    @include respondmax(lg) {
         display: none;
     }
 }

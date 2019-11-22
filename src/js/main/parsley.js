@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('#phoneNumber').mask('+000000000000');
+  $('#phoneNumber').mask('(00)0000000');
 
 
   $('#sign-in-form').parsley().on('field:validated', function () {
