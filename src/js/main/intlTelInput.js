@@ -3,7 +3,8 @@ $("#phone").intlTelInput({
 
     autoPlaceholder: "polite",
     allowDropdown: true,
-
+    initialCountry: "az",
+    separateDialCode: true,
 
 });
 
@@ -17,3 +18,8 @@ $("#phoneNumber").intlTelInput({
 
 });
 
+// $("#phoneNumber").focus(function () {
+//     $(".iti__selected-flag").css({
+//         'height': '75%',
+//     });
+// });

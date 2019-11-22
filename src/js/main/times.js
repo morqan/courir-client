@@ -1,41 +1,3 @@
-// //  TODAY TOMORROW CALENDARI DƏYİŞDİKDƏ CAROUSEL TİME DƏYİŞİR
-// $('input:radio[name="day"]').change(
-//   function () {
-//     if ($(".today").prop('checked')) {
-//       $('.delivery__time-1').css({
-//         'display': 'block'
-//       });
-//       $('.delivery__time-2').css({
-//         'display': 'none'
-//       });
-//       $('.delivery__time-3').css({
-//         'display': 'none'
-//       });
-//     } else if ($(".tomorrow").prop('checked')) {
-//       $('.delivery__time-1').css({
-//         'display': 'none'
-//       });
-//       $('.delivery__time-2').css({
-//         'display': 'block'
-//       });
-//       $('.delivery__time-3').css({
-//         'display': 'none'
-//       });
-//     } else if ($(".calendar-input").prop('checked')) {
-//       $('.delivery__time-1').css({
-//         'display': 'none'
-//       });
-//       $('.delivery__time-2').css({
-//         'display': 'none'
-//       });
-//       $('.delivery__time-3').css({
-//         'display': 'block'
-//       });
-
-
-//     }
-//   });
-
 //  CAROUSEL TİME İNPUT RADİO CLİCK ETDİKDƏ VALUE-SU  BUGUN SABAH CALENDAR İNPUTLARİNİN VALUE-SUNA YAZILIR
 
 // $(document).ready(function () {
@@ -61,4 +23,39 @@
 //   });
 // });
 
+
+
+// //  TODAY TOMORROW CALENDARI DƏYİŞDİKDƏ CAROUSEL TİME DƏYİŞİR
+// $(document).ready(function () {
+// $('input:radio[name="day"]').change(
+//   function () {
+//     if ($(".today").prop('checked')) {
+//       $('.delivery__time').css({
+//         'display': 'block'
+//       });
+     
+//     } 
+//     // else if ($(".tomorrow").prop('checked')) {
+//     //   $('.delivery__time-1').css({
+//     //     'display': 'none'
+//     //   });
+//     //   $('.delivery__time-2').css({
+//     //     'display': 'block'
+//     //   });
+//     //   $('.delivery__time-3').css({
+//     //     'display': 'none'
+//     //   });
+//     // } else if ($(".calendar-input").prop('checked')) {
+//     //   $('.delivery__time-1').css({
+//     //     'display': 'none'
+//     //   });
+//     //   $('.delivery__time-2').css({
+//     //     'display': 'none'
+//     //   });
+//     //   $('.delivery__time-3').css({
+//     //     'display': 'block'
+//     //   });
+//     // }
+//   });
+// });
 

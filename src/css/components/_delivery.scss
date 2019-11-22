@@ -7,15 +7,9 @@
     width: 100% !important;
   }
 
-  &__time-1 {
-    display: block;
-  }
-  &__time-2 {
-    display: none;
-  }
-  &__time-3 {
-    display: none;
-  }
+  // &__time {
+  //   display: none;
+  // }
 }
 
 .day {
@@ -98,4 +92,7 @@
  
 }
 
-
+#today-span,
+#tomorrow-span {
+  text-transform: capitalize;
+}

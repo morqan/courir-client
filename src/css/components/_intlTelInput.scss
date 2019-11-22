@@ -12,5 +12,22 @@
   
 }
 
+.iti__selected-flag{
+  height: 50px;
+
+  &:focus {
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &:hover {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+}
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: rgba(0, 0, 0, 0);
+}
 
 
