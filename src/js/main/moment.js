@@ -1,4 +1,5 @@
 
+
 $(document).ready(function () {
     var dayHours = 24; 
     var currentTime = moment().startOf('hour').add(1, 'h').format("HH:mm");
@@ -7,6 +8,8 @@ $(document).ready(function () {
     var today = moment().locale("az").format("DD MMMM");
     var tomorrow = moment().add(1, 'days').format("DD MMMM");
    
+//  BUGÜN VƏ SABAHIN TARİXİNİN İNPUT NAME=DAY-DƏ GÖRSƏNMƏSİ
+
     var todaySlash = moment().format('L');
     var tomorrowSlash = moment().add(1, 'days').format('L');
 
