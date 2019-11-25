@@ -20,7 +20,7 @@ $(document).ready(function () {
         dayNamesShort: ["B", "Be", "Ça", "Ç", "Ca", "C", "Ş"],
         dayNamesMin: ["B", "B", "Ç", "С", "Ç", "C", "Ş"],
         weekHeader: "Hf",
-        dateFormat: "dd.mm.yy",
+        dateFormat: "dd/mm/yy",
         firstDay: 1,
         isRTL: false,
         showMonthAfterYear: false,
@@ -28,13 +28,10 @@ $(document).ready(function () {
         minDate: 0, // disable past date
         minTime: 0, // disable past time
 
-
         // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
         onSelect: function () {
             $("label[for='calendar']").text($(this).val());
-            var calendarInput = document.getElementById("calendar");
-            var timeVal4 = $("input[name='time3']:checked").val();
-            calendarInput.value = $(this).val() + " " + timeVal4;
+           
         }
     });
 
@@ -44,9 +41,3 @@ $(document).ready(function () {
         $("#datepicker").datepicker("show");
     });
 });
-
-// $(document).ready(function () {
-//     $(".ui-state-disabled").find('.ui-state-default').css({
-//         'color': '#f5f5f5'
-//     });
-// });

@@ -6,8 +6,8 @@
     
       nav: false,
       dots: false,
-      autoplay: true,
-      autoplayHoverPause: true,
+      // autoplay: true,
+      // autoplayHoverPause: true,
       responsive: {
         0: {
           items: 4
