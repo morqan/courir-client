@@ -212,8 +212,9 @@
                     </div>
                     <div class="form-group form__group ">
                         <label for="phone" class="d-block form-label form__label">Receiver number</label>
-                        <input type="tel" name="phone" class="form-control form__control d-block " id="phone"
-                            value="+994">
+                        <input type="text" name="phone" class="form-control form__control d-block " id="phone"
+                         data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
+                            data-parsley-minlength="11"  data-parsley-maxlength="11" required>
                         <span id="valid-msg" class="hide d-block"></span>
                         <span id="error-msg" class="hide d-block"></span>
                     </div>
@@ -332,7 +333,7 @@
                             <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
                                 placeholder="Pick a Date">
 
-                            <input class="day__input form-check-input calendar-input" type="radio" name="day"
+                            <input class="day__input  form-check-input calendar-input" type="radio" name="day"
                                 id="calendar" value="" />
 
                             <label class="day__label form-check-label calendar-label" for="calendar">Pick a date</label>
@@ -342,7 +343,7 @@
                     </div>
                     <span class="form-label form__label mb-1">Delivery time</span>
                     <div id="delivery__time" class="delivery__time times times-carousel owl-carousel  owl-theme">
-                     
+
                     </div>
                     <!-- <div id="delivery__time-1" class="delivery__time-1 times">
                         <div class="tab__pane__list times-carousel owl-carousel  owl-theme">

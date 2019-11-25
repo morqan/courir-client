@@ -3,7 +3,8 @@ $("#phone").intlTelInput({
 
     autoPlaceholder: "polite",
     allowDropdown: true,
-
+    initialCountry: "az",
+    separateDialCode: true,
 
 });
 
