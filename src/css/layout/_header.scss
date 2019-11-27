@@ -5,7 +5,9 @@
     width: 100vw;
 
 
-
+&__logo {
+    margin-right: 0;
+}
 
     &__container {
         z-index: 999;
@@ -130,7 +132,34 @@
         }
     }
 
+    &__language2 {
+        color: rgba(255,255,255,.65);
+        font-size: 20px;
+
+        &:hover {
+            color: rgba(255,255,255,.85);
+        }
+
+        .fa-globe {
+            margin-right: 5px;
+        }
+    }
+
     &__toggler {
+        &:focus {
+            outline: none;
+        }
+
+
+        &--badge {
+            font-size: 10px;
+            padding: 3px 5px;
+            border-radius: 50%;
+            transform: translateY(-10px) translateX(10px);
+        }
+    }
+
+    &__toggler2 {
         &:focus {
             outline: none;
         }
@@ -152,6 +181,10 @@
 .index-shadow {
     box-shadow: 0 8px 15px #7b2bfc1f;
 
+}
+
+.login2 {
+    padding: 0;
 }
 
 // #myOrderTab-2 {
@@ -204,4 +237,14 @@
             }
         }
     }
+}
+.header-scroll {
+color: rgba(0,0,0,.5) !important;
+&:after {
+    color: rgba(0,0,0,.5) !important;
+}
+
+&:hover{
+    color: rgba(0,0,0,.7) !important;
+}
 }
