@@ -5,10 +5,9 @@
 
     <div class="form-row mt-5 ">
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
-
-            <form class="form scrollbar1 p-3 scroll-style" id="first_form">
+            <form class="form scrollbar1 p-3 scroll-style" id="first_form" data-parsley-validate="">
                 <!-- LOADING  START  -->
-                <div class="loading-spinner d-none">
+                <div class="loading-spinner">
                     <div class="spinner-square">
                         <div class="square-1 square"></div>
                         <div class="square-2 square"></div>
@@ -17,417 +16,84 @@
                     <div class="loading-spinner__text mt-2">Kuryer axtarılır</div>
                 </div>
                 <!-- LOADING END -->
-                <!--INPUTS STARTS-->
-                <div class="form-text">
-                    <div class="form-group form__group">
-                        <label for="startPlace" class="form-label form__label">From:</label>
-                        <input type="text" name="from" class="form-control form__control" id="startPlace"
-                            placeholder="Insert pick-up address">
 
+                <div class="loading-info ">
+                    <div class="loading-info__heading">Götürülmə ünvanı</div>
+                    <p class="loading-info--from">94 Təbriz küç.</p>
+                </div>
+                <div class="loading-info ">
+                    <div class="loading-info__heading">Çatdırılma ünvanı</div>
+                    <p class="loading-info--destination">94 Nizami küç.</p>
+                </div>
+
+                <div class="loading-info loading-info--payment-group">
+                    <div>
+                        <div class="loading-info__heading">Ödəniş növü</div>
+                        <p class="loading-info--payment">Nəğd</p>
                     </div>
-                    <input type="hidden" id="startPlaceLat">
-                    <input type="hidden" id="startPlaceLng">
-                    <div class="form-group form__group">
-                        <label for="endPlace" class="form-label form__label">Destination:</label>
-                        <input type="text" name="destination" class="form-control form__control" id="endPlace"
-                            placeholder="Insert Delivery address">
+                    <p class="loading-info--money">5.20$</p>
+                </div>
+                
 
-                    </div>
-                    <input type="hidden" id="endPlaceLat">
-                    <input type="hidden" id="endPlaceLng">
+                <div class="loading-info ">
+                    <div class="loading-info__heading">Receiver</div>
+                    <p class="loading-info--receiver">Mammad Mammadov</p>
+                </div>
+                <div class="loading-info ">
+                    <div class="loading-info__heading">Receiver Number</div>
+                    <p class="loading-info--receiver-number">+994-55-444-33-22</p>
                 </div>
 
-                <div id="price_for_selected" style="width:100%;"></div>
-                <!-- INPUT END-->
+                <div class="loading-info ">
+                    <div class="loading-info__heading mb-3">Daşınacaq yükün fotosu</div>
+                    <div class="container">
+                        <div class="row">
+                            <div class=" col-sm-6 col-md-4 ">
+                                <div class="loading-info__img-group--div">
+                                    <img src="assets/img/about-1.jpg" alt="" class="img-fluid loading-info--img">
+                                </div>
+                            </div>
+                            <div class=" col-sm-6 col-md-4 ">
+                                <div class="loading-info__img-group--div">
+                                    <img src="assets/img/about-1.jpg" alt="" class="img-fluid loading-info--img">
+                                </div>
+                            </div>
+                            <div class=" col-sm-6 col-md-4 ">
+                                <div class="loading-info__img-group--div">
+                                    <img src="assets/img/about-1.jpg" alt="" class="img-fluid loading-info--img">
+                                </div>
+                            </div>
+                            <div class=" col-sm-6 col-md-4 ">
+                                <div class="loading-info__img-group--div">
+                                    <img src="assets/img/about-1.jpg" alt="" class="img-fluid loading-info--img">
+                                </div>
+                            </div>
+                            <div class=" col-sm-6 col-md-4 ">
+                                <div class="loading-info__img-group--div">
+                                    <img src="assets/img/about-1.jpg" alt="" class="img-fluid loading-info--img">
+                                </div>
+                            </div>
 
-                <!-- CAR START-->
-                <label class="form-label form__label">Daşıma növünü seçin:</label>
-
-                <div class="car-carousel owl-carousel  owl-theme mb-2" id="car-carousel">
-                    <div class="form-group car__form-group">
-
-                        <input class="car__input car-hide" type="radio" name="car" id="pedestrian" />
-                        <label class="car__label" for="pedestrian">
-                            <img src="img/pedestrian.png" alt="car" class="car__label--img">
-                            <span class="car__label--span">Piyada</span>
-                        </label>
-                    </div>
-                    <div class="form-group car__form-group">
-
-                        <input class="car__input car-hide" type="radio" name="car" id="motorbike" />
-                        <label class="car__label" for="motorbike">
-                            <img src="img/motorbike.png" alt="car" class="car__label--img">
-                            <span class="car__label--span">Motosiklet</span>
-                        </label>
-
-                    </div>
-                    <div class="form-group car__form-group">
-                        <input class="car__input car-hide" type="radio" name="car" id="car" />
-                        <label class="car__label" for="car">
-                            <img src="img/car.png" alt="car" class="car__label--img">
-                            <span class="car__label--span">Avtomobil</span>
-                        </label>
-
-                    </div>
-                    <div class="form-group car__form-group">
-                        <input class="car__input car-hide" type="radio" name="car" id="evacuator" />
-                        <label class="car__label" for="evacuator">
-                            <img src="img/evacuator.png" alt="car" class="car__label--img">
-                            <span class="car__label--span">Evakuator</span>
-                        </label>
-
-                    </div>
-                    <div class="form-group car__form-group">
-                        <input class="car__input" type="radio" name="car" id="truck" />
-                        <label class="car__label" for="truck">
-                            <img src="img/transit.png" alt="car" class="car__label--img"><span
-                                class="car__label--span">Yük maşını</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="info">
-                    <div class="info__span">
-                        <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
-                        <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
-                        <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                    </div>
-                    <p class="info__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                        magnam, dolorum alias assumenda accusantium nemo exercitationem sint cum aspernatur
-                        necessitatibus.
-                    </p>
-
-                </div>
-                <!-- CAR  END-->
-
-
-   <!-- INPUTS STARTS-->
-   <div id="receiver">
-        <div class="form-group form__group">
-            <label for="contact-name" class="form-label form__label">Receiver</label>
-            <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
-                placeholder="Mammad Mammadov">
-            <div class="invalid-feedback">
-                Please type your name.
-            </div>
-        </div>
-        <div class="form-group form__group ">
-            <label for="phone" class="d-block form-label form__label">Receiver number</label>
-            <input type="tel" name="phone" class="form-control form__control d-block " id="phone"
-                value="+994">
-            <span id="valid-msg" class="hide d-block"></span>
-            <span id="error-msg" class="hide d-block"></span>
-        </div>
-    </div>
-
-    <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
-    <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
-    <!--INPUTS END-->
-    <!--TEXTAREA STARTS-->
-    <div class="form-group form__group">
-        <label for="contact-message" class="form-label form__label">Message</label>
-        <textarea id="contact-message" name="contact-message" rows="10"
-            class="form-control form__control textarea  "></textarea>
-
-
-    </div>
-    <!-- TEXTAREA FINISH-->
-
-
-    <!-- LABOR SPINNER STARTS-->
-    <div id="labor">
-        <label  class="form-label form__label">İşçi qüvvəsi</label>
-        <div class="input-spinner form-control form__control">
-            <i class="fa fa-user-alt-slash" id="user0"></i>
-            <i class="fa fa-user d-none " id="user1"></i>
-            <i class="fa fa-user-friends d-none" id="user2"></i>
-            <i class="fa fa-users d-none" id="userMore"></i>
-            <div class="number-spinner">
-                <span class="ns-btn">
-                    <a>
-                        <div class="icon-minus" id="icon-minus"></div>
-                    </a>
-                </span>
-                <input type="text" class="pl-ns-value" value="0" maxlength=2 id="spinner">
-                <span class="ns-btn">
-                    <a>
-                        <div class="icon-plus" id="icon-plus"></div>
-                    </a>
-                </span>
-            </div>
-        </div>
-    </div>
-    <!-- LABOR SPINNER END-->
-
-    <!-- PACKING START -->
-    <div class="packing" id="packing">
-        <span class="form-label form__label">Paketləmə lazımdırmı?</span>
-        <div class="packing__div my-3">
-            <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes" value="Bəli" checked />
-            <label class="packing__div__label packing__div__label--packing-yes"
-                for="packing-yes" >Bəli</label>
-            <input class="packing__div__input" type="radio" name="packing-radio" id="packing-no" value="Xeyr" />
-            <label class="packing__div__label  packing__div__label--packing-no "
-                for="packing-no">Xeyr</label>
-        </div>
-
-
-    </div>
-    <!-- PACKING END -->
-
-    <!--URGENT START-->
-    <div class="urgent">
-        <span class="form-label form__label">Çatdırılma növü</span>
-        <div class=" urgent__list">
-            <div class="urgent__list--item form-check">
-                <input class="urgent__input form-check-input" type="radio" name="urgent"
-                    id="pills-non-urgent-tab" value="urgent" />
-                <label class="urgent__label urgent__label--1 form-check-label"
-                    for="pills-non-urgent-tab">Delivery now
-                    <span class="d-block">(ASAP)</span>
-                </label>
-            </div>
-            <div class="urgent__list--item form-check">
-                <input class="urgent__input form-check-input" type="radio" name="urgent"
-                    id="pills-urgent-tab" value="non-urgent" />
-                <label class="urgent__label urgent__label--2 form-check-label"
-                    for="pills-urgent-tab">Scheduled
-                    <span class="d-block">(non-urgent)</span>
-                </label>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- URGENT END -->
-    <!-- DELIVERY START -->
-    <div class="delivery" id="delivery">
-        <span class="form-label form__label">Delivery date</span>
-
-        <div class="day">
-            <div class="day__list form-check">
-                <input class="day__input form-check-input today" type="radio" name="day" id="today" value=""
-                    checked />
-                <label class="day__label form-check-label " for="today">
-                    <span>Bu gün</span>
-                    <span class="  day__link--span d-inline-block" id="today-span"></span>
-                </label>
-            </div>
-
-            <div class="day__list form-check">
-                <input class="day__input form-check-input tomorrow" type="radio" name="day" id="tomorrow"
-                    value="" />
-                <label class="day__label form-check-label tomorrow-label" for="tomorrow">
-                    <span>Sabah</span>
-                    <span class="  day__link--span d-inline-block" id="tomorrow-span"></span>
-
-                </label>
-            </div>
-
-            <div class="day__list datepicker form-check">
-                <input class="datepicker__input" type="text" id="datepicker" autocomplete="off"
-                    placeholder="Pick a Date">
-
-                <input class="day__input form-check-input calendar-input" type="radio" name="day"
-                    id="calendar" value="" />
-
-                <label class="day__label form-check-label calendar-label" for="calendar">Pick a date</label>
-
-
-            </div>
-        </div>
-        <span class="form-label form__label mb-1">Delivery time</span>
-
-        <div id="delivery__time-1" class="delivery__time-1 times">
-            <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
-
-                <div class=" form-check">
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_1"
-                        value="08:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_1">08:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_2"
-                        value="10:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_2">10:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_3"
-                        value="12:00" checked />
-                    <label class="times__label form-check-label" for="time_3">12:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_4"
-                        value="14:00" />
-                    <label class="times__label form-check-label" for="time_4">14:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_5"
-                        value="16:00" />
-                    <label class="times__label form-check-label" for="time_5">16:00</label>
-                </div>
-
-                <div class="form-check">
-
-                    <input class="times__input form-check-input" type="radio" name="time1" id="time_6"
-                        value="18:00" />
-                    <label class="times__label form-check-label" for="time_6">18:00</label>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div id="delivery__time-2" class="delivery__time-2 times">
-            <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
-
-                <div class=" form-check">
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_7"
-                        value="08:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_7">08:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_8"
-                        value="10:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_8">10:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_9"
-                        value="12:00" checked />
-                    <label class="times__label form-check-label" for="time_9">12:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_10"
-                        value="14:00" />
-                    <label class="times__label form-check-label" for="time_10">14:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_13"
-                        value="16:00" />
-                    <label class="times__label form-check-label" for="time_13">16:00</label>
-                </div>
-
-                <div class="form-check">
-
-                    <input class="times__input form-check-input" type="radio" name="time2" id="time_14"
-                        value="18:00" />
-                    <label class="times__label form-check-label" for="time_14">18:00</label>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div id="delivery__time-3" class="delivery__time-3 times">
-            <div class="tab__pane__list times-carousel owl-carousel  owl-theme">
-
-                <div class=" form-check">
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_15"
-                        value="08:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_15">08:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_16"
-                        value="10:00" />
-                    <label class="times__label  form-check-label disable-label" for="time_16">10:00</label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_17"
-                        value="12:00" checked />
-                    <label class="times__label form-check-label" for="time_17">12:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_18"
-                        value="14:00" />
-                    <label class="times__label form-check-label" for="time_18">14:00</label>
-                </div>
-
-                <div class="form-check">
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_19"
-                        value="16:00" />
-                    <label class="times__label form-check-label" for="time_19">16:00</label>
-                </div>
-
-                <div class="form-check">
-
-                    <input class="times__input form-check-input" type="radio" name="time3" id="time_20"
-                        value="18:00" />
-                    <label class="times__label form-check-label" for="time_20">18:00</label>
-                </div>
-
-
-            </div>
-
-        </div>
-    </div>
-    <!-- DELIVERY END -->
-
-    <!--  PAYMENT START -->
-    <div class="form-text payment">
-        <div class="form-group form__group">
-            <div class="form-label form__label mt-3 mb-2">Ödəniş növü :</div>
-            <div class="dropdown   payment__dropdown">
-                <button aria-expanded="false" aria-haspopup="true" id="payment"
-                    class="btn btn-sm  dropdown-toggle arrow-bottom form__control  payment__dropdown--btn"
-                    data-toggle="dropdown" type="button">
-                    <div class="payment__text">
-                        <i class="far fa-money-bill-alt color-purple mr-1"></i>
-                        <span>Nəğd ödəniş</span>
-                    </div>
-                </button>
-                <div class="dropdown-menu payment__dropdown-menu">
-
-                    <div class="dropdown-item payment__dropdown-menu--item " id="kartla-odenis"
-                        data-id="kartla-odenis">
-                        <div class="payment__text">
-                            <i class="fas fa-credit-card color-purple mr-1"></i>
-                            <span id="kartla-odenis" data-id="kartla-odenis">Kartla ödəniş</span>
                         </div>
-                        <span class="mr-3 payment-check"></span>
                     </div>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-item payment__dropdown-menu--item" id="nagd-odenis"
-                        data-id="nagd-odenis">
-                        <div class="payment__text">
-                            <i class="far fa-money-bill-alt color-purple mr-1"></i>
-                            <span>Nəğd ödəniş</span>
-                        </div>
-                        <span class="mr-3 payment-check"></span>
-                    </div>
-
 
                 </div>
-            </div>
 
-            <input type="hidden" id="payment-hidden">
+                <div class="loading-info ">
+                        <div class="loading-info__heading">Çatdırılma növü</div>
+                        <p class="loading-info--urgent">Təcili</p>
+                    </div>
+                    <div class="loading-info ">
+                        <div class="loading-info__heading">Çatdırılma vaxtı</div>
+                        <p class="loading-info--delivery-time">16/12/2019 15:00 </p>
+                    </div>
 
-        </div>
-
-
-    </div>
-    <!-- PAYMENT END   -->
-
-                <!--SUBMIT BUTTON-->
-                <button class="btn btn-2 btn-purple form-submit" type="submit" name="submit">
-                    <span>Order Now</span>
-                </button>
+                <div class="loading-info ">
+                    <div class="loading-info__heading">Qeydlər</div>
+                    <p class="loading-info--note">Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi
+                        soluta maxime, sequi beatae
+                        quod ratione alias ipsum labore totam?</p>
+                </div>
 
             </form>
             <!-- EXAMPLE BUTTON -->
@@ -440,7 +106,7 @@
 
         <!--    MAP -->
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 map order-1 order-lg-2">
-            <div class=" divider-side divider__side d-lg-block transform-flip-y"></div>
+            <div class=" divider-side divider__side d-lg-block transform-flip-y d-none"></div>
             <div id="map_canvas"></div>
 
 
@@ -449,26 +115,24 @@
 
     </div>
     <div class="container">
-            <div class="index__content mt-2">
-                <div class="index__content--h1-group p-3">
-                    <div class="mr-2">Axtarış sözü :</div>
-                    <h1 class="index__content--h1-group--h1">Gucci
-                </div>
+        <div class="index__content mt-2">
+            <div class="index__content--h1-group p-3">
+                <div class="mr-2">Axtarış sözü :</div>
+                <h1 class="index__content--h1-group--h1">Gucci
             </div>
-            <div class="index__content__div">
-                <div  class="index__content__div--img" >
-                        <img src="assets/img/about-2.jpg" alt="" class="img-fluid">
-                </div>
-               
-                <p>
-                    Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
-                    explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
-                    ipsam
-                </p>
-                
-              </div>
         </div>
+        <div class="index__content__div">
+            <div class="index__content__div--img"><img src="assets/img/about-2.jpg" alt="" class="img-fluid"></div>
+            <p>
+                Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Molestias distinctio est magni molestiae id error
+                explicabo, expedita itaque saepe corrupti, alias laudantium? Saepe laborum quasi corporis atque autem
+                ipsam
+
+            </p>
+
+        </div>
+    </div>
 
     <div class="index__search mt-2">
         <div class=" p-3">
@@ -820,6 +484,7 @@
                     var hidenInputStartLng = document.getElementById("startPlaceLng");
                     hidenInputStartLng.value = inputResultLng;
 
+
                 })
 
             } else {
@@ -929,5 +594,9 @@
 
     window.onload = initialize;
 </script>
+
+
+
+
 
 //= template/footer.html

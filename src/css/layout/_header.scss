@@ -240,9 +240,11 @@
 }
 .header-scroll {
 color: rgba(0,0,0,.5) !important;
-&:after {
+&::after {
     color: rgba(0,0,0,.5) !important;
+    
 }
+
 
 &:hover{
     color: rgba(0,0,0,.7) !important;

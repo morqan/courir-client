@@ -1,3 +1,5 @@
+// NEW  FOR LANDING-4.HTML HEADER    
+
 $(window).on('scroll', function() {
   
     if( $(".navbar").hasClass("scrolled")){

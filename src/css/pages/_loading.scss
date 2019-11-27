@@ -1,0 +1,47 @@
+.loading-info {
+    margin-bottom: 20px;
+    color: $color-secondary-dark;
+    border-bottom: 1px solid $color-secondary;
+
+    
+
+    &__heading {
+        opacity: .5;
+
+    }
+
+    &__img-group {
+        margin-top: 10px;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+
+        &--div {
+            max-width: 120px;
+            height: auto;
+            margin: 10px auto;
+
+            @include respondmax(xl) {
+                max-width: 100px;
+            }
+            @include respondmax(lg) {
+                max-width: 115px;
+            }
+           
+        }
+    }
+
+    &--img {
+        border-radius: 10px;
+    }
+
+    &--payment-group{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    }
+
+    &--money {
+        font-size: 25px;
+    }
+}

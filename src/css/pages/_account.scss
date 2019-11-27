@@ -272,10 +272,10 @@ flex-wrap: wrap;
            
                 align-items: center;
                 justify-content: center;
-                border-radius: 20% !important;
+        
                 width: 150px;
                 height: 150px;
-                margin: 20px;
+                margin: 20px auto;
                 color: #fff;
 
                 @include respondmax(md) {
@@ -283,23 +283,9 @@ flex-wrap: wrap;
                     margin-top: 10px;
                 }
 
-                &:not(:last-child){
-                   
-                    @include respondmax(md) {
-                        margin-right: 10px;
-                    }
-                    @include respondmax(sm) {
-                        margin-right: 0;
-                    }
-                }
-
-                @include respondmax(sm) {
-
-                    margin-top: 10px;
-                }
 
                 img {
-                    border-radius: 20%;
+                    border-radius: 10px;
 
                 }
             }
