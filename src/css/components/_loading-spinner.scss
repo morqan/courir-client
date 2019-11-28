@@ -1,9 +1,9 @@
 .loading-spinner {
-    display: none;
+   display: flex;
     justify-content: center;
     flex-direction: column;
  align-items: center;
-    margin: 40px auto;
+    margin: 20px auto;
 
     &__text {
         
