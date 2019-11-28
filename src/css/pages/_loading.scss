@@ -2,43 +2,75 @@
     margin-bottom: 20px;
     color: $color-secondary-dark;
     border-bottom: 1px solid $color-secondary;
+    width: 100%;
 
-    
+    &__circle {
+        position: relative;
+        height: auto;
+
+        &--before {
+            display: flex;
+
+            .fa-circle {
+                color: $color-secondary-dark;
+                z-index: 2;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 7px;
+                z-index: 100;
+                top: 25px;
+                height: 30%;
+                z-index: 1;
+                border-left: 2px dashed $color-secondary-dark;
+            }
+        }
+
+        &--after {
+            display: flex;
+
+            .fa-circle {
+                color: $color-primary;
+                z-index: 2;
+            }
+        }
+    }
+
+    &--bottom {
+        position: relative;
+        padding-left: 20px;
+
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f111";
+            color: $color-secondary-dark;
+            position: absolute;
+            top: 0;
+            left: -8px;
+
+
+        }
+    }
 
     &__heading {
         opacity: .5;
 
     }
 
-    &__img-group {
-        margin-top: 10px;
-        // display: flex;
-        // justify-content: space-between;
-        // flex-wrap: wrap;
 
-        &--div {
-            max-width: 120px;
-            height: auto;
-            margin: 10px auto;
-
-            @include respondmax(xl) {
-                max-width: 100px;
-            }
-            @include respondmax(lg) {
-                max-width: 115px;
-            }
-           
-        }
-    }
 
     &--img {
         border-radius: 10px;
     }
 
-    &--payment-group{
-display: flex;
-justify-content: space-between;
-align-items: center;
+    &--payment-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &--money {

@@ -9,10 +9,7 @@ $(document).ready(function () {
     var ok = $('.parsley-error').length === 0
 
   })
-  $('#sign-in-form').parsley().on('field:validated', function () {
-      var ok = $('.parsley-error').length === 0
 
-    })
     .on('form:submit', function () {
       return false; // Don't submit form for this demo
     });
