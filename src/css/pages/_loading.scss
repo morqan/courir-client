@@ -4,6 +4,10 @@
     border-bottom: 1px solid $color-secondary;
     width: 100%;
 
+    &--courier{
+        border-bottom: none;
+    }
+
     &__circle {
         position: relative;
         height: auto;

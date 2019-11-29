@@ -1,0 +1,63 @@
+.insurance {
+
+    &__input {
+        display: none;
+
+        &:checked+label:before {
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: #fff;
+        }
+
+        &:disabled+label:before {
+            transform: scale(1);
+            border-color: #aaa;
+        }
+
+        &:checked:disabled+label:before {
+            transform: scale(1);
+            background-color: #bfb;
+            border-color: #bfb;
+        }
+       
+    }
+   
+    &__input+label {
+        display: block;
+        border-radius: 10px;
+        background-color: $color-secondary;
+        cursor: pointer;
+        padding: 8px 16px;
+        height: 50px;
+
+        &:before {
+            content: "\2714";
+            border: 0.1em solid $color-secondary-dark;
+            border-radius: 0.2em;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            padding-left: 0.1em;
+            padding-bottom: 0.3em;
+            margin-right: 0.25rem;
+            margin-top: 10px;
+            vertical-align: sub;
+            color: transparent;
+            transition: .2s;
+        }
+
+        &:active:before {
+            transform: scale(0);
+        }
+    }
+
+    &__div {
+        display: none;
+        margin-top: 20px;
+      
+        &--input-group{
+            border-radius: 10px;
+        }
+
+    }
+}

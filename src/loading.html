@@ -465,180 +465,180 @@
             .DirectionsRenderer; //  məsafə, növbələrin sayı və digər amilləri göstərmək üçün  istifadə olunur
         this.directionsRenderer.setMap(map); //  xəritənin yenilənməsi
 
-        var originInput = document.getElementById('startPlace');
-        var destinationInput = document.getElementById('endPlace');
+        // var originInput = document.getElementById('startPlace');
+        // var destinationInput = document.getElementById('endPlace');
 
-        var originAutocomplete = new google.maps.places.Autocomplete(originInput);
+        // var originAutocomplete = new google.maps.places.Autocomplete(originInput);
         // Specify just the place data fields that you need.
-        originAutocomplete.setFields(['place_id']);
-        console.log("placeid", originAutocomplete.setFields(['place_id']));
+        // originAutocomplete.setFields(['place_id']);
+        // console.log("placeid", originAutocomplete.setFields(['place_id']));
 
 
 
-        var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+        // var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
         // Specify just the place data fields that you need.
-        destinationAutocomplete.setFields(['place_id']);
+        // destinationAutocomplete.setFields(['place_id']);
 
         // this.setupClickListener('pedestrian', 'WALKING');
-        this.setupClickListener('pedestrian', 'TRANSIT');
-        this.setupClickListener('motorbike', 'DRIVING');
-        this.setupClickListener('car', 'DRIVING');
-        this.setupClickListener('evacuator', 'DRIVING');
-        this.setupClickListener('truck', 'DRIVING');
+        // this.setupClickListener('pedestrian', 'TRANSIT');
+        // this.setupClickListener('motorbike', 'DRIVING');
+        // this.setupClickListener('car', 'DRIVING');
+        // this.setupClickListener('evacuator', 'DRIVING');
+        // this.setupClickListener('truck', 'DRIVING');
 
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+        // this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+        // this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
 
     }
 
     // Sets a listener on a radio button to change the filter type on Places
     // Autocomplete.
-    AutocompleteDirectionsHandler.prototype.setupClickListener = function ( // CLİCK EDƏRƏK YOLUN GÖSTƏRİLMƏSİ
-        id, mode) {
-        var radioButton = document.getElementById(id);
-        var me = this;
+    // AutocompleteDirectionsHandler.prototype.setupClickListener = function ( // CLİCK EDƏRƏK YOLUN GÖSTƏRİLMƏSİ
+    //     id, mode) {
+    //     var radioButton = document.getElementById(id);
+    //     var me = this;
 
-        radioButton.addEventListener('click', function () {
-            me.travelMode = mode;
-            me.route();
-        });
-    };
+    //     radioButton.addEventListener('click', function () {
+    //         me.travelMode = mode;
+    //         me.route();
+    //     });
+    // };
 
-    AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
-        autocomplete, mode) {
-        var me = this;
-        autocomplete.bindTo('bounds', this.map);
-
-
-        autocomplete.addListener('place_changed', function () { // İSTİQAMƏTİN DƏYİŞMƏSİ FUNKSİYASI
-            var place = autocomplete.getPlace();
-            var service = new google.maps.places.PlacesService(map);
-            if (!place.place_id) {
-                window.alert('Please select an option from the dropdown list.');
-                return;
-            }
-            if (mode === 'ORIG') {
-                me.originPlaceId = place.place_id;
-                var service = new google.maps.places.PlacesService(map);
-                service.getDetails({
-                    placeId: place.place_id
-                }, function (place, status) {
-                    var inputResultLat = place.geometry.location.lat(); // ENLIK
-                    var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
-                    console.log(inputResultLat, inputResultLng);
-
-                    var hidenInputStartLat = document.getElementById("startPlaceLat");
-                    hidenInputStartLat.value = inputResultLat;
-                    var hidenInputStartLng = document.getElementById("startPlaceLng");
-                    hidenInputStartLng.value = inputResultLng;
+    // AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
+    //     autocomplete, mode) {
+    //     var me = this;
+    //     autocomplete.bindTo('bounds', this.map);
 
 
-                })
+    //     autocomplete.addListener('place_changed', function () { // İSTİQAMƏTİN DƏYİŞMƏSİ FUNKSİYASI
+    //         var place = autocomplete.getPlace();
+    //         var service = new google.maps.places.PlacesService(map);
+    //         if (!place.place_id) {
+    //             window.alert('Please select an option from the dropdown list.');
+    //             return;
+    //         }
+    //         if (mode === 'ORIG') {
+    //             me.originPlaceId = place.place_id;
+    //             var service = new google.maps.places.PlacesService(map);
+    //             service.getDetails({
+    //                 placeId: place.place_id
+    //             }, function (place, status) {
+    //                 var inputResultLat = place.geometry.location.lat(); // ENLIK
+    //                 var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
+    //                 console.log(inputResultLat, inputResultLng);
 
-            } else {
-                me.destinationPlaceId = place.place_id;
-                console.log('end', place.place_id);
-
-                var service = new google.maps.places.PlacesService(map);
-                service.getDetails({
-                    placeId: place.place_id
-                }, function (place, status) {
-                    var inputResultLat = place.geometry.location.lat(); // ENLIK
-                    var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
-                    console.log(inputResultLat, inputResultLng);
-
-                    var hidenInputEndLat = document.getElementById("endPlaceLat");
-                    hidenInputEndLat.value = inputResultLat;
-
-                    var hidenInputEndLng = document.getElementById("endPlaceLng");
-                    hidenInputEndLng.value = inputResultLng;
-
-                })
-            }
-            me.route();
-        });
-    };
-
-    AutocompleteDirectionsHandler.prototype.route = function () {
-        if (!this.originPlaceId || !this.destinationPlaceId) {
-            return;
-        }
-        var me = this;
-
-        this.directionsService.route( // ROUTE  marşrut mənşəyindən  göstərilən yerə çatmağın yolunu göstərir
-            {
-                origin: {
-                    'placeId': this.originPlaceId
-                }, // BAŞLANĞIC NÖQTƏ
-                destination: {
-                    'placeId': this.destinationPlaceId
-                }, // SON NÖQTƏ
-                travelMode: this.travelMode // DAŞIMA NÖVÜ
-            },
-            function (response, status) {
-                if (status === 'OK') {
-                    me.directionsRenderer.setDirections(response);
-                } else {
-                    window.alert('Directions request failed due to ' + status);
-                }
-            });
+    //                 var hidenInputStartLat = document.getElementById("startPlaceLat");
+    //                 hidenInputStartLat.value = inputResultLat;
+    //                 var hidenInputStartLng = document.getElementById("startPlaceLng");
+    //                 hidenInputStartLng.value = inputResultLng;
 
 
+    //             })
 
-        var request = {
-            origin: {
-                'placeId': this.originPlaceId
-            },
-            destination: {
-                'placeId': this.destinationPlaceId
-            },
-            travelMode: this.travelMode
-        };
+    //         } else {
+    //             me.destinationPlaceId = place.place_id;
+    //             console.log('end', place.place_id);
 
-        directionsService.route(request, function (result, status) {
-            if (status == google.maps.DirectionsStatus
-                .OK) { // düzgün istiqamətləndirmə nəticəsini  göstərir.
-                directionsDisplay.setDirections(
-                    result); // xəritədə dəyişiklik baş verərkən avtomatik xəritənin dəyişməsi
-                var price_for_selected = document.getElementById('price_for_selected');
-                var myRoute = result.routes[0].legs[0];
+    //             var service = new google.maps.places.PlacesService(map);
+    //             service.getDetails({
+    //                 placeId: place.place_id
+    //             }, function (place, status) {
+    //                 var inputResultLat = place.geometry.location.lat(); // ENLIK
+    //                 var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
+    //                 console.log(inputResultLat, inputResultLng);
 
-                var commonDistanse = myRoute.distance.value / 1000; // ÜMUMİ MƏSAFƏNİN HESABLANMASI
+    //                 var hidenInputEndLat = document.getElementById("endPlaceLat");
+    //                 hidenInputEndLat.value = inputResultLat;
 
-                if (commonDistanse <= 3) { // PULUN HESABLANMASI
-                    price = 2
-                } else if (commonDistanse > 3 && commonDistanse <= 12) {
-                    price = (commonDistanse - 3) * 0.5 + 2
-                } else if (commonDistanse > 12 && commonDistanse <= 70) {
-                    price = (commonDistanse - 12) * 0.4 + 2 + (9 * 0.5)
-                } else {
-                    price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
-                }
+    //                 var hidenInputEndLng = document.getElementById("endPlaceLng");
+    //                 hidenInputEndLng.value = inputResultLng;
+
+    //             })
+    //         }
+    //         me.route();
+    //     });
+    // };
+
+    // AutocompleteDirectionsHandler.prototype.route = function () {
+    //     if (!this.originPlaceId || !this.destinationPlaceId) {
+    //         return;
+    //     }
+    //     var me = this;
+
+    //     this.directionsService.route( // ROUTE  marşrut mənşəyindən  göstərilən yerə çatmağın yolunu göstərir
+    //         {
+    //             origin: {
+    //                 'placeId': this.originPlaceId
+    //             }, // BAŞLANĞIC NÖQTƏ
+    //             destination: {
+    //                 'placeId': this.destinationPlaceId
+    //             }, // SON NÖQTƏ
+    //             travelMode: this.travelMode // DAŞIMA NÖVÜ
+    //         },
+    //         function (response, status) {
+    //             if (status === 'OK') {
+    //                 me.directionsRenderer.setDirections(response);
+    //             } else {
+    //                 window.alert('Directions request failed due to ' + status);
+    //             }
+    //         });
 
 
-                var roadPrice = Math.ceil(price) + ' AZN'; // PUL
-                var roadDistance = myRoute.distance.text; // MƏSAFƏ
-                var roadTime = Math.round(myRoute.duration.value / 60) + ' dəq'; // ZAMAN
+
+    //     var request = {
+    //         origin: {
+    //             'placeId': this.originPlaceId
+    //         },
+    //         destination: {
+    //             'placeId': this.destinationPlaceId
+    //         },
+    //         travelMode: this.travelMode
+    //     };
+
+    //     directionsService.route(request, function (result, status) {
+    //         if (status == google.maps.DirectionsStatus
+    //             .OK) { // düzgün istiqamətləndirmə nəticəsini  göstərir.
+    //             directionsDisplay.setDirections(
+    //                 result); // xəritədə dəyişiklik baş verərkən avtomatik xəritənin dəyişməsi
+    //             var price_for_selected = document.getElementById('price_for_selected');
+    //             var myRoute = result.routes[0].legs[0];
+
+    //             var commonDistanse = myRoute.distance.value / 1000; // ÜMUMİ MƏSAFƏNİN HESABLANMASI
+
+    //             if (commonDistanse <= 3) { // PULUN HESABLANMASI
+    //                 price = 2
+    //             } else if (commonDistanse > 3 && commonDistanse <= 12) {
+    //                 price = (commonDistanse - 3) * 0.5 + 2
+    //             } else if (commonDistanse > 12 && commonDistanse <= 70) {
+    //                 price = (commonDistanse - 12) * 0.4 + 2 + (9 * 0.5)
+    //             } else {
+    //                 price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
+    //             }
 
 
-                $('.price').text(roadPrice);
-                $('.distance').text(roadDistance);
-                $('.time').text(roadTime);
+    //             var roadPrice = Math.ceil(price) + ' AZN'; // PUL
+    //             var roadDistance = myRoute.distance.text; // MƏSAFƏ
+    //             var roadTime = Math.round(myRoute.duration.value / 60) + ' dəq'; // ZAMAN
 
 
-                console.log(myRoute.distance.text);
-                console.log(myRoute.duration.text);
-                console.log(Math.ceil(price));
-            } else {
-                var price_for_selected = document.getElementById('price_for_selected');
-                var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
-                price_for_selected.innerHTML = innerHtml;
-                var directionsPanel = document.getElementById('directionsPanel');
-                directionsPanel.innerHTML = '';
-            }
-        });
+    //             $('.price').text(roadPrice);
+    //             $('.distance').text(roadDistance);
+    //             $('.time').text(roadTime);
 
-    };
+
+    //             console.log(myRoute.distance.text);
+    //             console.log(myRoute.duration.text);
+    //             console.log(Math.ceil(price));
+    //         } else {
+    //             var price_for_selected = document.getElementById('price_for_selected');
+    //             var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
+    //             price_for_selected.innerHTML = innerHtml;
+    //             var directionsPanel = document.getElementById('directionsPanel');
+    //             directionsPanel.innerHTML = '';
+    //         }
+    //     });
+
+    // };
 
     window.onload = initialize;
 </script>

@@ -7,7 +7,7 @@
 .spinner-container {
     width: 140px !important;
     height: auto !important;
-    margin: 20px auto ;
+    margin: 10px auto ;
 }
 
 .path {
@@ -39,10 +39,8 @@
 }
 
 .spinner-complete, .path-complete {
-    /*-webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;*/
+   
+    animation-play-state: paused;
 }
 
 .path-complete {
@@ -52,10 +50,8 @@
     -o-transition: all 2.75s ease-out;
     -webkit-transition: all 2.75s ease-out;
     transition: all 2.75s ease-out;
-    /*-webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    -o-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;*/
+   
+    animation-fill-mode: backwards;
 }
 
 .check, .cross
@@ -70,7 +66,7 @@
     -moz-animation: check 1s ease-in forwards;
     -o-animation: check 1s ease-in forwards;
     animation: check 1s ease-in forwards;
-    stroke-width: 15;
+    stroke-width: 8;
     stroke-dashoffset: 0;
 }
 
