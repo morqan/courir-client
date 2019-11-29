@@ -7,13 +7,27 @@
         <div class="col-sm-12 col-md-12 col-lg-5 order-2 order-lg-1">
             <form class="form scrollbar1 p-3 scroll-style" id="first_form" data-parsley-validate="">
                 <!-- LOADING  START  -->
-                <div class="loading-spinner">
-                    <div class="spinner-square">
-                        <div class="square-1 square"></div>
-                        <div class="square-2 square"></div>
-                        <div class="square-3 square"></div>
+                <div id="spin"></div>
+
+                <div id="spinner-template" style="display:none;">
+                    <div class="spinner-container">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" x="0px" y="0px" viewBox="0, 0, 100, 100">
+                            <g>
+                                <g class="spinner-g">
+                                    <circle class="path" fill="none" stroke="#7DB0D5" stroke-width="7"
+                                        stroke-miterlimit="10" stroke-linecap="round" cx="50" cy="50" r="44" />
+                                </g>
+                                <polyline class="check" fill="none" stroke="#7DB0D5" stroke-width="8"
+                                    stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round"
+                                    points="70,35 45,65 30,52" />
+                                <path class="cross" fill="none" stroke="#7DB0D5" stroke-width="16"
+                                    stroke-linecap="round" stroke-miterlimit="10" d="M70,30 l-40,40 M70,70 l-40,-40" />
+                            </g>
+                        </svg>
+                        
                     </div>
-                    <div class="loading-spinner__text mt-2">Kuryer axtarılır</div>
+                    <div class="loading-spinner__text mt-2 text-center">Sizə kuryer təyin olundu</div>
                 </div>
                 <!-- LOADING END -->
                 <div class="loading-info__circle loading-info">
@@ -25,17 +39,17 @@
                         </div>
                     </div>
                     <div class="loading-info__circle--after">
-                            <i class="fas fa-circle mr-3 mt-1"></i>
-                            <div class=" ">
-                                <div class="loading-info__heading">Çatdırılma ünvanı</div>
-                                <p class="loading-info--destination">94 Nizami küç.</p>
-                            </div>
+                        <i class="fas fa-circle mr-3 mt-1"></i>
+                        <div class=" ">
+                            <div class="loading-info__heading">Çatdırılma ünvanı</div>
+                            <p class="loading-info--destination">94 Nizami küç.</p>
                         </div>
+                    </div>
                 </div>
 
                 <div class="loading-info__circle">
-                        
-                    </div>
+
+                </div>
 
                 <div class="loading-info loading-info--payment-group">
                     <div>
