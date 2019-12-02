@@ -67,6 +67,8 @@
 }(jQuery));
 
 $(document).ready(function(){
+	var myVar = setInterval(myTimer, 1000);
+	var value = 0;
 	// Initialize the spinner.
 	// Change the "size" parameter to resize the spinner.
   var $spinner = $("div#spin").loadingSpinner({size:400});
@@ -74,4 +76,11 @@ $(document).ready(function(){
 		// You can set this to "failure" to see a red X instead of the checkmark
 		$spinner.loadingSpinner("success");
 	}, 2700)
+
+   function myTimer() {
+	value = value+1;
+	 if (value ==6){
+	  document.getElementById("spin").style.display='none';
+	 }
+   }
 });

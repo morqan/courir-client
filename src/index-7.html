@@ -103,7 +103,7 @@
                                                 <span>Məbləğ</span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 5$ </span>
+                                                    <span class="price"> 15$ </span>
                                                 </span>
 
                                             </div>
@@ -144,24 +144,24 @@
                                             </div>
                                             <div class="info2">
 
-                                                    <span class="distance-span">
-                                                        <i class="fas fa-route mr-1"></i>
-                                                        <span class="distance">5.6km</span>
-                                                    </span>
-                                                    <span class="time-span">
-                                                         <i class="fas fa-clock mr-1"></i>
-                                                        <span class="time">10 dəq</span>
-                                                    </span>
-                                                    <span class="price-span">
-                                                            <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                            <span class="price"> 5$ </span>
-                                                        </span>
+                                                <span class="distance-span">
+                                                    <i class="fas fa-route mr-1"></i>
+                                                    <span class="distance">5.6km</span>
+                                                </span>
+                                                <span class="time-span">
+                                                    <i class="fas fa-clock mr-1"></i>
+                                                    <span class="time">10 dəq</span>
+                                                </span>
+                                                <span class="price-span">
+                                                    <i class="fa fa-coins mr-1 ml-auto"></i>
+                                                    <span class="price-evacuator"> 2$ </span>
+                                                </span>
                                             </div>
                                         </label>
                                         <div class="info__div--away-time">
-                                                <i class="fas fa-clock mr-1"></i>
-                                                <span class="away-time">15 dəqiqə uzaqlıqda</span>
-                                            </div>
+                                            <i class="fas fa-clock mr-1"></i>
+                                            <span class="away-time">15 dəqiqə uzaqlıqda</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -180,13 +180,13 @@
 
                                                 <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
                                                 <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                                                <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                                <span class="price-truck"><i class="fa fa-coins mr-1"></i>13$</span>
                                             </div>
                                         </label>
                                         <div class="info__div--away-time">
-                                                <i class="fas fa-clock mr-1"></i>
-                                                <span class="away-time">15 dəqiqə uzaqlıqda</span>
-                                            </div>
+                                            <i class="fas fa-clock mr-1"></i>
+                                            <span class="away-time">15 dəqiqə uzaqlıqda</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -213,8 +213,8 @@
                     <div class="form-group form__group ">
                         <label for="phone" class="d-block form-label form__label">Receiver number</label>
                         <input type="text" name="phone" class="form-control form__control d-block " id="phone"
-                         data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
-                            data-parsley-minlength="11"  data-parsley-maxlength="11" required>
+                            data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
+                            data-parsley-minlength="11" data-parsley-maxlength="11" required>
                         <span id="valid-msg" class="hide d-block"></span>
                         <span id="error-msg" class="hide d-block"></span>
                     </div>
@@ -311,8 +311,8 @@
 
                     <div class="day">
                         <div class="day__list form-check">
-                            <input class="day__input form-check-input today" type="radio" name="day" id="today" value=""
-                                 />
+                            <input class="day__input form-check-input today" type="radio" name="day" id="today"
+                                value="" />
                             <label class="day__label form-check-label " for="today">
                                 <span>Bu gün</span>
                                 <span class="  day__link--span d-inline-block" id="today-span"></span>
@@ -345,7 +345,7 @@
                     <div id="delivery__time" class="delivery__time times times-carousel owl-carousel  owl-theme">
 
                     </div>
-                   
+
                 </div>
                 <!-- DELIVERY END -->
 
@@ -394,16 +394,40 @@
                 </div>
                 <!-- PAYMENT END   -->
 
+                <!--  INSURANCE START -->
+                <div class="insurance form-group ">
+                    <input type="checkbox" id="insurance__input" name="insurance__input"
+                        class="insurance__input form-check-input">
+                    <label for="insurance__input" class="form-check-label"> <span>Sığorta əlavə et</span> <span class="">3%</span></label>
+                    <div class="insurance__div">
+                        <div class="input-group insurance__div--input-group">
+                            <input type="number" class="form-control insurance__div--input"
+                                aria-label="Recipient's username" aria-describedby="insurance__div--money">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="insurance__div--money">AZN</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- INSURANCE END -->
+                <!-- TOTAL MONEY START -->
+                <div class="total">
+                    <p>Ödəniləcək Məbləğ</p>
+
+                    <div class="total__money"> 1 AZN </div>
+                </div>
+                <!-- TOTAL MONEY END -->
+
                 <!--SUBMIT BUTTON-->
                 <button class="btn btn-2 btn-purple form-submit" type="submit" name="submit" value="validate">
                     <span>Order Now</span>
                 </button>
 
             </form>
-            <!-- EXAMPLE BUTTON -->
-            <!-- <button class="btn btn-2 btn-purple  btn-submit" type="submit" name="submit">
-                        <span>Button</span>
-                    </button> -->
+
 
 
         </div>
@@ -870,7 +894,6 @@
                 } else {
                     price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
                 }
-
 
                 var roadPrice = Math.ceil(price) + ' AZN'; // PUL
                 var roadDistance = myRoute.distance.text; // MƏSAFƏ
