@@ -8,10 +8,16 @@ $(function () {
         ele.addClass("active");
         ele.attr("aria-selected", "true");
 
-        var price = $(".swiper-slide-active").find( ".price" ).text();
-        var insuranceMoney = $( ".insurance__div--input" ).val();
-        console.log(insuranceMoney);
-        $( ".total__money" ).html( price + insuranceMoney);
+
+        // //  TOTAL MONEY
+        // var percent = 0.03;
+        // var insuranceMoney = $(".insurance__div--input").val();
+        // var totalInsurance = percent * insuranceMoney;
+        // var totalInsurance = $(".insurance__percent").text(totalInsurance);
+        // var price = $(".swiper-slide-active").find(".price").text();
+
+        // console.log(insuranceMoney);
+        // $(".total__money").html(price + insuranceMoney);
 
 
 
@@ -38,7 +44,7 @@ $(function () {
             });
         }
 
-// SWIPE EDENDE TEK OLAN CAR INPUTUNU SECSIN
+        // SWIPE EDENDE TEK OLAN CAR INPUTUNU SECSIN
 
         var numItems = $('.swiper-slide-active').find(".car-pills__input").length;
 
@@ -184,7 +190,7 @@ $(function () {
 $(document).ready(function () {
     $('#car-tab1').click(function () {
         $("#evacuator").prop("checked", false);
-        $("#truck").prop("checked",false);
+        $("#truck").prop("checked", false);
     });
     $('#car-tab2').click(function () {
         $("#evacuator").prop("checked", true);

@@ -115,6 +115,13 @@
                 border-top: 1px solid $color-secondary;
                 z-index: -1;
             }
+
+            .price{
+                &:after{
+                    content: " AZN";
+                    margin-left: 2px;
+                }
+            }
         }
 
         @include respondmax(xl) {
