@@ -1,5 +1,5 @@
 //  SHOW AND HIDE #DELIVERY
-
+$(document).ready(function () {
 $("#pills-non-urgent-tab").prop("checked", true);
 
 $('input:radio[name="urgent"]').change(
@@ -41,9 +41,10 @@ $(function () {
 });
 
 $(window).bind('unload', function () {
-  $('input:radio[name="urgent"]').each(function () {
+  $('input:radio[data-item-id="urgent"]').each(function () {
     localStorage.setItem('radio_' + $(this).attr('id'), JSON.stringify({
       checked: this.checked
     }));
   });
+});
 });

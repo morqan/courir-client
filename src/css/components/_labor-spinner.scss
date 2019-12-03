@@ -68,7 +68,7 @@
             transition: all .2s;
         }
 
-        a {
+        div {
             height: 32px;
             min-height: 32px;
             width: 32px;
@@ -95,7 +95,7 @@
         .icon-minus:after {
             content: "\002212";
             font-size: 30px;
-            line-height: 30px;
+            line-height: 26px;
             font-weight: bold;
             width: 32px !important;
             height: 32px !important;
@@ -104,7 +104,7 @@
         .icon-plus:after {
             content: "\00002B";
             font-size: 30px;
-            line-height: 30px;
+            line-height: 26px;
             font-weight: bold;
             width: 32px !important;
                 height: 32px !important;

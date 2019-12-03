@@ -1,5 +1,5 @@
 //  HEADER-DA HAMBURGER MENUNUN ÜZƏRİNDƏ NOTİFİCATİONUN GÖRSƏNMƏSİ
-
+$(document).ready(function () {
 $(function () { 
     $('.header__toggler').on('click', function () {
       
@@ -9,4 +9,5 @@ $(function () {
             $(".header__toggler--badge").css( "display", "none" );
         }
     });
+});
 });

@@ -1,4 +1,5 @@
 // FOR  INDEX.HTML  INDEX-3.HTML İNTERNATİONAL TELEPHONE İNPUT
+$(document).ready(function () {
 $("#phone").intlTelInput({
 
     autoPlaceholder: "polite",
@@ -17,9 +18,4 @@ $("#phoneNumber").intlTelInput({
     separateDialCode: true,
 
 });
-
-// $("#phoneNumber").focus(function () {
-//     $(".iti__selected-flag").css({
-//         'height': '75%',
-//     });
-// });
+});

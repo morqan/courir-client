@@ -173,11 +173,12 @@
         width: 0;
         display: none;
 
-        &:checked+label {
+        &:checked+div,
+        &:checked+label  {
             border: 2px solid $color-primary;
     
         }
-
+       
         &:checked+label .car-pills__label1--span,
         &:checked+label .car-pills__label2--span,
         &:checked+label .info2 {

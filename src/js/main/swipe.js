@@ -1,5 +1,5 @@
 // SWIPE  FOR İNDEX-3.HTML
-
+$(document).ready(function () {
 $(function () {
 
     function setCurrentSlide(ele, index, cssClass) {
@@ -200,4 +200,5 @@ $(document).ready(function () {
         $("#truck").prop("checked", true);
     });
 
+});
 });

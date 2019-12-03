@@ -1,5 +1,5 @@
 // İNDEXDƏ OLAN FORMUN İÇİNDƏKİ #LABOR  SPINNERIN İCONUNUN DƏYİŞMƏSİ
-
+$(document).ready(function () {
 function spinnerAction(count) {
     if(count == 0) {
         $("#user0").removeClass("d-none");
@@ -44,4 +44,5 @@ $("#icon-plus").on("click", function (e) {
         count = count + 1;
     $("#spinner").val(count);
     spinnerAction(count);
+});
 });

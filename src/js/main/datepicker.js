@@ -31,7 +31,7 @@ $(document).ready(function () {
         // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
         onSelect: function () {
             $("label[for='calendar']").text($(this).val());
-           
+            $( "input[data-item-id=calendarTimes]" ).prop( "checked", false );
         }
     });
 

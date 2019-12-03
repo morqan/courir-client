@@ -1,5 +1,5 @@
 //  İNDEXDƏ FORMDA OLAN ÖDƏNİŞ NÖVÜNÜN SEÇİLMƏSİ
-
+$(document).ready(function () {
 $('.payment__dropdown-menu--item').click(function () {
     $(".payment-active").find(".payment-check").css("display", "none");
     $('.payment__dropdown-menu--item ').removeClass("payment-active");
@@ -18,7 +18,8 @@ $('.payment__dropdown-menu--item').click(function () {
 $('.payment__dropdown-menu--item ').click(function () {
     var name = $(".payment-active").attr('data-id'); // `this` here refers to the current p you clicked on
  
-    alert(name);
+    
     $("#payment-hidden").val(name);
     console.log(name);
-})
+});
+});
