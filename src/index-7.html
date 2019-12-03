@@ -20,6 +20,11 @@
                 <div class="form-text">
                     <div class="form-group form__group">
                         <label for="startPlace" class="form-label form__label">From:</label>
+                        <div class="tooltip-circle bg-dark text-white"  data-placement="right" data-toggle="tooltip" data-html="true"
+                        title="<div class='p-2 d-flex align-items-center'><a href'#''>Read More</a></div>">?</div>
+                        <button type="button" class="tooltip-circle bg-dark text-white" data-toggle="tooltip" data-html="true" title="<div class='p-2 d-flex align-items-center'><a href='index.html'>Read More</a></div>">
+                         ?
+                          </button>
                         <input type="text" name="from" class="form-control form__control" id="startPlace"
                             placeholder="Insert pick-up address" required>
 
@@ -103,20 +108,19 @@
                                                 <span>Məbləğ</span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 15$ </span>
+                                                    <span class="price">0</span>
                                                 </span>
-
                                             </div>
                                             <div class="info__div--distance">
                                                 <span>Məsafə</span>
                                                 <span class="distance-span"><i class="fas fa-route mr-1"></i>
-                                                    <span class="distance">5.6km</span>
+                                                    <span class="distance">0 km</span>
                                                 </span>
                                             </div>
                                             <div class="info__div--time">
                                                 <span>Çatdırılma vaxtı</span>
                                                 <span class="time-span"> <i class="fas fa-clock mr-1"></i>
-                                                    <span class="time">10 dəq</span>
+                                                    <span class="time">0 dəq</span>
                                                 </span>
                                             </div>
 
@@ -154,7 +158,7 @@
                                                 </span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price-evacuator"> 2$ </span>
+                                                    <span class="price-evacuator"> </span>
                                                 </span>
                                             </div>
                                         </label>
@@ -180,7 +184,7 @@
 
                                                 <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
                                                 <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                                                <span class="price-truck"><i class="fa fa-coins mr-1"></i>13$</span>
+                                                <span class="price-truck"><i class="fa fa-coins mr-1"></i> </span>
                                             </div>
                                         </label>
                                         <div class="info__div--away-time">
@@ -203,7 +207,7 @@
                 <!-- INPUTS STARTS-->
                 <div id="receiver">
                     <div class="form-group form__group">
-                        <label for="contact-name" class="form-label form__label">Receiver</label>
+                        <label for="contact-name" class="form-label form__label">Receiver:</label>
                         <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
                             placeholder="Mammad Mammadov">
                         <div class="invalid-feedback">
@@ -211,7 +215,7 @@
                         </div>
                     </div>
                     <div class="form-group form__group ">
-                        <label for="phone" class="d-block form-label form__label">Receiver number</label>
+                        <label for="phone" class="d-block form-label form__label">Receiver number:</label>
                         <input type="text" name="phone" class="form-control form__control d-block " id="phone"
                             data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
                             data-parsley-minlength="11" data-parsley-maxlength="11" required>
@@ -220,12 +224,12 @@
                     </div>
                 </div>
 
-                <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin</label>
+                <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin:</label>
                 <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
-                    <label for="contact-message" class="form-label form__label">Message</label>
+                    <label for="contact-message" class="form-label form__label">Message:</label>
                     <textarea id="contact-message" name="contact-message" rows="10"
                         class="form-control form__control textarea" data-parsley-trigger="keyup"
                         data-parsley-minlength="1" data-parsley-maxlength="100"
@@ -239,7 +243,7 @@
 
                 <!-- LABOR SPINNER STARTS-->
                 <div id="labor">
-                    <label class="form-label form__label">İşçi qüvvəsi</label>
+                    <label class="form-label form__label">İşçi qüvvəsi:</label>
                     <div class="input-spinner form-control form__control">
                         <i class="fa fa-user-alt-slash" id="user0"></i>
                         <i class="fa fa-user d-none " id="user1"></i>
@@ -282,7 +286,7 @@
 
                 <!--URGENT START-->
                 <div class="urgent">
-                    <span class="form-label form__label">Çatdırılma növü</span>
+                    <div class="form-label form__label  mb-2">Çatdırılma növü:</div>
                     <div class=" urgent__list">
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
@@ -307,7 +311,7 @@
                 <!-- URGENT END -->
                 <!-- DELIVERY START -->
                 <div class="delivery" id="delivery">
-                    <span class="form-label form__label">Delivery date</span>
+                    <span class="form-label form__label">Delivery date:</span>
 
                     <div class="day">
                         <div class="day__list form-check">
@@ -396,12 +400,16 @@
 
                 <!--  INSURANCE START -->
                 <div class="insurance form-group ">
-                    <input type="checkbox" id="insurance__input" name="insurance__input"
-                        class="insurance__input form-check-input">
-                    <label for="insurance__input" class="form-check-label"> <span>Sığorta əlavə et</span> <span class="">3%</span></label>
+                        <div class="form-label form__label mb-2">Sığorta:</div>
+                    <label class="insurance__label form__control">Sığorta əlavə et
+                        <input type="checkbox" class="insurance__input form-check-input" disabled>
+                        <span class="checkmark"></span>
+                        <div class="insurance__percent">3%</div>
+                    </label>
                     <div class="insurance__div">
+                            <div class="form-label form__label mb-2">Daşınacaq yükün dəyəri:</div>
                         <div class="input-group insurance__div--input-group">
-                            <input type="number" class="form-control insurance__div--input"
+                            <input type="number" class="form-control insurance__div--input" min="0"
                                 aria-label="Recipient's username" aria-describedby="insurance__div--money">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="insurance__div--money">AZN</span>
@@ -415,10 +423,11 @@
                 <!-- INSURANCE END -->
                 <!-- TOTAL MONEY START -->
                 <div class="total">
-                    <p>Ödəniləcək Məbləğ</p>
+                        <span>Ödəniləcək Məbləğ</span>
+                        <span class="total__money"> </span>
 
-                    <div class="total__money"> 1 AZN </div>
-                </div>
+                    </div>
+              
                 <!-- TOTAL MONEY END -->
 
                 <!--SUBMIT BUTTON-->
@@ -434,7 +443,7 @@
 
         <!--    MAP -->
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-7 map order-1 order-lg-2">
-            <div class=" divider divider-side divider__side d-lg-block transform-flip-y"></div>
+            <div class=" divider-side divider__side d-lg-block transform-flip-y"></div>
             <div id="map_canvas"></div>
 
 
@@ -788,7 +797,7 @@
         autocomplete, mode) {
         var me = this;
         autocomplete.bindTo('bounds', this.map);
-
+      
 
         autocomplete.addListener('place_changed', function () { // İSTİQAMƏTİN DƏYİŞMƏSİ FUNKSİYASI
             var place = autocomplete.getPlace();
@@ -812,7 +821,9 @@
                     var hidenInputStartLng = document.getElementById("startPlaceLng");
                     hidenInputStartLng.value = inputResultLng;
 
-
+                   
+                       
+                    $(".insurance__input").prop("disabled", false);
                 })
 
             } else {
@@ -832,6 +843,8 @@
 
                     var hidenInputEndLng = document.getElementById("endPlaceLng");
                     hidenInputEndLng.value = inputResultLng;
+
+                  
 
                 })
             }
@@ -895,7 +908,7 @@
                     price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
                 }
 
-                var roadPrice = Math.ceil(price) + ' AZN'; // PUL
+                var roadPrice = Math.ceil(price); // PUL
                 var roadDistance = myRoute.distance.text; // MƏSAFƏ
                 var roadTime = Math.round(myRoute.duration.value / 60) + ' dəq'; // ZAMAN
 
@@ -903,6 +916,9 @@
                 $('.price').text(roadPrice);
                 $('.distance').text(roadDistance);
                 $('.time').text(roadTime);
+                var priceText = $(".price").text();
+                totalPrice = $('.total__money').text(priceText);
+
 
 
                 console.log(myRoute.distance.text);
