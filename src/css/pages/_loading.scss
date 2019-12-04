@@ -1,7 +1,7 @@
 .loading-info {
     margin-bottom: 20px;
     color: $color-secondary-dark;
-    border-bottom: 1px solid $color-secondary;
+    border-bottom: 1px solid #d0d2d7;
     width: 100%;
 
     &--courier{
@@ -75,6 +75,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__urgent-time{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+    }
+    &--delivery-time{
+        display: flex;flex-direction: column;
+        align-items: flex-end;
     }
 
     &--money {
