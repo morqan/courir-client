@@ -45,6 +45,9 @@
 }
 }
 
+.tooltip.show {
+  opacity: 1 !important
+}
 
 .bg-secondary {
   color: $color-secondary-dark;

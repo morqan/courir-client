@@ -54,8 +54,14 @@
                 <!-- INPUT END-->
 
                 <!-- CAR START-->
-                <label class="form-label form__label">Daşıma növünü seçin:</label> 
-
+                <label class="form-label form__label">Daşıma növünü seçin:</label>
+                <div class="form__tooltip">
+                        <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                            data-toggle="tooltip" data-html="true"
+                            title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                            ?
+                        </button>   
+                    </div>
                 <!-- SWIPE START -->
                 <div class="tabcontainer">
 
@@ -79,8 +85,8 @@
                                     <div class="pills-car-1__div">
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="pedestrian" checked />
+                                            <input class="car-pills__input car-hide" type="radio" name="car2" data-id="car2"
+                                                id="pedestrian" checked="checked" />
                                             <label class="car-pills__label1" for="pedestrian">
                                                 <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Piyada</span>
@@ -89,7 +95,7 @@
 
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide" type="radio" name="car2"
+                                            <input class="car-pills__input car-hide" type="radio" name="car2"  data-id="car2"
                                                 id="motorbike" />
                                             <label class="car-pills__label1" for="motorbike">
                                                 <img src="img/motorbike.png" alt="car" class="car-pills__label1--img">
@@ -98,7 +104,7 @@
 
                                         </div>
                                         <div class="form-group  car-pills__form-group">
-                                            <input class="car-pills__input car-hide" type="radio" name="car2" id="car"
+                                            <input class="car-pills__input car-hide" type="radio" name="car2" id="car"  data-id="car2"
                                                 required />
                                             <label class="car-pills__label1" for="car">
                                                 <img src="img/car.png" alt="car" class="car-pills__label1--img">
@@ -117,20 +123,20 @@
                                                 <span>Məbləğ</span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 5$ </span>
+                                                    <span class="price"> 0 </span>
                                                 </span>
 
                                             </div>
                                             <div class="info__div--distance">
                                                 <span>Məsafə</span>
                                                 <span class="distance-span"><i class="fas fa-route mr-1"></i>
-                                                    <span class="distance">5.6km</span>
+                                                    <span class="distance">0</span>
                                                 </span>
                                             </div>
                                             <div class="info__div--time">
                                                 <span>Çatdırılma vaxtı</span>
                                                 <span class="time-span"> <i class="fas fa-clock mr-1"></i>
-                                                    <span class="time">10 dəq</span>
+                                                    <span class="time">0</span>
                                                 </span>
                                             </div>
 
@@ -149,7 +155,7 @@
                             <div class="swiper-slide">
                                 <div id="panel2" class="tabpanels__panel" aria-labelledby="car-tab2" role="tabpanel">
                                     <div class="form-group">
-                                        <input class="car-pills__input car-hide" type="radio" name="car2"
+                                        <input class="car-pills__input car-hide" type="radio" name="car2" data-id="car2"
                                             id="evacuator" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group">
@@ -168,7 +174,7 @@
                                                 </span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 5$ </span>
+                                                    <span class="price-evacuator"> 5</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -182,7 +188,7 @@
                             <div class="swiper-slide">
                                 <div id="panel3" class="tabpanels__panel" aria-labelledby="car-tab3" role="tabpanel">
                                     <div class="form-group ">
-                                        <input class="car-pills__input " type="radio" name="car2" id="truck" />
+                                        <input class="car-pills__input " type="radio" name="car2" id="truck"  data-id="car2" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group"> <img src="img/transit.png"
                                                     alt="car" class="car-pills__label2--img"><span
@@ -194,7 +200,7 @@
 
                                                 <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
                                                 <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                                                <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                                <span class="price-truck"><i class="fa fa-coins mr-1"></i>5$</span>
                                             </div>
                                         </div>
                                         <div class="info__div--away-time">
@@ -218,6 +224,13 @@
                 <div id="receiver">
                     <div class="form-group form__group">
                         <label for="contact-name" class="form-label form__label">Receiver:</label>
+                        <div class="form__tooltip">
+                                <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                    data-toggle="tooltip" data-html="true"
+                                    title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                    ?
+                                </button>   
+                            </div>
                         <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
                             placeholder="Mammad Mammadov">
                         <div class="invalid-feedback">
@@ -226,6 +239,13 @@
                     </div>
                     <div class="form-group form__group ">
                         <label for="phone" class="d-block form-label form__label">Receiver number:</label>
+                        <div class="form__tooltip">
+                                <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                    data-toggle="tooltip" data-html="true"
+                                    title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                    ?
+                                </button>   
+                            </div>
                         <input type="text" name="phone" class="form-control form__control d-block " id="phone"
                             data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
                             data-parsley-minlength="11" data-parsley-maxlength="11" required>
@@ -235,11 +255,25 @@
                 </div>
 
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin:</label>
+                <div class="form__tooltip">
+                        <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                            data-toggle="tooltip" data-html="true"
+                            title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                            ?
+                        </button>   
+                    </div>
                 <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
                     <label for="contact-message" class="form-label form__label">Message:</label>
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
                     <textarea id="contact-message" name="contact-message" rows="10"
                         class="form-control form__control textarea" data-parsley-trigger="keyup"
                         data-parsley-minlength="1" data-parsley-maxlength="100"
@@ -253,7 +287,14 @@
 
                 <!-- LABOR SPINNER STARTS-->
                 <div id="labor">
-                    <label class="form-label form__label">İşçi qüvvəsi</label>
+                    <label class="form-label form__label">İşçi qüvvəsi:</label>
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
                     <div class="input-spinner form-control form__control">
                         <i class="fa fa-user-alt-slash" id="user0"></i>
                         <i class="fa fa-user d-none " id="user1"></i>
@@ -279,6 +320,13 @@
                 <!-- PACKING START -->
                 <div class="packing" id="packing">
                     <span class="form-label form__label">Paketləmə lazımdırmı?</span>
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
                     <div class="packing__div my-3">
                         <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes"
                             value="Bəli" checked />
@@ -297,6 +345,13 @@
                 <!--URGENT START-->
                 <div class="urgent">
                     <div class="form-label form__label  mb-2">Çatdırılma növü:</div>
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
                     <div class=" urgent__list">
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
@@ -322,7 +377,13 @@
                 <!-- DELIVERY START -->
                 <div class="delivery" id="delivery">
                     <span class="form-label form__label">Delivery date:</span>
-
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
                     <div class="day">
                         <div class="day__list form-check">
                             <input class="day__input form-check-input today" type="radio" name="day" data-item-id="day"
@@ -364,7 +425,7 @@
                 <!-- DELIVERY END -->
 
                 <!--  PAYMENT START -->
-                <div class="form-text payment">
+                <!-- <div class="form-text payment">
                     <div class="form-group form__group">
                         <div class="form-label form__label mt-3 mb-2">Ödəniş növü :</div>
                         <div class="dropdown   payment__dropdown">
@@ -405,21 +466,73 @@
                     </div>
 
 
-                </div>
+                </div> -->
                 <!-- PAYMENT END   -->
 
+
+                <!-- EXAMPLE START -->
+                <div class="form-text payment">
+                    <div class="form-group form__group">
+                        <div class="form-label form__label mt-3 mb-2">Ödəniş növü :</div>
+                        <div class="form__tooltip">
+                                <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                    data-toggle="tooltip" data-html="true"
+                                    title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                    ?
+                                </button>   
+                            </div>
+                        <div class="payment__wrap-drop form__control " id="paymentMethod">
+
+                            <div><i class="far fa-money-bill-alt color-purple mr-1"></i>
+                                <span>Nəğd ödəniş</span>
+                            </div>
+                            <ul class="payment__drop">
+                                <li class="selected" data-id="paymentWithCash">
+
+                                    <i class="far fa-money-bill-alt color-purple mr-1"></i>
+                                    <span>Nəğd ödəniş</span>
+
+                                </li>
+                                <li data-id="paymentWithCard">
+
+                                    <i class="fas fa-credit-card color-purple mr-1"></i>
+                                    <span data-id="kartla-odenis">Kartla ödəniş</span>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="hidden" id="payment-hidden">
+                    </div>
+                </div>
+
+
+                <!-- EXAMPLE END -->
                 <!--  INSURANCE START -->
                 <div class="insurance form-group ">
                     <div class="form-label form__label mb-2">Sığorta:</div>
-                    <div class="insurance__label form__control">Sığorta əlavə et
-                        <input type="checkbox" class="insurance__input form-check-input" disabled>
+                    <div class="form__tooltip">
+                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                data-toggle="tooltip" data-html="true"
+                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                ?
+                            </button>   
+                        </div>
+                    <label class="insurance__label form__control">Sığorta əlavə et
+                        <input type="checkbox" class="insurance__input form-check-input" name="" disabled>
                         <span class="checkmark"></span>
                         <div class="insurance__percent">3%</div>
-                    </div>
+                    </label>
                     <div class="insurance__div">
                         <div class="form-label form__label mb-2">Daşınacaq yükün dəyəri:</div>
+                        <div class="form__tooltip">
+                                <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
+                                    data-toggle="tooltip" data-html="true"
+                                    title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+                                    ?
+                                </button>   
+                            </div>
                         <div class="input-group insurance__div--input-group">
-                            <input type="number" class="form-control insurance__div--input" min="0"
+                            <input type="text" pattern="\d*" class="form-control insurance__div--input" min="0"
                                 aria-label="Recipient's username" aria-describedby="insurance__div--money">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="insurance__div--money">AZN</span>
@@ -754,7 +867,7 @@
         this.map = map;
         this.originPlaceId = null;
         this.destinationPlaceId = null;
-        this.travelMode = 'WALKING';
+        this.travelMode = 'TRANSIT';
         this.directionsService = new google.maps.DirectionsService;
         this.directionsRenderer = new google.maps
             .DirectionsRenderer; //  məsafə, növbələrin sayı və digər amilləri göstərmək üçün  istifadə olunur
@@ -827,9 +940,9 @@
                     var hidenInputStartLng = document.getElementById("startPlaceLng");
                     hidenInputStartLng.value = inputResultLng;
 
-
-
                     $(".insurance__input").prop("disabled", false);
+
+
                 })
 
             } else {
