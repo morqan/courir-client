@@ -176,6 +176,9 @@
 
 .color-purple {
     color: $color-primary !important;
+    &:hover {
+        color: $color-primary-dark !important;
+    }
 }
 
 .index-shadow {

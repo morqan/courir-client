@@ -1,5 +1,5 @@
 // NEW  FOR LANDING-4.HTML HEADER    
-
+$(document).ready(function () {
 $(window).on('scroll', function() {
   
     if( $(".navbar").hasClass("scrolled")){
@@ -10,4 +10,5 @@ $(window).on('scroll', function() {
         $('.header__language2 , .header__toggler2, .dropdown-toggle:after').removeClass('header-scroll');
     }
 
+});
 });

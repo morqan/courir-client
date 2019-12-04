@@ -1,4 +1,5 @@
 //  FİLE YÜKLƏMƏK ÜÇÜN
+$(document).ready(function () {
 FilePond.registerPlugin(
     FilePondPluginImageCrop,
     FilePondPluginImagePreview,
@@ -34,4 +35,5 @@ FilePond.create(document.querySelector('.add-image[type="file"]'), {
 
         resolve(type);
     })
+});
 });
