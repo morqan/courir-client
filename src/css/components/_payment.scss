@@ -93,9 +93,10 @@
             border-width: 0 7px 7px;
         }
     }
+
     &__drop {
         background: #ffffff;
-    border-radius: 10px;
+        border-radius: 10px;
         box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .2);
         display: none;
         left: 0;
@@ -108,18 +109,30 @@
         right: 0;
         top: 100%;
         z-index: 2;
-    margin-top: 5px;
+        margin-top: 5px;
+
         li {
             color: $color-secondary-dark;
             display: block;
             padding: 1rem;
             text-decoration: none;
-            &:not(:last-child){
+
+            position: relative;
+            &:not(:last-child) {
                 border-bottom: 1px solid $color-secondary;
             }
         }
+
+        &--checkmark {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: $color-primary ;
+
+        }
     }
 }
+
 
 
 .payment__wrap-drop.active::after {

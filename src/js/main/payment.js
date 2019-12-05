@@ -45,15 +45,20 @@ DropDown.prototype = {
            
         });
         obj.opts.on('click', function () {
+            var checkmark = '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>';
             var opt = $(this);
             obj.val = opt.html();
             obj.valText = opt.text();
             obj.index = opt.index();
             obj.placeholder.html(obj.val);
             opt.siblings().removeClass('selected');
+            opt.siblings().children().last().removeClass( "fas fa-check payment__drop--checkmark" );
+            // opt.siblings().remove( '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
             opt.filter(':contains("' + obj.valText + '")').addClass('selected');
             var dataID = $(".selected").attr('data-id');
             $("#payment-hidden").val(dataID);
+            $( ".selected" ).children().last().addClass( "fas fa-check payment__drop--checkmark" );
+            // $( ".selected" ).add('<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
         }).change();
     },
     getValue: function () {
