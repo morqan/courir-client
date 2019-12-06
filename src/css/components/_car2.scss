@@ -209,9 +209,13 @@
     align-items: center;
     color: $color-primary;
     font-weight: bold;
-    .price{
-        color: $color-secondary-dark;
-        font-size: 16px;
+    .price-evacuator,
+    .price-truck{
+        &:after{
+            content: "AZN";
+            margin-left: 2px;
+         
+        }
     }
 
     @include respondmax(sm) {

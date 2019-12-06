@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     var todaySlash = moment().format('DD/MM/YYYY');
     var tomorrowSlash = moment().add(1, 'days').format('DD/MM/YYYY');
-   
+
     var todayVal = document.getElementById("today");
     var tomorrowVal = document.getElementById("tomorrow");
     var calendarVal = document.getElementById("calendar");
@@ -23,9 +23,9 @@ $(document).ready(function () {
     $(document).on('change', 'input:radio[data-item-id="day"]', function () {
 
         if ($(".today").prop("checked")) {
-            $('#tomorrow').attr('value', '');  
-            $('#calendar').attr('value', '');    
-            $("label[for='calendar']").text('Pick a date');  
+            $('#tomorrow').attr('value', '');
+            $('#calendar').attr('value', '');
+            $("label[for='calendar']").text('Pick a date');
             for (i = 0; i < allHours; i++) {
                 $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
             }
@@ -40,36 +40,36 @@ $(document).ready(function () {
                 ]).trigger('refresh.owl.carousel');
             }
 
-            $(document).on('change', 'input:radio[data-item-id=todayTimes]', function () { 
+            $(document).on('change', 'input:radio[data-item-id=todayTimes]', function () {
                 var TimeVal = $('input[data-item-id=todayTimes]:checked').val();
-                todayVal.value = todaySlash +"/"+TimeVal;
-               
+                todayVal.value = todaySlash + " " + TimeVal;
+
             });
         } else if ($(".tomorrow").prop("checked")) {
-            $('#today').attr('value', '');  
-            $('#calendar').attr('value', '');  
-            $("label[for='calendar']").text('Pick a date');  
+            $('#today').attr('value', '');
+            $('#calendar').attr('value', '');
+            $("label[for='calendar']").text('Pick a date');
             for (i = 0; i < allHours; i++) {
                 $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
             }
             for (i = 0; i < dayHours; i++) {
                 var tomorrowHours = moment().startOf('day').add(i, 'h').format("HH:mm");
                 $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
-                    '<input class="times__input form-check-input" type="radio" value="' + tomorrowHours+
+                    '<input class="times__input form-check-input" type="radio" value="' + tomorrowHours +
                     ' " name="tomorrowTimes" data-item-id="tomorrowTimes" id="' + i + '" />' +
                     ' <label class="times__label  form-check-label"  for="' + i + '" >' + tomorrowHours +
                     '</label>\n' +
                     '</div>'
                 ]).trigger('refresh.owl.carousel');
             }
-            $(document).on('change', 'input:radio[data-item-id=tomorrowTimes]', function () { 
+            $(document).on('change', 'input:radio[data-item-id=tomorrowTimes]', function () {
                 var TimeVal = $('input[data-item-id=tomorrowTimes]:checked').val();
-                tomorrowVal.value = tomorrowSlash + "/" + TimeVal;    
+                tomorrowVal.value = tomorrowSlash + " " + TimeVal;
             });
         } else if ($(".calendar-input").prop("checked")) {
-            $('#tomorrow').attr('value', '');  
-            $('#today').attr('value', '');  
-        
+            $('#tomorrow').attr('value', '');
+            $('#today').attr('value', '');
+
             for (i = 0; i < dayHours; i++) {
                 $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
             }
@@ -85,11 +85,11 @@ $(document).ready(function () {
                 ]).trigger('refresh.owl.carousel');
             }
 
-            $(document).on('change', 'input:radio[data-item-id=calendarTimes]', function () { 
+            $(document).on('change', 'input:radio[data-item-id=calendarTimes]', function () {
                 var calendarLabel = $(".calendar-label").text();
                 var TimeVal = $('input[data-item-id=calendarTimes]:checked').val();
-               
-                calendarVal.value = calendarLabel + "/" + TimeVal;
+
+                calendarVal.value = calendarLabel + " " + TimeVal;
             });
         }
     });

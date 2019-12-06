@@ -4,10 +4,10 @@ $(document).ready(function () {
     totalPrice = $('.total__money').text(priceText);
     console.log(totalPrice, 'this');
 
-    $('.insurance__div--input').on('keyup keypress blur', function (event) {
+    $(document).on('keyup keypress blur', '.insurance__div--input', function (event) {
         var percent = 0.03;
         var insuranceInputVal = $(".insurance__div--input").val();
-        //Input accept only number
+        //Input accept only digits
         $(this).val($(this).val().replace(/[^\d].+/, ""));
         if ((event.which < 48 || event.which > 57)) {
             event.preventDefault();
@@ -20,12 +20,23 @@ $(document).ready(function () {
             var totalPercentValRound = Math.ceil(totalPercentVal * 100) / 100;
             var InsurancePercent = $(".insurance__percent").text(totalPercentValRound);
             var totalPrice = parseInt($('.total__money').text());
-            var total = totalPrice + totalPercentValRound;
+            // var total =totalPrice + totalPercentValRound;
+            var total =Math.ceil((totalPrice + totalPercentValRound) *100) / 100;
             var totalMoney = $('.total__money').text(total);
-            // totalPrice = $('.total__money').text(totalMoney + totalPercentVal);
         } else {
             var InsurancePercent = $(".insurance__percent").text('0');
             totalPrice = $('.total__money').text(parseInt($(".price").text()));
         }
+    });
+
+    $('input[type=radio][data-id=car2]').change(function() {
+        var insuranceInputVal = $(".insurance__div--input").val();
+        insuranceInputVal = $(".insurance__div--input").val('');
+       var InsurancePercent = $(".insurance__percent").text('0');
+       totalPrice = $('.total__money').text(parseInt($(".price").text()));
+       $(".insurance__input").prop("checked", false);
+                $( ".insurance__div" ).css({
+                    'display': 'none'
+                });
     });
 });

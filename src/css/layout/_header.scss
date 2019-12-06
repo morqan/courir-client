@@ -5,9 +5,9 @@
     width: 100vw;
 
 
-&__logo {
-    margin-right: 0;
-}
+    &__logo {
+        margin-right: 0;
+    }
 
     &__container {
         z-index: 999;
@@ -80,8 +80,9 @@
             }
 
             &__dropdown-menu {
-            
+
                 margin: 0;
+
                 @include respondmax(lg) {
                     display: none !important;
                 }
@@ -133,11 +134,11 @@
     }
 
     &__language2 {
-        color: rgba(255,255,255,.65);
+        color: rgba(255, 255, 255, .65);
         font-size: 20px;
 
         &:hover {
-            color: rgba(255,255,255,.85);
+            color: rgba(255, 255, 255, .85);
         }
 
         .fa-globe {
@@ -176,15 +177,13 @@
 
 .color-purple {
     color: $color-primary !important;
+
     &:hover {
         color: $color-primary-dark !important;
     }
 }
 
-.index-shadow {
-    box-shadow: 0 8px 15px #7b2bfc1f;
 
-}
 
 .login2 {
     padding: 0;
@@ -241,15 +240,23 @@
         }
     }
 }
+
 .header-scroll {
-color: rgba(0,0,0,.5) !important;
-&::after {
-    color: rgba(0,0,0,.5) !important;
-    
-}
+    color: rgba(0, 0, 0, .5) !important;
+
+    &::after {
+        color: rgba(0, 0, 0, .5) !important;
+
+    }
 
 
-&:hover{
-    color: rgba(0,0,0,.7) !important;
+    &:hover {
+        color: rgba(0, 0, 0, .7) !important;
+    }
 }
+
+// SHADOW FOR INDEX.html
+.index-shadow {
+    box-shadow: 0 8px 15px #7b2bfc1f;
+
 }
