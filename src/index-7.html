@@ -48,22 +48,22 @@
                 <div class="tabcontainer">
 
                     <!-- swiper1 -->
-                    <div id="tabs" class="swiper-container swiper1">
+                    <div id="tabs" class="swiper-container swiper-tabs">
                         <div class="tablist swiper-wrapper  car-pills " role="tablist">
-                            <div id="car-tab1" class="tablist__tab swiper-slide active" data-hash="car-tab1"
-                                data-rel="panel1" aria-selected="true" aria-controls="panel1" role="tab">Kuryer</div>
-                            <div id="car-tab2" class="tablist__tab swiper-slide" data-hash="car-tab2" data-rel="panel2"
-                                aria-selected="false" aria-controls="panel2" role="tab">Evakuator</div>
-                            <div id="car-tab3" class="tablist__tab swiper-slide" data-hash="car-tab3" data-rel="panel3"
-                                aria-selected="false" aria-controls="panel3" role="tab">Yük maşını</div>
+                            <div id="car-tab-courier" class="tablist__tab swiper-slide active" data-hash="car-tab-courier"
+                                data-rel="panel-courier" aria-selected="true" aria-controls="panel-courier" role="tab">Kuryer</div>
+                            <div id="car-tab-evacutor" class="tablist__tab swiper-slide" data-hash="car-tab-evacutor" data-rel="panel-evacuator"
+                                aria-selected="false" aria-controls="panel-evacuator" role="tab">Evakuator</div>
+                            <div id="car-tab-truck" class="tablist__tab swiper-slide" data-hash="car-tab-truck" data-rel="panel-truck"
+                                aria-selected="false" aria-controls="panel-truck" role="tab">Yük maşını</div>
                         </div>
                     </div>
 
                     <!-- swiper2 -->
-                    <div id="panels" class="swiper-container swiper2">
+                    <div id="panels" class="swiper-container swiper-tabs-panel">
                         <div class="tabpanels swiper-wrapper">
                             <div class="swiper-slide">
-                                <div id="panel1" class="tabpanels__panel" aria-labelledby="car-tab1" role="tabpanel">
+                                <div id="panel-courier" class="tabpanels__panel" aria-labelledby="car-tab-courier" role="tabpanel">
                                     <div class="pills-car-1__div">
                                         <div class="form-group  car-pills__form-group">
 
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel2" class="tabpanels__panel" aria-labelledby="car-tab2" role="tabpanel">
+                                <div id="panel-evacuator" class="tabpanels__panel" aria-labelledby="car-tab-evacutor" role="tabpanel">
                                     <div class="form-group">
                                         <input class="car-pills__input car-hide" type="radio" name="car2" data-id="car2"
                                             id="evacuator" />
@@ -168,7 +168,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel3" class="tabpanels__panel" aria-labelledby="car-tab3" role="tabpanel">
+                                <div id="panel-truck" class="tabpanels__panel" aria-labelledby="car-tab-truck" role="tabpanel">
                                     <div class="form-group ">
                                         <input class="car-pills__input " type="radio" name="car2" id="truck"  data-id="car2" />
                                         <div class="car-pills__label2">
@@ -416,15 +416,7 @@
                         <div class="insurance__percent">3%</div>
                     </label>
                     <div class="insurance__div">
-                        <!-- <div class="form-label form__label mb-2">Daşınacaq yükün dəyəri :</div>
-                        
-                        <div class="input-group insurance__div--input-group">
-                            <input type="text" pattern="\d*" class="form-control insurance__div--input" min="0"
-                                aria-label="Recipient's username" aria-describedby="insurance__div--money" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="insurance__div--money">AZN</span>
-                            </div>
-                        </div> -->
+                       
                     </div>
 
 

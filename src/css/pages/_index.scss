@@ -68,8 +68,12 @@
     border-radius: 10px;
     @include respondmax(lg) {
        height: 400px;
+       margin-top: 10px;
 
     }
+    @include respondmax(md) {
+        margin-top: 30px;
+     }
     @include respondmax(sm) {
         height: 300px;
  
