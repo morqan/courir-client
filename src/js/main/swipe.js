@@ -219,7 +219,7 @@ $(document).ready(function () {
             $("#evacuator").prop("checked", true);
         });
 
-        $('#car-tab3').click(function () {
+        $('#car-tab-truck').click(function () {
             $("#truck").prop("checked", true);
         });
 

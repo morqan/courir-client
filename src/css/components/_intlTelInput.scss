@@ -1,6 +1,7 @@
 .iti {
  
     display: block;
+    border-radius: 10px;
 }
 
 .iti__country-list {
@@ -13,7 +14,7 @@
 }
 
 .iti__selected-flag{
-  height: 50px;
+  height: 100%;
 
   &:focus {
     outline: none;

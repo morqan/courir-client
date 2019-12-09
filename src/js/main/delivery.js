@@ -2,7 +2,7 @@
 $(document).ready(function () {
 $("#pills-non-urgent-tab").prop("checked", true);
 
-$('input:radio[name="urgent"]').change(
+$('input:radio[data-item-id="urgent"]').change(
 
   function () {
 
@@ -23,7 +23,7 @@ $('input:radio[name="urgent"]').change(
 // LOCAL STORAGE FOR INPUT RADIO 
 
 $(function () {
-  $('input:radio[name="urgent"]').each(function () {
+  $('input:radio[data-item-id="urgent"]').each(function () {
     var state = JSON.parse(localStorage.getItem('radio_' + $(this).attr('id')));
 
     if (state) this.checked = state.checked;
