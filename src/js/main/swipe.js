@@ -1,5 +1,6 @@
 // SWIPE  FOR İNDEX-3.HTML
 $(document).ready(function () {
+    
     $(function () {
 
         function setCurrentSlide(ele, index, cssClass) {
@@ -10,7 +11,7 @@ $(document).ready(function () {
 
 
 
-            var z = $('#car-tab1').attr("aria-selected");
+            var z = $('#car-tab-courier').attr("aria-selected");
             if (z == "true") {
 
                 var insuranceInputVal = $(".insurance__div--input").val();
@@ -18,12 +19,10 @@ $(document).ready(function () {
                 var InsurancePercent = $(".insurance__percent").text('0');
                 totalPrice = $('.total__money').text(parseInt($(".price").text()));
                 $(".insurance__input").prop("checked", false);
-                $(".insurance__div").css({
-                    'display': 'none'
-                });
+              
             }
 
-            var x = $("#car-tab3").attr("aria-selected");
+            var x = $("#car-tab-truck").attr("aria-selected");
             if (x == "true") {
                 $('#labor, #packing').css({
                     'display': 'block'
@@ -33,16 +32,14 @@ $(document).ready(function () {
                 var InsurancePercent = $(".insurance__percent").text('0');
                 totalPrice = $('.total__money').text(parseInt($(".price").text()));
                 $(".insurance__input").prop("checked", false);
-                $(".insurance__div").css({
-                    'display': 'none'
-                });
+             
             } else {
                 $('#labor, #packing').css({
                     'display': 'none'
                 });
             }
 
-            var y = $("#car-tab2").attr("aria-selected");
+            var y = $("#car-tab-evacutor").attr("aria-selected");
             if (y == "false") {
                 $('#receiver').css({
                     'display': 'block'
@@ -56,9 +53,7 @@ $(document).ready(function () {
                 var InsurancePercent = $(".insurance__percent").text('0');
                 totalPrice = $('.total__money').text(parseInt($(".price").text()));
                 $(".insurance__input").prop("checked", false);
-                $(".insurance__div").css({
-                    'display': 'none'
-                });
+              
             }
 
             // SWIPE EDENDE TEK OLAN CAR INPUTUNU SECSIN
@@ -94,8 +89,8 @@ $(document).ready(function () {
             //cache unique id
             var el = '#tabcontainer-' + i;
             //add unique class to the tab list
-            $(this).find('.swiper1').addClass('navinstance-' + i);
-            $(this).find('.swiper2').addClass('panelinstance-' + i);
+            $(this).find('.swiper-tabs').addClass('navinstance-' + i);
+            $(this).find('.swiper-tabs-panel').addClass('panelinstance-' + i);
             var tabNavClass = '.navinstance-' + i;
             var tabPnlClass = '.panelinstance-' + i;
 
@@ -104,9 +99,7 @@ $(document).ready(function () {
                 window.matchMedia("(max-width: 979px)")
             ]
 
-            // if ($('#car-tab2').attr('aria-selected', true)) {
-            //     $("#evacuator").prop("checked", true);
-            // }
+          
 
 
 
@@ -206,7 +199,7 @@ $(document).ready(function () {
     // CLICK EDENDE TEK OLAN CAR INPUTUNU SECSIN
 
     $(document).ready(function () {
-        $('#car-tab1').click(function () {
+        $('#car-tab-courier').click(function () {
             $("#evacuator").prop("checked", false);
             $("#truck").prop("checked", false);
             $(".swiper-slide-active").find("#pedestrian").prop("checked", true);
@@ -222,7 +215,7 @@ $(document).ready(function () {
 
          
         });
-        $('#car-tab2').click(function () {
+        $('#car-tab-evacutor').click(function () {
             $("#evacuator").prop("checked", true);
         });
 

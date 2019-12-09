@@ -46,27 +46,27 @@
                 <div class="tabcontainer">
 
                     <!-- swiper1 -->
-                    <div id="tabs" class="swiper-container swiper1">
+                    <div id="tabs" class="swiper-container swiper-tabs">
                         <div class="tablist swiper-wrapper  car-pills " role="tablist">
-                            <div id="car-tab1" class="tablist__tab swiper-slide active" data-hash="car-tab1"
-                                data-rel="panel1" aria-selected="true" aria-controls="panel1" role="tab">Kuryer</div>
-                            <div id="car-tab2" class="tablist__tab swiper-slide" data-hash="car-tab2" data-rel="panel2"
-                                aria-selected="false" aria-controls="panel2" role="tab">Evakuator</div>
-                            <div id="car-tab3" class="tablist__tab swiper-slide" data-hash="car-tab3" data-rel="panel3"
-                                aria-selected="false" aria-controls="panel3" role="tab">Yük maşını</div>
+                            <div id="car-tab-courier" class="tablist__tab swiper-slide active" data-hash="car-tab-courier"
+                                data-rel="panel-courier" aria-selected="true" aria-controls="panel-courier" role="tab">Kuryer</div>
+                            <div id="car-tab-evacutor" class="tablist__tab swiper-slide" data-hash="car-tab-evacutor" data-rel="panel-evacuator"
+                                aria-selected="false" aria-controls="panel-evacuator" role="tab">Evakuator</div>
+                            <div id="car-tab-truck" class="tablist__tab swiper-slide" data-hash="car-tab-truck" data-rel="panel-truck"
+                                aria-selected="false" aria-controls="panel-truck" role="tab">Yük maşını</div>
                         </div>
                     </div>
 
                     <!-- swiper2 -->
-                    <div id="panels" class="swiper-container swiper2">
+                    <div id="panels" class="swiper-container swiper-tabs-panel">
                         <div class="tabpanels swiper-wrapper">
                             <div class="swiper-slide">
-                                <div id="panel1" class="tabpanels__panel" aria-labelledby="car-tab1" role="tabpanel">
+                                <div id="panel-courier" class="tabpanels__panel" aria-labelledby="car-tab-courier" role="tabpanel">
                                     <div class="pills-car-1__div">
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide" type="radio" name="car2"
-                                                id="pedestrian" checked />
+                                            <input class="car-pills__input car-hide" type="radio" name="car2" data-id="car2"
+                                                id="pedestrian" checked="checked" />
                                             <label class="car-pills__label1" for="pedestrian">
                                                 <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Piyada</span>
@@ -75,7 +75,7 @@
 
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide" type="radio" name="car2"
+                                            <input class="car-pills__input car-hide" type="radio" name="car2"  data-id="car2"
                                                 id="motorbike" />
                                             <label class="car-pills__label1" for="motorbike">
                                                 <img src="img/motorbike.png" alt="car" class="car-pills__label1--img">
@@ -84,7 +84,7 @@
 
                                         </div>
                                         <div class="form-group  car-pills__form-group">
-                                            <input class="car-pills__input car-hide" type="radio" name="car2" id="car"
+                                            <input class="car-pills__input car-hide" type="radio" name="car2" id="car"  data-id="car2"
                                                 required />
                                             <label class="car-pills__label1" for="car">
                                                 <img src="img/car.png" alt="car" class="car-pills__label1--img">
@@ -103,20 +103,20 @@
                                                 <span>Məbləğ</span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 5$ </span>
+                                                    <span class="price"> 0 </span>
                                                 </span>
 
                                             </div>
                                             <div class="info__div--distance">
                                                 <span>Məsafə</span>
                                                 <span class="distance-span"><i class="fas fa-route mr-1"></i>
-                                                    <span class="distance">5.6km</span>
+                                                    <span class="distance">0 km</span>
                                                 </span>
                                             </div>
                                             <div class="info__div--time">
                                                 <span>Çatdırılma vaxtı</span>
                                                 <span class="time-span"> <i class="fas fa-clock mr-1"></i>
-                                                    <span class="time">10 dəq</span>
+                                                    <span class="time">0 dəq</span>
                                                 </span>
                                             </div>
 
@@ -133,9 +133,9 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel2" class="tabpanels__panel" aria-labelledby="car-tab2" role="tabpanel">
+                                <div id="panel-evacuator" class="tabpanels__panel" aria-labelledby="car-tab-evacutor" role="tabpanel">
                                     <div class="form-group">
-                                        <input class="car-pills__input car-hide" type="radio" name="car2"
+                                        <input class="car-pills__input car-hide" type="radio" name="car2" data-id="car2"
                                             id="evacuator" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group">
@@ -154,7 +154,7 @@
                                                 </span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
-                                                    <span class="price"> 5$ </span>
+                                                    <span class="price-evacuator">35</span>
                                                 </span>
                                             </div>
                                         </div>
@@ -166,9 +166,9 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel3" class="tabpanels__panel" aria-labelledby="car-tab3" role="tabpanel">
+                                <div id="panel-truck" class="tabpanels__panel" aria-labelledby="car-tab-truck" role="tabpanel">
                                     <div class="form-group ">
-                                        <input class="car-pills__input " type="radio" name="car2" id="truck" />
+                                        <input class="car-pills__input " type="radio" name="car2" id="truck"  data-id="car2" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group"> <img src="img/transit.png"
                                                     alt="car" class="car-pills__label2--img"><span
@@ -180,7 +180,7 @@
 
                                                 <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
                                                 <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
-                                                <span class="price"><i class="fa fa-coins mr-1"></i>5$</span>
+                                                <span class="price-truck"><i class="fa fa-coins mr-1"></i>225</span>
                                             </div>
                                         </div>
                                         <div class="info__div--away-time">

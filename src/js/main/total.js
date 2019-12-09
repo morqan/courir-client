@@ -34,9 +34,8 @@ $(document).ready(function () {
         insuranceInputVal = $(".insurance__div--input").val('');
        var InsurancePercent = $(".insurance__percent").text('0');
        totalPrice = $('.total__money').text(parseInt($(".price").text()));
-       $(".insurance__input").prop("checked", false);
-                $( ".insurance__div" ).css({
-                    'display': 'none'
-                });
+       $('.insurance__input').prop("checked",false) ;
+       $('.insurance__div').empty();
+     
     });
 });
