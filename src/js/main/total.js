@@ -3,10 +3,15 @@ $(document).ready(function () {
     var priceText = parseInt($(".price").text());
     totalPrice = $('.total__money').text(priceText);
     console.log(totalPrice, 'this');
+    
 
     $(document).on('keyup keypress blur', '.insurance__div--input', function (event) {
         var percent = 0.03;
         var insuranceInputVal = $(".insurance__div--input").val();
+        var reg = /^0+/gi;
+        if (this.value.match(reg)) {
+            this.value = this.value.replace(reg, '');
+        }
         //Input accept only digits
         $(this).val($(this).val().replace(/[^\d].+/, ""));
         if ((event.which < 48 || event.which > 57)) {
@@ -28,6 +33,7 @@ $(document).ready(function () {
             totalPrice = $('.total__money').text(parseInt($(".price").text()));
         }
     });
+  
 
     $('input[type=radio][data-id=car2]').change(function() {
         var insuranceInputVal = $(".insurance__div--input").val();
@@ -39,3 +45,4 @@ $(document).ready(function () {
      
     });
 });
+
