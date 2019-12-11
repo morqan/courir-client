@@ -216,11 +216,9 @@
                     <div class="form-group form__group ">
                         <label for="phone" class="d-block form-label form__label">Receiver number :</label>
                         
-                        <input type="text" name="phone" class="form-control form__control d-block " id="phone"
-                            data-parsley-trigger="keyup" data-parsley-validation-threshold="1"
-                            data-parsley-minlength="11" data-parsley-maxlength="11" required>
-                        <span id="valid-msg" class="hide d-block"></span>
-                        <span id="error-msg" class="hide d-block"></span>
+                        <input type="text" class="form-control form__control"  id="phoneNumber"  data-parsley-validation-threshold="1" data-parsley-trigger="keyup"   data-parsley-minlength="5" >
+                        <span id="valid-msg" class="valid-hide text-success">✓ Valid</span>
+                        <span id="error-msg" class="valid-hide text-danger"></span>
                     </div>
                 </div>
 
