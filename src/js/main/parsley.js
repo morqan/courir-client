@@ -1,9 +1,27 @@
 $(document).ready(function () {
-
-  $('#phoneNumber').mask('(00)0000000');
-  $('#phone').mask('(00)0000000');
   $('#verify-number').mask('000000');
+  $('#sign-in-form').parsley().on('field:validated', function () {
+    var ok = $('.parsley-error').length === 0
 
+    $("#phoneNumber").removeClass('parsley-success');
+   
+
+    var parsleyError = $('#sign-in-form').find('.parsley-error')
+    if(parsleyError){
+      $('#sign-in-form').find(".iti__selected-flag").css({
+        'height': '70%'
+      });
+    }
+    // else{
+    //   $('#sign-in-form').find(".iti__selected-flag").css({
+    //     'height': '100%'
+    //   });
+    // }
+   
+    $("#phoneNumber").addEventListener('keyup', function() {
+      $("#phoneNumber").removeClass('parsley-error');
+    });
+  })
 
   $('#first_form').parsley().on('field:validated', function () {
     var ok = $('.parsley-error').length === 0

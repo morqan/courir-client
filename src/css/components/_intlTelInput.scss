@@ -14,8 +14,7 @@
 }
 
 .iti__selected-flag{
-  height: 100%;
-
+  height:  100%;
   &:focus {
     outline: none;
     border-bottom-left-radius: 10px;
@@ -31,6 +30,15 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+#phoneNumber {
+  padding-left: 45px !important;
+}
+#phoneNumber .parsley-success {
+  display: none;
+}
+.valid-hide{
+  display: none;
+}
 
 
 
