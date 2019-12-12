@@ -13,26 +13,26 @@
   
 }
 
-.iti__selected-flag{
-  height:  100%;
-  &:focus {
-    outline: none;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-  &:hover {
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-  }
+// // .iti__selected-flag{
+// //   height:  100%;
+// //   &:focus {
+// //     outline: none;
+// //     border-bottom-left-radius: 10px;
+// //     border-top-left-radius: 10px;
+// //   }
+// //   &:hover {
+// //     border-bottom-left-radius: 10px;
+// //     border-top-left-radius: 10px;
+// //   }
 
-}
-.iti--separate-dial-code .iti__selected-flag {
-  background-color: rgba(0, 0, 0, 0);
-}
+// // }
+// .iti--separate-dial-code .iti__selected-flag {
+//   background-color: rgba(0, 0, 0, 0);
+// }
 
-#phoneNumber {
-  padding-left: 45px !important;
-}
+// #phoneNumber {
+//   padding-left: 45px !important;
+// }
 #phoneNumber .parsley-success {
   display: none;
 }
