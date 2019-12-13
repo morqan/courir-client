@@ -1,6 +1,6 @@
 //  SHOW AND HIDE #DELIVERY
 $(document).ready(function () {
-$("#pills-non-urgent-tab").prop("checked", true);
+$("#non-urgent-tab").prop("checked", true);
 
 $('input:radio[data-item-id="urgent"]').change(
 
