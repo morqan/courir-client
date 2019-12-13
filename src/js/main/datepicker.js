@@ -1,6 +1,7 @@
 //  DATEPICKER  IN INDEX.HTML, INDEX-3.HTML
 $(document).ready(function () {
     var date = new Date();
+  
     date.setDate(date.getDate());
     $("#datepicker").datepicker({
         startDate: date,
@@ -27,7 +28,7 @@ $(document).ready(function () {
         yearSuffix: "",
         minDate: 0, // disable past date
         minTime: 0, // disable past time
-
+   
         // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
         onSelect: function () {
             $("label[for='calendar']").text($(this).val());

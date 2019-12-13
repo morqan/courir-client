@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
   
 
-    $('input[type=radio][data-id=car2]').change(function() {
+    $('input[type=radio][data-id=transition]').change(function() {
         var insuranceInputVal = $(".insurance__div--input").val();
         insuranceInputVal = $(".insurance__div--input").val('');
        var InsurancePercent = $(".insurance__percent").text('0');

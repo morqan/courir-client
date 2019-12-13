@@ -204,12 +204,12 @@ $(document).ready(function () {
             $("#truck").prop("checked", false);
             $(".swiper-slide-active").find("#pedestrian").prop("checked", true);
             $("#pedestrian").trigger("change");
-            // $('input:radio[data-id=car2]:nth(0)').prop('checked', true).trigger("change");
+            // $('input:radio[data-id=transition]:nth(0)').prop('checked', true).trigger("change");
             // setTimeout(function(){
             //     $("#pedestrian").prop('checked','checked');
             //   },10);
 
-            // let who = $('input:radio[data-id=car2]:nth(0)').prop('id').trigger("change") ;
+            // let who = $('input:radio[data-id=transition]:nth(0)').prop('id').trigger("change") ;
             // let checked = $(this).prop('checked') ? 'checked' : 'unchecked';
             // console.log(who + ' has been ' + checked);
 
