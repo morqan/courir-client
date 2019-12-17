@@ -58,6 +58,8 @@ let chatList = [];
 // in the message area
 let lastDate = "";
 
+
+
 // 'populateChatList' will generate the chat list
 // based on the 'messages' in the datastore
 let populateChatList = () => {
@@ -75,13 +77,16 @@ let populateChatList = () => {
 		
 		chat.isGroup = msg.recvIsGroup;
 		chat.msg = msg;
+		
 
 		if (msg.recvIsGroup) {
 			chat.group = groupList.find((group) => (group.id === msg.recvId));
 			chat.name = chat.group.name;
+			chat.orderNumber= chat.group.orderNumber;
 		} else {
 			chat.contact = contactList.find((contact) => (msg.sender !== user.id) ? (contact.id === msg.sender) : (contact.id === msg.recvId));
 			chat.name = chat.contact.name;
+			chat.orderNumber = chat.contact.orderNumber;
 		}
 
 		chat.unread = (msg.sender !== user.id && msg.status < 2) ? 1: 0;
@@ -97,20 +102,24 @@ let populateChatList = () => {
 };
 
 let viewChatList = () => {
+	
 	DOM.chatList.innerHTML = "";
 	chatList
 	.sort((a, b) => mDate(b.msg.time).subtract(a.msg.time))
 	.forEach((elem, index) => {
 		let statusClass = elem.msg.status < 2 ? "far" : "fas";
 		let unreadClass = elem.unread ? "unread" : "";
-
+		let orderNumber = elem.orderNumber;
 		DOM.chatList.innerHTML += `
-		<div class="chat-list-item d-flex flex-row w-100 p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
+		<div class="chat-list-item   w-100 p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
 			<img src="${elem.isGroup ? elem.group.pic : elem.contact.pic}" alt="Profile Photo" class="img-fluid rounded-circle mr-2" style="height:50px;">
-			<div class="w-50">
-				<div class="name">${elem.name}</div>
-				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).number + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
+			<div class=" messages-searching-div">
+				<div class="order-number">${orderNumber}</div>
+				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).name + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
 			</div>
+			<a class="messages__btn color-purple" href="my-messages-inner.html">
+                                                                <i class="fas fa-arrow-right "></i>
+                                                            </a>
 			<div class="flex-grow-1 text-right">
 				<div class="small time">${mDate(elem.msg.time).chatListFormat()}</div>
 				${elem.unread ? "<div class=\"badge badge-success badge-pill my-badge small\" id=\"unread-count\">" + elem.unread + "</div>" : ""}
@@ -142,7 +151,7 @@ let addMessageToMessageArea = (msg) => {
 
 	let htmlForGroup = `
 	<div class="small font-weight-bold text-primary">
-		${contactList.find(contact => contact.id === msg.sender).number}
+		${contactList.find(contact => contact.id === msg.sender).name}
 	</div>
 	`;
 
@@ -168,10 +177,12 @@ let addMessageToMessageArea = (msg) => {
 };
 
 let generateMessageArea = (elem, chatIndex) => {
+	document.getElementById("messages").style.borderBottomRightRadius = "0";
 	chat = chatList[chatIndex];
 
 	mClassList(DOM.inputArea).contains("d-none", (elem) => elem.remove("d-none").add("d-flex"));
 	mClassList(DOM.messageAreaOverlay).add("d-none");
+	
 
 	[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
 
@@ -202,10 +213,11 @@ let generateMessageArea = (elem, chatIndex) => {
 				.filter(contact => groupMembers.indexOf(contact.id) !== -1)
 				.map(contact => contact.id === user.id ? "You" : contact.name)
 				.join(", ");
-		
+			
 		DOM.messageAreaDetails.innerHTML = `${memberNames}`;
 	} else {
-		DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
+		// DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
+		DOM.messageAreaDetails.innerHTML = chat.contact.courierNumber;
 	}
 
 	let msgs = chat.isGroup ? MessageUtils.getByGroupId(chat.group.id) : MessageUtils.getByContactId(chat.contact.id);
@@ -245,18 +257,37 @@ let sendMessage = () => {
 	generateChatList();
 };
 
-let showProfileSettings = () => {
-    // DOM.profileSettings.style.left = 0;
-    DOM.profileSettings.style.display = "block";
-	DOM.profilePic.src = user.pic;
-	DOM.inputName.value = user.name;
-};
 
-let hideProfileSettings = () => {
-    // DOM.profileSettings.style.left = "-110%";
-    DOM.profileSettings.style.display = "none";
-	DOM.username.innerHTML = user.name;
-};
+  function searchMessages() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchMessages");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("chat-list");
+    li = ul.getElementsByClassName("chat-list-item");
+    for (i = 0; i < li.length; i++) {
+        div = li[i].getElementsByClassName("searching-div")[0];
+        txtValue = div.textContent || div.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+// SHOW HIDE PROFILE SETTINGS
+
+// let showProfileSettings = () => {
+//     // DOM.profileSettings.style.left = 0;
+//     DOM.profileSettings.style.display = "block";
+// 	DOM.profilePic.src = user.pic;
+// 	DOM.inputName.value = user.name;
+// };
+
+// let hideProfileSettings = () => {
+//     // DOM.profileSettings.style.left = "-110%";
+//     DOM.profileSettings.style.display = "none";
+// 	DOM.username.innerHTML = user.name;
+// };
 
 window.addEventListener("resize", e => {
 	if (window.innerWidth > 575) showChatList();
