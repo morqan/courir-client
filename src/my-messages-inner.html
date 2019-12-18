@@ -1,5 +1,6 @@
 //= template/header.html
 //= template/head.html
+
 <div class="loader">
     <div class="loading-animation"></div>
 </div>
@@ -11,7 +12,7 @@
                 <div class="col-lg-3">
                     <ul class="nav  flex-lg-column account__btn" id="myOrderTab-1">
                         <li class="nav-item account__btn__item">
-                            <a class="btn btn-primary w-100 account__btn__link active" href="my-orders.html">
+                            <a class="btn  w-100 account__btn__link" href="my-orders.html">
                                 <div class="d-flex align-items-center">
                                     <i class="fab fa-first-order mr-2"></i>
                                     <span> Sifarişlərim</span>
@@ -19,10 +20,10 @@
                             </a>
                         </li>
                         <li class="nav-item account__btn__item">
-                            <a class="btn  w-100 account__btn__link"  href="my-messages.html">
+                            <a class="btn  btn-primary  w-100 account__btn__link active" href="my-messages.html">
                                 <div class="d-flex align-items-center">
                                     <i class="fab fa-first-order mr-2"></i>
-                                    <span>Mesajlarım</span>
+                                    <span> Mesajlarım</span>
                                 </div>
                             </a>
                         </li>
@@ -53,16 +54,20 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-9" id="myOrderTabContent-1">
+                <div class="col-lg-9" id="myMessages" class="my-messages">
 
-                    <div class="flex-grow-1 ml-lg-4 mt-3 mt-md-0">
-                        <!-- MY ORDERS -->
-                        <div id="my-order-1">
+                    <div class=" flex-grow-1 ml-lg-4 mt-3 mt-md-0">
+
+                        <!-- MY MESSAGES -->
+                        <div class="container" id="main-container">
+                            <div class="my-messages-inner">
+                                <div class="my-messages-inner__btn">
+                                    <a class="my-messages-inner__btn--left" href="my-messages.html">
+                                        <i class="fas fa-arrow-left "></i>
+                                    </a>
+                                    <div class="my-messages-inner__name">Order 2</div>
+                                </div>
                                 
-                            <div class=" account my-order bg-light mb-3">
-                                    <a class=" order-card__btn mb-3" href="my-orders.html">
-                                            <i class="fas fa-arrow-left "></i>
-                                        </a>
                                 <!--    MAP  START-->
                                 <div class="map">
                                     <div class=" divider-side divider__side d-lg-block transform-flip-y d-none"></div>
@@ -230,26 +235,20 @@
                                         </div>
 
                                     </form>
-                             
-
-
-                             
                             </div>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
 
 
-    <!-- <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up"
-    data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-    <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
-</a> -->
-
-    <script
+<script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
     </script>
     <script>
@@ -637,5 +636,4 @@
         window.onload = initialize;
     </script>
 
-//= template/foot.html
-//= template/footer.html
+    //= template/footer.html

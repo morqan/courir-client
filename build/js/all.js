@@ -345,65 +345,121 @@ let user = {
 	id: 0,
 	name: "Anish",
 	number: "Kuryer name",
-	pic: "img/asdsd12f34ASd231.png"
+	pic: "img/asdsd12f34ASd231.png",
+	courierNumber: "+994 50 3332211",
+	orderNumber: 'Order No 1'
 };
 
 let contactList = [
 	{
 		id: 0,
 		name: "Anish",
-		number: "+91 91231 40293",
+		number: "+994 50 3332211",
 		pic: "img/asdsd12f34ASd231.png",
-		lastSeen: "Apr 29 2018 17:58:02"
+		lastSeen: "Apr 29 2018 17:58:02",
+		courierNumber: "+994 50 3332211",
+		orderNumber: 'Order No 1'
 	},
 	{
 		id: 1,
 		name: "Nitin",
 		number: "Kuryer name",
 		pic: "img/Ass09123asdj9dk0qw.jpg",
-		lastSeen: "+91 91231 40293"
+		lastSeen: "Apr 29 2018 17:58:02",
+		courierNumber: "+994 70 5552233",
+		orderNumber: 'Order No 2'
 	},
 	{
 		id: 2,
 		name: "Sanjay",
 		number: "Kuryer name",
 		pic: "img/asd1232ASdas123a.png",
-		lastSeen: "Apr 28 2018 19:23:16"
+		lastSeen: "Apr 28 2018 19:23:16",
+		courierNumber: "+994 70 1112233",
+		orderNumber: 'Order No 3'
 	},
 	{
 		id: 3,
 		name: "Suvro Mobile",
 		number: "+91 98232 63547",
 		pic: "img/Alsdk120asdj913jk.jpg",
-		lastSeen: "Apr 29 2018 11:16:42"
+		lastSeen: "Apr 29 2018 11:16:42",
+		courierNumber: "+994 55 44874433",
+		orderNumber: 'Order No 4'
 	},
 	{
 		id: 4,
 		name: "Dee",
 		number: "+91 72781 38213",
 		pic: "img/dsaad212312aGEA12ew.png",
-		lastSeen: "Apr 27 2018 17:28:10"
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 5,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 6,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 7,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
 	}
 ];
 
 let groupList = [
 	{
 		id: 1,
-		name: "Order No",
+		name: "Group",
 		members: [0, 1, 3],
-		pic: "img/0923102932_aPRkoW.jpg"
+		pic: "img/0923102932_aPRkoW.jpg",
+		orderNumber: "Order No 15"
 	},
 	{
 		id: 2,
 		name: "Web Developers",
 		members: [0, 2],
-		pic: "img/1921231232_Ag1asE.png"
+		pic: "img/1921231232_Ag1asE.png",
+		orderNumber: "Order No 14"
 	},
 	{
 		id: 3,
 		name: "notes",
-		members: [0],
-		pic: "img/8230192232_asdEWq2.png"
+		members: [0,4,5],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 13'
+	},
+	{
+		id: 4,
+		name: "notes",
+		members: [0,4,7],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 12'
+	},
+	{
+		id: 5,
+		name: "notes",
+		members: [0,3,5],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 11'
 	}
 ];
 
@@ -416,17 +472,17 @@ let messages = [
 		body: "where are you, buddy?",
 		time: "April 25, 2018 13:21:03",
 		status: 2,
-		recvId: 0,
+		recvId: 3,
 		recvIsGroup: false
 	},
 	{
 		id: 1,
-		sender: 0,
+		sender: 3,
 		body: "at home",
 		time: "June 25, 2018 13:22:03",
 		status: 2,
 		recvId: 2,
-		recvIsGroup: false
+		recvIsGroup: true
 	},
 	{
 		id: 2,
@@ -435,7 +491,7 @@ let messages = [
 		time: "April 25, 2018 18:15:23",
 		status: 2,
 		recvId: 3,
-		recvIsGroup: false
+		recvIsGroup: true
 	},
 	{
 		id: 3,
@@ -453,7 +509,7 @@ let messages = [
 		time: "April 26, 2018 09:17:03",
 		status: 1,
 		recvId: 3,
-		recvIsGroup: false
+		recvIsGroup: true
 	},
 	{
 		id: 5,
@@ -474,12 +530,12 @@ let messages = [
 		recvIsGroup: false
 	},
 	{
-		id: 7,
-		sender: 0,
+		id: 0,
+		sender: 3,
 		body: "are you going to the party tonight?",
 		time: "April 27, 2018 08:11:21",
 		status: 2,
-		recvId: 2,
+		recvId: 0,
 		recvIsGroup: false
 	},
 	{
@@ -498,24 +554,24 @@ let messages = [
 		time: "June 27, 2018 08:31:23",
 		status: 1,
 		recvId: 2,
-		recvIsGroup: false
+		recvIsGroup: true
 	},
 	{
 		id: 10,
 		sender: 0,
 		body: "if you go to the movie, then give me a call",
 		time: "April 27, 2018 22:41:55",
-		status: 2,
+		status: 7,
 		recvId: 4,
-		recvIsGroup: false
+		recvIsGroup: true
 	},
 	{
 		id: 11,
-		sender: 1,
+		sender: 5,
 		body: "yeah, i'm online",
 		time: "April 28 2018 17:10:21",
-		status: 0,
-		recvId: 1,
+		status: 6,
+		recvId: 2,
 		recvIsGroup: true
 	}
 ];
@@ -1372,6 +1428,8 @@ let chatList = [];
 // in the message area
 let lastDate = "";
 
+
+
 // 'populateChatList' will generate the chat list
 // based on the 'messages' in the datastore
 let populateChatList = () => {
@@ -1389,13 +1447,16 @@ let populateChatList = () => {
 		
 		chat.isGroup = msg.recvIsGroup;
 		chat.msg = msg;
+		
 
 		if (msg.recvIsGroup) {
 			chat.group = groupList.find((group) => (group.id === msg.recvId));
 			chat.name = chat.group.name;
+			chat.orderNumber= chat.group.orderNumber;
 		} else {
 			chat.contact = contactList.find((contact) => (msg.sender !== user.id) ? (contact.id === msg.sender) : (contact.id === msg.recvId));
 			chat.name = chat.contact.name;
+			chat.orderNumber = chat.contact.orderNumber;
 		}
 
 		chat.unread = (msg.sender !== user.id && msg.status < 2) ? 1: 0;
@@ -1411,20 +1472,24 @@ let populateChatList = () => {
 };
 
 let viewChatList = () => {
+	
 	DOM.chatList.innerHTML = "";
 	chatList
 	.sort((a, b) => mDate(b.msg.time).subtract(a.msg.time))
 	.forEach((elem, index) => {
 		let statusClass = elem.msg.status < 2 ? "far" : "fas";
 		let unreadClass = elem.unread ? "unread" : "";
-
+		let orderNumber = elem.orderNumber;
 		DOM.chatList.innerHTML += `
-		<div class="chat-list-item d-flex flex-row w-100 p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
+		<div class="chat-list-item   w-100 p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
 			<img src="${elem.isGroup ? elem.group.pic : elem.contact.pic}" alt="Profile Photo" class="img-fluid rounded-circle mr-2" style="height:50px;">
-			<div class="w-50">
-				<div class="name">${elem.name}</div>
-				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).number + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
+			<div class=" messages-searching-div">
+				<div class="order-number">${orderNumber}</div>
+				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).name + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
 			</div>
+			<a class="messages__btn color-purple" href="my-messages-inner.html">
+                                                                <i class="fas fa-arrow-right "></i>
+                                                            </a>
 			<div class="flex-grow-1 text-right">
 				<div class="small time">${mDate(elem.msg.time).chatListFormat()}</div>
 				${elem.unread ? "<div class=\"badge badge-success badge-pill my-badge small\" id=\"unread-count\">" + elem.unread + "</div>" : ""}
@@ -1456,7 +1521,7 @@ let addMessageToMessageArea = (msg) => {
 
 	let htmlForGroup = `
 	<div class="small font-weight-bold text-primary">
-		${contactList.find(contact => contact.id === msg.sender).number}
+		${contactList.find(contact => contact.id === msg.sender).name}
 	</div>
 	`;
 
@@ -1482,10 +1547,12 @@ let addMessageToMessageArea = (msg) => {
 };
 
 let generateMessageArea = (elem, chatIndex) => {
+	document.getElementById("messages").style.borderBottomRightRadius = "0";
 	chat = chatList[chatIndex];
 
 	mClassList(DOM.inputArea).contains("d-none", (elem) => elem.remove("d-none").add("d-flex"));
 	mClassList(DOM.messageAreaOverlay).add("d-none");
+	
 
 	[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
 
@@ -1516,10 +1583,11 @@ let generateMessageArea = (elem, chatIndex) => {
 				.filter(contact => groupMembers.indexOf(contact.id) !== -1)
 				.map(contact => contact.id === user.id ? "You" : contact.name)
 				.join(", ");
-		
+			
 		DOM.messageAreaDetails.innerHTML = `${memberNames}`;
 	} else {
-		DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
+		// DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
+		DOM.messageAreaDetails.innerHTML = chat.contact.courierNumber;
 	}
 
 	let msgs = chat.isGroup ? MessageUtils.getByGroupId(chat.group.id) : MessageUtils.getByContactId(chat.contact.id);
@@ -1559,18 +1627,37 @@ let sendMessage = () => {
 	generateChatList();
 };
 
-let showProfileSettings = () => {
-    // DOM.profileSettings.style.left = 0;
-    DOM.profileSettings.style.display = "block";
-	DOM.profilePic.src = user.pic;
-	DOM.inputName.value = user.name;
-};
 
-let hideProfileSettings = () => {
-    // DOM.profileSettings.style.left = "-110%";
-    DOM.profileSettings.style.display = "none";
-	DOM.username.innerHTML = user.name;
-};
+  function searchMessages() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchMessages");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("chat-list");
+    li = ul.getElementsByClassName("chat-list-item");
+    for (i = 0; i < li.length; i++) {
+        div = li[i].getElementsByClassName("searching-div")[0];
+        txtValue = div.textContent || div.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+// SHOW HIDE PROFILE SETTINGS
+
+// let showProfileSettings = () => {
+//     // DOM.profileSettings.style.left = 0;
+//     DOM.profileSettings.style.display = "block";
+// 	DOM.profilePic.src = user.pic;
+// 	DOM.inputName.value = user.name;
+// };
+
+// let hideProfileSettings = () => {
+//     // DOM.profileSettings.style.left = "-110%";
+//     DOM.profileSettings.style.display = "none";
+// 	DOM.username.innerHTML = user.name;
+// };
 
 window.addEventListener("resize", e => {
 	if (window.innerWidth > 575) showChatList();

@@ -15,20 +15,51 @@
 
 #main-container {
 	width: 100%;
-	height: 100vh;
+	// height: 100vh;
+	height: 500px;
+	// @include respondmax(md) {
+    //    height: 350px;
+    // }
 }
 
 #message-navbar {
 	background: $color-primary;
 }
+.messages-searching-div{
+	width: 130px !important;
+}
 
 .dropdown-toggle::after {
 	display: none;
 }
+#chat-list {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 386px;
+	border-left: 2px solid $color-secondary;
+	border-bottom: 2px solid $color-secondary;
+	border-bottom-left-radius: 10px;
+	@include respondmax(md) {
+		// max-height: 234px;
+		border-right: 2px solid $color-secondary;
+		
+	}
+	@include respondmax(sm) {
+		
+		border-bottom-right-radius: 10px;
+	}
+	
+}
+#chat-list-area {
 
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
 .chat-list-item {
 	background: white;
 	cursor: pointer;
+	display: flex;
+	flex-direction: row;
 }
 
 .chat-list-item:hover {
@@ -61,18 +92,31 @@
 
 #message-area {
 	border-left: 1px solid white;
+
 }
 
 #message-area .overlay {
 	background: hsl(0, 0%, 80%);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	@include respondmax(sm) {
+		border-bottom-left-radius: 10px;
+	}
 }
 
 #input-area {
 	background: hsl(0, 0%, 95%);
+	border-bottom-right-radius: 10px;
+	@include respondmax(sm) {
+		border-bottom-left-radius: 10px;
+	}
 }
 
 #input-area #input {
 	outline: none;
+	@include respondmax(md) {
+       width: 100%;
+    }
 }
 
 .message-item {
@@ -104,6 +148,7 @@
 	flex: 1!important;
 	background: hsl(0, 0%, 80%);
 	overflow: auto;
+	border-bottom-right-radius: 10px;
 }
 
 #profile-settings {
@@ -141,4 +186,62 @@
 	top: 0;
 	left: 0;
 	z-index: 99;
+}
+
+.my-messages{
+	&__navbar{
+border-top-left-radius: 10px;
+@include respondmax(sm) {
+	border-top-right-radius: 10px;
+}
+	}
+	&__div {
+		display: block;
+		width: 100%;
+		padding: .5rem;
+		padding-bottom: 0;
+		&--input {
+width: 100%;
+height: 40px;
+border-radius: 10px;
+padding-left: 10px;
+outline: none;
+border: none;
+		}
+	}
+}
+.message-area {
+	&__navbar{
+		border-top-right-radius: 10px;
+		@include respondmax(sm) {
+			border-top-left-radius: 10px;
+		}
+			}
+}
+
+.my-messages-inner {
+	
+	&__btn {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		background-color: $color-primary;
+		color: #ffffff;
+		height: 65px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		&--left{
+			margin-left: 20px;
+			color: #ffffff;
+			padding: 5px;
+			font-size: 20px;
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+	&__name {
+		font-size: 20px;
+		margin-left: 10px;
+	}
 }

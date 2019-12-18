@@ -1,3 +1,4 @@
+//= template/header.html
 //= template/head.html
 
 <div class="loader">
@@ -53,17 +54,17 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-9" id="myOrderTabContent-1">
+                <div class="col-lg-9" id="myMessages" class="my-messages">
 
                     <div class=" flex-grow-1 ml-lg-4 mt-3 mt-md-0">
 
                         <!-- MY MESSAGES -->
                         <div class="container" id="main-container">
                             <div class="row h-100">
-                                <div class="col-12 col-sm-5 col-md-5 d-flex flex-column" id="chat-list-area" style="position:relative;">
+                                <div class="col-12 col-sm-6 col-md-5 d-flex flex-column" id="chat-list-area" style="position:relative;">
                     
                                     <!-- Navbar -->
-                                    <div class="row d-flex flex-row align-items-center p-2" id="message-navbar">
+                                    <div class="row d-flex flex-row align-items-center p-2 my-messages__navbar" id="message-navbar">
                                         <img alt="Profile Photo" class="img-fluid rounded-circle mr-2" style="height:50px; cursor:pointer;" onclick="showProfileSettings()" id="display-pic">
                                         <div class="text-white font-weight-bold" id="username"></div>
                                         <div class="nav-item dropdown ml-auto">
@@ -76,10 +77,13 @@
                                                 <a class="dropdown-item" href="#">Log Out</a>
                                             </div>
                                         </div>
+                                        <div class="my-messages__div">
+                                            <input type="text" class="my-messages__div--input" id="searchMessages" onkeyup="searchMessages()" placeholder="Search messages">
+                                        </div>
                                     </div>
                     
                                     <!-- Chat List -->
-                                    <div class="row" id="chat-list" style="overflow:auto;"></div>
+                                    <div class="row" id="chat-list"></div>
                     
                                     <!-- Profile Settings -->
                                     <div class=" flex-column w-100 h-100" id="profile-settings">
@@ -107,11 +111,11 @@
                                 </div>
                     
                                 <!-- Message Area -->
-                                <div class="d-none d-sm-flex flex-column col-12 col-sm-7 col-md-7 p-0 h-100" id="message-area">
+                                <div class="d-none d-sm-flex flex-column col-12 col-sm-6 col-md-7 p-0 h-100" id="message-area">
                                     <div class="w-100 h-100 overlay"></div>
                     
                                     <!-- Navbar -->
-                                    <div class="row d-flex flex-row align-items-center p-2 m-0 w-100" id="message-navbar">
+                                    <div class="row d-flex flex-row align-items-center p-2 m-0 w-100 message-area__navbar" id="message-navbar">
                                         <div class="d-block d-sm-none">
                                             <i class="fas fa-arrow-left p-2 mr-2 text-white" style="font-size: 1.5rem; cursor: pointer;" onclick="showChatList()"></i>
                                         </div>
@@ -155,4 +159,4 @@
     <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
 </a> -->
 
-//= template/footer.html
+    //= template/footer.html
