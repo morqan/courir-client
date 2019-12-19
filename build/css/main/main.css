@@ -3531,7 +3531,8 @@ p + p {
      -moz-box-orient: horizontal;
      -moz-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  width: 85%; }
 
 .chat-list-item:hover {
   background: #f2f2f2; }
@@ -3627,6 +3628,38 @@ p + p {
      -moz-border-radius-bottomright: 10px;
           border-bottom-right-radius: 10px; }
 
+.messages__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15%;
+  height: 100%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer; }
+  .messages__btn:hover {
+    text-decoration: none; }
+  .messages__btn .fa-share-square {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
 #profile-settings {
   display: none;
   position: absolute;
@@ -3697,38 +3730,65 @@ p + p {
          -moz-border-radius-topleft: 10px;
               border-top-left-radius: 10px; } }
 
-.my-messages-inner__btn {
+.my-messages-inner {
+  height: 500px; }
+  .my-messages-inner__map-group {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 435px;
+    overflow-y: scroll;
+    padding: 20px;
+    background-color: #fff; }
+  .my-messages-inner__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: #7b2bfc;
+    color: #ffffff;
+    height: 65px;
+    -webkit-border-top-right-radius: 10px;
+       -moz-border-radius-topright: 10px;
+            border-top-right-radius: 10px; }
+    .my-messages-inner__btn--left {
+      margin-left: 20px;
+      color: #ffffff;
+      padding: 5px;
+      font-size: 20px;
+      cursor: pointer; }
+      .my-messages-inner__btn--left:hover {
+        color: #ffffff; }
+    .my-messages-inner__btn--group {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 65px; }
+  .my-messages-inner__name {
+    font-size: 20px;
+    margin-left: 10px; }
+
+.chat-list-group {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  background-color: #7b2bfc;
-  color: #ffffff;
-  height: 65px;
-  -webkit-border-top-left-radius: 10px;
-     -moz-border-radius-topleft: 10px;
-          border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-     -moz-border-radius-topright: 10px;
-          border-top-right-radius: 10px; }
-  .my-messages-inner__btn--left {
-    margin-left: 20px;
-    color: #ffffff;
-    padding: 5px;
-    font-size: 20px; }
-    .my-messages-inner__btn--left:hover {
-      color: #ffffff; }
-
-.my-messages-inner__name {
-  font-size: 20px;
-  margin-left: 10px; }
+  display: flex; }
 
 /*! WEBCODER - http://webcoder.az/ Mehemmed Memmedli  16 Aprel 2018  https://github.com/nemerki */
 /* ==========================================================================
