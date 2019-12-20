@@ -60,6 +60,7 @@
 	cursor: pointer;
 	display: flex;
 	flex-direction: row;
+	width: 85%;
 }
 
 .chat-list-item:hover {
@@ -150,7 +151,25 @@
 	overflow: auto;
 	border-bottom-right-radius: 10px;
 }
-
+.messages {
+	&__btn {
+		display: flex;
+		width: 15%;
+		height: 100%;
+		
+		align-self: center;
+		justify-content: center;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			text-decoration: none;
+		}
+		.fa-share-square{
+			display: flex;
+    align-self: center;
+		}
+	}
+}
 #profile-settings {
     display: none;
 	position: absolute;
@@ -220,28 +239,56 @@ border: none;
 }
 
 .my-messages-inner {
+	height: 500px;
+	&__map-group {
+		display: none;
+		position: absolute;
+	top: 65px;
+	left: 0;
+height: 435px;
+overflow-y: scroll;
+padding: 20px;
+background-color: #fff;
+	}
+	// &__form{
+	// 	overflow-y: scroll;
+	// 	height: 435px;
+	// }
 	
 	&__btn {
-		display: flex;
+		
+		position: absolute;
+	top: 0;
+	left: 0;
+		display: none;
 		align-items: center;
 		width: 100%;
 		background-color: $color-primary;
 		color: #ffffff;
 		height: 65px;
-		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		&--left{
 			margin-left: 20px;
 			color: #ffffff;
 			padding: 5px;
 			font-size: 20px;
+			cursor: pointer;
 			&:hover {
 				color: #ffffff;
 			}
+		}
+		&--group {
+			display: flex;
+			align-items: center;
+			height: 65px;
 		}
 	}
 	&__name {
 		font-size: 20px;
 		margin-left: 10px;
 	}
+}
+.chat-list-group{
+	width: 100%;
+	display: flex;
 }
