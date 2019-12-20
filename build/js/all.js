@@ -1707,8 +1707,6 @@ let showMap = (elem) => {
 	}
 };
 
-
-
 let hideMap = () => {
 
 
@@ -1739,7 +1737,7 @@ let init = () => {
 	DOM.inputName.addEventListener("blur", (e) => user.name = e.target.value);
 	generateChatList();
 
-	console.log("Click the Image at top-left to open settings.");
+	// console.log("Click the Image at top-left to open settings.");
 };
 
 init();

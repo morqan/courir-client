@@ -2814,6 +2814,10 @@ label.error {
     top: 0;
     opacity: 0; }
 
+@media (max-width: 991px) {
+  .account-sign-in-cover2 {
+    min-height: 65vh !important; } }
+
 .account-sign-in-cover2__label {
   display: block;
   position: relative;
@@ -2830,7 +2834,8 @@ label.error {
     height: 0;
     width: 0; }
     .account-sign-in-cover2__label input:checked ~ span {
-      background-color: #7b2bfc; }
+      background-color: #7b2bfc;
+      border: none; }
     .account-sign-in-cover2__label input:checked ~ span::after {
       display: block; }
   .account-sign-in-cover2__label span {
@@ -2839,7 +2844,11 @@ label.error {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee; }
+    background-color: #eee;
+    border: 2px solid #7b2bfc;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px; }
     .account-sign-in-cover2__label span::after {
       content: "";
       position: absolute;
@@ -2868,6 +2877,10 @@ label.error {
 
 .membership:hover {
   text-decoration: none; }
+
+@media (max-width: 991px) {
+  .account-form {
+    margin-top: 90px; } }
 
 .inpBtn {
   display: -webkit-box;
@@ -3486,7 +3499,10 @@ p + p {
   background: #7b2bfc; }
 
 .messages-searching-div {
-  width: 130px !important; }
+  min-width: 130px !important; }
+  @media (max-width: 1199px) {
+    .messages-searching-div {
+      min-width: 92px !important; } }
 
 .dropdown-toggle::after {
   display: none; }
@@ -3695,6 +3711,14 @@ p + p {
   left: 0;
   z-index: 99; }
 
+@media (max-width: 991px) {
+  #myMessages {
+    padding-top: 20px; } }
+
+@media (max-width: 767px) {
+  #myMessages {
+    padding-top: 0; } }
+
 .my-messages__navbar {
   -webkit-border-top-left-radius: 10px;
      -moz-border-radius-topleft: 10px;
@@ -3758,6 +3782,11 @@ p + p {
     -webkit-border-top-right-radius: 10px;
        -moz-border-radius-topright: 10px;
             border-top-right-radius: 10px; }
+    @media (max-width: 575px) {
+      .my-messages-inner__btn {
+        -webkit-border-top-left-radius: 10px;
+           -moz-border-radius-topleft: 10px;
+                border-top-left-radius: 10px; } }
     .my-messages-inner__btn--left {
       margin-left: 20px;
       color: #ffffff;

@@ -1,4 +1,8 @@
 .account-sign-in-cover2 {
+
+    @include respondmax(lg){
+        min-height: 65vh !important;
+    }
     &__label {
         display: block;
         position: relative;
@@ -16,6 +20,7 @@
 
             &:checked ~ span{
                 background-color: $color-primary;
+                border: none;
             }
 
             &:checked ~ span::after {
@@ -31,6 +36,8 @@
             height: 25px;
             width: 25px;
             background-color: #eee;
+         border: 2px solid $color-primary;
+         border-radius: 5px;
          
         
 
@@ -75,5 +82,10 @@
 .membership {
     &:hover{
         text-decoration: none;
+    }
+}
+.account-form {
+    @include respondmax(lg){
+        margin-top: 90px;
     }
 }
