@@ -23,10 +23,16 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
   <!-- <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css"> -->
-  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+
+<!--  FILEPOND -->
+<link rel="stylesheet" href="assets/css/filepond.css">
+<link rel="stylesheet" href="assets/css/filepond-plugin-image-preview.css">
+
+<!--  PARSLEY -->
   <link rel="stylesheet" href="libs/parsleyjs/src/parsley.css">
 
 
@@ -35,13 +41,16 @@
   <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.default.min.css">
 
   <!-- SWIPER  -->
-  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css"> -->
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
 
   <!-- intlTelInput -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css">
+  <!-- <link rel="stylesheet" href="assets/css/intlTelInput.css"> -->
 
   <!-- LIGHTGALLERY -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"> -->
+  <link rel="stylesheet" href="assets/css/lightgallery.min.css">
 
 
   <link rel="stylesheet" href="css/main/main.css">
@@ -664,20 +673,22 @@
   <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
     <script src="libs/jquery/dist/jquery.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   ></script>
   <!-- SWIPER -->
-    <script src="https://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script> -->
+    <script src="assets/js/swiper.jquery.min.js"></script>
   
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js"></script> -->
+    <script src="assets/js/typeahead.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
   <!-- <script src="libs/bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script> -->
   <!-- <script type="text/javascript" src="assets/js/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="assets/js/popper.min.js"></script> -->
+  <script type="text/javascript" src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.js"></script>
   
   <!-- 
@@ -747,13 +758,16 @@
   <!-- OUR FOOTER -->
   
   <!-- FILEPOND -->
-  <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
-  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
-  <script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
-  <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
-  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+  
+  <script src="assets/js/filepond-plugin-file-validate-type.js"></script>
+  <script src="assets/js/filepond-plugin-image-preview.js"></script>
+  <script src="assets/js/filepond-plugin-image-resize.js"></script>
+  <script src="assets/js/filepond-plugin-image-transform.js"></script>
+  <script src="assets/js/filepond-plugin-image-crop.js"></script>
+  <script src="assets/js/filepond.js"></script>
+  
+  <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script> -->
+  <script src="assets/js/jquery-ui.min.js"></script>
   
   
   <!--  Owl carousel -->
@@ -762,36 +776,52 @@
   <!-- MOMENT JS -->
   <script src="libs/moment/moment.js"></script>
   <script src="libs/moment/locale/az.js"></script>
+  
   <!-- PARSLEY -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.js"></script> -->
+  <script src="assets/js/parsley.js"></script>
   
   
   <!-- intlTelInput  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.min.js"></script>
+  <!-- <script src="assets/js/intlTelInput.min.js"></script> -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput-jquery.min.js"></script>
+  <!-- <script src="../assets/js/intlTelInput-jquery.min.js"></script> -->
   
   
   
   <!-- JQUERY MASK -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script> -->
+  <script src="assets/js/jquery.mask.js"></script>
   
   <!-- AUTOCOMPLETE  -->
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js"></script> -->
+  <script src="assets/js/autocomplete.min.js"></script>
   
   <!--  LIGHTGALLERY-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script> -->
+  <script src="assets/js/lightgallery.min.js"></script>
   
   <!--  DATEPICKER LANGUAGE  WHICH IS LAST -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-en-AU.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-en-AU.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ru.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-az.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-az.min.js"></script> -->
+  
+  <script src="assets/js/datepicker-en-AU.min.js"></script>
+  <script src="assets/js/datepicker-ru.min.js"></script>
+  <script src="assets/js/datepicker-az.min.js"></script>
   
   <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
+  <script src="assets/js/jquery.mousewheel.min.js"></script>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script> -->
+  <script src="assets/js/lg-thumbnail.min.js"></script>
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script> -->
+  <script src="assets/js/lg-fullscreen.min.js"></script>
   
   
   <script>

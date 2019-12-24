@@ -2341,19 +2341,24 @@ label.error {
       font-weight: normal;
       font-size: 8px; }
   .index__content__div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
     border: 1px solid #f5f5f5;
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
-    padding: 10px; }
+    padding: 10px;
+    overflow: auto; }
     .index__content__div--img {
-      width: 200px;
-      margin: 10px; }
+      width: 150px;
+      margin: 10px;
+      margin-bottom: 0;
+      float: left; }
+      @media (max-width: 991px) {
+        .index__content__div--img {
+          margin-left: 0;
+          margin-top: 0; } }
+      @media (max-width: 575px) {
+        .index__content__div--img {
+          width: 100px; } }
   .index__search__content__1 {
     display: -webkit-box;
     display: -webkit-flex;
