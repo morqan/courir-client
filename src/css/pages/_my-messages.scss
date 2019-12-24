@@ -26,7 +26,12 @@
 	background: $color-primary;
 }
 .messages-searching-div{
-	width: 130px !important;
+	min-width: 130px !important;
+	@include respondmax(xl) {
+		min-width: 92px !important
+		
+	}
+	
 }
 
 .dropdown-toggle::after {
@@ -207,6 +212,15 @@
 	z-index: 99;
 }
 
+#myMessages{
+	@include respondmax(lg) {
+		padding-top: 20px;
+	}
+	@include respondmax(md) {
+		padding-top: 0;
+	}
+}
+
 .my-messages{
 	&__navbar{
 border-top-left-radius: 10px;
@@ -267,6 +281,11 @@ background-color: #fff;
 		color: #ffffff;
 		height: 65px;
 		border-top-right-radius: 10px;
+
+		@include respondmax(sm) {
+		
+			border-top-left-radius: 10px;
+		}
 		&--left{
 			margin-left: 20px;
 			color: #ffffff;
