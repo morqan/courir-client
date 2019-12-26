@@ -1,4 +1,6 @@
+// FOR INDEX
 
+// PAYMENT METHODS START
 function DropDown(el) {
     this.dd = el;
     this.placeholder = this.dd.children('div');
@@ -51,3 +53,5 @@ $(function () {
         $('.payment__wrap-drop').removeClass('active');
     });
 });
+
+// PAYMENT METHODS END

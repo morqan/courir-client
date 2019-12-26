@@ -49,8 +49,8 @@
   <!-- <link rel="stylesheet" href="assets/css/intlTelInput.css"> -->
 
   <!-- LIGHTGALLERY -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"> -->
-  <link rel="stylesheet" href="assets/css/lightgallery.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/lightgallery.min.css"> -->
 
 
   <link rel="stylesheet" href="css/main/main.css">
@@ -220,7 +220,7 @@
                   aria-haspopup="true" aria-expanded="false">
 
                   <div class="avatar-container">
-                    <img src="assets/img/avatars/female-1.jpg" alt="Avatar" class="avatar avatar-xs">
+                    <img src="img/user-default-img.png" alt="Avatar" class="avatar avatar-xs">
 
 
                     <!-- AVATAR BADGE  -->
@@ -521,7 +521,7 @@
                 <div class="form-text">
                     <div class="form-group form__group">
                         <label for="startPlace" class="form-label form__label">From :</label>
-                       
+
                         <input type="text" name="from" class="form-control form__control" id="startPlace"
                             placeholder="Insert pick-up address" required>
 
@@ -530,7 +530,7 @@
                     <input type="hidden" id="startPlaceLng">
                     <div class="form-group form__group">
                         <label for="endPlace" class="form-label form__label">Destination :</label>
-                      
+
                         <input type="text" name="destination" class="form-control form__control" id="endPlace"
                             placeholder="Insert Delivery address" required>
 
@@ -544,19 +544,22 @@
 
                 <!-- CAR START-->
                 <label class="form-label form__label">Daşıma növünü seçin :</label>
-               
+
                 <!-- SWIPE START -->
                 <div class="tabcontainer">
 
                     <!-- swiper1 -->
                     <div id="tabs" class="swiper-container swiper-tabs">
                         <div class="tablist swiper-wrapper  car-pills " role="tablist">
-                            <div id="car-tab-courier" class="tablist__tab swiper-slide active" data-hash="car-tab-courier"
-                                data-rel="panel-courier" aria-selected="true" aria-controls="panel-courier" role="tab">Kuryer</div>
-                            <div id="car-tab-evacutor" class="tablist__tab swiper-slide" data-hash="car-tab-evacutor" data-rel="panel-evacuator"
-                                aria-selected="false" aria-controls="panel-evacuator" role="tab">Evakuator</div>
-                            <div id="car-tab-truck" class="tablist__tab swiper-slide" data-hash="car-tab-truck" data-rel="panel-truck"
-                                aria-selected="false" aria-controls="panel-truck" role="tab">Yük maşını</div>
+                            <div id="car-tab-courier" class="tablist__tab swiper-slide active"
+                                data-hash="car-tab-courier" data-rel="panel-courier" aria-selected="true"
+                                aria-controls="panel-courier" role="tab">Kuryer</div>
+                            <div id="car-tab-evacutor" class="tablist__tab swiper-slide" data-hash="car-tab-evacutor"
+                                data-rel="panel-evacuator" aria-selected="false" aria-controls="panel-evacuator"
+                                role="tab">Evakuator</div>
+                            <div id="car-tab-truck" class="tablist__tab swiper-slide" data-hash="car-tab-truck"
+                                data-rel="panel-truck" aria-selected="false" aria-controls="panel-truck" role="tab">Yük
+                                maşını</div>
                         </div>
                     </div>
 
@@ -564,12 +567,13 @@
                     <div id="panels" class="swiper-container swiper-tabs-panel">
                         <div class="tabpanels swiper-wrapper">
                             <div class="swiper-slide">
-                                <div id="panel-courier" class="tabpanels__panel" aria-labelledby="car-tab-courier" role="tabpanel">
+                                <div id="panel-courier" class="tabpanels__panel" aria-labelledby="car-tab-courier"
+                                    role="tabpanel">
                                     <div class="pills-car-1__div">
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide " type="radio" name="transition" data-id="transition"
-                                                id="pedestrian" checked="checked" />
+                                            <input class="car-pills__input car-hide " type="radio" name="transition"
+                                                data-id="transition" id="pedestrian" checked="checked" />
                                             <label class="car-pills__label1" for="pedestrian">
                                                 <img src="img/pedestrian.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Piyada</span>
@@ -578,8 +582,8 @@
 
                                         <div class="form-group  car-pills__form-group">
 
-                                            <input class="car-pills__input car-hide" type="radio" name="transition"  data-id="transition"
-                                                id="motorbike" />
+                                            <input class="car-pills__input car-hide" type="radio" name="transition"
+                                                data-id="transition" id="motorbike" />
                                             <label class="car-pills__label1" for="motorbike">
                                                 <img src="img/motorbike.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Motosiklet</span>
@@ -587,8 +591,8 @@
 
                                         </div>
                                         <div class="form-group  car-pills__form-group">
-                                            <input class="car-pills__input car-hide" type="radio" name="transition" id="car"  data-id="transition"
-                                                required />
+                                            <input class="car-pills__input car-hide" type="radio" name="transition"
+                                                id="car" data-id="transition" required />
                                             <label class="car-pills__label1" for="car">
                                                 <img src="img/car.png" alt="car" class="car-pills__label1--img">
                                                 <span class="car-pills__label1--span">Avtomobil</span>
@@ -619,7 +623,7 @@
                                             <div class="info__div--time">
                                                 <span>Çatdırılma vaxtı</span>
                                                 <span class="time-span"> <i class="fas fa-clock mr-1"></i>
-                                                    <span class="time">0 dəq</span>
+                                                    <span class="transition-time">0 dəq</span>
                                                 </span>
                                             </div>
 
@@ -636,10 +640,11 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel-evacuator" class="tabpanels__panel" aria-labelledby="car-tab-evacutor" role="tabpanel">
+                                <div id="panel-evacuator" class="tabpanels__panel" aria-labelledby="car-tab-evacutor"
+                                    role="tabpanel">
                                     <div class="form-group">
-                                        <input class="car-pills__input car-hide" type="radio" name="transition" data-id="transition"
-                                            id="evacuator" />
+                                        <input class="car-pills__input car-hide" type="radio" name="transition"
+                                            data-id="transition" id="evacuator" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group">
                                                 <img src="img/evacuator.png" alt="car" class="car-pills__label2--img">
@@ -653,7 +658,7 @@
                                                 </span>
                                                 <span class="time-span">
                                                     <i class="fas fa-clock mr-1"></i>
-                                                    <span class="time">10 dəq</span>
+                                                    <span class="transition-time">10 dəq</span>
                                                 </span>
                                                 <span class="price-span">
                                                     <i class="fa fa-coins mr-1 ml-auto"></i>
@@ -669,9 +674,11 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div id="panel-truck" class="tabpanels__panel" aria-labelledby="car-tab-truck" role="tabpanel">
+                                <div id="panel-truck" class="tabpanels__panel" aria-labelledby="car-tab-truck"
+                                    role="tabpanel">
                                     <div class="form-group ">
-                                        <input class="car-pills__input " type="radio" name="transition" id="truck"  data-id="transition" />
+                                        <input class="car-pills__input " type="radio" name="transition" id="truck"
+                                            data-id="transition" />
                                         <div class="car-pills__label2">
                                             <div class="car-pills__label2__img-group"> <img src="img/transit.png"
                                                     alt="car" class="car-pills__label2--img"><span
@@ -682,7 +689,7 @@
                                             <div class="info2">
 
                                                 <span class="distance"><i class="fas fa-route mr-1"></i>5.6km</span>
-                                                <span class="time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
+                                                <span class="transition-time"><i class="fas fa-clock mr-1"></i>15 dəq</span>
                                                 <span class="price-truck"><i class="fa fa-coins mr-1"></i>225</span>
                                             </div>
                                         </div>
@@ -707,7 +714,7 @@
                 <div id="receiver">
                     <div class="form-group form__group">
                         <label for="contact-name" class="form-label form__label">Receiver :</label>
-                      
+
                         <input type="text" name="contact-name" class="form-control form__control " id="contact-name"
                             placeholder="Mammad Mammadov">
                         <div class="invalid-feedback">
@@ -715,32 +722,35 @@
                         </div>
                     </div>
                     <div class="form-group form__group ">
-                        <label for="phone" class="d-block form-label form__label">Receiver number :</label>
-                        
-                        <input type="text" class="form-control form__control"  id="phoneNumber" >
-                                
-                                    <span id="valid-msg" class="valid-hide text-success">✓ Valid</span>
-                                    <span id="error-msg" class="valid-hide text-danger d-block"></span>
+                        <label for="phoneNumber" class="d-block form-label form__label">Receiver number :</label>
+
+                        <input type="text" class="form-control form__control" id="phoneNumber">
+
+                        <span id="valid-msg" class="valid-hide text-success">✓ Valid</span>
+                        <span id="error-msg" class="valid-hide text-danger d-block"></span>
                     </div>
                 </div>
 
                 <label class="d-block form-label form__label">Daşınacaq yükün fotosunu yükləyin :</label>
-              
+
                 <input type="file" multiple class="add-image" accept="image/x-png,image/jpeg">
                 <!--INPUTS END-->
                 <!--TEXTAREA STARTS-->
                 <div class="form-group form__group">
                     <label for="contact-message" class="form-label form__label">Message :</label>
+                    <!-- NEW TOOLTIP -->
                     <div class="form__tooltip">
-                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
-                                data-toggle="tooltip" data-html="true"
-                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
-                                ?
-                            </button>   
-                        </div>
+                        <button type="button" class="tooltip-circle  form__tooltip--circle  " data-toggle="tooltip"
+                            data-html="true"
+                            title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+
+                            <i class="fas fa-question-circle"></i>
+                        </button>
+                    </div>
+                   
                     <textarea id="contact-message" name="contact-message" rows="10"
                         class="form-control form__control textarea" data-parsley-trigger="keyup"
-                        data-parsley-minlength="1" data-parsley-maxlength="100"
+                        data-parsley-minlength="1" data-parsley-maxlength="1000"
                         data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.."
                         data-parsley-validation-threshold="10" required></textarea>
 
@@ -752,7 +762,7 @@
                 <!-- LABOR SPINNER STARTS-->
                 <div id="labor">
                     <label class="form-label form__label">İşçi qüvvəsi :</label>
-                    
+
                     <div class="input-spinner form-control form__control">
                         <i class="fa fa-user-alt-slash" id="user0"></i>
                         <i class="fa fa-user d-none " id="user1"></i>
@@ -778,7 +788,7 @@
                 <!-- PACKING START -->
                 <div class="packing" id="packing">
                     <span class="form-label form__label">Paketləmə lazımdırmı?</span>
-                  
+
                     <div class="packing__div my-3">
                         <input class="packing__div__input " type="radio" name="packing-radio" id="packing-yes"
                             value="Bəli" checked />
@@ -797,27 +807,28 @@
                 <!--URGENT START-->
                 <div class="urgent">
                     <label class="form-label form__label  mb-2">Çatdırılma növü :</label>
-                    <div class="form__tooltip">
-                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
-                                data-toggle="tooltip" data-html="true"
-                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
-                                ?
-                            </button>   
-                        </div>
+                   <!-- NEW TOOLTIP -->
+                   <div class="form__tooltip">
+                    <button type="button" class="tooltip-circle  form__tooltip--circle  " data-toggle="tooltip"
+                        data-html="true"
+                        title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
                     <div class=" urgent__list">
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
                                 data-item-id="urgent" id="non-urgent-tab" value="urgent" />
-                            <label class="urgent__label urgent__label--1 form-check-label"
-                                for="non-urgent-tab">Delivery now
+                            <label class="urgent__label urgent__label--1 form-check-label" for="non-urgent-tab">Delivery
+                                now
                                 <span class="d-block">(ASAP)</span>
                             </label>
                         </div>
                         <div class="urgent__list--item form-check">
                             <input class="urgent__input form-check-input" type="radio" name="urgent"
                                 data-item-id="urgent" id="urgent-tab" value="non-urgent" />
-                            <label class="urgent__label urgent__label--2 form-check-label"
-                                for="urgent-tab">Scheduled
+                            <label class="urgent__label urgent__label--2 form-check-label" for="urgent-tab">Scheduled
                                 <span class="d-block">(non-urgent)</span>
                             </label>
                         </div>
@@ -829,7 +840,7 @@
                 <!-- DELIVERY START -->
                 <div class="delivery" id="delivery">
                     <label class="form-label form__label">Delivery date :</label>
-                    
+
                     <div class="day">
                         <div class="day__list form-check">
                             <input class="day__input form-check-input today" type="radio" name="day" data-item-id="day"
@@ -874,7 +885,7 @@
                 <div class="form-text payment">
                     <div class="form-group form__group">
                         <label class="form-label form__label mt-3 mb-2">Ödəniş növü :</label>
-                       
+
                         <div class="payment__wrap-drop form__control " id="paymentMethod">
 
                             <div><i class="far fa-money-bill-alt color-purple mr-1"></i>
@@ -885,14 +896,14 @@
 
                                     <i class="far fa-money-bill-alt color-purple mr-1"></i>
                                     <span>Nəğd ödəniş</span>
-                                   <i class="fas fa-check payment__drop--checkmark"></i>
-                                  
+                                    <i class="fas fa-check payment__drop--checkmark"></i>
+
                                 </li>
                                 <li data-id="paymentWithCard">
 
                                     <i class="fas fa-credit-card color-purple mr-1"></i>
                                     <span data-id="kartla-odenis">Kartla ödəniş</span>
-<i></i>
+                                    <i></i>
                                 </li>
                             </ul>
                         </div>
@@ -903,20 +914,22 @@
                 <!--  INSURANCE START -->
                 <div class="insurance form-group ">
                     <label class="form-label form__label mb-2">Sığorta :</label>
-                    <div class="form__tooltip">
-                            <button type="button" class="tooltip-circle  text-white form__tooltip--btn "
-                                data-toggle="tooltip" data-html="true"
-                                title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
-                                ?
-                            </button>   
-                        </div>
+                  <!-- NEW TOOLTIP -->
+                  <div class="form__tooltip">
+                    <button type="button" class="tooltip-circle  form__tooltip--circle  " data-toggle="tooltip"
+                        data-html="true"
+                        title="<div class='p-2 d-flex align-items-center bg-secondary flex-column'> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dicta dolorum quibusdam possimus qui repudiandae quis, voluptatum autem aperiam fugit!</p><a href='index.html' class=' text-white p-2 color-purple text-decoration-none btn-read'>Read More</a></div>">
+
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
                     <label class="insurance__label form__control">Sığorta əlavə et
                         <input type="checkbox" class="insurance__input form-check-input" name="" disabled>
                         <span class="checkmark"></span>
                         <div class="insurance__percent">3%</div>
                     </label>
                     <div class="insurance__div">
-                       
+
                     </div>
 
 
@@ -963,8 +976,19 @@
         <div class="index__content__div">
             <div class="index__content__div--img"><img src="img/dh.png" alt="" class="img-fluid"></div>
             <!-- <img src="img/dh.png" alt="" class="img-fluid index__content__div--img"> -->
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo unde sit sapiente magni esse aperiam ea minus expedita alias perferendis omnis id, eum dolorem laboriosam nam quas sint molestiae iure architecto velit! Perspiciatis repellat ipsa enim quis itaque dolor, sit beatae aspernatur sint laboriosam reiciendis, facere rerum veritatis in cum molestias illo quia quas quidem. Laborum incidunt quod ipsam mollitia quo atque facilis aperiam odio? Est omnis magni accusamus quisquam nam quis perferendis ipsam inventore. Quis doloribus aut assumenda veniam.  
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo provident velit natus magni at ut sit ab incidunt fugit eaque, ex ad! Minus quis soluta tempore voluptatibus odit iure distinctio non fugiat a. Magni praesentium dolores pariatur animi quasi ab accusantium cum, numquam nisi dolorum illum quos eius fugit officia ad repellat? Veniam soluta dolore sequi saepe, iste delectus. Id animi quam necessitatibus odit architecto ipsam inventore modi eaque quos recusandae at cumque perspiciatis sunt, nesciunt exercitationem possimus quod? Adipisci perferendis culpa dignissimos! Quae cupiditate nesciunt molestias quasi est, dignissimos voluptatum dolore amet tempora ipsum voluptates dolor rerum consequuntur!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo unde sit sapiente magni esse aperiam ea minus
+            expedita alias perferendis omnis id, eum dolorem laboriosam nam quas sint molestiae iure architecto velit!
+            Perspiciatis repellat ipsa enim quis itaque dolor, sit beatae aspernatur sint laboriosam reiciendis, facere
+            rerum veritatis in cum molestias illo quia quas quidem. Laborum incidunt quod ipsam mollitia quo atque
+            facilis aperiam odio? Est omnis magni accusamus quisquam nam quis perferendis ipsam inventore. Quis
+            doloribus aut assumenda veniam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quo provident velit natus magni at ut sit ab
+            incidunt fugit eaque, ex ad! Minus quis soluta tempore voluptatibus odit iure distinctio non fugiat a. Magni
+            praesentium dolores pariatur animi quasi ab accusantium cum, numquam nisi dolorum illum quos eius fugit
+            officia ad repellat? Veniam soluta dolore sequi saepe, iste delectus. Id animi quam necessitatibus odit
+            architecto ipsam inventore modi eaque quos recusandae at cumque perspiciatis sunt, nesciunt exercitationem
+            possimus quod? Adipisci perferendis culpa dignissimos! Quae cupiditate nesciunt molestias quasi est,
+            dignissimos voluptatum dolore amet tempora ipsum voluptates dolor rerum consequuntur!
         </div>
     </div>
 
@@ -1044,393 +1068,8 @@
 </div>
 
 
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
-</script>
-<script>
-    var directionsDisplay;
-    var directionsService = new google.maps.DirectionsService(); // ISTİQAMƏTİ ÖLÇMƏK
-    var map;
-    var autocomplete_start, autocomplete_end;
-    var place_start, place_end, marker;
-    var startPos = [40.4050531, 49.8346519]; // BAKININ KOORDİNATI
-    var speed = 80; // km/h
-    var delay = 100;
 
 
-    function animateMarker(marker, coords, km_h) {
-        var target = 0;
-        var km_h = km_h || 50;
-        coords.push([startPos[0], startPos[1]]);
-
-        function goToPoint() {
-            var lat = marker.position.lat(); // enlik 
-            var lng = marker.position.lng(); // uzunluq
-            var step = (km_h * 1000 * delay) / 3600000; // in meters
-
-            var dest = new google.maps.LatLng(
-                coords[target][0], coords[target][1]);
-
-            var distance =
-                google.maps.geometry.spherical.computeDistanceBetween(
-                    dest, marker.position); // in meters
-
-            var numStep = distance / step;
-            var i = 0;
-            var deltaLat = (coords[target][0] - lat) / numStep;
-            var deltaLng = (coords[target][1] - lng) / numStep;
-
-            function moveMarker() {
-                lat += deltaLat;
-                lng += deltaLng;
-                i += step;
-
-                if (i < distance) {
-                    marker.setPosition(new google.maps.LatLng(lat, lng));
-                    setTimeout(moveMarker, delay);
-                } else {
-                    marker.setPosition(dest);
-                    target++;
-                    if (target == coords.length) {
-                        target = 0;
-                    }
-
-                    setTimeout(goToPoint, delay);
-                }
-            }
-            moveMarker();
-        }
-        goToPoint();
-    }
-
-    function initialize() {
-
-        directionsDisplay = new google.maps
-            .DirectionsRenderer(); //  məsafə, növbələrin sayı və digər amilləri göstərmək üçün  istifadə olunur
-        var thisCity = new google.maps.LatLng(40.4050531, 49.8346519); //  enlik uzunluq
-        var myOptions = {
-            zoom: 12, // BÖYÜTMƏK
-            mapTypeId: google.maps.MapTypeId.ROADMAP, //  XƏRİTƏ  NÖVÜ
-            center: thisCity // KOORDINAT 
-        }
-        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); // XƏRİTƏNİN GÖSTƏRİLƏCƏYİ YER
-        directionsDisplay.setMap(map); // XƏRİTƏNİN SON VERSİYASININ GÖSTƏRİLMƏSİ    
-        new AutocompleteDirectionsHandler(map);
-
-        var image = { // AVTOMOBİLLƏ DAŞIMA 
-            url: 'img/carMarker.png',
-            scaledSize: new google.maps.Size(35, 35),
-        };
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(startPos[0], startPos[1]),
-            icon: image,
-            map: map
-        });
-
-        google.maps.event.addListenerOnce(map, 'idle', function () { // AVTOMOBİL HƏRƏKƏTİ
-            animateMarker(marker, [
-                // The coordinates of each point you want the marker to go to.
-                // You don't need to specify the starting position again.
-                [40.4048204, 49.83358990000001],
-                [40.40219039999999, 49.83461519999999],
-                [40.4015122, 49.8315717],
-                [40.3788527, 49.8400521],
-                [40.3793502, 49.8418695],
-                [40.37025, 49.84570060000001],
-                [40.37091119999999, 49.8478119],
-                [40.37025, 49.84570060000001, ]
-
-                // [42.42300508749226, -83.29679489135742],
-                // [42.42304468678425, -83.29434871673584],
-                // [42.424882066428424, -83.2944130897522],
-                // [42.42495334300206, -83.29203128814697]
-            ], speed);
-        });
-
-        var image = { // MOTOSİKLET DAŞIMA 
-            url: 'img/mapMarker.png',
-            scaledSize: new google.maps.Size(35, 35),
-        };
-        marker1 = new google.maps.Marker({
-            position: new google.maps.LatLng(40.3752692, 49.8128778),
-            icon: image,
-            map: map
-        });
-
-        google.maps.event.addListenerOnce(map, 'idle', function () { // MOTOSİKLET HƏRƏKƏTİ
-            animateMarker(marker1, [
-                // The coordinates of each point you want the marker to go to.
-                // You don't need to specify the starting position again.
-                [40.3751928, 49.8119447],
-                [40.40219039999999, 49.83461519999999],
-                [40.3775918, 49.811615],
-                [40.37770099999999, 49.8134018],
-                [40.3761736, 49.8136082],
-                [40.3762931, 49.8157333],
-                [40.3726486, 49.8162402],
-                [40.3728445, 49.8183952]
-
-                // [42.42300508749226, -83.29679489135742],
-                // [42.42304468678425, -83.29434871673584],
-                // [42.424882066428424, -83.2944130897522],
-                // [42.42495334300206, -83.29203128814697]
-            ], 100);
-        });
-
-        var image = { // PİYADA DAŞIMA 
-            url: 'img/Untitlffed-3ddd.png',
-            scaledSize: new google.maps.Size(35, 35),
-        };
-        marker2 = new google.maps.Marker({
-            position: new google.maps.LatLng(40.40219039999999, 49.83461519999999),
-            icon: image,
-            map: map
-        });
-
-        google.maps.event.addListenerOnce(map, 'idle', function () { // PİYADA  HƏRƏKƏTİ
-            animateMarker(marker2, [
-                // The coordinates of each point you want the marker to go to.
-                // You don't need to specify the starting position again.
-
-                [40.3775918, 49.811615],
-                [40.37770099999999, 49.8134018],
-                [40.3761736, 49.8136082],
-                [40.3762931, 49.8157333],
-                [40.3726486, 49.8162402],
-                [40.3728445, 49.8183952]
-
-                // [42.42300508749226, -83.29679489135742],
-                // [42.42304468678425, -83.29434871673584],
-                // [42.424882066428424, -83.2944130897522],
-                // [42.42495334300206, -83.29203128814697]
-            ], 100);
-        });
-
-        var image = { // YÜK MAŞINI İLƏ DAŞIMA 
-            url: 'img/44.png',
-            scaledSize: new google.maps.Size(35, 35),
-        };
-        marker3 = new google.maps.Marker({
-            position: new google.maps.LatLng(40.3761736, 49.8136082),
-            icon: image,
-            map: map
-        });
-
-        google.maps.event.addListenerOnce(map, 'idle', function () { // YÜK MAŞINI  HƏRƏKƏTİ
-            animateMarker(marker3, [
-                // The coordinates of each point you want the marker to go to.
-                // You don't need to specify the starting position again.
-
-                [40.3775918, 49.811615],
-                [40.37770099999999, 49.8134018],
-                [40.3761736, 49.8136082],
-                [40.3762931, 49.8157333],
-                [40.3726486, 49.8162402],
-                [40.3728445, 49.8183952]
-
-                // [42.42300508749226, -83.29679489135742],
-                // [42.42304468678425, -83.29434871673584],
-                // [42.424882066428424, -83.2944130897522],
-                // [42.42495334300206, -83.29203128814697]
-            ], 50);
-        });
-
-    }
-
-    function AutocompleteDirectionsHandler(map) {
-        this.map = map;
-        this.originPlaceId = null;
-        this.destinationPlaceId = null;
-        this.travelMode = 'TRANSIT';
-        this.directionsService = new google.maps.DirectionsService;
-        this.directionsRenderer = new google.maps
-            .DirectionsRenderer; //  məsafə, növbələrin sayı və digər amilləri göstərmək üçün  istifadə olunur
-        this.directionsRenderer.setMap(map); //  xəritənin yenilənməsi
-
-        var originInput = document.getElementById('startPlace');
-        var destinationInput = document.getElementById('endPlace');
-
-        var originAutocomplete = new google.maps.places.Autocomplete(originInput);
-        // Specify just the place data fields that you need.
-        originAutocomplete.setFields(['place_id']);
-        console.log("placeid", originAutocomplete.setFields(['place_id']));
-
-
-
-        var destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
-        // Specify just the place data fields that you need.
-        destinationAutocomplete.setFields(['place_id']);
-
-        // this.setupClickListener('pedestrian', 'WALKING');
-        this.setupClickListener('pedestrian', 'TRANSIT');
-        this.setupClickListener('motorbike', 'DRIVING');
-        this.setupClickListener('car', 'DRIVING');
-        this.setupClickListener('evacuator', 'DRIVING');
-        this.setupClickListener('truck', 'DRIVING');
-
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
-
-    }
-
-    // Sets a listener on a radio button to change the filter type on Places
-    // Autocomplete.
-    AutocompleteDirectionsHandler.prototype.setupClickListener = function ( // CLİCK EDƏRƏK YOLUN GÖSTƏRİLMƏSİ
-        id, mode) {
-        var radioButton = document.getElementById(id);
-        var me = this;
-
-        radioButton.addEventListener('change', function () {
-            me.travelMode = mode;
-            me.route();
-            
-        });
-    };
-
-    AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
-        autocomplete, mode) {
-        var me = this;
-        autocomplete.bindTo('bounds', this.map);
-
-
-        autocomplete.addListener('place_changed', function () { // İSTİQAMƏTİN DƏYİŞMƏSİ FUNKSİYASI
-            var place = autocomplete.getPlace();
-            var service = new google.maps.places.PlacesService(map);
-            if (!place.place_id) {
-                window.alert('Please select an option from the dropdown list.');
-                return;
-            }
-            if (mode === 'ORIG') {
-                me.originPlaceId = place.place_id;
-                var service = new google.maps.places.PlacesService(map);
-                service.getDetails({
-                    placeId: place.place_id
-                }, function (place, status) {
-                    var inputResultLat = place.geometry.location.lat(); // ENLIK
-                    var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
-                    console.log(inputResultLat, inputResultLng);
-
-                    var hidenInputStartLat = document.getElementById("startPlaceLat");
-                    hidenInputStartLat.value = inputResultLat;
-                    var hidenInputStartLng = document.getElementById("startPlaceLng");
-                    hidenInputStartLng.value = inputResultLng;
-
-                    $(".insurance__input").prop("disabled", false);
-
-
-                })
-
-            } else {
-                me.destinationPlaceId = place.place_id;
-                console.log('end', place.place_id);
-
-                var service = new google.maps.places.PlacesService(map);
-                service.getDetails({
-                    placeId: place.place_id
-                }, function (place, status) {
-                    var inputResultLat = place.geometry.location.lat(); // ENLIK
-                    var inputResultLng = place.geometry.location.lng(); //  UZUNLUQ
-                    console.log(inputResultLat, inputResultLng);
-
-                    var hidenInputEndLat = document.getElementById("endPlaceLat");
-                    hidenInputEndLat.value = inputResultLat;
-
-                    var hidenInputEndLng = document.getElementById("endPlaceLng");
-                    hidenInputEndLng.value = inputResultLng;
-
-
-
-                })
-            }
-            me.route();
-        });
-    };
-
-    AutocompleteDirectionsHandler.prototype.route = function () {
-        if (!this.originPlaceId || !this.destinationPlaceId) {
-            return;
-        }
-        var me = this;
-
-        this.directionsService.route( // ROUTE  marşrut mənşəyindən  göstərilən yerə çatmağın yolunu göstərir
-            {
-                origin: {
-                    'placeId': this.originPlaceId
-                }, // BAŞLANĞIC NÖQTƏ
-                destination: {
-                    'placeId': this.destinationPlaceId
-                }, // SON NÖQTƏ
-                travelMode: this.travelMode // DAŞIMA NÖVÜ
-            },
-            function (response, status) {
-                if (status === 'OK') {
-                    me.directionsRenderer.setDirections(response);
-                } else {
-                    window.alert('Directions request failed due to ' + status);
-                }
-            });
-
-
-
-        var request = {
-            origin: {
-                'placeId': this.originPlaceId
-            },
-            destination: {
-                'placeId': this.destinationPlaceId
-            },
-            travelMode: this.travelMode
-        };
-
-        directionsService.route(request, function (result, status) {
-            if (status == google.maps.DirectionsStatus
-                .OK) { // düzgün istiqamətləndirmə nəticəsini  göstərir.
-                directionsDisplay.setDirections(
-                    result); // xəritədə dəyişiklik baş verərkən avtomatik xəritənin dəyişməsi
-                var price_for_selected = document.getElementById('price_for_selected');
-                var myRoute = result.routes[0].legs[0];
-
-                var commonDistanse = myRoute.distance.value / 1000; // ÜMUMİ MƏSAFƏNİN HESABLANMASI
-
-                if (commonDistanse <= 3) { // PULUN HESABLANMASI
-                    price = 2
-                } else if (commonDistanse > 3 && commonDistanse <= 12) {
-                    price = (commonDistanse - 3) * 0.5 + 2
-                } else if (commonDistanse > 12 && commonDistanse <= 70) {
-                    price = (commonDistanse - 12) * 0.4 + 2 + (9 * 0.5)
-                } else {
-                    price = (commonDistanse - 70) * 0.22 + (70 * 0.4)
-                }
-
-                var roadPrice = Math.ceil(price); // PUL
-                var roadDistance = myRoute.distance.text; // MƏSAFƏ
-                var roadTime = Math.round(myRoute.duration.value / 60) + ' dəq'; // ZAMAN
-
-
-                $('.price').text(roadPrice);
-                $('.distance').text(roadDistance);
-                $('.time').text(roadTime);
-                var priceText = $(".price").text();
-                totalPrice = $('.total__money').text(priceText);
-
-
-
-                console.log(myRoute.distance.text);
-                console.log(myRoute.duration.text);
-                console.log(Math.ceil(price));
-            } else {
-                var price_for_selected = document.getElementById('price_for_selected');
-                var innerHtml = '<div class="alert alert-warning" role="alert"></div>';
-                price_for_selected.innerHTML = innerHtml;
-                var directionsPanel = document.getElementById('directionsPanel');
-                directionsPanel.innerHTML = '';
-            }
-        });
-
-    };
-
-    window.onload = initialize;
-</script>
 
 <footer class="  pb-md-4 footer ">
     <div class="container">
@@ -1516,7 +1155,7 @@
         </div>
         <div class=" col-sm-12   col-md-3 mt-2 col-lg-2  mt-md-5 mt-lg-0  footer__4">
             <h5>For Customer App</h5>
-            <ul class="nav flex-row justify-content-between  flex-md-column align-items-md-end justify-content-md-end">
+            <ul class="nav flex-row justify-content-between  flex-md-column align-items-start justify-content-md-end">
               <li class="nav-item  mr-md-0">
                 <a href="company-about-1.html" class="nav-link fade-page px-0 py-2"><img src="img/appstore.png" alt="appstore"></a>
               </li>
@@ -1540,180 +1179,175 @@
       </div>
     </div>
   </footer>
-    
-    
-    
-    
-    <!-- Required vendor scripts (Do not remove) -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
-      <script src="libs/jquery/dist/jquery.min.js"
-     ></script>
-    <!-- SWIPER -->
-      <!-- <script src="https://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script> -->
-      <script src="assets/js/swiper.jquery.min.js"></script>
-    
-      
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js"></script> -->
-      <script src="assets/js/typeahead.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')
-    </script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-    <!-- <script src="libs/bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script> -->
-    <!-- <script type="text/javascript" src="assets/js/jquery.min.js"></script> -->
-    <script type="text/javascript" src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    
-    <!-- 
-                 This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
-                 by altering the date before the countdown is initialized 
-            -->
-    <!-- <script type="text/javascript">
-          (($) => {
-                var now             = new Date;
-                var day             = 864e5;
-                var weeksToAdd      = 2;
-                var tenWeeksFromNow = new Date(+now + day * 7 * weeksToAdd).toISOString().slice(0,10).replace(/\-/g, 'index.html');
-                $('[data-countdown-date].add-countdown-time').attr('data-countdown-date', tenWeeksFromNow);
-              })(jQuery);
-        </script> -->
-    
-    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
-    
-    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
-    <script  src="assets/js/aos.js"></script>
-    <!-- Clipboard (copies content from browser into OS clipboard) -->
-    <script  src="assets/js/clipboard.min.js"></script>
-    <!-- Fancybox (handles image and video lightbox and galleries) -->
-    <script  src="assets/js/jquery.fancybox.min.js"></script>
-    <!-- Flatpickr (calendar/date/time picker UI) -->
-    <script  src="assets/js/flatpickr.min.js"></script>
-    <!-- Flickity (handles touch enabled carousels and sliders) -->
-    <script src="assets/js/flickity.pkgd.min.js"></script>
-    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
-    <script src="assets/js/ion.rangeSlider.min.js"></script>
-    <!-- Isotope (masonry layouts and filtering) -->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <!-- jarallax (parallax effect and video backgrounds) -->
-    <script src="assets/js/jarallax.min.js"></script>
-    <script src="assets/js/jarallax-video.min.js"></script>
-    <script src="assets/js/jarallax-element.min.js"></script>
-    <!-- jQuery Countdown (displays countdown text to a specified date) -->
-    <script src="assets/js/jquery.countdown.min.js"></script>
-    <!-- jQuery smartWizard facilitates steppable wizard content -->
-    <script src="assets/js/jquery.smartWizard.min.js"></script>
-    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
-    <script src="assets/js/plyr.polyfilled.min.js"></script>
-    <!-- Prism (displays formatted code boxes) -->
-    <script src="assets/js/prism.js"></script>
-    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
-    <script src="assets/js/scrollMonitor.js"></script>
-    <!-- Smooth scroll (animation to links in-page)-->
-    <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
-    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
-    <script src="assets/js/svg-injector.umd.production.js"></script>
-    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
-    <script src="assets/js/twitterFetcher_min.js"></script>
-    <!-- Typed text (animated typing effect)-->
-    <script src="assets/js/typed.min.js"></script>
-    
-    
-    
-    
-    
-    <!-- Required theme scripts (Do not remove) -->
-    <script src="assets/js/theme.js"></script>
-    
-    
-    
-    
-    
-    <!-- OUR FOOTER -->
-    
-    <!-- FILEPOND -->
-    
-    <script src="assets/js/filepond-plugin-file-validate-type.js"></script>
-    <script src="assets/js/filepond-plugin-image-preview.js"></script>
-    <script src="assets/js/filepond-plugin-image-resize.js"></script>
-    <script src="assets/js/filepond-plugin-image-transform.js"></script>
-    <script src="assets/js/filepond-plugin-image-crop.js"></script>
-    <script src="assets/js/filepond.js"></script>
-    
-    <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script> -->
-    <script src="assets/js/jquery-ui.min.js"></script>
-    
-    
-    <!--  Owl carousel -->
-    <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
-    
-    <!-- MOMENT JS -->
-    <script src="libs/moment/moment.js"></script>
-    <script src="libs/moment/locale/az.js"></script>
-    
-    <!-- PARSLEY -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.js"></script> -->
-    <script src="assets/js/parsley.js"></script>
-    
-    
-    <!-- intlTelInput  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.min.js"></script>
-    <!-- <script src="assets/js/intlTelInput.min.js"></script> -->
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput-jquery.min.js"></script>
-    <!-- <script src="../assets/js/intlTelInput-jquery.min.js"></script> -->
-    
-    
-    
-    <!-- JQUERY MASK -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script> -->
-    <script src="assets/js/jquery.mask.js"></script>
-    
-    <!-- AUTOCOMPLETE  -->
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js"></script> -->
-    <script src="assets/js/autocomplete.min.js"></script>
-    
-    <!--  LIGHTGALLERY-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script> -->
-    <script src="assets/js/lightgallery.min.js"></script>
-    
-    <!--  DATEPICKER LANGUAGE  WHICH IS LAST -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-en-AU.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ru.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-az.min.js"></script> -->
-    
-    <script src="assets/js/datepicker-en-AU.min.js"></script>
-    <script src="assets/js/datepicker-ru.min.js"></script>
-    <script src="assets/js/datepicker-az.min.js"></script>
-    
-    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
-    <script src="assets/js/jquery.mousewheel.min.js"></script>
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js"></script> -->
-    <script src="assets/js/lg-thumbnail.min.js"></script>
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script> -->
-    <script src="assets/js/lg-fullscreen.min.js"></script>
-    
-    
-    <script>
-    // Register the plugin
-    FilePond.registerPlugin(FilePondPluginFileValidateType);
-    
-    // ... FilePond initialisation code here
-    </script>
-    
-    <script src="js/all.js"></script>
-    
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!-- <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
-    </body>
-    
-    </html>
+
+
+
+
+<!-- Required vendor scripts (Do not remove) -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+<!-- SWIPER -->
+  <!-- <script src="https://cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script> -->
+  <script src="assets/js/swiper.jquery.min.js"></script>
+
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.bundle.min.js"></script> -->
+  <script src="assets/js/typeahead.min.js"></script>
+<script>
+  window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+<!-- <script src="libs/bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script> -->
+<!-- <script type="text/javascript" src="assets/js/jquery.min.js"></script> -->
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- 
+             This appears in the demo only.  This script ensures our demo countdowns are always showing a date in the future 
+             by altering the date before the countdown is initialized 
+        -->
+<!-- <script type="text/javascript">
+      (($) => {
+            var now             = new Date;
+            var day             = 864e5;
+            var weeksToAdd      = 2;
+            var tenWeeksFromNow = new Date(+now + day * 7 * weeksToAdd).toISOString().slice(0,10).replace(/\-/g, 'index.html');
+            $('[data-countdown-date].add-countdown-time').attr('data-countdown-date', tenWeeksFromNow);
+          })(jQuery);
+    </script> -->
+
+<!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+<!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+<script  src="assets/js/aos.js"></script>
+<!-- Clipboard (copies content from browser into OS clipboard) -->
+<script  src="assets/js/clipboard.min.js"></script>
+<!-- Fancybox (handles image and video lightbox and galleries) -->
+<script  src="assets/js/jquery.fancybox.min.js"></script>
+<!-- Flatpickr (calendar/date/time picker UI) -->
+<script  src="assets/js/flatpickr.min.js"></script>
+<!-- Flickity (handles touch enabled carousels and sliders) -->
+<script src="assets/js/flickity.pkgd.min.js"></script>
+<!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+<script src="assets/js/ion.rangeSlider.min.js"></script>
+<!-- Isotope (masonry layouts and filtering) -->
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<!-- jarallax (parallax effect and video backgrounds) -->
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/jarallax-video.min.js"></script>
+<script src="assets/js/jarallax-element.min.js"></script>
+<!-- jQuery Countdown (displays countdown text to a specified date) -->
+<script src="assets/js/jquery.countdown.min.js"></script>
+<!-- jQuery smartWizard facilitates steppable wizard content -->
+<script src="assets/js/jquery.smartWizard.min.js"></script>
+<!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+<script src="assets/js/plyr.polyfilled.min.js"></script>
+<!-- Prism (displays formatted code boxes) -->
+<script src="assets/js/prism.js"></script>
+<!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+<script src="assets/js/scrollMonitor.js"></script>
+<!-- Smooth scroll (animation to links in-page)-->
+<script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+<!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+<script src="assets/js/svg-injector.umd.production.js"></script>
+<!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+<script src="assets/js/twitterFetcher_min.js"></script>
+<!-- Typed text (animated typing effect)-->
+<script src="assets/js/typed.min.js"></script>
+
+
+
+
+
+<!-- Required theme scripts (Do not remove) -->
+<script src="assets/js/theme.js"></script>
+
+<script src="js/badge.js"></script>
+<script src="js/tooltip.js"></script>
+
+<!-- INDEX FOOTER -->
+
+<!-- FILEPOND -->
+
+<script src="assets/js/filepond-plugin-file-validate-type.js"></script>
+<script src="assets/js/filepond-plugin-image-preview.js"></script>
+<script src="assets/js/filepond-plugin-image-resize.js"></script>
+<script src="assets/js/filepond-plugin-image-transform.js"></script>
+<script src="assets/js/filepond-plugin-image-crop.js"></script>
+<script src="assets/js/filepond.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+<!-- <script src="assets/js/jquery-ui.min.js"></script> -->
+
+
+<!--  Owl carousel -->
+<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<!-- MOMENT JS -->
+<script src="libs/moment/moment.js"></script>
+<script src="libs/moment/locale/az.js"></script>
+
+<!-- PARSLEY -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.js"></script> -->
+<script src="assets/js/parsley.js"></script>
+
+
+<!-- intlTelInput  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.min.js"></script>
+<!-- <script src="assets/js/intlTelInput.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput-jquery.min.js"></script>
+<!-- <script src="../assets/js/intlTelInput-jquery.min.js"></script> -->
+
+
+
+<!-- JQUERY MASK -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script> -->
+<script src="assets/js/jquery.mask.js"></script>
+
+
+<!--  DATEPICKER LANGUAGE  WHICH IS LAST -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-en-AU.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ru.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-az.min.js"></script> -->
+
+<script src="assets/js/datepicker-en-AU.min.js"></script>
+<script src="assets/js/datepicker-ru.min.js"></script>
+<script src="assets/js/datepicker-az.min.js"></script>
+
+<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
+<script src="assets/js/jquery.mousewheel.min.js"></script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6q83jcEbxloW8tYOXLgagBGJ1xrDowHc&libraries=places&language=az-AZ">
+</script>
+
+<script>
+// Register the plugin
+FilePond.registerPlugin(FilePondPluginFileValidateType);
+
+// ... FilePond initialisation code here
+</script>
+<script src="js/map-index.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/delivery-date.js"></script>
+<script src="js/filepond.js"></script>
+<script src="js/insurance.js"></script>
+<script src="js/intlTelInput.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/parsley-index.js"></script>
+<script src="js/payment-methods.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/search-carousel.js"></script>
+<script src="js/spinner-icon.js"></script>
+<script src="js/swipe.js"></script>
+<script src="js/times-carousel.js"></script>
+<script src="js/total.js"></script>
+
+
+</body>
+
+</html>

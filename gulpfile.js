@@ -60,15 +60,15 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //burdakileri al derle
 
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest(path.build.js)) //minify etmeden all.js dosyasini ekledik asagidaki noSource: true  komutunu silersek buna gerek olmayacak sanirim denemedim ama mantik olarak o kod minify olunmamisini eklemesini engelliyor
-    .pipe(minify({
-        ext:{
+    // .pipe(concat('all.js'))
+    // .pipe(gulp.dest(path.build.js)) //minify etmeden all.js dosyasini ekledik asagidaki noSource: true  komutunu silersek buna gerek olmayacak sanirim denemedim ama mantik olarak o kod minify olunmamisini eklemesini engelliyor
+    // .pipe(minify({
+    //     ext:{
 
-            min:'.min.js'
-        },
-        noSource:true //bu build altindaki js klasörüne düsen index.js yi düsürmüyor sadece min olan düsüyor 
-    }))
+    //         min:'.min.js'
+    //     },
+    //     noSource:true //bu build altindaki js klasörüne düsen index.js yi düsürmüyor sadece min olan düsüyor 
+    // }))
     
     
         .pipe(gulp.dest(path.build.js)); //derlenmis dosyayi buraya at

@@ -2,6 +2,7 @@ import hasOwnProp from './has-own-prop';
 
 var keys;
 
+
 if (Object.keys) {
     keys = Object.keys;
 } else {
