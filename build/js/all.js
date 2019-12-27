@@ -301,19 +301,6 @@ $(document).ready(function () {
     });
 
 });
-//  HEADER-DA HAMBURGER MENUNUN ÜZƏRİNDƏ NOTİFİCATİONUN GÖRSƏNMƏSİ
-$(document).ready(function () {
-$(function () { 
-    $('.header__toggler').on('click', function () {
-      
-        if ($(this).attr( 'aria-expanded') === 'true') {
-            $(".header__toggler--badge").css( "display", "block" );
-        } else {
-            $(".header__toggler--badge").css( "display", "none" );
-        }
-    });
-});
-});
 // FOR İNDEX.HTML
  $( document ).ready(function() {
     $('.car-carousel').owlCarousel({
@@ -339,395 +326,6 @@ $(function () {
         }
       }
     })
-});
-// // FOR MY-MESSAGES.HTML
-// let user = {
-// 	id: 0,
-// 	name: "Anish",
-// 	number: "Kuryer name",
-// 	pic: "img/asdsd12f34ASd231.png",
-// 	courierNumber: "+994 50 3332211",
-// 	orderNumber: 'Order No 1'
-// };
-
-// let contactList = [
-// 	{
-// 		id: 0,
-// 		name: "Anish",
-// 		number: "+994 50 3332211",
-// 		pic: "img/asdsd12f34ASd231.png",
-// 		lastSeen: "Apr 29 2018 17:58:02",
-// 		courierNumber: "+994 50 3332211",
-// 		orderNumber: 'Order No 1'
-// 	},
-// 	{
-// 		id: 1,
-// 		name: "Nitin",
-// 		number: "Kuryer name",
-// 		pic: "img/Ass09123asdj9dk0qw.jpg",
-// 		lastSeen: "Apr 29 2018 17:58:02",
-// 		courierNumber: "+994 70 5552233",
-// 		orderNumber: 'Order No 2'
-// 	},
-// 	{
-// 		id: 2,
-// 		name: "Sanjay",
-// 		number: "Kuryer name",
-// 		pic: "img/asd1232ASdas123a.png",
-// 		lastSeen: "Apr 28 2018 19:23:16",
-// 		courierNumber: "+994 70 1112233",
-// 		orderNumber: 'Order No 3'
-// 	},
-// 	{
-// 		id: 3,
-// 		name: "Suvro Mobile",
-// 		number: "+91 98232 63547",
-// 		pic: "img/Alsdk120asdj913jk.jpg",
-// 		lastSeen: "Apr 29 2018 11:16:42",
-// 		courierNumber: "+994 55 44874433",
-// 		orderNumber: 'Order No 4'
-// 	},
-// 	{
-// 		id: 4,
-// 		name: "Dee",
-// 		number: "+91 72781 38213",
-// 		pic: "img/dsaad212312aGEA12ew.png",
-// 		lastSeen: "Apr 27 2018 17:28:10",
-// 		courierNumber: "+994 70 9998833",
-// 		orderNumber: 'Order No 5'
-// 	},
-// 	{
-// 		id: 5,
-// 		name: "Dee",
-// 		number: "+91 72781 38213",
-// 		pic: "img/dsaad212312aGEA12ew.png",
-// 		lastSeen: "Apr 27 2018 17:28:10",
-// 		courierNumber: "+994 70 9998833",
-// 		orderNumber: 'Order No 5'
-// 	},
-// 	{
-// 		id: 6,
-// 		name: "Dee",
-// 		number: "+91 72781 38213",
-// 		pic: "img/dsaad212312aGEA12ew.png",
-// 		lastSeen: "Apr 27 2018 17:28:10",
-// 		courierNumber: "+994 70 9998833",
-// 		orderNumber: 'Order No 5'
-// 	},
-// 	{
-// 		id: 7,
-// 		name: "Dee",
-// 		number: "+91 72781 38213",
-// 		pic: "img/dsaad212312aGEA12ew.png",
-// 		lastSeen: "Apr 27 2018 17:28:10",
-// 		courierNumber: "+994 70 9998833",
-// 		orderNumber: 'Order No 5'
-// 	}
-// ];
-
-// let groupList = [
-// 	{
-// 		id: 1,
-// 		name: "Group",
-// 		members: [0, 1, 3],
-// 		pic: "img/0923102932_aPRkoW.jpg",
-// 		orderNumber: "Order No 15"
-// 	},
-// 	{
-// 		id: 2,
-// 		name: "Web Developers",
-// 		members: [0, 2],
-// 		pic: "img/1921231232_Ag1asE.png",
-// 		orderNumber: "Order No 14"
-// 	},
-// 	{
-// 		id: 3,
-// 		name: "notes",
-// 		members: [0,4,5],
-// 		pic: "img/8230192232_asdEWq2.png",
-// 		orderNumber: 'Order No 13'
-// 	},
-// 	{
-// 		id: 4,
-// 		name: "notes",
-// 		members: [0,4,7],
-// 		pic: "img/8230192232_asdEWq2.png",
-// 		orderNumber: 'Order No 12'
-// 	},
-// 	{
-// 		id: 5,
-// 		name: "notes",
-// 		members: [0,3,5],
-// 		pic: "img/8230192232_asdEWq2.png",
-// 		orderNumber: 'Order No 11'
-// 	}
-// ];
-
-// // message status - 0:sent, 1:delivered, 2:read
-
-// let messages = [
-// 	{
-// 		id: 0,
-// 		sender: 2,
-// 		body: "where are you, buddy?",
-// 		time: "April 25, 2018 13:21:03",
-// 		status: 2,
-// 		recvId: 3,
-// 		recvIsGroup: false
-// 	},
-// 	{
-// 		id: 1,
-// 		sender: 3,
-// 		body: "at home",
-// 		time: "June 25, 2018 13:22:03",
-// 		status: 2,
-// 		recvId: 2,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 2,
-// 		sender: 0,
-// 		body: "how you doin'?",
-// 		time: "April 25, 2018 18:15:23",
-// 		status: 2,
-// 		recvId: 3,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 3,
-// 		sender: 3,
-// 		body: "i'm fine...wat abt u?",
-// 		time: "April 25, 2018 21:05:11",
-// 		status: 2,
-// 		recvId: 0,
-// 		recvIsGroup: false
-// 	},
-// 	{
-// 		id: 4,
-// 		sender: 0,
-// 		body: "i'm good too",
-// 		time: "April 26, 2018 09:17:03",
-// 		status: 1,
-// 		recvId: 3,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 5,
-// 		sender: 3,
-// 		body: "anyone online?",
-// 		time: "April 27, 2018 18:20:11",
-// 		status: 0,
-// 		recvId: 1,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 6,
-// 		sender: 1,
-// 		body: "have you seen infinity war?",
-// 		time: "April 27, 2018 17:23:01",
-// 		status: 1,
-// 		recvId: 0,
-// 		recvIsGroup: false
-// 	},
-// 	{
-// 		id: 0,
-// 		sender: 3,
-// 		body: "are you going to the party tonight?",
-// 		time: "April 27, 2018 08:11:21",
-// 		status: 2,
-// 		recvId: 0,
-// 		recvIsGroup: false
-// 	},
-// 	{
-// 		id: 8,
-// 		sender: 2,
-// 		body: "no, i've some work to do..are you?",
-// 		time: "April 27, 2018 08:22:12",
-// 		status: 2,
-// 		recvId: 0,
-// 		recvIsGroup: false
-// 	},
-// 	{
-// 		id: 9,
-// 		sender: 0,
-// 		body: "yup",
-// 		time: "June 27, 2018 08:31:23",
-// 		status: 1,
-// 		recvId: 2,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 10,
-// 		sender: 0,
-// 		body: "if you go to the movie, then give me a call",
-// 		time: "April 27, 2018 22:41:55",
-// 		status: 7,
-// 		recvId: 4,
-// 		recvIsGroup: true
-// 	},
-// 	{
-// 		id: 11,
-// 		sender: 5,
-// 		body: "yeah, i'm online",
-// 		time: "April 28 2018 17:10:21",
-// 		status: 6,
-// 		recvId: 2,
-// 		recvIsGroup: true
-// 	}
-// ];
-
-// let MessageUtils = {
-// 	getByGroupId: (groupId) => {
-// 		return messages.filter(msg => msg.recvIsGroup && msg.recvId === groupId);
-// 	},
-// 	getByContactId: (contactId) => {
-// 		return messages.filter(msg => {
-// 			return !msg.recvIsGroup && ((msg.sender === user.id && msg.recvId === contactId) || (msg.sender === contactId && msg.recvId === user.id));
-// 		});
-// 	},
-// 	getMessages: () => {
-// 		return messages;
-// 	},
-// 	changeStatusById: (options) => {
-// 		messages = messages.map((msg) => {
-// 			if (options.isGroup) {
-// 				if (msg.recvIsGroup && msg.recvId === options.id) msg.status = 2;
-// 			} else {
-// 				if (!msg.recvIsGroup && msg.sender === options.id && msg.recvId === user.id) msg.status = 2;
-// 			}
-// 			return msg;
-// 		});
-// 	},
-// 	addMessage: (msg) => {
-// 		msg.id = messages.length + 1;
-// 		messages.push(msg);
-// 	}
-// };
-// // FOR MY-MESSAGES.HTML
-// const mDate = (dateString) => {
-	
-// 	let date = dateString ? new Date(dateString) : new Date();
-
-// 	let dualize = (x) => x < 10 ? "0" + x : x;
-// 	let getTime = () => dualize(date.getHours()) + ":" + dualize(date.getMinutes());
-// 	let getDate = () => dualize(date.getDate()) + "/" + dualize(date.getMonth()) + "/" + dualize(date.getFullYear());
-
-// 	return {
-// 		subtract: (otherDateString) => {
-// 			return date - new Date(otherDateString);
-// 		},
-// 		lastSeenFormat: () => {
-// 			let dateDiff = Math.round(new Date() - date) / (1000 * 60 * 60 * 24);
-// 			let value = (dateDiff === 0) ? "today" : (dateDiff === 1) ? "yesterday" : getDate();
-// 			return value + " at " + getTime();
-// 		},
-// 		chatListFormat: () => {
-// 			let dateDiff = Math.round((new Date() - date) / (1000 * 60 * 60 * 24));
-// 			if (dateDiff === 0) {
-// 				return getTime();
-// 			} else if (dateDiff === 1) {
-// 				return "Yesterday";
-// 			} else {
-// 				return getDate();
-// 			}
-// 		},
-// 		getDate: () => {
-// 			return getDate();
-// 		},
-// 		getTime: () => {
-// 			return getTime();
-// 		},
-// 		toString:() => {
-// 			return date.toString().substr(4, 20);
-// 		},
-// 	};
-// };
-// //  DATEPICKER  IN INDEX.HTML, INDEX-3.HTML
-
-$(document).ready(function () {
-    var date = new Date();
-
-    date.setDate(date.getDate());
-    $("#datepicker").datepicker({
-        startDate: date,
-        duration: "fast",
-        gotoCurrent: true,
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        dateFormat: "dd/mm/yy",
-        yearSuffix: "",
-        minDate: 0, // disable past date
-        minTime: 0, // disable past time
-
-        // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
-        onSelect: function () {
-            $( "input[data-item-id=calendarTimes]" ).prop( "checked", false );
-            $("label[for='calendar']").text($(this).val());
-            var calendarLabel = $(".calendar-label").text();
-            var calendarVal = document.getElementById("calendar");
-            calendarVal.value = calendarLabel ;
-            
-        }
-    });
-    // $("#datepicker").datepicker($.datepicker.regional["az"]); 
-    // $("#datepicker").datepicker($.datepicker.regional["ru"]); 
-    $("#datepicker").datepicker($.datepicker.regional["en-AU"]); 
-  
-
-    $("#calendar").click(function () {
-        $("#datepicker").datepicker("show");
-    });
-});
-//  SHOW AND HIDE #DELIVERY
-$(document).ready(function () {
-$("#non-urgent-tab").prop("checked", true);
-
-$('input:radio[data-item-id="urgent"]').change(
-
-  function () {
-
-    if ($(this).is(':checked') && $(this).val() == 'non-urgent') {
-      $('#delivery').css({
-        'display': 'block'
-      });
-
-    } else if ($(this).is(':checked') && $(this).val() == 'urgent') {
-      $('#delivery').css({
-        'display': 'none'
-      });
-    }
-  });
-
-
-
-// LOCAL STORAGE FOR INPUT RADIO 
-
-$(function () {
-  $('input:radio[data-item-id="urgent"]').each(function () {
-    var state = JSON.parse(localStorage.getItem('radio_' + $(this).attr('id')));
-
-    if (state) this.checked = state.checked;
-    if ($(this).is(':checked') && $(this).val() == 'non-urgent') {
-      $('#delivery').css({
-        'display': 'block'
-      });
-
-    } else if ($(this).is(':checked') && $(this).val() == 'urgent') {
-      $('#delivery').css({
-        'display': 'none'
-      });
-    }
-  });
-});
-
-$(window).bind('unload', function () {
-  $('input:radio[data-item-id="urgent"]').each(function () {
-    localStorage.setItem('radio_' + $(this).attr('id'), JSON.stringify({
-      checked: this.checked
-    }));
-  });
-});
 });
 //  FİLE YÜKLƏMƏK ÜÇÜN
 $(document).ready(function () {
@@ -782,6 +380,282 @@ $(window).on('scroll', function() {
 
 });
 });
+
+//  SHOWING BADGE ON HAMBURGER MENU
+$(document).ready(function () {
+    $(function () { 
+        $('.header__toggler').on('click', function () {
+          
+            if ($(this).attr( 'aria-expanded') === 'true') {
+                $(".header__toggler--badge").css( "display", "block" );
+            } else {
+                $(".header__toggler--badge").css( "display", "none" );
+            }
+        });
+    });
+    });
+
+// // DELIVERY DATE JS START
+//  SHOW AND HIDE #DELIVERY DATE WHEN CLICKED SHEDULED(NON-URGENT)
+$(document).ready(function () {
+    $("#non-urgent-tab").prop("checked", true);
+    
+    $('input:radio[data-item-id="urgent"]').change(
+    
+      function () {
+    
+        if ($(this).is(':checked') && $(this).val() == 'non-urgent') {
+          $('#delivery').css({
+            'display': 'block'
+          });
+    
+        } else if ($(this).is(':checked') && $(this).val() == 'urgent') {
+          $('#delivery').css({
+            'display': 'none'
+          });
+        }
+      });
+    
+    
+    
+    // LOCAL STORAGE FOR INPUT RADIO 
+    
+    $(function () {
+      $('input:radio[data-item-id="urgent"]').each(function () {
+        var state = JSON.parse(localStorage.getItem('radio_' + $(this).attr('id')));
+    
+        if (state) this.checked = state.checked;
+        if ($(this).is(':checked') && $(this).val() == 'non-urgent') {
+          $('#delivery').css({
+            'display': 'block'
+          });
+    
+        } else if ($(this).is(':checked') && $(this).val() == 'urgent') {
+          $('#delivery').css({
+            'display': 'none'
+          });
+        }
+      });
+    });
+    
+    $(window).bind('unload', function () {
+      $('input:radio[data-item-id="urgent"]').each(function () {
+        localStorage.setItem('radio_' + $(this).attr('id'), JSON.stringify({
+          checked: this.checked
+        }));
+      });
+    });
+    });
+    
+    // // DELIVERY DATE JS END
+
+
+// //  DATEPICKER START
+
+$(document).ready(function () {
+    var date = new Date();
+
+    date.setDate(date.getDate());
+    $("#datepicker").datepicker({
+        startDate: date,
+        duration: "fast",
+        gotoCurrent: true,
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        dateFormat: "dd/mm/yy",
+        yearSuffix: "",
+        minDate: 0, // disable past date
+        minTime: 0, // disable past time
+
+        // VAXTIN İNPUT NAME=DAY-DƏ  VƏ VALUE-SUNDA GÖRSƏNMƏSİ
+        onSelect: function () {
+            $( "input[data-item-id=calendarTimes]" ).prop( "checked", false );
+            $("label[for='calendar']").text($(this).val());
+            var calendarLabel = $(".calendar-label").text();
+            var calendarVal = document.getElementById("calendar");
+            calendarVal.value = calendarLabel ;
+            
+        }
+    });
+    // $("#datepicker").datepicker($.datepicker.regional["az"]); 
+    // $("#datepicker").datepicker($.datepicker.regional["ru"]); 
+    $("#datepicker").datepicker($.datepicker.regional["en-AU"]); 
+  
+
+    $("#calendar").click(function () {
+        $("#datepicker").datepicker("show");
+    });
+});
+
+// //  DATEPICKER END
+
+
+//  MOMENT JS START
+
+$(document).ready(function () {
+    var dayHours = 24;
+    var allHours = 24;
+    var currentTime = moment().startOf('hour').add(1, 'h').format("HH:mm");
+    var currentHour = moment().startOf('hour').add(1, 'h').format("HH");
+    var enableHoursToday = dayHours - currentHour;
+    var today = moment().locale("az").format("DD MMMM");
+    var tomorrow = moment().add(1, 'days').format("DD MMMM");
+
+    var todaySlash = moment().format('DD/MM/YYYY');
+    var tomorrowSlash = moment().add(1, 'days').format('DD/MM/YYYY');
+
+    var todayVal = document.getElementById("today");
+    var tomorrowVal = document.getElementById("tomorrow");
+    var calendarVal = document.getElementById("calendar");
+
+
+    //  BUGÜN VƏ SABAHIN TARİXİNİN İNPUT NAME=DAY-DƏ GÖRSƏNMƏSİ
+    $('#today-span').html(today);
+    $('#tomorrow-span').html(tomorrow);
+
+    var text = "";
+    $(document).on('change', 'input:radio[data-item-id="day"]', function () {
+
+        if ($(".today").prop("checked")) {
+            $('#tomorrow').attr('value', '');
+            $('#calendar').attr('value', '');
+            $("label[for='calendar']").text('Pick a date');
+            for (i = 0; i < allHours; i++) {
+                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
+            }
+            for (i = 0; i < enableHoursToday; i++) {
+                var currentTime = moment().startOf('hour').add(i + 2, 'h').format("HH:mm");
+                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
+                    '<input class="times__input form-check-input" type="radio" value="' + currentTime +
+                    ' " name="todayTimes" data-item-id="todayTimes" id="' + i + '"/>' +
+                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + currentTime +
+                    '</label>\n' +
+                    '</div>'
+                ]).trigger('refresh.owl.carousel');
+            }
+
+            $(document).on('change', 'input:radio[data-item-id=todayTimes]', function () {
+                var TimeVal = $('input[data-item-id=todayTimes]:checked').val();
+                todayVal.value = todaySlash + " " + TimeVal;
+
+            });
+        } else if ($(".tomorrow").prop("checked")) {
+            $('#today').attr('value', '');
+            $('#calendar').attr('value', '');
+            $("label[for='calendar']").text('Pick a date');
+            for (i = 0; i < allHours; i++) {
+                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
+            }
+            for (i = 0; i < dayHours; i++) {
+                var tomorrowHours = moment().startOf('day').add(i, 'h').format("HH:mm");
+                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
+                    '<input class="times__input form-check-input" type="radio" value="' + tomorrowHours +
+                    ' " name="tomorrowTimes" data-item-id="tomorrowTimes" id="' + i + '" />' +
+                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + tomorrowHours +
+                    '</label>\n' +
+                    '</div>'
+                ]).trigger('refresh.owl.carousel');
+            }
+            $(document).on('change', 'input:radio[data-item-id=tomorrowTimes]', function () {
+                var TimeVal = $('input[data-item-id=tomorrowTimes]:checked').val();
+                tomorrowVal.value = tomorrowSlash + " " + TimeVal;
+            });
+        } else if ($(".calendar-input").prop("checked")) {
+            $('#tomorrow').attr('value', '');
+            $('#today').attr('value', '');
+
+            for (i = 0; i < dayHours; i++) {
+                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
+            }
+
+            for (i = 0; i < allHours; i++) {
+                var calendarHours = moment().startOf('day').add(i, 'h').format("HH:mm");
+                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
+                    '<input class="times__input form-check-input" type="radio" value="' + calendarHours +
+                    '" name="calendarTimes" data-item-id="calendarTimes" id="' + i + '" />' +
+                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + calendarHours +
+                    '</label>\n' +
+                    '</div>'
+                ]).trigger('refresh.owl.carousel');
+            }
+
+            $(document).on('change', 'input:radio[data-item-id=calendarTimes]', function () {
+                var calendarLabel = $(".calendar-label").text();
+                var TimeVal = $('input[data-item-id=calendarTimes]:checked').val();
+
+                calendarVal.value = calendarLabel + " " + TimeVal;
+            });
+        }
+    });
+});
+
+// MOMENT JS END
+
+
+
+// PAYMENT METHODS START
+function DropDown(el) {
+    this.dd = el;
+    this.placeholder = this.dd.children('div');
+    this.opts = this.dd.find('ul.payment__drop li');
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+}
+
+DropDown.prototype = {
+    initEvents: function () {
+        var obj = this;
+        obj.dd.on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).toggleClass('active');
+           
+        });
+        obj.opts.on('click', function () {
+            var checkmark = '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>';
+            var opt = $(this);
+            obj.val = opt.html();
+            obj.valText = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.html(obj.val);
+            opt.siblings().removeClass('selected');
+            opt.siblings().children().last().removeClass( "fas fa-check payment__drop--checkmark" );
+            // opt.siblings().remove( '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
+            opt.filter(':contains("' + obj.valText + '")').addClass('selected');
+            var dataID = $(".selected").attr('data-id');
+            $("#payment-hidden").val(dataID);
+            $( ".selected" ).children().last().addClass( "fas fa-check payment__drop--checkmark" );
+            // $( ".selected" ).add('<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
+        }).change();
+    },
+    getValue: function () {
+        return this.val;
+    },
+    getIndex: function () {
+        return this.index;
+    }
+};
+
+$(function () {
+    // create new variable for each menu
+    var dd1 = new DropDown($('#paymentMethod'));
+    // var dd2 = new DropDown($('#other-gases'));
+    $(document).click(function () {
+        // close menu on document click
+        $('.payment__wrap-drop').removeClass('active');
+    });
+});
+
+// PAYMENT METHODS END
+
+
+
+
+
+// INSURANCE START
+
 $(document).ready(function () {
     $(".insurance__input").change(function () {
 
@@ -802,6 +676,782 @@ $(document).ready(function () {
         }
     });
 });
+
+// INSURANCE END
+//  NEW FOR LOADING-END.HTML
+// This is the jQuery UI widget. The configurable bits and initialization are at the bottom of this file.
+
+$(document).ready(function () {
+	(function ($) {
+		$.widget("eee.loadingSpinner", {
+
+			options: {
+				size: 200
+			},
+
+			_create: function () {
+				el = this.element;
+				var size = this.options.size;
+
+				$.loader = function (element) {
+					var dfd = $.Deferred();
+					var spinner = $("#spinner-template").html();
+					dfd.resolve(spinner, element);
+					return dfd;
+				}
+
+				$.loader(el).done(function (spinner, element) {
+					element.html(spinner);
+					element.find(".spinner-container").css("width", size + "px");
+					element.find(".spinner-container").css("height", size + "px");
+				});
+			},
+
+			success: function () {
+				el = this.element;
+				el.find(".check").attr("class", "check check-complete success");
+				el.find(".path").attr("class", "path path-complete success");
+			},
+
+			failure: function () {
+				el = this.element;
+				el.find(".cross").attr("class", "cross cross-complete danger");
+				el.find(".path").attr("class", "path path-complete danger");
+			},
+
+			reset: function () {
+				el.find(".path").attr("class", "path");
+				el.find(".spinner-g").attr("class", "spinner-g");
+				el.find(".check").attr("class", "check");
+				el.find(".cross").attr("class", "cross");
+			},
+
+			_setOption: function (key, value) {
+				if (key === "size") {
+					value = this._constrain(value);
+				}
+				this._super(key, value);
+			},
+			_setOptions: function (options) {
+				this._super(options);
+			},
+
+			_constrain: function (size) {
+				if (size > 400) {
+					size = 400;
+				}
+				if (size < 0) {
+					size = 0;
+				}
+				return size;
+			}
+		});
+	}(jQuery));
+});
+$(document).ready(function () {
+	var myVar = setInterval(myTimer, 1000);
+	var value = 0;
+	// Initialize the spinner.
+	// Change the "size" parameter to resize the spinner.
+	var $spinner = $("div#spin").loadingSpinner({
+		size: 400
+	});
+	setTimeout(function () {
+		// You can set this to "failure" to see a red X instead of the checkmark
+		$spinner.loadingSpinner("success");
+	}, 2700)
+
+	function myTimer() {
+		value = value + 1;
+		if (value == 6) {
+			document.getElementById("spin").style.display = 'none';
+		}
+	}
+
+});
+// DATASTORE.JS START
+let user = {
+	id: 0,
+	name: "Anish",
+	number: "Kuryer name",
+	pic: "img/asdsd12f34ASd231.png",
+	courierNumber: "+994 50 3332211",
+	orderNumber: 'Order No 1'
+};
+
+let contactList = [
+	{
+		id: 0,
+		name: "Anish",
+		number: "+994 50 3332211",
+		pic: "img/asdsd12f34ASd231.png",
+		lastSeen: "Apr 29 2018 17:58:02",
+		courierNumber: "+994 50 3332211",
+		orderNumber: 'Order No 1'
+	},
+	{
+		id: 1,
+		name: "Nitin",
+		number: "Kuryer name",
+		pic: "img/Ass09123asdj9dk0qw.jpg",
+		lastSeen: "Apr 29 2018 17:58:02",
+		courierNumber: "+994 70 5552233",
+		orderNumber: 'Order No 2'
+	},
+	{
+		id: 2,
+		name: "Sanjay",
+		number: "Kuryer name",
+		pic: "img/asd1232ASdas123a.png",
+		lastSeen: "Apr 28 2018 19:23:16",
+		courierNumber: "+994 70 1112233",
+		orderNumber: 'Order No 3'
+	},
+	{
+		id: 3,
+		name: "Suvro Mobile",
+		number: "+91 98232 63547",
+		pic: "img/Alsdk120asdj913jk.jpg",
+		lastSeen: "Apr 29 2018 11:16:42",
+		courierNumber: "+994 55 44874433",
+		orderNumber: 'Order No 4'
+	},
+	{
+		id: 4,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 5,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 6,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	},
+	{
+		id: 7,
+		name: "Dee",
+		number: "+91 72781 38213",
+		pic: "img/dsaad212312aGEA12ew.png",
+		lastSeen: "Apr 27 2018 17:28:10",
+		courierNumber: "+994 70 9998833",
+		orderNumber: 'Order No 5'
+	}
+];
+
+let groupList = [
+	{
+		id: 1,
+		name: "Group",
+		members: [0, 1, 3],
+		pic: "img/0923102932_aPRkoW.jpg",
+		orderNumber: "Order No 15"
+	},
+	{
+		id: 2,
+		name: "Web Developers",
+		members: [0, 2],
+		pic: "img/1921231232_Ag1asE.png",
+		orderNumber: "Order No 14"
+	},
+	{
+		id: 3,
+		name: "notes",
+		members: [0,4,5],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 13'
+	},
+	{
+		id: 4,
+		name: "notes",
+		members: [0,4,7],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 12'
+	},
+	{
+		id: 5,
+		name: "notes",
+		members: [0,3,5],
+		pic: "img/8230192232_asdEWq2.png",
+		orderNumber: 'Order No 11'
+	}
+];
+
+// message status - 0:sent, 1:delivered, 2:read
+
+let messages = [
+	{
+		id: 0,
+		sender: 2,
+		body: "where are you, buddy?",
+		time: "April 25, 2018 13:21:03",
+		status: 2,
+		recvId: 3,
+		recvIsGroup: false
+	},
+	{
+		id: 1,
+		sender: 3,
+		body: "at home",
+		time: "June 25, 2018 13:22:03",
+		status: 2,
+		recvId: 2,
+		recvIsGroup: true
+	},
+	{
+		id: 2,
+		sender: 0,
+		body: "how you doin'?",
+		time: "April 25, 2018 18:15:23",
+		status: 2,
+		recvId: 3,
+		recvIsGroup: true
+	},
+	{
+		id: 3,
+		sender: 3,
+		body: "i'm fine...wat abt u?",
+		time: "April 25, 2018 21:05:11",
+		status: 2,
+		recvId: 0,
+		recvIsGroup: false
+	},
+	{
+		id: 4,
+		sender: 0,
+		body: "i'm good too",
+		time: "April 26, 2018 09:17:03",
+		status: 1,
+		recvId: 3,
+		recvIsGroup: true
+	},
+	{
+		id: 5,
+		sender: 3,
+		body: "anyone online?",
+		time: "April 27, 2018 18:20:11",
+		status: 0,
+		recvId: 1,
+		recvIsGroup: true
+	},
+	{
+		id: 6,
+		sender: 1,
+		body: "have you seen infinity war?",
+		time: "April 27, 2018 17:23:01",
+		status: 1,
+		recvId: 0,
+		recvIsGroup: false
+	},
+	{
+		id: 0,
+		sender: 3,
+		body: "are you going to the party tonight?",
+		time: "April 27, 2018 08:11:21",
+		status: 2,
+		recvId: 0,
+		recvIsGroup: false
+	},
+	{
+		id: 8,
+		sender: 2,
+		body: "no, i've some work to do..are you?",
+		time: "April 27, 2018 08:22:12",
+		status: 2,
+		recvId: 0,
+		recvIsGroup: false
+	},
+	{
+		id: 9,
+		sender: 0,
+		body: "yup",
+		time: "June 27, 2018 08:31:23",
+		status: 1,
+		recvId: 2,
+		recvIsGroup: true
+	},
+	{
+		id: 10,
+		sender: 0,
+		body: "if you go to the movie, then give me a call",
+		time: "April 27, 2018 22:41:55",
+		status: 7,
+		recvId: 4,
+		recvIsGroup: true
+	},
+	{
+		id: 11,
+		sender: 5,
+		body: "yeah, i'm online",
+		time: "April 28 2018 17:10:21",
+		status: 6,
+		recvId: 2,
+		recvIsGroup: true
+	}
+];
+
+let MessageUtils = {
+	getByGroupId: (groupId) => {
+		return messages.filter(msg => msg.recvIsGroup && msg.recvId === groupId);
+	},
+	getByContactId: (contactId) => {
+		return messages.filter(msg => {
+			return !msg.recvIsGroup && ((msg.sender === user.id && msg.recvId === contactId) || (msg.sender === contactId && msg.recvId === user.id));
+		});
+	},
+	getMessages: () => {
+		return messages;
+	},
+	changeStatusById: (options) => {
+		messages = messages.map((msg) => {
+			if (options.isGroup) {
+				if (msg.recvIsGroup && msg.recvId === options.id) msg.status = 2;
+			} else {
+				if (!msg.recvIsGroup && msg.sender === options.id && msg.recvId === user.id) msg.status = 2;
+			}
+			return msg;
+		});
+	},
+	addMessage: (msg) => {
+		msg.id = messages.length + 1;
+		messages.push(msg);
+	}
+};
+
+// DATASTORE.JS END
+
+// DATAUTILS.JS START
+const mDate = (dateString) => {
+	
+	let date = dateString ? new Date(dateString) : new Date();
+
+	let dualize = (x) => x < 10 ? "0" + x : x;
+	let getTime = () => dualize(date.getHours()) + ":" + dualize(date.getMinutes());
+	let getDate = () => dualize(date.getDate()) + "/" + dualize(date.getMonth()) + "/" + dualize(date.getFullYear());
+
+	return {
+		subtract: (otherDateString) => {
+			return date - new Date(otherDateString);
+		},
+		lastSeenFormat: () => {
+			let dateDiff = Math.round(new Date() - date) / (1000 * 60 * 60 * 24);
+			let value = (dateDiff === 0) ? "today" : (dateDiff === 1) ? "yesterday" : getDate();
+			return value + " at " + getTime();
+		},
+		chatListFormat: () => {
+			let dateDiff = Math.round((new Date() - date) / (1000 * 60 * 60 * 24));
+			if (dateDiff === 0) {
+				return getTime();
+			} else if (dateDiff === 1) {
+				return "Yesterday";
+			} else {
+				return getDate();
+			}
+		},
+		getDate: () => {
+			return getDate();
+		},
+		getTime: () => {
+			return getTime();
+		},
+		toString:() => {
+			return date.toString().substr(4, 20);
+		},
+	};
+};
+
+// DATAUTILS.JS END
+
+// SCRIPT.JS START
+
+let getById = (id, parent) => parent ? parent.getElementById(id) : getById(id, document);
+let getByClass = (className, parent) => parent ? parent.getElementsByClassName(className) : getByClass(className, document);
+
+const DOM = {
+	chatListArea: getById("chat-list-area"),
+	messageArea: getById("message-area"),
+	inputArea: getById("input-area"),
+	chatList: getById("chat-list"),
+	messages: getById("messages"),
+	chatListItem: getByClass("chat-list-item"),
+	messageAreaName: getById("name", this.messageArea),
+	messageAreaPic: getById("pic", this.messageArea),
+	messageAreaNavbar: getById("message-navbar", this.messageArea),
+	messageAreaDetails: getById("details", this.messageAreaNavbar),
+	messageAreaOverlay: getByClass("overlay", this.messageArea)[0],
+	messageInput: getById("input"),
+	profileSettings: getById("profile-settings"),
+	profilePic: getById("profile-pic"),
+	profilePicInput: getById("profile-pic-input"),
+	inputName: getById("input-name"),
+	username: getById("username"),
+	displayPic: getById("display-pic"),
+	messagesLeftBtn: getById("my-messages-inner__btn"),
+	map: getByClass("messages-map"),
+	form: getByClass("messages-form"),
+	rightNavbar: getByClass("message-area__navbar"),
+	mapGroup: getById("my-messages-inner__map-group"),
+	messagesbtn: getByClass("messages__btn")
+
+};
+
+let mClassList = (element) => {
+	return {
+		add: (className) => {
+			element.classList.add(className);
+			return mClassList(element);
+		},
+		remove: (className) => {
+			element.classList.remove(className);
+			return mClassList(element);
+		},
+		contains: (className, callback) => {
+			if (element.classList.contains(className))
+				callback(mClassList(element));
+		}
+	};
+};
+
+// 'areaSwapped' is used to keep track of the swapping
+// of the main area between chatListArea and messageArea
+// in mobile-view
+let areaSwapped = false;
+
+// 'chat' is used to store the current chat
+// which is being opened in the message area
+let chat = null;
+
+// this will contain all the chats that is to be viewed
+// in the chatListArea
+let chatList = [];
+
+// this will be used to store the date of the last message
+// in the message area
+let lastDate = "";
+
+
+
+// 'populateChatList' will generate the chat list
+// based on the 'messages' in the datastore
+let populateChatList = () => {
+	chatList = [];
+
+	// 'present' will keep track of the chats
+	// that are already included in chatList
+	// in short, 'present' is a Map DS
+	let present = {};
+
+	MessageUtils.getMessages()
+
+		.sort((a, b) => mDate(a.time).subtract(b.time))
+		.forEach((msg) => {
+			let chat = {};
+
+			chat.isGroup = msg.recvIsGroup;
+			chat.msg = msg;
+
+
+			if (msg.recvIsGroup) {
+				chat.group = groupList.find((group) => (group.id === msg.recvId));
+				chat.name = chat.group.name;
+				chat.orderNumber = chat.group.orderNumber;
+			} else {
+				chat.contact = contactList.find((contact) => (msg.sender !== user.id) ? (contact.id === msg.sender) : (contact.id === msg.recvId));
+				chat.name = chat.contact.name;
+				chat.orderNumber = chat.contact.orderNumber;
+			}
+
+			chat.unread = (msg.sender !== user.id && msg.status < 2) ? 1 : 0;
+
+			if (present[chat.name] !== undefined) {
+				chatList[present[chat.name]].msg = msg;
+				chatList[present[chat.name]].unread += chat.unread;
+			} else {
+				present[chat.name] = chatList.length;
+				chatList.push(chat);
+			}
+		});
+};
+//  LEFT SIDE
+let viewChatList = () => {
+
+	DOM.chatList.innerHTML = "";
+	chatList
+		.sort((a, b) => mDate(b.msg.time).subtract(a.msg.time))
+		.forEach((elem, index) => {
+			let statusClass = elem.msg.status < 2 ? "far" : "fas";
+			let unreadClass = elem.unread ? "unread" : "";
+			let orderNumber = elem.orderNumber;
+			DOM.chatList.innerHTML += `<div class=" chat-list-group">
+		<div class="chat-list-item p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
+			<img src="${elem.isGroup ? elem.group.pic : elem.contact.pic}" alt="Profile Photo" class="img-fluid rounded-circle mr-2" style="height:50px;">
+			<div class=" messages-searching-div">
+				<div class="order-number">${orderNumber}</div>
+				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).name + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
+			</div>
+			
+			<div class="flex-grow-1 text-right">
+				<div class="small time">${mDate(elem.msg.time).chatListFormat()}</div>
+				${elem.unread ? "<div class=\"badge badge-success badge-pill my-badge small\" id=\"unread-count\">" + elem.unread + "</div>" : ""}
+			</div>
+		</div>
+		<div class="messages__btn color-purple " onclick="showMap(this, ${index})">
+                                                                <i class="fas fa-share-square "></i>
+															</div>
+															</div>
+		`;
+		});
+};
+
+let generateChatList = () => {
+	populateChatList();
+	viewChatList();
+};
+
+let addDateToMessageArea = (date) => {
+	DOM.messages.innerHTML += `
+	<div class="mx-auto my-2 bg-primary text-white small py-1 px-2 rounded">
+		${date}
+	</div>
+	`;
+};
+
+let addMessageToMessageArea = (msg) => {
+	let msgDate = mDate(msg.time).getDate();
+	if (lastDate != msgDate) {
+		addDateToMessageArea(msgDate);
+		lastDate = msgDate;
+	}
+
+	let htmlForGroup = `
+	<div class="small font-weight-bold text-primary">
+		${contactList.find(contact => contact.id === msg.sender).name}
+	</div>
+	`;
+
+	let sendStatus = `<i class="${msg.status < 2 ? "far" : "fas"} fa-check-circle"></i>`;
+	DOM.messages.innerHTML += `
+	<div class="align-self-${msg.sender === user.id ? "end self" : "start"} p-1 my-1 mx-3 rounded bg-white shadow-sm message-item">
+		<div class="options">
+			<a href="#"><i class="fas fa-angle-down text-muted px-2"></i></a>
+		</div>
+		${chat.isGroup ? htmlForGroup : ""}
+		<div class="d-flex flex-row">
+			<div class="body m-1 mr-2">${msg.body}</div>
+			<div class="time ml-auto small text-right flex-shrink-0 align-self-end text-muted" style="width:75px;">
+				${mDate(msg.time).getTime()}
+				${(msg.sender === user.id) ? sendStatus : ""}
+			</div>
+		</div>
+	</div>
+	`;
+
+	DOM.messages.scrollTo(0, DOM.messages.scrollHeight);
+};
+// LEFT SIDE
+let generateMessageArea = (elem, chatIndex) => {
+	document.getElementById("messages").style.borderBottomRightRadius = "0";
+	chat = chatList[chatIndex];
+
+	mClassList(DOM.inputArea).contains("d-none", (elem) => elem.remove("d-none").add("d-flex"));
+
+	mClassList(DOM.messageAreaOverlay).add("d-none");
+
+
+	[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
+
+	mClassList(elem).contains("unread", () => {
+		MessageUtils.changeStatusById({
+			isGroup: chat.isGroup,
+			id: chat.isGroup ? chat.group.id : chat.contact.id
+		});
+		mClassList(elem).remove("unread");
+		mClassList(elem.querySelector("#unread-count")).add("d-none");
+	});
+
+	if (window.innerWidth <= 575) {
+		mClassList(DOM.chatListArea).remove("d-flex").add("d-none");
+		mClassList(DOM.messageArea).remove("d-none").add("d-flex");
+		areaSwapped = true;
+	} else {
+		mClassList(elem).add("active");
+		DOM.mapGroup.style.display = "none";
+		DOM.messagesLeftBtn.style.display = "none";
+	}
+
+	DOM.messageAreaName.innerHTML = chat.name;
+	DOM.messageAreaPic.src = chat.isGroup ? chat.group.pic : chat.contact.pic;
+
+	// Message Area details ("last seen ..." for contacts / "..names.." for groups)
+	if (chat.isGroup) {
+		let groupMembers = groupList.find(group => group.id === chat.group.id).members;
+		let memberNames = contactList
+			.filter(contact => groupMembers.indexOf(contact.id) !== -1)
+			.map(contact => contact.id === user.id ? "You" : contact.name)
+			.join(", ");
+
+		DOM.messageAreaDetails.innerHTML = `${memberNames}`;
+	} else {
+		// DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
+		DOM.messageAreaDetails.innerHTML = chat.contact.courierNumber;
+	}
+
+	let msgs = chat.isGroup ? MessageUtils.getByGroupId(chat.group.id) : MessageUtils.getByContactId(chat.contact.id);
+
+	DOM.messages.innerHTML = "";
+
+	lastDate = "";
+	msgs
+		.sort((a, b) => mDate(a.time).subtract(b.time))
+		.forEach((msg) => addMessageToMessageArea(msg));
+};
+
+
+// RIGHT SIDE
+let showChatList = () => {
+	if (areaSwapped) {
+		mClassList(DOM.chatListArea).remove("d-none").add("d-flex");
+		mClassList(DOM.messageArea).remove("d-flex").add("d-none");
+
+		areaSwapped = false;
+	}
+};
+
+let sendMessage = () => {
+	let value = DOM.messageInput.value;
+	DOM.messageInput.value = "";
+	if (value === "") return;
+
+	let msg = {
+		sender: user.id,
+		body: value,
+		time: mDate().toString(),
+		status: 1,
+		recvId: chat.isGroup ? chat.group.id : chat.contact.id,
+		recvIsGroup: chat.isGroup
+	};
+
+	addMessageToMessageArea(msg);
+	MessageUtils.addMessage(msg);
+	generateChatList();
+};
+
+// // LEFT SIDE SEARCH MESSAGES
+// function searchMessages() {
+// 	var input, filter, ul, li, i, txtValue;
+// 	input = document.getElementById("searchMessages");
+// 	filter = input.value.toUpperCase();
+// 	ul = document.getElementById("chat-list");
+// 	li = ul.getElementsByClassName("chat-list-item");
+// 	for (i = 0; i < li.length; i++) {
+// 		div = li[i].getElementsByClassName("messages-searching-div")[0];
+// 		txtValue = div.textContent || div.innerText;
+// 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+// 			li[i].style.display = "";
+// 		} else {
+// 			li[i].style.display = "none";
+
+// 		}
+// 	}
+// }
+
+
+// LEFT SIDE SEARCH MESSAGES
+function searchMessages() {
+	var input, filter, ul, li, i, a, txtValue;
+	input = document.getElementById("searchMessages");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("chat-list");
+	li = ul.getElementsByClassName("chat-list-group");
+	for (i = 0; i < li.length; i++) {
+		div = li[i].getElementsByClassName("messages-searching-div")[0];
+		txtValue = div.textContent || div.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+
+		}
+	}
+}
+// SHOW HIDE PROFILE SETTINGS
+
+let showProfileSettings = () => {
+	// DOM.profileSettings.style.left = 0;
+	DOM.profileSettings.style.display = "block";
+	DOM.profilePic.src = user.pic;
+	DOM.inputName.value = user.name;
+};
+
+let hideProfileSettings = () => {
+	// DOM.profileSettings.style.left = "-110%";
+	DOM.profileSettings.style.display = "none";
+	DOM.username.innerHTML = user.name;
+};
+//  SHOWING MAP AREA
+let showMap = (elem) => {
+	let messages__btn = document.querySelectorAll(".messages__btn");
+	for (let x in messages__btn) {
+		messages__btn[x].onclick = function () {
+			DOM.mapGroup.style.display = "block";
+			DOM.messagesLeftBtn.style.display = "block";
+			[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
+			$(this).prev().addClass("active");
+		}
+	}
+};
+
+let hideMap = () => {
+
+
+
+	let myMessagesInnerBtnleft = document.querySelectorAll(".my-messages-inner__btn--left");
+	for (let y in myMessagesInnerBtnleft) {
+		myMessagesInnerBtnleft[y].onclick = function () {
+			DOM.mapGroup.style.display = "none";
+			DOM.messagesLeftBtn.style.display = "none";
+			// mClassList(DOM.messageAreaOverlay).add("d-block");
+		}
+	}
+
+
+};
+
+window.addEventListener("resize", e => {
+	if (window.innerWidth > 575) showChatList();
+});
+
+
+let init = () => {
+	DOM.username.innerHTML = user.name;
+	DOM.displayPic.src = user.pic;
+	DOM.profilePic.stc = user.pic;
+	DOM.profilePic.addEventListener("click", () => DOM.profilePicInput.click());
+	DOM.profilePicInput.addEventListener("change", () => console.log(DOM.profilePicInput.files[0]));
+	DOM.inputName.addEventListener("blur", (e) => user.name = e.target.value);
+	generateChatList();
+
+	// console.log("Click the Image at top-left to open settings.");
+};
+
+init();
+
+// SCRIPT.JS END
 // // // FOR  INDEX.HTML  INDEX-3.HTML İNTERNATİONAL TELEPHONE İNPUT
 $(document).ready(function () {
 
@@ -908,97 +1558,6 @@ $(document).ready(function() {
 	}); 
 
 });
-//  NEW FOR LOADING-END.HTML
-// This is the jQuery UI widget. The configurable bits and initialization are at the bottom of this file.
-
-$(document).ready(function () {
-	(function ($) {
-		$.widget("eee.loadingSpinner", {
-
-			options: {
-				size: 200
-			},
-
-			_create: function () {
-				el = this.element;
-				var size = this.options.size;
-
-				$.loader = function (element) {
-					var dfd = $.Deferred();
-					var spinner = $("#spinner-template").html();
-					dfd.resolve(spinner, element);
-					return dfd;
-				}
-
-				$.loader(el).done(function (spinner, element) {
-					element.html(spinner);
-					element.find(".spinner-container").css("width", size + "px");
-					element.find(".spinner-container").css("height", size + "px");
-				});
-			},
-
-			success: function () {
-				el = this.element;
-				el.find(".check").attr("class", "check check-complete success");
-				el.find(".path").attr("class", "path path-complete success");
-			},
-
-			failure: function () {
-				el = this.element;
-				el.find(".cross").attr("class", "cross cross-complete danger");
-				el.find(".path").attr("class", "path path-complete danger");
-			},
-
-			reset: function () {
-				el.find(".path").attr("class", "path");
-				el.find(".spinner-g").attr("class", "spinner-g");
-				el.find(".check").attr("class", "check");
-				el.find(".cross").attr("class", "cross");
-			},
-
-			_setOption: function (key, value) {
-				if (key === "size") {
-					value = this._constrain(value);
-				}
-				this._super(key, value);
-			},
-			_setOptions: function (options) {
-				this._super(options);
-			},
-
-			_constrain: function (size) {
-				if (size > 400) {
-					size = 400;
-				}
-				if (size < 0) {
-					size = 0;
-				}
-				return size;
-			}
-		});
-	}(jQuery));
-});
-// $(document).ready(function () {
-// 	var myVar = setInterval(myTimer, 1000);
-// 	var value = 0;
-// 	// Initialize the spinner.
-// 	// Change the "size" parameter to resize the spinner.
-// 	var $spinner = $("div#spin").loadingSpinner({
-// 		size: 400
-// 	});
-// 	setTimeout(function () {
-// 		// You can set this to "failure" to see a red X instead of the checkmark
-// 		$spinner.loadingSpinner("success");
-// 	}, 2700)
-
-// 	function myTimer() {
-// 		value = value + 1;
-// 		if (value == 6) {
-// 			document.getElementById("spin").style.display = 'none';
-// 		}
-// 	}
-
-// });
 // var directionsDisplay;
 // var directionsService = new google.maps.DirectionsService();
 // var map;
@@ -1171,102 +1730,6 @@ $(document).ready(function(){
   });
 
 
-$(document).ready(function () {
-    var dayHours = 24;
-    var allHours = 24;
-    var currentTime = moment().startOf('hour').add(1, 'h').format("HH:mm");
-    var currentHour = moment().startOf('hour').add(1, 'h').format("HH");
-    var enableHoursToday = dayHours - currentHour;
-    var today = moment().locale("az").format("DD MMMM");
-    var tomorrow = moment().add(1, 'days').format("DD MMMM");
-
-    var todaySlash = moment().format('DD/MM/YYYY');
-    var tomorrowSlash = moment().add(1, 'days').format('DD/MM/YYYY');
-
-    var todayVal = document.getElementById("today");
-    var tomorrowVal = document.getElementById("tomorrow");
-    var calendarVal = document.getElementById("calendar");
-
-
-    //  BUGÜN VƏ SABAHIN TARİXİNİN İNPUT NAME=DAY-DƏ GÖRSƏNMƏSİ
-    $('#today-span').html(today);
-    $('#tomorrow-span').html(tomorrow);
-
-    var text = "";
-    $(document).on('change', 'input:radio[data-item-id="day"]', function () {
-
-        if ($(".today").prop("checked")) {
-            $('#tomorrow').attr('value', '');
-            $('#calendar').attr('value', '');
-            $("label[for='calendar']").text('Pick a date');
-            for (i = 0; i < allHours; i++) {
-                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
-            }
-            for (i = 0; i < enableHoursToday; i++) {
-                var currentTime = moment().startOf('hour').add(i + 2, 'h').format("HH:mm");
-                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
-                    '<input class="times__input form-check-input" type="radio" value="' + currentTime +
-                    ' " name="todayTimes" data-item-id="todayTimes" id="' + i + '"/>' +
-                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + currentTime +
-                    '</label>\n' +
-                    '</div>'
-                ]).trigger('refresh.owl.carousel');
-            }
-
-            $(document).on('change', 'input:radio[data-item-id=todayTimes]', function () {
-                var TimeVal = $('input[data-item-id=todayTimes]:checked').val();
-                todayVal.value = todaySlash + " " + TimeVal;
-
-            });
-        } else if ($(".tomorrow").prop("checked")) {
-            $('#today').attr('value', '');
-            $('#calendar').attr('value', '');
-            $("label[for='calendar']").text('Pick a date');
-            for (i = 0; i < allHours; i++) {
-                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
-            }
-            for (i = 0; i < dayHours; i++) {
-                var tomorrowHours = moment().startOf('day').add(i, 'h').format("HH:mm");
-                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
-                    '<input class="times__input form-check-input" type="radio" value="' + tomorrowHours +
-                    ' " name="tomorrowTimes" data-item-id="tomorrowTimes" id="' + i + '" />' +
-                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + tomorrowHours +
-                    '</label>\n' +
-                    '</div>'
-                ]).trigger('refresh.owl.carousel');
-            }
-            $(document).on('change', 'input:radio[data-item-id=tomorrowTimes]', function () {
-                var TimeVal = $('input[data-item-id=tomorrowTimes]:checked').val();
-                tomorrowVal.value = tomorrowSlash + " " + TimeVal;
-            });
-        } else if ($(".calendar-input").prop("checked")) {
-            $('#tomorrow').attr('value', '');
-            $('#today').attr('value', '');
-
-            for (i = 0; i < dayHours; i++) {
-                $('#delivery__time').trigger('remove.owl.carousel', i).trigger('refresh.owl.carousel');
-            }
-
-            for (i = 0; i < allHours; i++) {
-                var calendarHours = moment().startOf('day').add(i, 'h').format("HH:mm");
-                $('#delivery__time').trigger('add.owl.carousel', ['<div class="form-check">\n' +
-                    '<input class="times__input form-check-input" type="radio" value="' + calendarHours +
-                    '" name="calendarTimes" data-item-id="calendarTimes" id="' + i + '" />' +
-                    ' <label class="times__label  form-check-label"  for="' + i + '" >' + calendarHours +
-                    '</label>\n' +
-                    '</div>'
-                ]).trigger('refresh.owl.carousel');
-            }
-
-            $(document).on('change', 'input:radio[data-item-id=calendarTimes]', function () {
-                var calendarLabel = $(".calendar-label").text();
-                var TimeVal = $('input[data-item-id=calendarTimes]:checked').val();
-
-                calendarVal.value = calendarLabel + " " + TimeVal;
-            });
-        }
-    });
-});
 // $(document).ready(function () {
 //   $('#verify-number').mask('000000');
 //   // $('#sign-in-form').parsley().on('field:validated', function () {
@@ -1315,433 +1778,7 @@ $(document).ready(function () {
 //     });
 
 // });
-
-function DropDown(el) {
-    this.dd = el;
-    this.placeholder = this.dd.children('div');
-    this.opts = this.dd.find('ul.payment__drop li');
-    this.val = '';
-    this.index = -1;
-    this.initEvents();
-}
-
-DropDown.prototype = {
-    initEvents: function () {
-        var obj = this;
-        obj.dd.on('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            $(this).toggleClass('active');
-           
-        });
-        obj.opts.on('click', function () {
-            var checkmark = '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>';
-            var opt = $(this);
-            obj.val = opt.html();
-            obj.valText = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.html(obj.val);
-            opt.siblings().removeClass('selected');
-            opt.siblings().children().last().removeClass( "fas fa-check payment__drop--checkmark" );
-            // opt.siblings().remove( '<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
-            opt.filter(':contains("' + obj.valText + '")').addClass('selected');
-            var dataID = $(".selected").attr('data-id');
-            $("#payment-hidden").val(dataID);
-            $( ".selected" ).children().last().addClass( "fas fa-check payment__drop--checkmark" );
-            // $( ".selected" ).add('<i class="fas fa-check color-purple ml-auto payment__drop--checkmark"></i>' );
-        }).change();
-    },
-    getValue: function () {
-        return this.val;
-    },
-    getIndex: function () {
-        return this.index;
-    }
-};
-
-$(function () {
-    // create new variable for each menu
-    var dd1 = new DropDown($('#paymentMethod'));
-    // var dd2 = new DropDown($('#other-gases'));
-    $(document).click(function () {
-        // close menu on document click
-        $('.payment__wrap-drop').removeClass('active');
-    });
-});
-// // FOR MY-MESSAGES.HTML
-
-// let getById = (id, parent) => parent ? parent.getElementById(id) : getById(id, document);
-// let getByClass = (className, parent) => parent ? parent.getElementsByClassName(className) : getByClass(className, document);
-
-// const DOM = {
-// 	chatListArea: getById("chat-list-area"),
-// 	messageArea: getById("message-area"),
-// 	inputArea: getById("input-area"),
-// 	chatList: getById("chat-list"),
-// 	messages: getById("messages"),
-// 	chatListItem: getByClass("chat-list-item"),
-// 	messageAreaName: getById("name", this.messageArea),
-// 	messageAreaPic: getById("pic", this.messageArea),
-// 	messageAreaNavbar: getById("message-navbar", this.messageArea),
-// 	messageAreaDetails: getById("details", this.messageAreaNavbar),
-// 	messageAreaOverlay: getByClass("overlay", this.messageArea)[0],
-// 	messageInput: getById("input"),
-// 	profileSettings: getById("profile-settings"),
-// 	profilePic: getById("profile-pic"),
-// 	profilePicInput: getById("profile-pic-input"),
-// 	inputName: getById("input-name"),
-// 	username: getById("username"),
-// 	displayPic: getById("display-pic"),
-// 	messagesLeftBtn: getById("my-messages-inner__btn"),
-// 	map: getByClass("messages-map"),
-// 	form: getByClass("messages-form"),
-// 	rightNavbar: getByClass("message-area__navbar"),
-// 	mapGroup: getById("my-messages-inner__map-group"),
-// 	messagesbtn: getByClass("messages__btn")
-
-// };
-
-// let mClassList = (element) => {
-// 	return {
-// 		add: (className) => {
-// 			element.classList.add(className);
-// 			return mClassList(element);
-// 		},
-// 		remove: (className) => {
-// 			element.classList.remove(className);
-// 			return mClassList(element);
-// 		},
-// 		contains: (className, callback) => {
-// 			if (element.classList.contains(className))
-// 				callback(mClassList(element));
-// 		}
-// 	};
-// };
-
-// // 'areaSwapped' is used to keep track of the swapping
-// // of the main area between chatListArea and messageArea
-// // in mobile-view
-// let areaSwapped = false;
-
-// // 'chat' is used to store the current chat
-// // which is being opened in the message area
-// let chat = null;
-
-// // this will contain all the chats that is to be viewed
-// // in the chatListArea
-// let chatList = [];
-
-// // this will be used to store the date of the last message
-// // in the message area
-// let lastDate = "";
-
-
-
-// // 'populateChatList' will generate the chat list
-// // based on the 'messages' in the datastore
-// let populateChatList = () => {
-// 	chatList = [];
-
-// 	// 'present' will keep track of the chats
-// 	// that are already included in chatList
-// 	// in short, 'present' is a Map DS
-// 	let present = {};
-
-// 	MessageUtils.getMessages()
-
-// 		.sort((a, b) => mDate(a.time).subtract(b.time))
-// 		.forEach((msg) => {
-// 			let chat = {};
-
-// 			chat.isGroup = msg.recvIsGroup;
-// 			chat.msg = msg;
-
-
-// 			if (msg.recvIsGroup) {
-// 				chat.group = groupList.find((group) => (group.id === msg.recvId));
-// 				chat.name = chat.group.name;
-// 				chat.orderNumber = chat.group.orderNumber;
-// 			} else {
-// 				chat.contact = contactList.find((contact) => (msg.sender !== user.id) ? (contact.id === msg.sender) : (contact.id === msg.recvId));
-// 				chat.name = chat.contact.name;
-// 				chat.orderNumber = chat.contact.orderNumber;
-// 			}
-
-// 			chat.unread = (msg.sender !== user.id && msg.status < 2) ? 1 : 0;
-
-// 			if (present[chat.name] !== undefined) {
-// 				chatList[present[chat.name]].msg = msg;
-// 				chatList[present[chat.name]].unread += chat.unread;
-// 			} else {
-// 				present[chat.name] = chatList.length;
-// 				chatList.push(chat);
-// 			}
-// 		});
-// };
-// //  LEFT SIDE
-// let viewChatList = () => {
-
-// 	DOM.chatList.innerHTML = "";
-// 	chatList
-// 		.sort((a, b) => mDate(b.msg.time).subtract(a.msg.time))
-// 		.forEach((elem, index) => {
-// 			let statusClass = elem.msg.status < 2 ? "far" : "fas";
-// 			let unreadClass = elem.unread ? "unread" : "";
-// 			let orderNumber = elem.orderNumber;
-// 			DOM.chatList.innerHTML += `<div class=" chat-list-group">
-// 		<div class="chat-list-item p-2 border-bottom ${unreadClass}" onclick="generateMessageArea(this, ${index})">
-// 			<img src="${elem.isGroup ? elem.group.pic : elem.contact.pic}" alt="Profile Photo" class="img-fluid rounded-circle mr-2" style="height:50px;">
-// 			<div class=" messages-searching-div">
-// 				<div class="order-number">${orderNumber}</div>
-// 				<div class="small last-message">${elem.isGroup ? contactList.find(contact => contact.id === elem.msg.sender).name + ": " : ""}${elem.msg.sender === user.id ? "<i class=\"" + statusClass + " fa-check-circle mr-1\"></i>" : ""} ${elem.msg.body}</div>
-// 			</div>
-			
-// 			<div class="flex-grow-1 text-right">
-// 				<div class="small time">${mDate(elem.msg.time).chatListFormat()}</div>
-// 				${elem.unread ? "<div class=\"badge badge-success badge-pill my-badge small\" id=\"unread-count\">" + elem.unread + "</div>" : ""}
-// 			</div>
-// 		</div>
-// 		<div class="messages__btn color-purple " onclick="showMap(this, ${index})">
-//                                                                 <i class="fas fa-share-square "></i>
-// 															</div>
-// 															</div>
-// 		`;
-// 		});
-// };
-
-// let generateChatList = () => {
-// 	populateChatList();
-// 	viewChatList();
-// };
-
-// let addDateToMessageArea = (date) => {
-// 	DOM.messages.innerHTML += `
-// 	<div class="mx-auto my-2 bg-primary text-white small py-1 px-2 rounded">
-// 		${date}
-// 	</div>
-// 	`;
-// };
-
-// let addMessageToMessageArea = (msg) => {
-// 	let msgDate = mDate(msg.time).getDate();
-// 	if (lastDate != msgDate) {
-// 		addDateToMessageArea(msgDate);
-// 		lastDate = msgDate;
-// 	}
-
-// 	let htmlForGroup = `
-// 	<div class="small font-weight-bold text-primary">
-// 		${contactList.find(contact => contact.id === msg.sender).name}
-// 	</div>
-// 	`;
-
-// 	let sendStatus = `<i class="${msg.status < 2 ? "far" : "fas"} fa-check-circle"></i>`;
-// 	DOM.messages.innerHTML += `
-// 	<div class="align-self-${msg.sender === user.id ? "end self" : "start"} p-1 my-1 mx-3 rounded bg-white shadow-sm message-item">
-// 		<div class="options">
-// 			<a href="#"><i class="fas fa-angle-down text-muted px-2"></i></a>
-// 		</div>
-// 		${chat.isGroup ? htmlForGroup : ""}
-// 		<div class="d-flex flex-row">
-// 			<div class="body m-1 mr-2">${msg.body}</div>
-// 			<div class="time ml-auto small text-right flex-shrink-0 align-self-end text-muted" style="width:75px;">
-// 				${mDate(msg.time).getTime()}
-// 				${(msg.sender === user.id) ? sendStatus : ""}
-// 			</div>
-// 		</div>
-// 	</div>
-// 	`;
-
-// 	DOM.messages.scrollTo(0, DOM.messages.scrollHeight);
-// };
-// // LEFT SIDE
-// let generateMessageArea = (elem, chatIndex) => {
-// 	document.getElementById("messages").style.borderBottomRightRadius = "0";
-// 	chat = chatList[chatIndex];
-
-// 	mClassList(DOM.inputArea).contains("d-none", (elem) => elem.remove("d-none").add("d-flex"));
-
-// 	mClassList(DOM.messageAreaOverlay).add("d-none");
-
-
-// 	[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
-
-// 	mClassList(elem).contains("unread", () => {
-// 		MessageUtils.changeStatusById({
-// 			isGroup: chat.isGroup,
-// 			id: chat.isGroup ? chat.group.id : chat.contact.id
-// 		});
-// 		mClassList(elem).remove("unread");
-// 		mClassList(elem.querySelector("#unread-count")).add("d-none");
-// 	});
-
-// 	if (window.innerWidth <= 575) {
-// 		mClassList(DOM.chatListArea).remove("d-flex").add("d-none");
-// 		mClassList(DOM.messageArea).remove("d-none").add("d-flex");
-// 		areaSwapped = true;
-// 	} else {
-// 		mClassList(elem).add("active");
-// 		DOM.mapGroup.style.display = "none";
-// 		DOM.messagesLeftBtn.style.display = "none";
-// 	}
-
-// 	DOM.messageAreaName.innerHTML = chat.name;
-// 	DOM.messageAreaPic.src = chat.isGroup ? chat.group.pic : chat.contact.pic;
-
-// 	// Message Area details ("last seen ..." for contacts / "..names.." for groups)
-// 	if (chat.isGroup) {
-// 		let groupMembers = groupList.find(group => group.id === chat.group.id).members;
-// 		let memberNames = contactList
-// 			.filter(contact => groupMembers.indexOf(contact.id) !== -1)
-// 			.map(contact => contact.id === user.id ? "You" : contact.name)
-// 			.join(", ");
-
-// 		DOM.messageAreaDetails.innerHTML = `${memberNames}`;
-// 	} else {
-// 		// DOM.messageAreaDetails.innerHTML = `last seen ${mDate(chat.contact.lastSeen).lastSeenFormat()}`;
-// 		DOM.messageAreaDetails.innerHTML = chat.contact.courierNumber;
-// 	}
-
-// 	let msgs = chat.isGroup ? MessageUtils.getByGroupId(chat.group.id) : MessageUtils.getByContactId(chat.contact.id);
-
-// 	DOM.messages.innerHTML = "";
-
-// 	lastDate = "";
-// 	msgs
-// 		.sort((a, b) => mDate(a.time).subtract(b.time))
-// 		.forEach((msg) => addMessageToMessageArea(msg));
-// };
-
-
-// // RIGHT SIDE
-// let showChatList = () => {
-// 	if (areaSwapped) {
-// 		mClassList(DOM.chatListArea).remove("d-none").add("d-flex");
-// 		mClassList(DOM.messageArea).remove("d-flex").add("d-none");
-
-// 		areaSwapped = false;
-// 	}
-// };
-
-// let sendMessage = () => {
-// 	let value = DOM.messageInput.value;
-// 	DOM.messageInput.value = "";
-// 	if (value === "") return;
-
-// 	let msg = {
-// 		sender: user.id,
-// 		body: value,
-// 		time: mDate().toString(),
-// 		status: 1,
-// 		recvId: chat.isGroup ? chat.group.id : chat.contact.id,
-// 		recvIsGroup: chat.isGroup
-// 	};
-
-// 	addMessageToMessageArea(msg);
-// 	MessageUtils.addMessage(msg);
-// 	generateChatList();
-// };
-
-// // // LEFT SIDE SEARCH MESSAGES
-// // function searchMessages() {
-// // 	var input, filter, ul, li, i, txtValue;
-// // 	input = document.getElementById("searchMessages");
-// // 	filter = input.value.toUpperCase();
-// // 	ul = document.getElementById("chat-list");
-// // 	li = ul.getElementsByClassName("chat-list-item");
-// // 	for (i = 0; i < li.length; i++) {
-// // 		div = li[i].getElementsByClassName("messages-searching-div")[0];
-// // 		txtValue = div.textContent || div.innerText;
-// // 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-// // 			li[i].style.display = "";
-// // 		} else {
-// // 			li[i].style.display = "none";
-
-// // 		}
-// // 	}
-// // }
-
-
-// // LEFT SIDE SEARCH MESSAGES
-// function searchMessages() {
-// 	var input, filter, ul, li, i, a, txtValue;
-// 	input = document.getElementById("searchMessages");
-// 	filter = input.value.toUpperCase();
-// 	ul = document.getElementById("chat-list");
-// 	li = ul.getElementsByClassName("chat-list-group");
-// 	for (i = 0; i < li.length; i++) {
-// 		div = li[i].getElementsByClassName("messages-searching-div")[0];
-// 		txtValue = div.textContent || div.innerText;
-// 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-// 			li[i].style.display = "";
-// 		} else {
-// 			li[i].style.display = "none";
-
-// 		}
-// 	}
-// }
-// // SHOW HIDE PROFILE SETTINGS
-
-// let showProfileSettings = () => {
-// 	// DOM.profileSettings.style.left = 0;
-// 	DOM.profileSettings.style.display = "block";
-// 	DOM.profilePic.src = user.pic;
-// 	DOM.inputName.value = user.name;
-// };
-
-// let hideProfileSettings = () => {
-// 	// DOM.profileSettings.style.left = "-110%";
-// 	DOM.profileSettings.style.display = "none";
-// 	DOM.username.innerHTML = user.name;
-// };
-// //  SHOWING MAP AREA
-// let showMap = (elem) => {
-// 	let messages__btn = document.querySelectorAll(".messages__btn");
-// 	for (let x in messages__btn) {
-// 		messages__btn[x].onclick = function () {
-// 			DOM.mapGroup.style.display = "block";
-// 			DOM.messagesLeftBtn.style.display = "block";
-// 			[...DOM.chatListItem].forEach((elem) => mClassList(elem).remove("active"));
-// 			$(this).prev().addClass("active");
-// 		}
-// 	}
-// };
-
-// let hideMap = () => {
-
-
-
-// 	let myMessagesInnerBtnleft = document.querySelectorAll(".my-messages-inner__btn--left");
-// 	for (let y in myMessagesInnerBtnleft) {
-// 		myMessagesInnerBtnleft[y].onclick = function () {
-// 			DOM.mapGroup.style.display = "none";
-// 			DOM.messagesLeftBtn.style.display = "none";
-// 			// mClassList(DOM.messageAreaOverlay).add("d-block");
-// 		}
-// 	}
-
-
-// };
-
-// window.addEventListener("resize", e => {
-// 	if (window.innerWidth > 575) showChatList();
-// });
-
-
-// let init = () => {
-// 	DOM.username.innerHTML = user.name;
-// 	DOM.displayPic.src = user.pic;
-// 	DOM.profilePic.stc = user.pic;
-// 	DOM.profilePic.addEventListener("click", () => DOM.profilePicInput.click());
-// 	DOM.profilePicInput.addEventListener("change", () => console.log(DOM.profilePicInput.files[0]));
-// 	DOM.inputName.addEventListener("blur", (e) => user.name = e.target.value);
-// 	generateChatList();
-
-// 	// console.log("Click the Image at top-left to open settings.");
-// };
-
-// init();
-// SCROLL
+// SCROLL FOR INDEX7
 
 // $(document).ready(function () {
 
@@ -1846,7 +1883,7 @@ $("#icon-plus").on("click", function (e) {
     spinnerAction(count);
 });
 });
-// SWIPE  FOR İNDEX-3.HTML
+//  SWIPE TRANSITION START
 $(document).ready(function () {
     
     $(function () {
@@ -2073,6 +2110,8 @@ $(document).ready(function () {
 
     });
 });
+
+//  SWIPE TRANSITION END
 
  $( document ).ready(function() {
     $('.times-carousel').owlCarousel({

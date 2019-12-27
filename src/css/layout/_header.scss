@@ -7,6 +7,10 @@
 
     &__logo {
         margin-right: 0;
+
+        &--img {
+            transform: translateY(-4px);
+        }
     }
 
     &__container {
@@ -259,4 +263,11 @@
 .index-shadow {
     box-shadow: 0 8px 15px #7b2bfc1f;
 
+}
+
+.my-badge{
+    padding: 4px 7px;
+    font-size: 10px;
+    margin-left: 2px;
+   
 }

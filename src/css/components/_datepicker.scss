@@ -1,14 +1,12 @@
 .datepicker {
-  
-        &__input {
-        display: none;  
-            
-                }
-        
+
+    &__input {
+        display: none;
+    }
 }
 
 
-#calendar-label{
+#calendar-label {
     position: relative;
 }
 
@@ -66,9 +64,6 @@
         }
     }
 }
-
-
-
 
 .ui-datepicker-header {
 
@@ -128,8 +123,3 @@
     font-size: 0.75rem;
 }
 
-// .ui-state-disabled{
-//     background-color: #ababab;
-//     color: #fff;
-//  border-radius: 5px;
-// }

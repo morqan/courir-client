@@ -34,9 +34,7 @@
 	
 }
 
-.dropdown-toggle::after {
-	display: none;
-}
+
 #chat-list {
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -172,6 +170,13 @@
 		.fa-share-square{
 			display: flex;
     align-self: center;
+		}
+	}
+	&__navbar{
+		&--dropdown {
+			&::after {
+				display: none;
+			}
 		}
 	}
 }

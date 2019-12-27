@@ -1,5 +1,5 @@
 #labor {
-  display: none;
+    display: none;
 }
 
 .input-spinner {
@@ -8,13 +8,13 @@
     align-items: center;
     width: 360px;
     height: 70px !important;
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
     @include respondmax(md) {
         width: 100% !important;
     }
 
-.fa-user-alt-slash,
+    .fa-user-alt-slash,
     .fa-user,
     .fa-user-friends,
     .fa-users {
@@ -84,8 +84,9 @@
             display: inline-block;
             vertical-align: middle;
             text-decoration: none;
+
             .icon-minus,
-            .icon-plus{
+            .icon-plus {
                 position: relative;
                 width: 32px !important;
                 height: 32px !important;
@@ -107,11 +108,8 @@
             line-height: 26px;
             font-weight: bold;
             width: 32px !important;
-                height: 32px !important;
+            height: 32px !important;
         }
     }
-    
+
 }
-
-
-
